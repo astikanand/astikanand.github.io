@@ -16,6 +16,7 @@ bundle exec jekyll build
 COMMIT_TIME=`date '+%A %d-%B-%Y at %I:%M %p'`
 
 # Commit changes and push
+git pull
 git add --a
 git commit -m "Last updated on $COMMIT_TIME"
 git push

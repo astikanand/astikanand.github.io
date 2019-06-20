@@ -24,4 +24,3 @@ Passionate Geek with love for Computer Science, Economics, Sports and Adventures
 
 
 ## Non-tech Blogs
-

@@ -7,14 +7,18 @@ Passionate Geek with love for Computer Science, Economics, Sports and Adventures
 ## Tech Blogs
 
 - #### Subjects
+  - ##### [Data Structures](data-structures)
+
+  - ##### [Algorithms](algorithms)
+
   - ##### [Machine Learning](techblogs/machine-learning)
 
   - ##### [Linux and Unix](techblogs/linux-unix)
 
   - ##### [Django: Python Web Framework](techblogs/django)
-
+  
     
-
+  
 - #### Articles
 
   - ##### [Hosting static website or repository on Github using Github Pages](github-pages-boilerplate)
@@ -24,3 +28,4 @@ Passionate Geek with love for Computer Science, Economics, Sports and Adventures
 <br>
 
 ## Non-tech Blogs
+

@@ -7,9 +7,9 @@ Passionate Geek with love for Computer Science, Economics, Sports and Adventures
 ## Tech Blogs
 
 - #### Subjects
-  - ##### [Data Structures](data-structures)
+  - ##### [Data Structures](techblogs/data-structures)
 
-  - ##### [Algorithms](algorithms)
+  - ##### [Algorithms](techblogs/algorithms)
 
   - ##### [Machine Learning](techblogs/machine-learning)
 

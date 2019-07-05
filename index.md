@@ -1,6 +1,6 @@
 # Astik Anand
 
-Passionate Geek with love for Computer Science, Economics, Sports and Adventures.
+Passionate Geek with love for Computer Science, Artificial Intelligence, Economics, Sports and Adventures.
 
 
 

@@ -14,6 +14,8 @@ Passionate Geek with love for Computer Science, Artificial Intelligence, Economi
   
   - ##### [System Design](techblogs/3_system_design)
   
+  - ##### [Software Enginnering](techblogs/15_software_engineering)
+  
   - ##### [Machine Learning](techblogs/4_machine_learning)
   
   - ##### [Operating System](techblogs/5_operating_system)

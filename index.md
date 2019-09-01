@@ -9,24 +9,26 @@ Passionate Geek with love for Computer Science, Artificial Intelligence, Economi
 - #### Subjects
   
   - ##### [Data Structures](techblogs/1_data_structures)
-
-  - ##### [Algorithms](techblogs/2_algorithms)
   
-  - ##### [System Design](techblogs/3_system_design)
+  - ##### [Advanced Data Structures](techblogs/2_advanced_data_structures)
+
+  - ##### [Algorithms](techblogs/3_algorithms)
   
-  - ##### [Software Enginnering](techblogs/15_software_engineering)
+  - ##### [System Design](techblogs/4_system_design)
   
-  - ##### [Machine Learning](techblogs/4_machine_learning)
+  - ##### [Software Enginnering](techblogs/16_software_engineering)
   
-  - ##### [Operating System](techblogs/5_operating_system)
+  - ##### [Machine Learning](techblogs/5_machine_learning)
+  
+  - ##### [Operating System](techblogs/6_operating_system)
 
-  - ##### [Linux and Unix](techblogs/8_linux_unix)
+  - ##### [Linux and Unix](techblogs/9_linux_unix)
 
-  - ##### [Python](techblogs/9_python)
+  - ##### [Python](techblogs/10_python)
 
-  - ##### [Django: Python Web Framework](techblogs/11_django)
+  - ##### [Django: Python Web Framework](techblogs/12_django)
 
-  - ##### [Puzzles](techblogs/13_puzzles)
+  - ##### [Puzzles](techblogs/14_puzzles)
   
   
     

@@ -1,10 +1,4 @@
 # Astik's Resume
 
-<iframe
-    src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://astikanand.github.io/about/files/astik_resume.pdf#toolbar=0&scrollbar=0"
-    frameBorder="0"
-    scrolling="auto"
-    height="1250px"
-    width="100%"
-></iframe>
+<iframe src="https://docs.google.com/gview?url=https://astikanand.github.io/about/files/astik_resume.pdf &embedded=true" style="width:100%; height:1250px;" frameborder="0"></iframe>
 

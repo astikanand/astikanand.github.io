@@ -1,0 +1,23 @@
+-
+    title: TechBlogs
+    description: Browse all the technical blogs properly categorised with proper documentation and code imeplementation.
+    img: /path/to/techblogs/img
+    link: /techblogs
+
+-
+    title: Non-TechBlogs
+    description: Browse all the non-technical blogs properly categorised ino section and topics.
+    img: /path/to/nontechblogs/img
+    link: /nonetechblogs
+
+-
+    title: Articles
+    description: Browse all the technical articles on recent and trending technologies.
+    img: /path/to/articles/img
+    link: /articles
+
+-
+    title: About
+    description: Details about me about the technical abilities, education, personal and professional life.
+    img: /path/to/about/img
+    link: /about

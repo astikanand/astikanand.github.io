@@ -1,0 +1,38 @@
+- 
+    title: Data Structures
+    slug: data-structures
+    link: data-structures
+    description: This is about data structures.
+    img: /path/to/ds/img
+    topics:
+        -
+            title: array
+            link: array
+            description: This is about array.
+            img: /path/to/array/img
+        -
+            title: stack
+            link: stack
+            description: This is about stack.
+            img: /path/to/stack/img
+
+-
+    title: Algorithms
+    slug: algorithms
+    link: algorithms
+    description: This is about algorithms.
+    img: /path/to/algo/img
+    topics:
+        -
+            title: time-complexity
+            link: time-complexity
+            description: This is about time complexity.
+            img: /path/to/array/time-complexity
+        -
+            title: searching-sorting
+            link: searching-sorting
+            description: This is about searching and sorting.
+            img: /path/to/searching-sorting/img
+
+
+

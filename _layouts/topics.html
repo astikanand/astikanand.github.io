@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+    <head>
+        {%  include headers.html %}
+    </head>
+
+    <body>
+        {% include navbar.html %}
+
+        <div class="splash" >
+            <div class="main-heading">
+                {% include breadcrumb.html %}
+            </div>
+        </div>
+
+        <div class="ui container main-container">
+            <div class="container-lg px-3 my-5 markdown-body">
+                {% for subsection in site.data[page.section] %}
+                    {% if subsection['slug'] == page.subsection %}
+                        {% for topic in subsection['topics'] %}
+                            {% if topic['slug'] == page.topic %}
+                                <h1>{{topic.title}}</h1>
+                                <div class="ui special link two stackable cards">
+                                    {% for subtopic in topic['subtopics'] %}
+                                        <div class="ui raised card">
+                                            <div class="blurring dimmable image">
+                                                <div class="ui dimmer">
+                                                    <div class="content">
+                                                        <div class="center">
+                                                            <a class="ui inverted button" href="{{subtopic['link']}}">View Detail</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <img src="{{subtopic['img']}}">
+                                            </div>
+                                            <div class="content">
+                                                <div class="header"><a href="{{subtopic['link']}}">{{subtopic['title']}}</a></div>
+                                                <div class="description">{{subtopic['description']}}</div>
+                                            </div>
+                                            <!-- <div class="extra content">
+                                                <span><i class="user icon"></i></span>
+                                            </div> -->
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        {% include footer.html %}
+        
+        {% include js_scripts_other.html %}
+
+        {% include google_analytics.html %}
+    </body>
+</html>

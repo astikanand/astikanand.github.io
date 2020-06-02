@@ -1,0 +1,15 @@
+machine-or-deep-learning-for-biological-data-analysis:
+    description: This article describes about getting started with using Machine or Deep Learning for Bioinformatics which is a very promising field in coming days.
+    img: assets/machine-learning-biological-data.png
+
+amazon-s3-bucket-for-storing-media-files-of-django:
+    description: Heroku only saves the static files and deletes the media files on refresh of dyno which occurs every 30 minutes. So, we need to store media files to some other location, here we are going to use Amazon Web Services. We are going to make use of Amazon S3 bucket as default media storage.
+    img: assets/store-media-files-amazon-s3.jpg
+
+enable-copy-paste-and-file-sharing-between-host-and-guest-operating-system:
+    description: It becomes frustrating when we are unable to copy and paste or share the files between our host and guest operating systems installed either on virtualbox or VM Workstation. This article explains steps to enable the copy paste and file sharing between guest and host operating systems.
+    img: assets/enable-copy-paste-host-guest-os.png
+
+embed-youtube-channel-videos-on-the-website-free:
+    description: Embedding youtube videos creates a lots of engagement to visitors on website, youtube provides a way to embed a single video or playlist videos but to embed all the videos from a channel is challenging. This article provides easy way to embed youtube channel videos, user uploaded videos and playlist videos.
+    img: assets/embed-youtube-channel-videos.jpg

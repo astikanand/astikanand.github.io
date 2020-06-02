@@ -1,2 +1,0 @@
-# Life Through Pictures
-

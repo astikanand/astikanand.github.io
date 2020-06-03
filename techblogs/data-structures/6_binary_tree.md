@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/data-structures/binary-tree
+topic: binary-tree
+---
+
+
+
 # Binary Tree
 
 ###### What are Trees ?

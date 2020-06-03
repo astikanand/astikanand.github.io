@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+    <head>
+        {%  include headers.html %}
+    </head>
+
+    <body>
+        {% include navbar.html %}
+
+        <div class="splash" >
+            <div class="main-heading">
+                {% include breadcrumb.html %}
+            </div>
+        </div>
+
+        <div class="ui container main-container">
+            <div class="container-lg px-3 my-5 markdown-body">
+                <h1 id="astik-anand">Astik Anand</h1>
+                <p>Passionate Geek with love for Computer Science, Artificial Intelligence, Economics, Sports and Adventures.</p>
+                <br>
+                <div class="ui huge relaxed list">
+                    <div class="item">
+                        <i class="list ul orange icon"></i>
+                        <div class="content">
+                            <a style="color: #F2711C; font-style: bold;" href="/">astik.me</a>
+
+                            <div class="ui small relaxed list">
+                                {% for section in site.data.sections %}
+                                    <div class="item">
+                                        <i class="folder {% if section.slug == page.section %} open {% endif %} outline purple icon"></i>
+                                        <div class="content">
+                                            <a style="color: #a333c8; font-style: bold;" href="/{{section.slug}}">{{section.title}}</a>
+                                            {% if section.slug == page.section %}
+                                                <div class="ui small relaxed list">
+                                                    {% for subsection in site.data[section.slug] %}
+                                                        <div class="item">
+                                                            <i class="folder {% if subsection.slug == page.subsection %} open {% endif %} outline blue icon"></i>
+                                                            <div class="content">
+                                                                <a style="color: #2185d0; font-style: bold;" href="/{{section.slug}}/{{subsection.slug}}">{{subsection.title}}</a>
+                                                                {% if subsection.slug == page.subsection %}
+                                                                    <div class="ui tiny relaxed list">
+                                                                        {% for topic in subsection['topics'] %}
+                                                                        <div class="item">
+                                                                            <i class="file alternate outline gray icon"></i>
+                                                                            <div class="content">
+                                                                                <a style="color: #767676; font-style: bold;" href="/{{section.slug}}/{{subsection.slug}}/{{topic.slug}}">{{topic.title}}</a>
+                                                                            </div>
+                                                                        </div>
+                                                                        {% endfor %}
+                                                                    </div>
+                                                                {% endif %}
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                {{content}}
+            </div>
+        </div>
+
+        {% include footer.html %}
+        
+        {% include js_scripts_other.html %}
+
+        {% include google_analytics.html %}
+    </body>
+</html>

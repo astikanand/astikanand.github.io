@@ -140,6 +140,6 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: default
+      layout: posts
       author: Astik Anand
       navlink: home

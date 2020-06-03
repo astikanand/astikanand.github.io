@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/data-structures/linked-list
+topic: linked-list
+---
+
+
+
 # Linked List
 
 ###### What is lInked list ? 

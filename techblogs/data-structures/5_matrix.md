@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/data-structures/matrix
+topic: matrix
+---
+
+
+
 # Matrix
 
 ###### What is Matrix ?

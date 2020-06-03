@@ -1,24 +1,24 @@
 - 
     title: My Resume
-    link: my-resume
+    slug: my-resume
     description: Depiction of my education, work experience and technical abilities.
     img: /path/to/ds/img
 
 -
     title: My Bio Data
-    link: my-bio-data
+    slug: my-bio-data
     description: Depiction of my current in-short personal and professional details.
     img: /path/to/algo/img
 
 -
     title: My Life Through Pics
-    link: my-life-through-pics
+    slug: my-life-through-pics
     description: Chronological depiction of my life through pictures.
     img: /path/to/algo/img
 
 -
     title: My Family
-    link: my-family
+    slug: my-family
     description: In-short description of my family and its members.
     img: /path/to/algo/img
 

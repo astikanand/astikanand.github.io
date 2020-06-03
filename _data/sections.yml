@@ -1,23 +1,23 @@
 -
     title: TechBlogs
-    description: Browse all the technical blogs properly categorised with proper documentation and code imeplementation.
+    description: Blogs on various different technologies, computer science fundamentals, computer languages and many more, properly categorised with proper documentation and code imeplementation.
     img: /path/to/techblogs/img
-    link: /techblogs
+    slug: techblogs
 
 -
     title: Non-TechBlogs
-    description: Browse all the non-technical blogs properly categorised ino section and topics.
+    description: Blogs on various different subjects like Geography, History, Economy, Polity, Science and Tech, Art & Culture, Environment, Sociology, Current Affairs and Various Others.
     img: /path/to/nontechblogs/img
-    link: /nonetechblogs
+    slug: nontechblogs
 
 -
     title: Articles
     description: Browse all the technical articles on recent and trending technologies.
     img: /path/to/articles/img
-    link: /articles
+    slug: articles
 
 -
     title: About
     description: Details about me about the technical abilities, education, personal and professional life.
     img: /path/to/about/img
-    link: /about
+    slug: about

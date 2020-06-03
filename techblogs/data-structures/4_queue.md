@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/data-structures/queue
+topic: queue
+---
+
+
+
 # Queue
 
 ###### What is Queue ?

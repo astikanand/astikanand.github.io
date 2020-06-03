@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/data-structures/binary-search-tree
+topic: binary-search-tree
+---
+
+
+
 # Binary Search Tree
 
 ###### What is Binary Search Tree ?

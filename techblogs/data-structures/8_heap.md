@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/data-structures/heap
+topic: heap
+---
+
+
+
 # Heap / Priority Queue
 
 ###### What is heap ?

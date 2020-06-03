@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/data-structures/stack
+topic: stack
+---
+
+
+
 # Stack
 
 ###### What is Stack ?

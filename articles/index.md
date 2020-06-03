@@ -1,6 +1,4 @@
 ---
-layout: section
+layout: pages
 ---
-
-# Articles
 

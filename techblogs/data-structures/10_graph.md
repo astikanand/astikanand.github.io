@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/data-structures/graph
+topic: graph
+---
+
+
+
 # Graph
 
 ###### What is Graph ?

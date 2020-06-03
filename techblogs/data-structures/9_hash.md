@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/data-structures/hash
+topic: hash
+---
+
+
+
 # Hash
 
 ###### What is Hash Data Structure ?

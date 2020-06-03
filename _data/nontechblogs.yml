@@ -1,36 +1,35 @@
 - 
     title: data-structures
-    link: techblogs/data-structures
+    slug: techblogs/data-structures
     description: This is about data structures.
     img: /path/to/ds/img
     topics:
         -
             title: array
-            link: techblogs/data-structures/array
+            slug: techblogs/data-structures/array
             description: This is about array.
             img: /path/to/array/img
         -
             title: stack
-            link: techblogs/data-structures/stack
+            slug: techblogs/data-structures/stack
             description: This is about stack.
             img: /path/to/stack/img
 
 -
     title: algorithms
-    link: techblogs/algorithms
+    slug: techblogs/algorithms
     description: This is about algorithms.
     img: /path/to/algo/img
     topics:
         -
             title: time-complexity
-            link: techblogs/algorithms/time-complexity
+            slug: techblogs/algorithms/time-complexity
             description: This is about time complexity.
             img: /path/to/array/time-complexity
         -
             title: searching-sorting
-            link: techblogs/algorithms/searching-sorting
+            slug: techblogs/algorithms/searching-sorting
             description: This is about searching and sorting.
             img: /path/to/searching-sorting/img
 
 
- 

@@ -1,5 +1,5 @@
 ---
-layout: section
+layout: pages
 ---
 
 
@@ -7,8 +7,4 @@ layout: section
 # Non-Tech Blogs
 
 Blogs on various different subjects like Geography, History, Economy, Polity, Science and Tech, Art & Culture, Environment, Sociology, Current Affairs and Various Others.
-
-## Subjects
-
-##### [History](2_history)
 

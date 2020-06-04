@@ -7,10 +7,10 @@ echo -e "#################### Starting the deployment ##########################
 set -e
 
 # Change to project repo directory
-cd /Users/astikanand/Projects/astikanand.github.io/
+cd /Users/astikanand/astikanand.github.io/
 
 # Build the project and only if build suceeds commit the new changes
-# bundle exec jekyll build
+bundle exec jekyll build
 
 # Get the current date and time for the commit
 COMMIT_TIME=`date '+%A %d-%B-%Y at %I:%M %p'`
@@ -19,7 +19,7 @@ COMMIT_TIME=`date '+%A %d-%B-%Y at %I:%M %p'`
 git pull
 git add --a
 git commit -m "Last updated on $COMMIT_TIME"
-git push
+# git push
 
 ## Stop the error logging
 set +e

@@ -1,0 +1,300 @@
+body{
+    background-color: #f3f3f3;
+}
+
+.ui.menu {
+    font-size: 1.1rem;
+    min-height: 3.55714286em;
+}
+
+.splash {
+    height: 25rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    background: url(../images/back.jpg) center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.main-heading{
+	font-size:35px;
+	text-align:center;
+	margin-top:150px !important;
+	font-weight:bold;
+	color:darkslateblue;
+}
+
+.main-container{
+	min-height: 800px;
+	margin-top: -70px;
+	padding: 30px;
+    background-color: #fff;
+}
+
+@media (min-width:1200px) {
+    .main-container{
+    	padding: 10px 80px;
+    }
+}
+
+.site-title{
+	color: #13a5a6 !important;
+}
+
+.ui.cards > .card {
+    margin-top: 50px;
+}
+@media only screen and (max-width: 767px){
+    .ui.stackable.cards .card:first-child {
+        margin-top: 50px !important;
+    }
+}
+
+.ui.form.container{
+    max-width:410px!important;
+}
+
+.ui.horizontal.divider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ui.center.aligned.header{
+  margin-bottom: 40px;
+}
+
+.float-right{
+  float: right;
+}
+
+.float-left{
+    float: left;
+}
+
+.align-center{
+  text-align: center;
+}
+
+.navbar-fixed-top {
+    border-width: 0;
+}
+
+.ui.mini.modal {
+    font-weight: bold;
+    text-align: center;
+    max-width: 500px;
+}
+
+.main-logo{
+    height:30px;
+    width:150px;
+}
+
+@media only screen and (max-width: 767px) {
+  .ui.container {
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .main-container {
+    padding: 30px 5px 30px 5px;
+  }
+
+  .main-heading {
+    font-size: 30px;
+  }
+}
+
+.footer .ui.button{
+    margin-top: 10px;
+}
+
+.footer .ui.button{
+    margin-top: 10px;
+}
+
+.footer-icons .ui.button {
+    min-width: 125px;
+}
+
+.github {
+    background:  #4078c0 !important;
+}
+
+.stackoverflow {
+    background: #f48024 !important;
+}
+
+.markdown-body h1 {
+    padding-bottom: .3em;
+    font-size: 2.2em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+}
+.markdown-body h2 {
+    padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+    color: rgb(255, 47, 146);
+    margin-top: 1.8em;
+    margin-bottom: 0.1em;
+}
+.markdown-body h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+    color: rgb(148, 55, 255);
+    margin-top: 1.8em;
+    margin-bottom: 0.1em;
+    font-weight: bold;
+}
+.markdown-body h4 {
+    font-size: 1.25em;
+    color: #ffa500;
+    margin-top: 1.8em;
+    margin-bottom: 0.1em;
+}
+.markdown-body h5 {
+    font-size: 1em;
+    color: #86c232;
+    margin-top: 1.8em;
+    margin-bottom: 0.1em;
+}
+
+.markdown-body h6 {
+    font-size: 1em;
+    color: #3399ff !important;
+    margin-top: 1.8em;
+    margin-bottom: 0.1em;
+}
+
+.markdown-body blockquote {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #FFF8DC;
+    border-left: 4px solid #ffeb8e;
+}
+
+h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6,
+h2 + h3, h2 + h4, h2 + h5, h2 + h6,
+h3 + h4, h3 + h5, h3 + h6,
+h4 + h5, h4 + h6,
+h5 + h6 {
+  margin-top: 12px !important;
+}
+
+img, code, .md-fences, blockquote {
+    margin-left: 0em;
+}
+
+html {
+    font-size: 14px;
+}
+
+.markdown-body {
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+body, .markdown-body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #474747;
+    line-height: 1.6;
+}
+
+.markdown-body code{
+    background-color: #f7f7f9
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+p, li>p, .markdown-body p, .markdown-body li>p{
+    margin-top: 0;
+    margin-bottom: 2px;
+    text-align: justify;
+}
+
+.next-button{
+    background-color: limegreen;
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 2px;
+    float: right;
+    font-weight: bold;
+}
+  
+.prev-button{
+    background-color: royalblue;
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 2px;
+    float: left;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: purple;
+}
+
+a[href=""] {
+    color: #A16E83;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.md-fences {
+    margin-bottom: 7px;
+    margin-top: 5px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border: none;
+}

@@ -1,0 +1,24 @@
+<div class="ui breadcrumb" style="background: goldenrod;padding: 5px;">
+    <a class="section" href="/"><i class="home icon"></i>Home</a>
+    {% if page.section %}
+        <i class="right chevron icon divider"></i>
+    {% endif %}
+
+    {% if page.section and page.subsection and page.topic %}
+        <a class="section" href="/{{page.section}}"><i class="folder icon"></i>{{page.section}}</a>
+        <i class="right chevron icon divider"></i>
+        <a class="section" href="/{{page.section}}/{{page.subsection}}"><i class="folder icon"></i>{{page.subsection}}</a>
+        <i class="right chevron icon divider"></i>
+        <span class="section"><i class="file icon"></i>{{page.topic}}</span>
+    {% elsif page.section and page.subsection %}
+        <a class="section" href="/{{page.section}}"><i class="folder icon"></i>{{page.section}}</a>
+        <i class="right chevron icon divider"></i>
+        <span class="section"><i class="folder open disabled icon"></i>{{page.subsection}}</span>
+    {% elsif page.section and page.topic %}
+        <a class="section" href="/{{page.section}}"><i class="folder icon"></i>{{page.section}}</a>
+        <i class="right chevron icon divider"></i>
+        <span class="section"><i class="file alternate icon"></i>{{page.topic}}</span>
+    {% elsif page.section %}
+        <span class="section"><i class="folder open disabled icon"></i>{{page.section}}</span>
+    {% endif %}
+</div>

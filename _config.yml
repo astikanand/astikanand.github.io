@@ -1,1 +1,109 @@
 theme: jekyll-theme-primer
+
+disqus:
+    shortname: astikanand
+
+
+defaults:
+# Configs for SECTION : TechBlogs
+  - scope:
+      path: techblogs/data-structures
+    values:
+      subsection: data-structures
+
+  - scope:
+      path: techblogs/algorithms
+    values:
+      subsection: algorithms 
+  
+  - scope:
+      path: techblogs/advanced-data-structures
+    values:
+      subsection: advanced-data-structures
+  
+  - scope:
+      path: techblogs/system-design
+    values:
+      subsection: system-design
+  
+  - scope:
+      path: techblogs/software-engineering
+    values:
+      subsection: software-engineering 
+  
+  - scope:
+      path: techblogs/java
+    values:
+      subsection: java
+  
+  - scope:
+      path: techblogs/python
+    values:
+      subsection: python 
+  
+  - scope:
+      path: techblogs/machine-learning
+    values:
+      subsection: machine-learning 
+  
+  - scope:
+      path: techblogs/ai-robotics
+    values:
+      subsection: ai-robotics  
+  
+  - scope:
+      path: techblogs/web-frameworks
+    values:
+      subsection: web-frameworks
+  
+  - scope:
+      path: techblogs/interview-specifics
+    values:
+      subsection: interview-specifics
+
+
+  - scope:
+      path: techblogs
+    values:
+      section: techblogs
+      navlink: techblogs
+      comments: true
+
+
+
+# Configs for SECTION : Non-TechBlogs
+  - scope:
+      path: nontechblogs
+    values:
+      section: nontechblogs
+      navlink: nontechblogs
+      comments: true
+  
+
+      
+# Configs for SECTION : Articles
+  - scope:
+      path: articles
+    values:
+      section: articles
+      navlink: articles
+      comments: true
+
+
+
+# Configs for SECTION : About
+  - scope:
+      path: about
+    values:
+      section: about
+      navlink: about
+
+
+
+# GLOBAL Config
+  - scope:
+      path: ""
+    values:
+      layout: posts
+      author: Astik Anand
+      navlink: home

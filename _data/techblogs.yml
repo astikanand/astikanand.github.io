@@ -1,0 +1,483 @@
+- 
+    title: Data Structures
+    slug: data-structures
+    description: This is about data structures.
+    img: /path/to/data-structures/img
+    topics:
+        -
+            title: Array
+            slug: array
+            description: This is about array.
+            img: /path/to/array/img
+        -
+            title: Linked List
+            slug: linked-list
+            description: This is about Linked List.
+            img: /path/to/linked-list/img
+        -
+            title: Stack
+            slug: stack
+            description: This is about stack.
+            img: /path/to/stack/img
+        -
+            title: Queue
+            slug: queue
+            description: This is about queue.
+            img: /path/to/queue/img
+        -
+            title: Matrix
+            slug: matrix
+            description: This is about matrix.
+            img: /path/to/matrix/img
+        -
+            title: Binary Tree
+            slug: binary-tree
+            description: This is about binary-tree.
+            img: /path/to/binary-tree/img
+        -
+            title: Binary Search Tree
+            slug: binary-search-tree
+            description: This is about binary-search-tree.
+            img: /path/to/binary-search-tree/img
+        -
+            title: Heap
+            slug: heap
+            description: This is about heap.
+            img: /path/to/heap/img
+        -
+            title: Hash
+            slug: hash
+            description: This is about hash.
+            img: /path/to/hash/img
+        -
+            title: Graph
+            slug: graph
+            description: This is about graph.
+            img: /path/to/graph/img
+
+
+-
+    title: Algorithms
+    slug: algorithms
+    description: This is about algorithms.
+    img: /path/to/algo/img
+    topics:
+        -
+            title: Complexity Analysis
+            slug: complexity-analysis
+            description: This is about complexity analysis.
+            img: /path/to/complexity-analysis/img
+        -
+            title: Searching and Sorting Algorithms
+            slug: searching-sorting-algorithms
+            description: This is about searching and sorting.
+            img: /path/to/searching-sorting/img
+        -
+            title: Recursion Backtrack Approach
+            slug: recursion-backtrack-approach
+            description: This is about time recursion-backtrack-approach.
+            img: /path/to/recursion-backtrack-approach/img
+        -
+            title: Greedy Approach
+            slug: greedy-approach
+            description: This is about greedy approach.
+            img: /path/to/greedy-approach/img
+        -
+            title: Dynamic Programming Approach
+            slug: dynamic-programming-approach
+            description: This is about time dynamic programming approach.
+            img: /path/to/dynamic-programming-approach/img
+        -
+            title: Divide and Conquer Approach
+            slug: divide-and-conquer-approach
+            description: This is about divide and conquer approach.
+            img: /path/to/divide-and-conquer-approach/img
+        -
+            title: Pattern Searching - String Alogrithms
+            slug: pattern-searching-string-alogrithms
+            description: This is about time pattern searching and string alogrithms.
+            img: /path/to/pattern-searching-string-alogrithms/img
+        -
+            title: Bit Algorithms
+            slug: bit-algorithms
+            description: This is about bit algorithms.
+            img: /path/to/bit-algorithms/img
+        -
+            title: Mathematical Algorithms
+            slug: mathematical-algorithms
+            description: This is about mathematical algorithms.
+            img: /path/to/mathematical-algorithms/img
+        -
+            title: Geometric Algorithms
+            slug: geometric-algorithms
+            description: This is about geometricalgorithms.
+            img: /path/to/geometric-algorithms/img
+        -
+            title: Randomized Algorithms
+            slug: randomized-algorithms
+            description: This is about randomized algorithms.
+            img: /path/to/randomized-algorithms/img
+        -
+            title: Branch and Bound Approach
+            slug: branch-and-bound-approach
+            description: This is about branch-and-bound-approach.
+            img: /path/to/branch-and-bound-approach/img
+        -
+            title: Miscellaneous Algorithmic Problems
+            slug: miscellaneous
+            description: This is about time miscellaneous.
+            img: /path/to/miscellaneous/img
+
+        
+- 
+    title: Advanced Data Structures
+    slug: advanced-data-structures
+    description: This is about advanced data structures.
+    img: /path/to/advanced-data-structures/img
+    topics:
+        -
+            title: Skip List
+            slug: skip-list
+            description: This is about skip list.
+            img: /path/to/skip-list/img
+        -
+            title: Trie
+            slug: trie
+            description: This is about trie.
+            img: /path/to/trie/img
+        -
+            title: AVL Tree
+            slug: avl-tree
+            description: This is about avl tree.
+            img: /path/to/avl-tree/img
+        -
+            title: Suffix Array
+            slug: suffix-array
+            description: This is about suffix array.
+            img: /path/to/suffix-array/img
+        -
+            title: Suffix Tree
+            slug: suffix-tree
+            description: This is about suffix-tree.
+            img: /path/to/suffix-tree/img
+        -
+            title: Segment Tree
+            slug: segment-tree
+            description: This is about segment tree.
+            img: /path/to/segment-tree/img
+        -
+            title: Interval Tree
+            slug: interval-tree
+            description: This is about interval tree.
+            img: /path/to/interval-tree/img
+        -
+            title: Binary Indexed / Fenwick Tree
+            slug: binary-indexed-or-fenwick-tree
+            description: This is about binary-indexed-or-fenwick-tree.
+            img: /path/to/binary-indexed-or-fenwick-tree/img
+        -
+            title: Splay Tree
+            slug: splay-tree
+            description: This is about splay tree.
+            img: /path/to/splay-tree/img
+        -
+            title: B-Trees
+            slug: b-trees
+            description: This is about b-trees.
+            img: /path/to/b-trees/img
+        -
+            title: Red-Black Tree
+            slug: red-black-tree
+            description: This is about red-black-tree.
+            img: /path/to/red-black-tree/img
+        -
+            title: Ternary Search Tree
+            slug: ternary-search-tree
+            description: This is about ternary-search-tree.
+            img: /path/to/ternary-search-tree/img
+
+
+- 
+    title: System Design
+    slug: system-design
+    description: This is about system design.
+    img: /path/to/system-design/img
+    topics:
+        -
+            title: Basics
+            slug: basics
+            description: This is about basics.
+            img: /path/to/basics/img
+        -
+            title: Concepts - Part-1
+            slug: concepts-part-1
+            description: This is about concepts-part-1.
+            img: /path/to/concepts-part-1/img
+        -
+            title: Concepts - Part-2
+            slug: concepts-part-2
+            description: This is about concepts-part-2.
+            img: /path/to/concepts-part-2/img
+        -
+            title: Step By Step Guide
+            slug: step-by-step-guide
+            description: This is about step-by-step-guide.
+            img: /path/to/step-by-step-guide/img
+        -
+            title: Tools and Techniques
+            slug: tools-techniques
+            description: This is about tools-techniques.
+            img: /path/to/tools-techniques/img
+        -
+            title: Design Tiny Url Service
+            slug: design-tiny-url-service
+            description: This is about design-tiny-url-service.
+            img: /path/to/design-tiny-url-service/img
+        -
+            title: Design Pastebin
+            slug: design-pastebin
+            description: This is about design-pastebin.
+            img: /path/to/design-pastebin/img
+        -
+            title: Design Instagram
+            slug: design-instagram
+            description: This is about design-instagram.
+            img: /path/to/design-instagram/img
+        -
+            title: Design Dropbox
+            slug: design-dropbox
+            description: This is about design-dropbox.
+            img: /path/to/design-dropbox/img
+        -
+            title: Design Facebook Messenger
+            slug: design-facebook-messenger
+            description: This is about design-facebook-messenger.
+            img: /path/to/design-facebook-messenger/img
+        -
+            title: Design Twitter
+            slug: design-twitter
+            description: This is about design-twitter.
+            img: /path/to/design-twitter/img
+        -
+            title: Design Youtube / Netflix
+            slug: design-youtube-or-netflix
+            description: This is about design-youtube-or-netflix.
+            img: /path/to/design-youtube-or-netflix/img
+        -
+            title: Design Typeahead Suggestion
+            slug: design-typeahead-suggestion
+            description: This is about design-typeahead-suggestion.
+            img: /path/to/design-typeahead-suggestion/img
+        -
+            title: Design Api Rate Limiter
+            slug: design-api-rate-limiter
+            description: This is about design-api-rate-limiter.
+            img: /path/to/design-api-rate-limiter/img
+        -
+            title: Design Twitter Search
+            slug: design-twitter-search
+            description: This is about design-twitter-search.
+            img: /path/to/design-twitter-search/img
+        -
+            title: Design Web Crawler
+            slug: design-web-crawler
+            description: This is about design-web-crawler.
+            img: /path/to/design-web-crawler/img
+        -
+            title: design-facebook-newsfeed
+            slug: design-facebook-newsfeed
+            description: This is about design-facebook-newsfeed.
+            img: /path/to/design-facebook-newsfeed/img
+        -
+            title: Design Yelp / Nearby
+            slug: design-yelp-or-nearby
+            description: This is about design-yelp-or-nearby.
+            img: /path/to/design-yelp-or-nearby/img
+        -
+            title: Design Uber
+            slug: design-uber
+            description: This is about design-uber.
+            img: /path/to/design-uber/img
+        -
+            title: Design BookMyShow
+            slug: design-bookmyshow
+            description: This is about design-book-my-show.
+            img: /path/to/design-book-my-show/img
+
+
+- 
+    title: Software Engineering
+    slug: software-engineering
+    description: This is about software-engineering.
+    img: /path/to/software-engineering/img
+    topics:
+        -
+            title: Understanding Microservices
+            slug: understanding-microservices
+            description: This is about Understanding Microservices.
+            img: /path/to/understanding-microservices/img
+        -
+            title: Understading APIs and REST APIs
+            slug: understanding-apis-rest-apis
+            description: This is about understanding-apis-rest-apis.
+            img: /path/to/understanding-apis-rest-apis/img
+        -
+            title: MVC, MVP and MVVM Architectures
+            slug: mvc-mvp-mvvm-architectures
+            description: This is about mvc-mvp-mvvm-architectures.
+            img: /path/to/mvc-mvp-mvvm-architectures/img
+        -
+            title: Design Patterns
+            slug: design-pattterns
+            description: This is about design-pattterns.
+            img: /path/to/design-pattterns/img
+        -
+            title: S.O.L.I.D Principles
+            slug: solid-principles
+            description: This is about solid-principles.
+            img: /path/to/solid-principles/img
+        -
+            title: Dependency Injection
+            slug: dependency-injection
+            description: This is about dependency-injection.
+            img: /path/to/dependency-injection/img
+
+
+- 
+    title: Java
+    slug: java
+    description: This is about Java.
+    img: /path/to/java/img
+    topics:
+        -
+            title: Introduction
+            slug: introduction
+            description: This is about introduction.
+            img: /path/to/introduction/img
+        -
+            title: JVM Architecture
+            slug: jvm-architecture
+            description: This is about jvm-architecture.
+            img: /path/to/jvm-architecture/img
+        -
+            title: Basics
+            slug: basics
+            description: This is about basics.
+            img: /path/to/basics/img
+        -
+            title: Object Oriented Programming
+            slug: object-oriented-programming
+            description: This is about object-oriented-programming.
+            img: /path/to/object-oriented-programming/img
+        -
+            title: Arrays and Strings
+            slug: arrays-and-strings
+            description: This is about arrays-and-strings.
+            img: /path/to/arrays-and-strings/img
+        -
+            title: Collections
+            slug: collections
+            description: This is about collections.
+            img: /path/to/collections/img
+        -
+            title: Lambdas and Streams
+            slug: lambdas-and-streams
+            description: This is about lambdas-and-streams.
+            img: /path/to/lambdas-and-streams/img
+        -
+            title: Exceptions Handling
+            slug: exceptions-handling
+            description: This is about exceptions-handling.
+            img: /path/to/exceptions-handling/img
+        -
+            title: Regular Expressions
+            slug: regular-expressions
+            description: This is about regular-expressions.
+            img: /path/to/regular-expressions/img
+        -
+            title: Multi-Threading
+            slug: multi-threading
+            description: This is about multi-threading.
+            img: /path/to/multi-threading/img
+        -
+            title: File Handling
+            slug: file-handling
+            description: This is about file-handling.
+            img: /path/to/file-handling/img
+        -
+            title: Packages
+            slug: packages
+            description: This is about packages.
+            img: /path/to/packages/img
+    
+
+- 
+    title: Python
+    slug: python
+    description: This is about Python.
+    img: /path/to/python/img
+    topics:
+        -
+            title: Data Structures
+            slug: data-structures
+            description: This is about data-structures.
+            img: /path/to/data-structures/img
+        -
+            title: Object Oriented Programming
+            slug: object-oriented-programming
+            description: This is about object-oriented-programming.
+            img: /path/to/object-oriented-programming/img
+        -
+            title: Regular Expressions
+            slug: regular-expressions
+            description: This is about regular-expressions.
+            img: /path/to/regular-expressions/img
+
+
+- 
+    title: Web Frameworks
+    slug: web-frameworks
+    description: This is about web-frameworks.
+    img: /path/to/web-frameworks/img
+    topics:
+        -
+            title: Django - Python
+            slug: django-python
+            description: This is about django-python.
+            img: /path/to/django-python/img
+        -
+            title: Spring - Java
+            slug: spring-java
+            description: This is about spring-java.
+            img: /path/to/spring-java/img
+        -
+            title: Spring Boot - Java
+            slug: spring-boot-java
+            description: This is about spring-boot-java.
+            img: /path/to/spring-boot-java/img
+
+
+- 
+    title: Machine Learning
+    slug: machine-learning
+    description: This is about machine learning.
+    img: /path/to/machine-learning/img
+    topics: []
+
+
+- 
+    title: AI - Robotics
+    slug: ai-robotics
+    description: This is about AI Robotics.
+    img: /path/to/ai-robotics/img
+    topics: 
+        -
+            title: Computer Vision - OpenCV
+            slug: computer-vision-opencv
+            description: This is about computer-vision-opencv.
+            img: /path/to/computer-vision-opencv/img
+        -
+            title: Numerical Computation - Numpy
+            slug: numerical-computation-numpy
+            description: This is about numerical-computation-numpy.
+            img: /path/to/numerical-computation-numpy/img

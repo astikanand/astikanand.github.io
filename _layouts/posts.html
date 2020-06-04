@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+    <head>
+        {%  include headers.html %}
+    </head>
+
+    <body>
+        <div class="splash" >
+            <div class="main-heading">
+                {% include breadcrumb.html %}
+            </div>
+        </div>
+
+        <div class="ui container main-container">
+            <div class="container-lg px-3 my-5 markdown-body">
+                {{ content }}
+                {% include disqus_comments.html %}
+            </div>
+        </div>
+
+        {% include footer.html %}
+        
+        {% include js_scripts.html %}
+
+        {% include google_analytics.html %}
+    </body>
+</html>

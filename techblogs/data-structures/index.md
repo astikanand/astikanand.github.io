@@ -2,7 +2,3 @@
 layout: pages
 ---
 
-
-
-# Data Structures
-

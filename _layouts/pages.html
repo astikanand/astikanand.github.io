@@ -20,40 +20,35 @@
                 <br>
                 <div class="ui huge relaxed list">
                     <div class="item">
-                        <i class="list ul orange icon"></i>
+                        <i class="server orange icon"></i>
                         <div class="content">
-                            <a style="color: #F2711C; font-style: bold;" href="/">astik.me</a>
-
-                            <div class="ui small relaxed list">
+                            <a style="color: #F2711C;" href="/">astik.me</a>
+                            <div class="ui tiny relaxed list">
                                 {% for section in site.data.sections %}
-                                    <div class="item">
-                                        <i class="folder {% if section.slug == page.section %} open {% endif %} outline purple icon"></i>
+                                    <div class="item title">
+                                        <i class="folder blue icon"></i>
                                         <div class="content">
-                                            <a style="color: #a333c8; font-style: bold;" href="/{{section.slug}}">{{section.title}}</a>
-                                            {% if section.slug == page.section %}
-                                                <div class="ui small relaxed list">
+                                            <a>{{section.title}}</a>
+                                                <div class="ui relaxed list" style="display: none;">
                                                     {% for subsection in site.data[section.slug] %}
-                                                        <div class="item">
-                                                            <i class="folder {% if subsection.slug == page.subsection %} open {% endif %} outline blue icon"></i>
+                                                        <div class="item title">
+                                                            <i class="folder purple icon"></i>
                                                             <div class="content">
-                                                                <a style="color: #2185d0; font-style: bold;" href="/{{section.slug}}/{{subsection.slug}}">{{subsection.title}}</a>
-                                                                {% if subsection.slug == page.subsection %}
-                                                                    <div class="ui tiny relaxed list">
+                                                                <a>{{subsection.title}}</a>
+                                                                    <div class="ui mini relaxed list" style="display: none;">
                                                                         {% for topic in subsection['topics'] %}
                                                                         <div class="item">
-                                                                            <i class="file alternate outline gray icon"></i>
+                                                                            <i class="file alternate olive icon"></i>
                                                                             <div class="content">
-                                                                                <a style="color: #767676; font-style: bold;" href="/{{section.slug}}/{{subsection.slug}}/{{topic.slug}}">{{topic.title}}</a>
+                                                                                <a href="/{{section.slug}}/{{subsection.slug}}/{{topic.slug}}">{{topic.title}}</a>
                                                                             </div>
                                                                         </div>
                                                                         {% endfor %}
                                                                     </div>
-                                                                {% endif %}
                                                             </div>
                                                         </div>
                                                     {% endfor %}
                                                 </div>
-                                            {% endif %}
                                         </div>
                                     </div>
                                 {% endfor %}
@@ -61,7 +56,6 @@
                         </div>
                     </div>
                 </div>
-
                 <br>
                 <br>
                 {{content}}

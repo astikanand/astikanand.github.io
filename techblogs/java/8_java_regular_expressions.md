@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/java/regular-expressions
+topic: regular-expressions
+---
+
+
+
 # Regular Expressions in Java
 
 ###### What are Regular Expressions ?

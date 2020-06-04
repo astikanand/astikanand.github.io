@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/java/file-handling
+topic: file-handling
+---
+
+
+
 # File Handling in Java
 
 ###### Why File Handling is needed ?
@@ -24,3 +31,10 @@
 4. Writing to a file
 5. Moving to a specific location in a file
 6. Closing a file
+
+
+
+
+
+---
+

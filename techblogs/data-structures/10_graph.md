@@ -1727,5 +1727,5 @@ print(Solution().criticalConnections(6, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,5],[5,
 
 ------
 
-<a href="9_hash" class="prev-button">&larr; Previous:  Hashing</a>
+<a href="hash" class="prev-button">&larr; Previous:  Hash</a>
 

@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/python/object-oriented-programming
+topic: object-oriented-programming
+---
+
+
+
 # Object Oriennted Programming
 
 ###### What is Object Oriented Programming?

@@ -409,5 +409,5 @@ connect_n_ropes_min_cost([4, 3, 2, 6])
 
 ------
 
-<a href="12_branch_bound" class="prev-button">&larr; Previous: Branch and Bound</a> 
+<a href="branch-and-bound-approach" class="prev-button">&larr; Previous: Branch and Bound Approach</a> 
 

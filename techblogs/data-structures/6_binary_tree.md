@@ -1480,5 +1480,5 @@ Stack (to store the path visited while traversing Preorder array) and Set (to ma
 
 ------
 
-<a href="5_matrix" class="prev-button">&larr; Previous:  Matrix</a>      <a href="7_binary_search_tree" class="next-button">Next: Binary Serach Tree &rarr;</a>
+<a href="matrix" class="prev-button">&larr; Previous:  Matrix</a>      <a href="binary-search-tree" class="next-button">Next: Binary Serach Tree &rarr;</a>
 

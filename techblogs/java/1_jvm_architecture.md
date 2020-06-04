@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/java/jvm-architecture
+topic: jvm-architecture
+---
+
+
+
 # JVM Architecture : Working of JVM
 
 ###### What is Java Virtual Machine (JVM) ?

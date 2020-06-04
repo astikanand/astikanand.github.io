@@ -1,4 +1,10 @@
 - 
+    title: Getting started with Git and Github
+    slug: getting-started-with-git-and-github
+    description: Git is a distributed revision control and Source Code Management(SCM) system with an emphasis on speed. Git was initially designed and developed by Linus Torvalds for Linux kernel development. 
+    img: assets/getting-started-git-github.png
+
+- 
     title: Machine / Deep Learning for Biological Data Analysis
     slug: machine-or-deep-learning-for-biological-data-analysis
     description: This article describes about getting started with using Machine or Deep Learning for Bioinformatics which is a very promising field in coming days.
@@ -22,3 +28,32 @@
     description: Embedding youtube videos creates a lots of engagement to visitors on website, youtube provides a way to embed a single video or playlist videos but to embed all the videos from a channel is challenging. This article provides easy way to embed youtube channel videos, user uploaded videos and playlist videos.
     img: assets/embed-youtube-channel-videos.jpg
 
+- 
+    title: Shell / Bash Scripting
+    slug: shell-bash-scripting
+    description: This article explains about the various components associated with shell scripting and writing shell scripts to automate certain tasks. It also discusses about various types of shell available.
+    img: assets/shell-scripting.png
+
+-
+    title: Crontab - Task Scheduling
+    slug: crontab-task-scheduling
+    description: desc
+    img: assets/img.jpg
+
+-
+    title: Client  and Server Chat Application in Python
+    slug: client-server-chat-app-python
+    description: desc
+    img: assets/img.jpg
+
+-
+    title: Getting started with PostgreSQL on MAC
+    slug: getting-started-with-postgres
+    description: desc
+    img: assets/img.jpg
+
+-
+    title: Getting Started with MongoDB 
+    slug: getting-started-with-mongodb
+    description: desc
+    img: assets/img.jpg

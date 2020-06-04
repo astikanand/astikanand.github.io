@@ -466,5 +466,5 @@ T(n) = Θ(√n) */
 
 ------
 
-<a href="2_searching_sorting" class="next-button">Next: Searching and Sorting &rarr;</a>
+<a href="searching-sorting-algorithms" class="next-button">Next: Searching and Sorting Algorithms&rarr;</a>
 

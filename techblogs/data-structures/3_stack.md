@@ -580,5 +580,5 @@ Desgin a stack which supports push(), pop() and getmin in O(1) time.
 
 ------
 
-<a href="2_linked_list" class="prev-button">&larr; Previous:  Linked List</a>            <a href="4_queue" class="next-button">Next: Queue &rarr;</a> 
+<a href="linked-list" class="prev-button">&larr; Previous:  Linked List</a>            <a href="queue" class="next-button">Next: Queue &rarr;</a> 
 

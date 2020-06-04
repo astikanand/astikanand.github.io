@@ -1,24 +1,30 @@
 - 
-    title: My Resume
+    title: Myself
+    slug: myself
+    description: Depiction of my education, work experience and technical abilities.
+    img: /path/to/myself/img
+
+- 
+    title: Resume
     slug: my-resume
     description: Depiction of my education, work experience and technical abilities.
-    img: /path/to/ds/img
+    img: /path/to/my-resume/img
 
--
-    title: My Bio Data
-    slug: my-bio-data
-    description: Depiction of my current in-short personal and professional details.
-    img: /path/to/algo/img
+# -
+#     title: My Bio Data
+#     slug: my-bio-data
+#     description: Depiction of my current in-short personal and professional details.
+#     img: /path/to/algo/img
 
--
-    title: My Life Through Pics
-    slug: my-life-through-pics
-    description: Chronological depiction of my life through pictures.
-    img: /path/to/algo/img
+# -
+#     title: My Life Through Pics
+#     slug: my-life-through-pics
+#     description: Chronological depiction of my life through pictures.
+#     img: /path/to/algo/img
 
--
-    title: My Family
-    slug: my-family
-    description: In-short description of my family and its members.
-    img: /path/to/algo/img
+# -
+#     title: My Family
+#     slug: my-family
+#     description: In-short description of my family and its members.
+#     img: /path/to/algo/img
 

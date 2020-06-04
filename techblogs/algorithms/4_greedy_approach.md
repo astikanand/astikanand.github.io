@@ -422,5 +422,7 @@ generate_huffman_code(chars, frequencies)
 
 ------
 
-<a href="3_recursion_backtracking" class="prev-button">&larr; Previous: Recursion and Backtrcking</a>     <a href="5_dynamic_programming" class="next-button">Next: Dynamic Programming &rarr;</a>
+<a href="recursion-backtrack-approach" class="prev-button">&larr; Previous: Recursion and Backtrack Approach</a>     
+
+<a href="dynamic-programming-approach" class="next-button">Next: Dynamic Programming Approach &rarr;</a>
 

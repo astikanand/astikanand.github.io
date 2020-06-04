@@ -1,4 +1,11 @@
-# MongoDB 
+---
+permalink: articles/getting-started-with-mongodb
+topic: getting-started-with-mongodb
+---
+
+
+
+# Getting Started with MongoDB 
 
 MongoDB is a very popular NoSQL database.
 

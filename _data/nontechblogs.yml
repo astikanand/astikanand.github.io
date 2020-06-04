@@ -1,35 +1,185 @@
 - 
-    title: data-structures
-    slug: techblogs/data-structures
-    description: This is about data structures.
-    img: /path/to/ds/img
+    title: History
+    slug: history
+    description: desc.
+    img: assets/img
     topics:
         -
-            title: array
-            slug: techblogs/data-structures/array
-            description: This is about array.
-            img: /path/to/array/img
+            title: Ancient History
+            slug: ancient-history
+            description: desc.
+            img: assets/img
+            subtopics:
+                -
+                    title: Periodic Ancient History
+                    slug: periodic-ancient-history
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Stone Age
+                    slug: stone-age
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Agricultural Pastoral Megalithic
+                    slug: agricultural-pastoral-megalithic
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Harappan Civilization
+                    slug: harappan-civilization
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Vedic Age
+                    slug: vedic-age
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Religion and Philosophies
+                    slug: religion-philosophies
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Land
+                    slug: land
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Coins
+                    slug: coins
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Social Life
+                    slug: social-life
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Politico-Admin Life
+                    slug: politico-admin-life
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Economic Life
+                    slug: economic-life
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Foreign Contacts
+                    slug: foreign-contacts
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Literary Sources
+                    slug: literary-sources
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Culture
+                    slug: culture
+                    description: desc.
+                    img: assets/img
+                -
+                    title: Maps
+                    slug: maps
+                    description: desc.
+                    img: assets/img
+
         -
-            title: stack
-            slug: techblogs/data-structures/stack
-            description: This is about stack.
-            img: /path/to/stack/img
+            title: Medieval History
+            slug: medieval-history
+            description: desc.
+            img: assets/img
+            subtopics: []
+
+        -
+            title: Modern History
+            slug: modern-history
+            description: desc.
+            img: assets/img
+            subtopics: []
+        -
+            title: After Independence History
+            slug: after-independence-history
+            description: desc.
+            img: assets/img
+            subtopics: []
+
 
 -
-    title: algorithms
-    slug: techblogs/algorithms
-    description: This is about algorithms.
-    img: /path/to/algo/img
+    title: Geography
+    slug: geography
+    description: desc.
+    img: assets/img
     topics:
         -
-            title: time-complexity
-            slug: techblogs/algorithms/time-complexity
-            description: This is about time complexity.
-            img: /path/to/array/time-complexity
+            title: Physical Geography
+            slug: physical-geography
+            description: desc.
+            img: assets/img
+            subtopics: []
         -
-            title: searching-sorting
-            slug: techblogs/algorithms/searching-sorting
-            description: This is about searching and sorting.
-            img: /path/to/searching-sorting/img
+            title: Human Geography
+            slug: human-geography
+            description: desc.
+            img: assets/img
+            subtopics: []
+        -
+            title: Economic Geography
+            slug: modern-history
+            description: desc.
+            img: assets/img
+            subtopics: []
+        -
+            title: Indian Geography
+            slug: after-independence-history
+            description: desc.
+            img: assets/img
+            subtopics: []
+
+-
+    title: Economics
+    slug: economics
+    description: desc.
+    img: assets/img
+    topics:
+        -
+            title: Micro Economics
+            slug: economics/micro-economics
+            description: desc.
+            img: assets/img
+            subtopics: []
+        -
+            title: Macro Economics
+            slug: economics/macro-economics
+            description: desc.
+            img: assets/img
+            subtopics: []
+        -
+            title: Money and Banking
+            slug: economics/money-banking
+            description: desc.
+            img: assets/img
+            subtopics: []
+        -
+            title: Public Finance
+            slug: economics/public-finance
+            description: desc.
+            img: assets/img
+            subtopics: []
+        -
+            title: International Economics
+            slug: economics/international-economics
+            description: desc.
+            img: assets/img
+            subtopics: []
+        -
+            title: Growth and Development
+            slug: economics/growth-development
+            description: desc.
+            img: assets/img
+            subtopics: []
+
 
 

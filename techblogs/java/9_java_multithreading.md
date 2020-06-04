@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/java/multi-threading
+topic: multi-threading
+---
+
+
+
 # Multi-threading in Java
 
 ##### Multi-tasking

@@ -1,4 +1,11 @@
-# Regex in Python
+---
+permalink: /techblogs/python/regular-expressions
+topic: regular-expressions
+---
+
+
+
+# Regular Expressions in Python
 
 ### Introduction
 

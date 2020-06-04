@@ -125,5 +125,7 @@ Randomized algorithms are classified in two categories:
 
 ------
 
-<a href="10_geometric_algorithms" class="prev-button">&larr; Previous: Geometric Algorithms</a>     <a href="12_branch_bound" class="next-button">Next: Branch and Bound &rarr;</a>
+<a href="geometric-algorithms" class="prev-button">&larr; Previous: Geometric Algorithms</a>    
+
+ <a href="branch-and-bound-approach" class="next-button">Next: Branch and Bound Approach &rarr;</a>
 

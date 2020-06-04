@@ -325,5 +325,5 @@ find_k_smallest([1, 23, 12, 9, 30, 2, 50], 2)
 
 ------
 
-<a href="7_binary_search_tree" class="prev-button">&larr; Previous:  Binary Serach Tree</a>        <a href="9_hash" class="next-button">Next: Hashing &rarr;</a>
+<a href="binary-search-tree" class="prev-button">&larr; Previous:  Binary Serach Tree</a>        <a href="hash" class="next-button">Next: Hash &rarr;</a>
 

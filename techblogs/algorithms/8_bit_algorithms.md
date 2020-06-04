@@ -482,5 +482,7 @@ print_possible_subsets(A[]):
 
 ------
 
-<a href="7_pattern_searching" class="prev-button">&larr; Previous: Pattern Searching</a>       <a href="9_mathematical_algorithms" class="next-button">Next: Mathematical Algorithms &rarr;</a>
+<a href="pattern-searching-string-alogrithms" class="prev-button">&larr; Previous: Pattern Searching - String Algorithms</a>       
+
+<a href="mathematical-algorithms" class="next-button">Next: Mathematical Algorithms &rarr;</a>
 

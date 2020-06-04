@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/java/basics
+topic: basics
+---
+
+
+
 # Java Basics
 
 - Java is one of the most popular and widely used programming language and platform. 

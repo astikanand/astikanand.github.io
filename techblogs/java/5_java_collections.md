@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/java/collections
+topic: collections
+---
+
+
+
 # Collections in Java
 
 ###### What are Java Collections ?

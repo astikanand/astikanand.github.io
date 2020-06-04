@@ -638,5 +638,5 @@ print(generate_1_to_n_binary_using_queue(10))
 
 ------
 
-<a href="3_stack" class="prev-button">&larr; Previous:  Stack</a>        <a href="5_matrix" class="next-button">Next: Matrix &rarr;</a>
+<a href="stack" class="prev-button">&larr; Previous:  Stack</a>        <a href="matrix" class="next-button">Next: Matrix &rarr;</a>
 

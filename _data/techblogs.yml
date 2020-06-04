@@ -123,7 +123,7 @@
             description: This is about branch-and-bound-approach.
             img: /path/to/branch-and-bound-approach/img
         -
-            title: Miscellaneous
+            title: Miscellaneous Algorithmic Problems
             slug: miscellaneous
             description: This is about time miscellaneous.
             img: /path/to/miscellaneous/img
@@ -146,7 +146,7 @@
             description: This is about trie.
             img: /path/to/trie/img
         -
-            title: avl-tree
+            title: AVL Tree
             slug: avl-tree
             description: This is about avl tree.
             img: /path/to/avl-tree/img
@@ -166,17 +166,17 @@
             description: This is about segment tree.
             img: /path/to/segment-tree/img
         -
-            title: interval tree
+            title: Interval Tree
             slug: interval-tree
             description: This is about interval tree.
             img: /path/to/interval-tree/img
         -
-            title: binary-indexed-or-fenwick-tree
+            title: Binary Indexed / Fenwick Tree
             slug: binary-indexed-or-fenwick-tree
             description: This is about binary-indexed-or-fenwick-tree.
             img: /path/to/binary-indexed-or-fenwick-tree/img
         -
-            title: splay-tree
+            title: Splay Tree
             slug: splay-tree
             description: This is about splay tree.
             img: /path/to/splay-tree/img
@@ -269,7 +269,7 @@
             description: This is about design-typeahead-suggestion.
             img: /path/to/design-typeahead-suggestion/img
         -
-            title: design-api-rate-limiter
+            title: Design Api Rate Limiter
             slug: design-api-rate-limiter
             description: This is about design-api-rate-limiter.
             img: /path/to/design-api-rate-limiter/img
@@ -300,6 +300,184 @@
             img: /path/to/design-uber/img
         -
             title: Design BookMyShow
-            slug: design-book-my-show
+            slug: design-bookmyshow
             description: This is about design-book-my-show.
             img: /path/to/design-book-my-show/img
+
+
+- 
+    title: Software Engineering
+    slug: software-engineering
+    description: This is about software-engineering.
+    img: /path/to/software-engineering/img
+    topics:
+        -
+            title: Understanding Microservices
+            slug: understanding-microservices
+            description: This is about Understanding Microservices.
+            img: /path/to/understanding-microservices/img
+        -
+            title: Understading APIs and REST APIs
+            slug: understanding-apis-rest-apis
+            description: This is about understanding-apis-rest-apis.
+            img: /path/to/understanding-apis-rest-apis/img
+        -
+            title: MVC, MVP and MVVM Architectures
+            slug: mvc-mvp-mvvm-architectures
+            description: This is about mvc-mvp-mvvm-architectures.
+            img: /path/to/mvc-mvp-mvvm-architectures/img
+        -
+            title: Design Patterns
+            slug: design-pattterns
+            description: This is about design-pattterns.
+            img: /path/to/design-pattterns/img
+        -
+            title: S.O.L.I.D Principles
+            slug: solid-principles
+            description: This is about solid-principles.
+            img: /path/to/solid-principles/img
+        -
+            title: Dependency Injection
+            slug: dependency-injection
+            description: This is about dependency-injection.
+            img: /path/to/dependency-injection/img
+
+
+- 
+    title: Java
+    slug: java
+    description: This is about Java.
+    img: /path/to/java/img
+    topics:
+        -
+            title: Introduction
+            slug: introduction
+            description: This is about introduction.
+            img: /path/to/introduction/img
+        -
+            title: JVM Architecture
+            slug: jvm-architecture
+            description: This is about jvm-architecture.
+            img: /path/to/jvm-architecture/img
+        -
+            title: Basics
+            slug: basics
+            description: This is about basics.
+            img: /path/to/basics/img
+        -
+            title: Object Oriented Programming
+            slug: object-oriented-programming
+            description: This is about object-oriented-programming.
+            img: /path/to/object-oriented-programming/img
+        -
+            title: Arrays and Strings
+            slug: arrays-and-strings
+            description: This is about arrays-and-strings.
+            img: /path/to/arrays-and-strings/img
+        -
+            title: Collections
+            slug: collections
+            description: This is about collections.
+            img: /path/to/collections/img
+        -
+            title: Lambdas and Streams
+            slug: lambdas-and-streams
+            description: This is about lambdas-and-streams.
+            img: /path/to/lambdas-and-streams/img
+        -
+            title: Exceptions Handling
+            slug: exceptions-handling
+            description: This is about exceptions-handling.
+            img: /path/to/exceptions-handling/img
+        -
+            title: Regular Expressions
+            slug: regular-expressions
+            description: This is about regular-expressions.
+            img: /path/to/regular-expressions/img
+        -
+            title: Multi-Threading
+            slug: multi-threading
+            description: This is about multi-threading.
+            img: /path/to/multi-threading/img
+        -
+            title: File Handling
+            slug: file-handling
+            description: This is about file-handling.
+            img: /path/to/file-handling/img
+        -
+            title: Packages
+            slug: packages
+            description: This is about packages.
+            img: /path/to/packages/img
+    
+
+- 
+    title: Python
+    slug: python
+    description: This is about Python.
+    img: /path/to/python/img
+    topics:
+        -
+            title: Data Structures
+            slug: data-structures
+            description: This is about data-structures.
+            img: /path/to/data-structures/img
+        -
+            title: Object Oriented Programming
+            slug: object-oriented-programming
+            description: This is about object-oriented-programming.
+            img: /path/to/object-oriented-programming/img
+        -
+            title: Regular Expressions
+            slug: regular-expressions
+            description: This is about regular-expressions.
+            img: /path/to/regular-expressions/img
+
+
+- 
+    title: Web Frameworks
+    slug: web-frameworks
+    description: This is about web-frameworks.
+    img: /path/to/web-frameworks/img
+    topics:
+        -
+            title: Django - Python
+            slug: django-python
+            description: This is about django-python.
+            img: /path/to/django-python/img
+        -
+            title: Spring - Java
+            slug: spring-java
+            description: This is about spring-java.
+            img: /path/to/spring-java/img
+        -
+            title: Spring Boot - Java
+            slug: spring-boot-java
+            description: This is about spring-boot-java.
+            img: /path/to/spring-boot-java/img
+
+
+- 
+    title: Machine Learning
+    slug: machine-learning
+    description: This is about machine learning.
+    img: /path/to/machine-learning/img
+    topics: []
+
+
+- 
+    title: AI - Robotics
+    slug: ai-robotics
+    description: This is about AI Robotics.
+    img: /path/to/ai-robotics/img
+    topics: 
+        -
+            title: Computer Vision - OpenCV
+            slug: computer-vision-opencv
+            description: This is about computer-vision-opencv.
+            img: /path/to/computer-vision-opencv/img
+        -
+            title: Numerical Computation - Numpy
+            slug: numerical-computation-numpy
+            description: This is about numerical-computation-numpy.
+            img: /path/to/numerical-computation-numpy/img

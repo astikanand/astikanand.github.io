@@ -478,5 +478,7 @@ print(heap_sort(arr))
 
 ------
 
-<a href="1_analysis_of_algorithms" class="prev-button">&larr; Previous: Analysis of Algorithms</a>   <a href="3_recursion_backtracking" class="next-button">Next: Recursion and Backtracking  &rarr;</a>
+<a href="complexity-analysis" class="prev-button">&larr; Previous: Complexity Analysis</a>   
+
+<a href="recursion-backtrack-approach" class="next-button">Next: Recursion and Backtrack Approach  &rarr;</a>
 

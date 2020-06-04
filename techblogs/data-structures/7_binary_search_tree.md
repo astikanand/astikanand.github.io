@@ -765,5 +765,5 @@ Since inorder traversal of BST is always a sorted array, the problem can be redu
 
 ------
 
-<a href="6_binary_tree" class="prev-button">&larr; Previous:  Binary Tree</a>       <a href="8_heap" class="next-button">Next: Heap &rarr;</a>
+<a href="binary-tree" class="prev-button">&larr; Previous:  Binary Tree</a>       <a href="heap" class="next-button">Next: Heap &rarr;</a>
 

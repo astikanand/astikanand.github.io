@@ -1,4 +1,11 @@
-# Client  and Server Chatting Application in Python
+---
+permalink: articles/client-server-chat-app-python
+topic: client-server-chat-app-python
+---
+
+
+
+# Client  and Server Chat Application in Python
 
 Below I am giving the complete code for both server and client. I will explain the snippets of codes later in this article.
 

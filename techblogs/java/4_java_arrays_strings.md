@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/java/arrays-and-strings
+topic: arrays-and-strings
+---
+
+
+
 # Arrays and Strings
 
 This section discussed about the the 2 major concepts in Java programming language.

@@ -697,5 +697,7 @@ print_pattern(string)
 
 ------
 
-<a href="6_divide_conquer" class="prev-button">&larr; Previous: Divide and Conquer</a>   <a href="8_bit_algorithms" class="next-button">Next: Bit Algorithms &rarr;</a>
+<a href="divide-and-conquer-approach" class="prev-button">&larr; Previous: Divide and Conquer Approach</a>   
+
+<a href="bit-algorithms" class="next-button">Next: Bit Algorithms &rarr;</a>
 

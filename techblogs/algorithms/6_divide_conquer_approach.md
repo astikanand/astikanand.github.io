@@ -357,5 +357,7 @@ print(count_inv(arr)[0])
 
 ------
 
-<a href="5_dynamic_programming" class="prev-button">&larr; Previous: Dynamic Programming</a>    <a href="7_pattern_searching" class="next-button">Next: Pattern Searching &rarr;</a>
+<a href="dynamic-programming-approach" class="prev-button">&larr; Previous: Dynamic Programming Approach</a>    
+
+<a href="pattern-searching-string-alogrithms" class="next-button">Next: Pattern Searching - String Algorithms &rarr;</a>
 

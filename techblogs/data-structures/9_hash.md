@@ -275,5 +275,5 @@ print_vertical_order(root)
 
 ------
 
-<a href="8_heap" class="prev-button">&larr; Previous:  Heap</a>          <a href="10_graph" class="next-button">Next: Graph &rarr;</a>
+<a href="heap" class="prev-button">&larr; Previous:  Heap</a>          <a href="graph" class="next-button">Next: Graph &rarr;</a>
 

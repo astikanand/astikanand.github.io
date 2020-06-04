@@ -133,5 +133,7 @@ Find out the maximum value subset of val[] such that sum of the weights of this 
 
 ------
 
-<a href="11_randomized_algorithms" class="prev-button">&larr; Previous: Randomized Algorithms</a>     <a href="13_miscellaneous" class="next-button">Next: Miscellaneous Algorithmic Problems &rarr;</a>
+<a href="randomized-algorithms" class="prev-button">&larr; Previous: Randomized Algorithms</a>     
+
+<a href="miscellaneous" class="next-button">Next: Miscellaneous Algorithmic Problems &rarr;</a>
 

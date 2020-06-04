@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/python/data-structures
+topic: data-structures
+---
+
+
+
 # Python Data Structures
 
 There are different types of data structures available in python which can be broadly categorised into 3 categories:

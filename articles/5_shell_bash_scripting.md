@@ -1,3 +1,10 @@
+---
+permalink: articles/shell-bash-scripting
+topic: shell-bash-scripting
+---
+
+
+
 # Shell / Bash Scripting
 
 ###### Shell Interaction
@@ -472,7 +479,7 @@ function jump(){
 For now we cannot execute our shell script because it do not have permissions. We have to make it executable by provinding execute permissions by typing following command.
 
     $ chmod u+x path/to/our/file/jump.sh
-    
+
 
 
 > Now to make this available on every terminal session, we have to put this in `.bashrc` file.
@@ -481,14 +488,14 @@ For now we cannot execute our shell script because it do not have permissions. W
 Now open terminal and type following command to make `jump` available as command in terminal.
 
     $ echo "source path/to/our/file/jump.sh">> ~/.bash_profile
-    
+
 
 <img src="assets/MyG4imM.png" width="75%"> 
 
 Now open you terminal and try out new `jump` functionality by typing following command.
 
     $ jump dir_name
-    
+
 
 <img src="assets/GH88U92.png" width="75%">
 

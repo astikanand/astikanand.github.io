@@ -571,5 +571,5 @@ def trap2(height):
 
 ------
 
-<a href="2_linked_list" class="next-button">Next: Linked List &rarr;</a>
+<a href="linked-list" class="next-button">Next: Linked List &rarr;</a>
 

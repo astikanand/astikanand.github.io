@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/java/packages
+topic: packages
+---
+
+
+
 # Packages in Java
 
 ###### What are Pacakges in Java ?

@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/java/lambdas-and-streams
+topic: lambdas-and-streams
+---
+
+
+
 # Lambdas and Streams in Java
 
 This section discussed about the the 2 major concepts in Java programming language.

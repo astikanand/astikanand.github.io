@@ -451,5 +451,7 @@ check_point_inside_polygon(polygon2, (8, 1))
 
 ------
 
-<a href="9_mathematical_algorithms" class="prev-button">&larr; Previous: Mathematical Algorithms</a>    <a href="11_randomized_algorithms" class="next-button">Next: Randomized Algorithms &rarr;</a>
+<a href="mathematical-algorithms" class="prev-button">&larr; Previous: Mathematical Algorithms</a>    
+
+<a href="randomized-algorithms" class="next-button">Next: Randomized Algorithms &rarr;</a>
 

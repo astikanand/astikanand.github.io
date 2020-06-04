@@ -827,5 +827,7 @@ birthday_paradox_find_n(0.999)
 
 ------
 
-<a href="8_bit_algorithms" class="prev-button">&larr; Previous: Bit Algorithms</a>       <a href="10_geometric_algorithms" class="next-button">Next: Geometric Algorithms &rarr;</a>
+<a href="bit-algorithms" class="prev-button">&larr; Previous: Bit Algorithms</a>       
+
+<a href="geometric-algorithms" class="next-button">Next: Geometric Algorithms &rarr;</a>
 

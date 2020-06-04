@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/java/object-oriented-programming
+topic: object-oriented-programming
+---
+
+
+
 # Object Oriented Programming (OOPs) in Java
 
 ###### What is OOPs in Java ?

@@ -229,5 +229,5 @@ Print all elements of matrix in sorted order.
 
 ------
 
-<a href="4_queue" class="prev-button">&larr; Previous:  Queue</a>         <a href="6_binary_tree" class="next-button">Next: Binary Tree &rarr;</a>
+<a href="queue" class="prev-button">&larr; Previous:  Queue</a>         <a href="binary-tree" class="next-button">Next: Binary Tree &rarr;</a>
 

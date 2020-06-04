@@ -899,5 +899,7 @@ print(count_tiling_ways(4))
 
 ------
 
-<a href="4_greedy_algorithms" class="prev-button">&larr; Previous: Greedy Algorithms</a>      <a href="6_divide_conquer" class="next-button">Next: Divide and Conquer &rarr;</a>
+<a href="greedy-approach" class="prev-button">&larr; Previous: Greedy Approach</a>      
+
+<a href="divide-and-conquer-approach" class="next-button">Next: Divide and Conquer Approach &rarr;</a>
 

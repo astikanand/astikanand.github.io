@@ -1,3 +1,10 @@
+---
+permalink: articles/getting-started-with-postgres
+topic: getting-started-with-postgres
+---
+
+
+
 # Getting started with PostgreSQL on MAC
 
 #### Step-1: Installation

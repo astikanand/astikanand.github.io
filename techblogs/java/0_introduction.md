@@ -1,4 +1,11 @@
-# Java : Basics & Introduction
+---
+permalink: /techblogs/java/introduction
+topic: introduction
+---
+
+
+
+# Java : Introduction
 
 ###### 4 Stages of Becoming a Programmer
 

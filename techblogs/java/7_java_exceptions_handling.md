@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/java/exceptions-handling
+topic: exceptions-handling
+---
+
+
+
 # Exceptions Handling in Java
 
 ###### What is an exception in Java ?

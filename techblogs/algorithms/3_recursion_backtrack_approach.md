@@ -681,5 +681,7 @@ tower_of_hanoi(4, "A", "B", "C")
 
 ------
 
-<a href="2_searching_sorting" class="prev-button">&larr; Previous: Searching and Sorting</a>    <a href="4_greedy_algorithms" class="next-button">Next: Greedy Algorithms &rarr;</a>
+<a href="searching-sorting-algorithms" class="prev-button">&larr; Previous: Searching and Sorting Algorithms</a>    
+
+<a href="greedy-approach" class="next-button">Next: Greedy Approach &rarr;</a>
 

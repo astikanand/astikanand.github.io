@@ -8,11 +8,13 @@ $(document).ready(function(){
         var $children =  $(this).parent().children(".title");
         $children.each(function () {
             $(this).children("i:first").removeClass("open");
-            $(this).children("div:first").children("div:first").css("display", "none");
+            $(this).children("div:first").children("div:first").removeClass("visible");
+            $(this).children("div:first").children("div:first").addClass("hidden");
         });
         if(!$opened){
             $(this).children("i:first").addClass("open");
-            $(this).children("div:first").children("div:first").css("display", "block");
+            $(this).children("div:first").children("div:first").removeClass("hidden");
+            $(this).children("div:first").children("div:first").addClass("visible");
         }
         e.stopPropagation();
     });

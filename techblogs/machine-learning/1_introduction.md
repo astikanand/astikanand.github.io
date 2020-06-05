@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/machine-learning/introduction
+topic: introduction
+---
+
+
+
 # Introduction to Machine Learning
 
 Machine learning is the science of getting computers the ability to learn, without being explicitly programmed.
@@ -157,7 +164,7 @@ _Samuel’s claim to fame was that back in the 1950’s, he wrote a checkers pla
 
 ------
 
-<a href="0_prerequisites_and_setup" class="prev-button">&larr; Previous: Pre-requisites, Setup, Resources</a> 
+<a href="setup-and-resources" class="prev-button">&larr; Previous: Setup and Resources</a> 
 
-<a href="2_linear_regression_with_one_variable" class="next-button">Next: Linear Regression with One Variable &rarr;</a>
+<a href="linear-regression-one-variable" class="next-button">Next: Linear Regression with One Variable &rarr;</a>
 

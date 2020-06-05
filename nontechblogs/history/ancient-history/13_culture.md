@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/culture
+subsection: history
+topic: ancient-history
+subtopic: culture
+---
+
+
+
 # Culture
 
 ### Indus Valley Civilization
@@ -739,7 +748,7 @@
 
 ---
 
-<a href="12_literary_sources" class="prev-button">← Previous: Literary Sources</a>          
+<a href="literary-sources" class="prev-button">← Previous: Literary Sources</a>          
 
-<a href="14_map_work" class="next-button">Next: Map Work →</a>
+<a href="maps" class="next-button">Next: Map Work →</a>
 

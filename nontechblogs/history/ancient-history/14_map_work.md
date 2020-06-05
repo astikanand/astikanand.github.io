@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/maps
+subsection: history
+topic: ancient-history
+subtopic: maps
+---
+
+
+
 # Map Work
 
 
@@ -16,5 +25,5 @@
 
 ---
 
-<a href="13_culture" class="prev-button">← Previous: Culture</a>
+<a href="culture" class="prev-button">← Previous: Culture</a>
 

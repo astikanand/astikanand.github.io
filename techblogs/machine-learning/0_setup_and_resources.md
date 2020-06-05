@@ -1,6 +1,13 @@
-# Pre-requistes, Setup, Installlation
+---
+permalink: /techblogs/machine-learning/setup-and-resources
+topic: setup-and-resources
+---
 
-## Installation:
+
+
+# Setup and Resources
+
+### Installation:
 
 1. Mac OS X only let us install applications only from the Mac App Store. We may need to configure it to allow the Octave installer. Visit System Preferences, click Security & Privacy, and check the setting to allow apps downloaded from Anywhere.
 2. Download [the Octave 3.8.0 installer](http://sourceforge.net/projects/octave/files/Octave MacOSX Binary/2013-12-30 binary installer of Octave 3.8.0 for OSX 10.9.1 (beta)/GNU_Octave_3.8.0-6.dmg/download) or the latest version that isn't 4.0.0. The file is large so this may take some time.
@@ -17,7 +24,7 @@
 
 
 
-## Resources
+### Resources
 
 #### Octave Resources
 
@@ -90,7 +97,9 @@ These short tutorial videos introduce MATLAB and cover various programming topic
 
 
 
-## Matlab Online
+
+
+### Matlab Online
 
 - Refer the link https://www.coursera.org/learn/machine-learning/supplement/rANSM/access-matlab-online-and-upload-the-exercise-files.
 
@@ -100,7 +109,7 @@ These short tutorial videos introduce MATLAB and cover various programming topic
 
 ------
 
-<a href="1_introduction" class="next-button">Next: Introduction to Machine Learning &rarr;</a>
+<a href="introduction" class="next-button">Next: Introduction to Machine Learning &rarr;</a>
 
 
 

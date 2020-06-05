@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/machine-learning/octave-matlab-tutorial
+topic: octave-matlab-tutorial
+---
+
+
+
 # Octave/Matlab Tutorial
 
 ### Basic Operations
@@ -267,7 +274,7 @@ costFunctionJ(X, y, theta)
 
 ------
 
-<a href="4_linear_regression_with_multiple_variables" class="prev-button">&larr; Previous: Linear Regression with multiple variables</a> 
+<a href="linear-regression-multiple-variables" class="prev-button">&larr; Previous: Linear Regression with multiple variables</a> 
 
-<a href="6_logistic_regression" class="next-button">Next: Logistic Regression &rarr;</a>
+<a href="logistic-regression" class="next-button">Next: Logistic Regression &rarr;</a>
 

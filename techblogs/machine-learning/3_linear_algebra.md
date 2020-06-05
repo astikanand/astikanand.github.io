@@ -1,3 +1,8 @@
+---
+permalink: /techblogs/machine-learning/linear-algebra
+topic: linear-algebra
+---
+
 
 
 # Linear Algebra
@@ -228,7 +233,7 @@ A_invA = inv(A)*A
 
 ------
 
-<a href="2_linear_regression_with_one_variable" class="prev-button">&larr; Previous: Linear Regression with One Variable</a> 
+<a href="linear-regression-one-variable" class="prev-button">&larr; Previous: Linear Regression with One Variable</a> 
 
-<a href="4_linear_regression_with_multiple_variables" class="next-button">Next: Linear Regression with multiple variables &rarr;</a>
+<a href="linear-regression-multiple-variables" class="next-button">Next: Linear Regression with multiple variables &rarr;</a>
 

@@ -462,7 +462,52 @@
     slug: machine-learning
     description: This is about machine learning.
     img: /path/to/machine-learning/img
-    topics: []
+    topics: 
+        -
+            title: Setup and Resources
+            slug: setup-and-resources
+            description: This is about setup-and-resources.
+            img: /path/to/setup-and-resources/img
+        -
+            title: Introduction
+            slug: introduction
+            description: This is about introduction.
+            img: /path/to/introduction/img
+        -
+            title: Linear Regression with One Variable
+            slug: linear-regression-one-variable
+            description: This is about linear-regression-one-variable.
+            img: /path/to/linear-regression-one-variable/img
+        -
+            title: Linear Algebra
+            slug: linear-algebra
+            description: This is about linear-algebra.
+            img: /path/to/linear-algebra/img
+        -
+            title: Linear Regression with Multiple Variables
+            slug: linear-regression-multiple-variables
+            description: This is about linear-regression-multiple-variables.
+            img: /path/to/linear-regression-multiple-variables/img
+        -
+            title: Octave / Matlab Tutorial
+            slug: octave-matlab-tutorial
+            description: This is about octave-matlab-tutorial.
+            img: /path/to/octave-matlab-tutorial/img
+        -
+            title: Logistic Regression
+            slug: Logistic Regression
+            description: This is about logistic-regression.
+            img: /path/to/logistic-regression/img
+        -
+            title: Regularization
+            slug: regularization
+            description: This is about regularization.
+            img: /path/to/regularization/img
+        -
+            title: Neural Networks
+            slug: neural-networks
+            description: This is about neural-networks.
+            img: /path/to/neural-networks/img
 
 
 - 

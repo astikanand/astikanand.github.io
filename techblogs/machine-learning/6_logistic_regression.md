@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/machine-learning/logistic-regression
+topic: logistic-regression
+---
+
+
+
 # Logistic Regression
 
 - Logistic regression is a method for classifying data into discrete outcomes.
@@ -105,7 +112,7 @@ Now we will approach the classification of data when we have more than two categ
 
 ------
 
-<a href="5_octave_matlab_tutorial" class="prev-button">&larr; Previous: Octave/Matlab Tutorial</a> 
+<a href="octave-matlab-tutorial" class="prev-button">&larr; Previous: Octave/Matlab Tutorial</a> 
 
-<a href="7_regularization" class="next-button">Next: Regularization &rarr;</a>
+<a href="regularization" class="next-button">Next: Regularization &rarr;</a>
 

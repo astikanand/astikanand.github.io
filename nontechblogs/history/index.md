@@ -1,4 +1,5 @@
-# History
-
-##### [Ancient History](1_ancient_history)
+---
+layout: pages
+subsection: history
+---
 

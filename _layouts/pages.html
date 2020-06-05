@@ -42,12 +42,12 @@
                                                         {% for topic in subsection.topics %}
                                                         <div class="item title">
                                                             {% if topic.subtopics %}
-                                                            <i class="folder teal icon {% if subsection.slug == page.subsection%} open {% endif %}"></i>
+                                                            <i class="folder teal icon {% if topic.slug == page.topic%} open {% endif %}"></i>
                                                             <div class="content">
                                                                 <a>{{topic.title}}</a>
-                                                                <div class="ui relaxed list transition {% if subsection.slug == page.subsection%} visible {% else %} hidden {% endif %}">
+                                                                <div class="ui relaxed list transition {% if topic.slug == page.topic%} visible {% else %} hidden {% endif %}">
                                                                     {% for subtopic in topic.subtopics %}
-                                                                    <div class="item">
+                                                                    <div class="item title">
                                                                         <i class="file alternate olive icon"></i>
                                                                         <div class="content">
                                                                             <a href="/{{section.slug}}/{{subsection.slug}}/{{topic.slug}}/{{subtopic.slug}}">{{subtopic.title}}</a>

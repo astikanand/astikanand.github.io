@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/machine-learning/linear-regression-multiple-variables
+topic: linear-regression-multiple-variables
+---
+
+
+
 # Linear Regression with multiple variables
 
 ## Multivariate Linear Regression
@@ -139,9 +146,9 @@ Let’s discuss a second way of doing so, this time performing the minimization 
 
 ------
 
-<a href="3_linear_algebra" class="prev-button">&larr; Previous: Linear Algebra</a> 
+<a href="linear-algebra" class="prev-button">&larr; Previous: Linear Algebra</a> 
 
-<a href="5_octave_matlab_tutorial" class="next-button">Next: Octave/Matlab Tutorial &rarr;</a>
+<a href="octave-matlab-tutorial" class="next-button">Next: Octave/Matlab Tutorial &rarr;</a>
 
 
 

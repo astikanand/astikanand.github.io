@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/machine-learning/regularization
+topic: regularization
+---
+
+
+
 # Regularization
 
 - Machine learning models need to generalize well to new examples that the model has not seen in practice.
@@ -111,9 +118,9 @@ We can regularize logistic regression in a similar way that we regularize linear
 
 ------
 
-<a href="6_logistic_regression" class="prev-button">&larr; Previous: Logistic Regression</a> 
+<a href="logistic-regression" class="prev-button">&larr; Previous: Logistic Regression</a> 
 
-<a href="8_neural_networks" class="next-button">Next: Neural Networks &rarr;</a>
+<a href="neural-networks" class="next-button">Next: Neural Networks &rarr;</a>
 
 
 

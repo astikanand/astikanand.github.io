@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/economic-life
+subsection: history
+topic: ancient-history
+subtopic: economic-life
+---
+
+
+
 # Economic Life
 
 ### Harappa Culture
@@ -335,7 +344,7 @@
 
 ---
 
-<a href="9_politico_admin_life" class="prev-button">← Previous: Politico-Admin Life</a>
+<a href="politico-admin-life" class="prev-button">← Previous: Politico-Admin Life</a>
 
-<a href="11_foreign_contacts" class="next-button">Next: Foreign Contacts →</a>
+<a href="foreign-contacts" class="next-button">Next: Foreign Contacts →</a>
 

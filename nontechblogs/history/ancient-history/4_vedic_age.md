@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/vedic-age
+subsection: history
+topic: ancient-history
+subtopic: vedic-age
+---
+
+
+
 # Vedic Age
 
 #### Expansion of Aryans into India
@@ -67,7 +76,7 @@
 
 ---
 
-<a href="3_harappan_civilization" class="prev-button">← Previous: Harappan Civilization</a>
+<a href="harappan-civilization" class="prev-button">← Previous: Harappan Civilization</a>
 
-<a href="5_religion_philosophies" class="next-button">Next: Religon Philosophies →</a>
+<a href="religion-philosophies" class="next-button">Next: Religon Philosophies →</a>
 

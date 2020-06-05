@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/machine-learning/neural-networks
+topic: neural-networks
+---
+
+
+
 # Neural Networks
 
 - Neural networks is a learning algorithm, it is a model inspired by how the brain works.
@@ -170,6 +177,10 @@ The Vectorized implementation of forward propagation allows us to compute the ac
 
 
 
+
+----
+
+<a href="regularization" class="prev-button">&larr; Previous: Regularization</a> 
 
 
 

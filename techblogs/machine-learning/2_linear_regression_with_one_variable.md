@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/machine-learning/linear-regression-one-variable
+topic: linear-regression-one-variable
+---
+
+
+
 # Linear Regression with One Variable
 
 Linear regression is the first learning algorithm, we need to see how the model looks like and more importatnly what is the overall process of supervised learning looks like.
@@ -154,9 +161,9 @@ Linear regression is the first learning algorithm, we need to see how the model 
 
 ------
 
-<a href="1_introduction" class="prev-button">&larr; Previous: Introduction to Machine Learning</a> 
+<a href="introduction" class="prev-button">&larr; Previous: Introduction to Machine Learning</a> 
 
-<a href="3_linear_algebra" class="next-button">Next: Linear Algebra &rarr;</a>
+<a href="linear-algebra" class="next-button">Next: Linear Algebra &rarr;</a>
 
 
 

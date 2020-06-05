@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/harappan-civilization
+subsection: history
+topic: ancient-history
+subtopic: harappan-civilization
+---
+
+
+
 # Harappan Civilization
 
 #### Beginning & End
@@ -26,7 +35,7 @@
 
 ---
 
-<a href="2_agricultural_pastoral_megalithic" class="prev-button">← Previous: Agricultural, Pastoral & Megalithic Cultures</a>          
+<a href="agricultural-pastoral-megalithic" class="prev-button">← Previous: Agricultural, Pastoral & Megalithic Cultures</a>          
 
-<a href="4_vedic_age" class="next-button">Next: Vedic Age →</a>
+<a href="vedic-age" class="next-button">Next: Vedic Age →</a>
 

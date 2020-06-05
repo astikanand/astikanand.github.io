@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/politico-admin-life
+subsection: history
+topic: ancient-history
+subtopic: politico-admin-life
+---
+
+
+
 # Politico-Administrative Life
 
 ### Harappan Culture
@@ -670,7 +679,7 @@ Local Administration
 
 ---
 
-<a href="8_social_life" class="prev-button">← Previous: Social Life</a>          
+<a href="social-life" class="prev-button">← Previous: Social Life</a>          
 
-<a href="10_economic_life" class="next-button">Next: Economic Life →</a>
+<a href="economic-life" class="next-button">Next: Economic Life →</a>
 

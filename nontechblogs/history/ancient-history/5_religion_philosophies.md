@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/religion-philosophies
+subsection: history
+topic: ancient-history
+subtopic: religion-philosophies
+---
+
+
+
 # Religion & Philosophy
 
 ### Jainism
@@ -480,7 +489,7 @@
 
 ---
 
-<a href="4_vedic_age" class="prev-button">← Previous: Vedic Age</a>          
+<a href="vedic-age" class="prev-button">← Previous: Vedic Age</a>          
 
-<a href="6_land" class="next-button">Next: Land →</a>
+<a href="land" class="next-button">Next: Land →</a>
 

@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/social-life
+subsection: history
+topic: ancient-history
+subtopic: social-life
+---
+
+
+
 # Social Life
 
 ### Harappa
@@ -427,7 +436,7 @@
 
 ---
 
-<a href="7_coins" class="prev-button">← Previous: Coins</a>
+<a href="coins" class="prev-button">← Previous: Coins</a>
 
-<a href="9_politico_admin_life" class="next-button">Next: Politico-Admin Life →</a>
+<a href="politico-admin-life" class="next-button">Next: Politico-Admin Life →</a>
 

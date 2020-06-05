@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/agricultural-pastoral-megalithic
+subsection: history
+topic: ancient-history
+subtopic: agricultural-pastoral-megalithic
+---
+
+
+
 # Agricultural, Pastoral & Megalithic Cultures
 
 #### Agricultural Pastoral Cultures
@@ -259,9 +268,9 @@
 
 ---
 
-<a href="1_stone_age" class="prev-button">← Previous: Stone Age</a>
+<a href="stone-age" class="prev-button">← Previous: Stone Age</a>
 
-<a href="3_harappan_civilization" class="next-button">Next: Harappan Civilization →</a>
+<a href="harappan-civilization" class="next-button">Next: Harappan Civilization →</a>
 
 
 

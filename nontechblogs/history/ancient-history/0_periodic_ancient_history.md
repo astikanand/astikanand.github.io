@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/periodic-ancient-history
+subsection: history
+topic: ancient-history
+subtopic: periodic-ancient-history
+---
+
+
+
 # Periodic Ancient History
 
 Zaman – The Period of Study 
@@ -837,7 +846,7 @@ There are multiple theories proposed by various scholars which explain the decli
 
 ----
 
-<a href="1_stone_age" class="next-button">Next: Stone Age →</a>
+<a href="stone-age" class="next-button">Next: Stone Age →</a>
 
 
 

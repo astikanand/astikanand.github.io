@@ -4,7 +4,21 @@
         <i class="right chevron icon divider"></i>
     {% endif %}
 
-    {% if page.section and page.subsection and page.topic %}
+    {% if page.section and page.subsection and page.topic and page.subtopic %}
+        <a class="section" href="/{{page.section}}"><i class="folder icon"></i>{{page.section}}</a>
+        <i class="right chevron icon divider"></i>
+        <a class="section" href="/{{page.section}}/{{page.subsection}}"><i class="folder icon"></i>{{page.subsection}}</a>
+        <i class="right chevron icon divider"></i>
+        <a class="section" href="/{{page.section}}/{{page.subsection}}/{{page.topic}}"><i class="folder icon"></i>{{page.topic}}</a>
+        <i class="right chevron icon divider"></i>
+        <span class="section"><i class="file icon"></i>{{page.subtopic}}</span>
+    {% elsif page.section and page.subsection and page.topic and page.section=="nontechblogs" %}
+        <a class="section" href="/{{page.section}}"><i class="folder icon"></i>{{page.section}}</a>
+        <i class="right chevron icon divider"></i>
+        <a class="section" href="/{{page.section}}/{{page.subsection}}"><i class="folder icon"></i>{{page.subsection}}</a>
+        <i class="right chevron icon divider"></i>
+        <span class="section"><i class="folder open disabled icon"></i>{{page.topic}}</span>
+    {% elsif page.section and page.subsection and page.topic %}
         <a class="section" href="/{{page.section}}"><i class="folder icon"></i>{{page.section}}</a>
         <i class="right chevron icon divider"></i>
         <a class="section" href="/{{page.section}}/{{page.subsection}}"><i class="folder icon"></i>{{page.subsection}}</a>

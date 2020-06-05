@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/literary-sources
+subsection: history
+topic: ancient-history
+subtopic: literary-sources
+---
+
+
+
 # Literary Sources
 
 ### Foreign Accounts
@@ -275,7 +284,7 @@
 
 ---
 
-<a href="11_foreign_contacts" class="prev-button">← Previous: Foreign Contacts</a>
+<a href="foreign-contacts" class="prev-button">← Previous: Foreign Contacts</a>
 
-<a href="13_culture" class="next-button">Next: Culture →</a>
+<a href="culture" class="next-button">Next: Culture →</a>
 

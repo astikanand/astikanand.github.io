@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/foreign-contacts
+subsection: history
+topic: ancient-history
+subtopic: foreign-contacts
+---
+
+
+
 # Foreign Contacts
 
 ### Iranian Invasion
@@ -132,7 +141,7 @@ Darius, the king of Iran penetrated Hindukush and captured Kamboja, Gandhara and
 
 ---
 
-<a href="10_economic_life" class="prev-button">← Previous: Economic Life</a>          
+<a href="economic-life" class="prev-button">← Previous: Economic Life</a>          
 
-<a href="12_literary_sources" class="next-button">Next: Literary Sources →</a>
+<a href="literary-sources" class="next-button">Next: Literary Sources →</a>
 

@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/land
+subsection: history
+topic: ancient-history
+subtopic: land
+---
+
+
+
 # Land
 
 ### System of Land Ownership
@@ -143,7 +152,7 @@ There were 4 types of land ownership.
 
 ---
 
-<a href="5_religion_philosophies" class="prev-button">← Previous: Religon Philosophies</a>
+<a href="religion-philosophies" class="prev-button">← Previous: Religon Philosophies</a>
 
-<a href="7_coins" class="next-button">Next: Coins →</a>
+<a href="coins" class="next-button">Next: Coins →</a>
 

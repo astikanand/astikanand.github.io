@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/stone-age
+subsection: history
+topic: ancient-history
+subtopic: stone-age
+---
+
+
+
 # Stone Age
 
 There are different types of stone ages:
@@ -60,6 +69,6 @@ There are different types of stone ages:
 
 ---
 
-<a href="0_periodic_ancient_history" class="prev-button">← Previous: Periodic Ancient History</a>          
+<a href="periodic-ancient-history" class="prev-button">← Previous: Periodic Ancient History</a>          
 
-<a href="2_agricultural_pastoral_megalithic" class="next-button">Next: Agricultural, Pastoral & Megalithic Cultures →</a>
+<a href="agricultural-pastoral-megalithic" class="next-button">Next: Agricultural, Pastoral & Megalithic Cultures →</a>

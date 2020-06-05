@@ -1,3 +1,12 @@
+---
+permalink: /nontechblogs/history/ancient-history/coins
+subsection: history
+topic: ancient-history
+subtopic: coins
+---
+
+
+
 # Coins
 
 ### Punched Marked Coins
@@ -160,7 +169,7 @@ They are divided into 4 series based on their weight, number and nature of punch
 
 ----
 
-<a href="6_land" class="prev-button">← Previous: Land</a>          
+<a href="land" class="prev-button">← Previous: Land</a>          
 
-<a href="8_social_life" class="next-button">Next: Social Life →</a>
+<a href="social-life" class="next-button">Next: Social Life →</a>
 

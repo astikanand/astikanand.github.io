@@ -41,15 +41,12 @@ body{
 	color: #13a5a6 !important;
 }
 
-.ui.cards > .card {
-    margin-top: 50px;
-}
+
 @media only screen and (max-width: 767px){
-    .ui.stackable.cards .card:first-child {
-        margin-top: 50px !important;
+    .ui.stackable.grid {
+        margin-left: 15px !important;
     }
 }
-
 .ui.form.container{
     max-width:410px!important;
 }

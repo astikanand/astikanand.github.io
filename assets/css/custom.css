@@ -46,6 +46,9 @@ body{
     .ui.stackable.grid {
         margin-left: 15px !important;
     }
+    img {
+        width: 100%;
+    }
 }
 .ui.form.container{
     max-width:410px!important;

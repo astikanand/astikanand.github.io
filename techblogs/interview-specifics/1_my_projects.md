@@ -1,14 +1,29 @@
 # My Projects
 
-### Jarvis Bot
+### Goldman Sachs
 
-#### Functions
+- Developed referral service with code generation, evaluation, fulfillment and stacking.
+- Developed account closure functionality for different marcus savings accounts.
+- Improved the profile service to deal with PII data.
+- Improved Middleware and UI Automations.
+
+
+
+
+
+
+
+### Cotiviti
+
+#### Jarvis Bot
+
+##### Functions
 
 - Tracks all the inbound GitHub events.
 - Makes her decision to inform appropriate persons about it.
 - Tracks the assigned issues, requested pull_requests reviews.
 
-#### Processing
+##### Processing
 
 Github Inbound Events Occurred  —> Calls the API endpoint configured in Github Web-hooks.
 
@@ -57,4 +72,12 @@ API which is an AWS API Gateway receives the Payload  —> Call the Event_Logger
   - Local
   - Prod
   - Test
+
+
+
+
+
+
+
+### Cerner
 

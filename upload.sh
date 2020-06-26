@@ -19,7 +19,7 @@ COMMIT_TIME=`date '+%A %d-%B-%Y at %I:%M %p'`
 git pull
 git add --a
 git commit -m "Last updated on $COMMIT_TIME"
-# git push
+git push
 
 ## Stop the error logging
 set +e

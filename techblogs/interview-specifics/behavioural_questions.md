@@ -226,29 +226,3 @@ Top behavioural question for the interview.
 
 
 
-
-
-
-
-
-
-Delivery Hero
-
--------------------
-
-1. In a nutshell being smart, getting things done and caring for each other, are three major attributes that we value.
-
-
-
-
-
-CTO:
-
-- Our customers are hungry and they tend  to be hungry all at the same time. 
-- Also, we are not talking about next  day or same day delivery – we are talking about delivering in 15 to 30  minutes.
-- We cannot let our hungry customer down under any circumstances.
-- Hence, we need to build real-time systems that are optimized for this  kind of instant delivery.
-- For example, you would not believe how  complicated address systems are around the world.
-- Take Saudi Arabia  where there is no such thing as a house number; or Bogota where you  describe your location based on distance from the next street crossing;  or Turkey where people like to use license plate numbers to provide  their location.
-- Our systems help matching customer location and  restaurant delivery polygons in all of these cases in an optimal way.
-- My vision is ‘zero-click food ordering’ – that means the app will be so smart that it knows when you will be  hungry before you know yourself. The app will just order the perfect  dish for you without any need for action. Then, we will have reached the ultimate convenience level.

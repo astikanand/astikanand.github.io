@@ -1,101 +1,110 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
-    <head>
-        {%  include headers.html %}
-    </head>
 
-    <body>
-        <div class="splash" >
+<head>
+    {%  include headers.html %}
+</head>
+
+<body>
+    <div class="splash"></div>
+
+    <div class="ui container main-container">
+        <div class="container-lg px-3 my-5 markdown-body">
             <div class="main-heading">
                 {% include breadcrumb.html %}
             </div>
-        </div>
-
-        <div class="ui container main-container">
-            <div class="container-lg px-3 my-5 markdown-body">
-                <h1 id="astik-anand">Astik Anand</h1>
-                <p>Passionate Geek with love for Computer Science, Artificial Intelligence, Economics, Sports and Adventures.</p>
-                <br>
-                <div class="ui huge relaxed list">
-                    <div class="item">
-                        <i class="server orange icon"></i>
-                        <div class="content">
-                            <a style="color: #F2711C;" href="/">astik.me</a>
-                            <div class="ui tiny relaxed list">
-                                {% for section in site.data.sections %}
-                                <div class="item title">
-                                    <i class="folder blue icon {% if section.slug == page.section%} open {% endif %}"></i>
-                                    <div class="content">
-                                        <a>{{section.title}}</a>
-                                        <div class="ui tiny relaxed list transition {% if section.slug == page.section%} visible {% else %} hidden {% endif %}">
+            <h1 id="astik-anand">Astik Anand</h1>
+            <p>Passionate Geek with love for Computer Science, Artificial Intelligence, Economics, Sports and
+                Adventures.</p>
+            <br>
+            <div class="ui huge relaxed list">
+                <div class="item">
+                    <i class="server orange icon"></i>
+                    <div class="content">
+                        <a style="color: #F2711C;" href="/">astik.me</a>
+                        <div class="ui tiny relaxed list">
+                            {% for section in site.data.sections %}
+                            <div class="item title">
+                                <i class="folder blue icon {% if section.slug == page.section%} open {% endif %}"></i>
+                                <div class="content">
+                                    <a>{{section.title}}</a>
+                                    <div
+                                        class="ui tiny relaxed list transition {% if section.slug == page.section%} visible {% else %} hidden {% endif %}">
 
 
-                                            {% for subsection in site.data[section.slug] %}
-                                            <div class="item title">
-                                                {% if subsection.topics %}
-                                                <i class="folder purple icon {% if subsection.slug == page.subsection%} open {% endif %}"></i>
-                                                <div class="content">
-                                                    <a>{{subsection.title}}</a>
-                                                    <div class="ui relaxed list transition {% if subsection.slug == page.subsection%} visible {% else %} hidden {% endif %}">
+                                        {% for subsection in site.data[section.slug] %}
+                                        <div class="item title">
+                                            {% if subsection.topics %}
+                                            <i
+                                                class="folder purple icon {% if subsection.slug == page.subsection%} open {% endif %}"></i>
+                                            <div class="content">
+                                                <a>{{subsection.title}}</a>
+                                                <div
+                                                    class="ui relaxed list transition {% if subsection.slug == page.subsection%} visible {% else %} hidden {% endif %}">
 
 
-                                                        {% for topic in subsection.topics %}
-                                                        <div class="item title">
-                                                            {% if topic.subtopics %}
-                                                            <i class="folder teal icon {% if topic.slug == page.topic%} open {% endif %}"></i>
-                                                            <div class="content">
-                                                                <a>{{topic.title}}</a>
-                                                                <div class="ui relaxed list transition {% if topic.slug == page.topic%} visible {% else %} hidden {% endif %}">
-                                                                    {% for subtopic in topic.subtopics %}
-                                                                    <div class="item title">
-                                                                        <i class="file alternate olive icon"></i>
-                                                                        <div class="content">
-                                                                            <a href="/{{section.slug}}/{{subsection.slug}}/{{topic.slug}}/{{subtopic.slug}}">{{subtopic.title}}</a>
-                                                                        </div>
+                                                    {% for topic in subsection.topics %}
+                                                    <div class="item title">
+                                                        {% if topic.subtopics %}
+                                                        <i
+                                                            class="folder teal icon {% if topic.slug == page.topic%} open {% endif %}"></i>
+                                                        <div class="content">
+                                                            <a>{{topic.title}}</a>
+                                                            <div
+                                                                class="ui relaxed list transition {% if topic.slug == page.topic%} visible {% else %} hidden {% endif %}">
+                                                                {% for subtopic in topic.subtopics %}
+                                                                <div class="item title">
+                                                                    <i class="file alternate olive icon"></i>
+                                                                    <div class="content">
+                                                                        <a
+                                                                            href="/{{section.slug}}/{{subsection.slug}}/{{topic.slug}}/{{subtopic.slug}}">{{subtopic.title}}</a>
                                                                     </div>
-                                                                    {% endfor %}
                                                                 </div>
+                                                                {% endfor %}
                                                             </div>
-                                                            {% else %}
-                                                            <i class="file alternate olive icon"></i>
-                                                            <div class="content">
-                                                                <a href="/{{section.slug}}/{{subsection.slug}}/{{topic.slug}}">{{topic.title}}</a>
-                                                            </div>
-                                                            {% endif %}
                                                         </div>
-                                                        {% endfor %}
-
-
+                                                        {% else %}
+                                                        <i class="file alternate olive icon"></i>
+                                                        <div class="content">
+                                                            <a
+                                                                href="/{{section.slug}}/{{subsection.slug}}/{{topic.slug}}">{{topic.title}}</a>
+                                                        </div>
+                                                        {% endif %}
                                                     </div>
+                                                    {% endfor %}
+
+
                                                 </div>
-                                                {% else %}
-                                                <i class="file alternate olive icon"></i>
-                                                <div class="content">
-                                                    <a href="/{{section.slug}}/{{subsection.slug}}">{{subsection.title}}</a>
-                                                </div>
-                                                {% endif %}
                                             </div>
-                                            {% endfor %}
-
-
+                                            {% else %}
+                                            <i class="file alternate olive icon"></i>
+                                            <div class="content">
+                                                <a href="/{{section.slug}}/{{subsection.slug}}">{{subsection.title}}</a>
+                                            </div>
+                                            {% endif %}
                                         </div>
+                                        {% endfor %}
+
+
                                     </div>
                                 </div>
-                                {% endfor %}
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
-                <br>
-                <br>
-                {{content}}
             </div>
+            <br>
+            <br>
+            {{content}}
         </div>
+    </div>
 
-        {% include footer.html %}
-        
-        {% include js_scripts_other.html %}
+    {% include footer.html %}
 
-        {% include google_analytics.html %}
-    </body>
+    {% include js_scripts_other.html %}
+
+    {% include google_analytics.html %}
+</body>
+
 </html>

@@ -11,6 +11,12 @@ Algorithms deals with Mathematical calculations and its aspects.
 
 
 
+
+
+---
+
+---
+
 ### Standard Mathematical Algorithm Problems
 
 ## 1. Lucky Numbers***

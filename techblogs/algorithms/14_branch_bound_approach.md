@@ -20,6 +20,8 @@ Branch and Bound solve these problems relatively quickly.
 
 
 
+---
+
 ------
 
 ### Standard  Branch and Bound Approach Problems

@@ -53,6 +53,10 @@ A typical Divide and Conquer algorithm solves a problem using following three st
     - For example: Binary Search is a Divide and Conquer algorithm, we never evaluate the same subproblems again.
     - On the other hand, for calculating nth Fibonacci number, Dynamic Programming should be preferred.
 
+
+
+---
+
 ------
 
 ### Standard Divide and Conquer Problems
@@ -318,38 +322,13 @@ print(count_inv(arr)[0])
 
 
 
-## 4. Strassen's Matrix Multiplication
-
-###### Problem:
 
 
 
 
+##### Problems To Do:
 
-###### Approach:
-
-
-
-
-
-###### Implementation:
-
-```python
-
-
-
-
-
-```
-
-**Output:**
-
-
-
-###### **Complexity:**
-
-- **Time:**
-- **Auxilliary Space:**
+- Strassen's Matrix Multiplication
 
 
 
@@ -359,5 +338,5 @@ print(count_inv(arr)[0])
 
 <a href="dynamic-programming-approach" class="prev-button">&larr; Previous: Dynamic Programming Approach</a>    
 
-<a href="pattern-searching-string-alogrithms" class="next-button">Next: Pattern Searching - String Algorithms &rarr;</a>
+<a href="pattern-search-alogrithms" class="next-button">Next: Pattern Search Algorithms &rarr;</a>
 

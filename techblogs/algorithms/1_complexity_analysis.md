@@ -28,6 +28,10 @@ topic: complexity-analysis
 
 - ##### Asymptotic Analysis:
 
+    - Discussed in detail below.
+
+
+
 ## 1. Asymptotic Analysis
 
 ###### **What is this Asymptotic Analysis?**
@@ -425,9 +429,15 @@ Asymptotic notations are mathematical tools to represent time complexity of algo
 
 
 
-## Examples of Algorithms Analysis:
 
-**Example-1:**
+
+---
+
+---
+
+### Complexity Analysis Problems
+
+##### Problem-1:
 
 ```c++
 void fun(){
@@ -442,7 +452,7 @@ T(n) = Θ(nlogn) */
 
 
 
-**Example-2:**
+##### Problem-2: 
 
 ```c++
 void fun(int n){
@@ -466,5 +476,5 @@ T(n) = Θ(√n) */
 
 ------
 
-<a href="searching-sorting-algorithms" class="next-button">Next: Searching and Sorting Algorithms&rarr;</a>
+<a href="searching-algorithms" class="next-button">Next: Searching Algorithms&rarr;</a>
 

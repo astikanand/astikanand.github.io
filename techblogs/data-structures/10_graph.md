@@ -148,6 +148,10 @@ Graphs are used to represent many real-life applications:
         - There may be several weights associated with each edge, including distance, travel time, or monetary cost.
         - Such weighted graphs are commonly used to **program GPS's**, and **travel-planning search engines** that compare flight times and costs. 
 
+
+
+---
+
 ------
 
 ### Standard Graph Algorithms and Problems
@@ -1628,100 +1632,11 @@ print(Solution().criticalConnections(6, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,5],[5,
 
 
 
-## 11. Order of Characters in Alien Language***
-
-###### Problem:
-
-
-
-###### Approach:
-
-
-
-###### Implementation:
-
-```python
-
-
-
-
-
-
-
-```
-
-**Output:**
-
-
-
-###### **Complexity:**
-
-- **Time:**
-- **Auxilliary Space:**
-
-
-
-## 12. Hamiltonian Cycle
-
-###### Problem:
-
-
-
-###### Approach:
-
-
-
-###### Implementation:
-
-```python
-
-
-
-
-
-
-```
-
-**Output:**
-
-
-
-###### **Complexity:**
-
-- **Time:**
-- **Auxilliary Space:**
-
-
-
-## 13. Travelling Salesman Problem (TSP)
-
-###### Problem:
-
-
-
-###### Approach:
-
-
-
-###### Implementation:
-
-```python
-
-
-
-
-
-
-```
-
-**Output:**
-
-
-
-###### **Complexity:**
-
-- **Time:**
-- **Auxilliary Space:**
+##### Problems To Do:
+
+- Order of Characters in Alien Language
+- Hamiltonian Cycle
+- Travelling Salesman Problem (TSP)
 
 
 

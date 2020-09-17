@@ -59,6 +59,8 @@ There are many other applications of hashing, including modern day cryptography 
 
 
 
+---
+
 ------
 
 ### Some Standard Hashing Problems

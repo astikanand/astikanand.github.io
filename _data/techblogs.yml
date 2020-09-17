@@ -68,10 +68,20 @@
             description: This is about complexity analysis.
             img: /path/to/complexity-analysis/img
         -
-            title: Searching and Sorting Algorithms
-            slug: searching-sorting-algorithms
-            description: This is about searching and sorting.
-            img: /path/to/searching-sorting/img
+            title: Searching Algorithms
+            slug: searching-algorithms
+            description: This is about searching alogrithms.
+            img: /path/to/searching-algorithms/img
+        -
+            title: Sorting Algorithms
+            slug: sorting-algorithms
+            description: This is about sorting alogrithms.
+            img: /path/to/sorting-algorithms/img
+        -
+            title: Selection Algorithms
+            slug: selection-algorithms
+            description: This is about selection-algorithms.
+            img: /path/to/selection-algorithms/img
         -
             title: Recursion Backtrack Approach
             slug: recursion-backtrack-approach
@@ -93,10 +103,10 @@
             description: This is about divide and conquer approach.
             img: /path/to/divide-and-conquer-approach/img
         -
-            title: Pattern Searching - String Alogrithms
-            slug: pattern-searching-string-alogrithms
-            description: This is about time pattern searching and string alogrithms.
-            img: /path/to/pattern-searching-string-alogrithms/img
+            title: Pattern Search Alogrithms
+            slug: pattern-search-alogrithms
+            description: This is about time pattern search alogrithms.
+            img: /path/to/pattern-search-alogrithms/img
         -
             title: Bit Algorithms
             slug: bit-algorithms

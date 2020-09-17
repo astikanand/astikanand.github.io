@@ -172,6 +172,8 @@ print("Is stack empty? {}".format(my_stack.is_empty()))
 
 
 
+---
+
 ------
 
 ### Standard Stack Problems

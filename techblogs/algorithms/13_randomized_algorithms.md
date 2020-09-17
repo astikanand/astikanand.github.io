@@ -14,11 +14,13 @@ An algorithm that uses random numbers to decide what to do next anywhere in its 
 - ***Randomized Quick Sort:*** Uses random number to pick the next pivot (or randomly shuffles the array).
 - ***Karger’s algorithm:*** Randomly picks an edge.
 
-## Concept of Expectation
+
+
+### Concept of Expectation
 
 A random variable can take any possible value in its range, so it is important to define the **expected value** of any random variable.
 
-### Expected Value
+#### Expected Value
 
 Expected value of a discrete random variable is R defined as following:
 
@@ -36,12 +38,14 @@ Given a fair dice with 6 faces, the dice is thrown n times, find expected value 
 
 <img src="assets/expected_value_calc.png" width="45%">
 
-##### Note:
+[Notes:]()
 
 - The above way to solve the problem becomes difficult when there are more dice throws.
 - If we know about **linearity of expectation**, then we can quickly solve the above problem for any number of throws.
 
-### Linearity of Expectation
+
+
+#### Linearity of Expectation
 
 Let R<sub>1</sub> and R<sub>2</sub> be two discrete random variables on some probability space, then expected value of R<sub>1</sub> + R<sub>2</sub> is:
 
@@ -49,19 +53,21 @@ Let R<sub>1</sub> and R<sub>2</sub> be two discrete random variables on some pro
 
 <img src="assets/linearity_of_expectation_with_example.png" width="90%">
 
-### Probability and Expectation
+#### Probability and Expectation
 
-<img src="assets/probability_and_exception.png" width="80%">
-
-
-
-## Mathematical Background
-
-<img src="assets/conditional_probability_bayes_theorem.png" width="85%">
+<img src="assets/probability_and_exception.png" width="70%">
 
 
 
-## Analyzing Randomized Algorithms
+### Mathematical Background
+
+<img src="assets/conditional_probability_bayes_theorem.png" width="75%">
+
+
+
+
+
+### Analyzing Randomized Algorithms
 
 - Some randomized algorithms have deterministic time complexity.
     - Example: Implementation of Karger’s algorithm has time complexity as O(E).
@@ -77,9 +83,7 @@ Let R<sub>1</sub> and R<sub>2</sub> be two discrete random variables on some pro
 
 
 
-
-
-## Classification of Randomized Algorithms
+### Classification of Randomized Algorithms
 
 Randomized algorithms are classified in two categories:
 
@@ -104,7 +108,7 @@ Randomized algorithms are classified in two categories:
 
 
 
-## Applications of Randomized Algorithms
+### Applications of Randomized Algorithms
 
 - Even for sorted array randomized **quick sort** gives O(nlogn) expected time.
 - Randomized algorithms have huge applications in **Cryptography**.

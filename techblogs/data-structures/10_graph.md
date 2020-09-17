@@ -53,12 +53,11 @@ topic: graph
 - The weights of edges can be stored in nodes of linked lists.
 - **Pros:**
 
-  - Saves space O(|V|+|E|) .
+  - Saves space **`O(|V|+|E|)`**.
   - In the worst case, there can be C(V, 2) number of edges in a graph thus consuming O(V<sup>2</sup>) space.
   - Adding a vertex is easier.
 - **Cons:**
-
-  - Queries like whether there is an edge from vertex u to vertex v are not efficient and can be done O(V).
+- Queries like whether there is an edge from vertex u to vertex v are not efficient and can be done O(V).
 
 ###### Implementation
 
@@ -313,9 +312,7 @@ g.bfs_traversal("A")
 
 <br>
 
-
-
->  ### Algo-2: Depth First Search (DFS)
+> ### Algo-2: Depth First Search (DFS)
 
 ###### What is DFS ?
 

@@ -25,11 +25,13 @@ Orientation of an ordered triplet of points in the plane can be:
 
 <img src="assets/orientation_formula.png" width="50%">
 
-
+<br>
 
 ---
 
 ------
+
+<br>
 
 ### Standard  Geometric Algorithm Problems
 
@@ -164,9 +166,9 @@ check_2_line_segments_intersection([(-5,-5), (0,0)], [(1,1), (10,10)])
 - **Time: O(1)**
 - **Auxilliary Space: O(1)**
 
+<br>
 
-
-
+<br>
 
 ## 2. Check if  Point lies inside triangle
 
@@ -218,7 +220,9 @@ point_lies_inside_triangle(0, 0, 10, 30, 20, 0, 15, 25)
 - **Time: O(1)**
 - **Auxilliary Space: O(1)**
 
+<br>
 
+<br>
 
 ## 3. Check if 4 Points form Square***
 
@@ -287,7 +291,9 @@ check_square((20, 10), (10, 20), (20, 20), (10, 20))
 - **Time: O(1)**
 - **Auxilliary Space: O(1)**
 
+<br>
 
+<br>
 
 ## 4. Check  if  Point  lies  inside  Polygon***
 
@@ -449,7 +455,9 @@ check_point_inside_polygon(polygon2, (8, 1))
 
 
 
+<br>
 
+<br>
 
 ------
 

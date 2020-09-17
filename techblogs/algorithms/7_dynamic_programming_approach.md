@@ -137,11 +137,13 @@ print(fib_tabulation_bottom_up(34))
 
     ![optimal_substructure](assets/optimal_substructure.gif)
 
-
+<br>
 
 ---
 
 ------
+
+<br>
 
 ### Standard Dynamic Programming Problems
 
@@ -210,7 +212,9 @@ print("Max: {} and Subarray: {}".format(max_sum, subarray))
 - **Time:** **O(n)** :- Loop runs till n 
 - **Auxilliary Space:** **O(1)** 
 
+<br>
 
+<br>
 
 ## 2. Subset Sum Problem***
 
@@ -340,7 +344,9 @@ print(is_subset_sum_dp(given_set, 6, 13))
 - **Time:** **O(sum****)** :- Loop till max_num in set 
 - **Auxilliary Space:** **O(n\*sum)** 
 
+<br>
 
+<br>
 
 ## 3. Minimum Jumps to Reach End***
 
@@ -483,7 +489,9 @@ min_jump_to_reach_end_DP(arr)
 
 There exists a O(n) solution to be discussed later.
 
+<br>
 
+<br>
 
 ## 4. Coin Change - Unique Ways***
 
@@ -598,7 +606,9 @@ print(coin_change_unique_ways_DP(coins, 10))
 - **Time:** **O(mn)** :- 2 for loops 
 - **Auxilliary Space:** **O(mn)** 
 
+<br>
 
+<br>
 
 ## 5. Coin Change - Min Coins***
 
@@ -711,7 +721,9 @@ print(coin_change_min_coins_DP(coins, 3))
 - **Time:** **O(mn)** :- 2 for loops 
 - **Auxilliary Space:** **O(mn)** 
 
+<br>
 
+<br>
 
 ## 6. Ways to reach n<sup>th</sup> stair
 
@@ -782,7 +794,9 @@ print(count_ways_to_nth_stair(4))
 >
 > **If max m stairs can be climbed at once, then this problem can be solved by MIN_COINS problem strategy.**
 
+<br>
 
+<br>
 
 ## 7. Tiling Problem
 
@@ -871,7 +885,9 @@ print(count_tiling_ways(4))
 
 
 
+<br>
 
+<br>
 
 
 
@@ -880,6 +896,10 @@ print(count_tiling_ways(4))
 ##### Problems To Do:
 
 - Edit Distance
+
+<br>
+
+<br>
 
 <br>
 

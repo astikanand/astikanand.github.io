@@ -49,11 +49,13 @@ topic: recursion-backtrack-approach
 - Sudoku
 - Graph-Coloring
 
-
+<br>
 
 ---
 
 ------
+
+<br>
 
 ### Standard Backtracking Problems
 
@@ -121,6 +123,10 @@ generate_permutations("ABCD")
 - **Auxilliary Space:** **O(1)**
 
 
+
+<br>
+
+<br>
 
 ## 2. Knight's Tour Problem***
 
@@ -230,7 +236,9 @@ knight_tour()
 - Backtracking is not the best solution for the Knight’s tour problem
 - Other better solutions: **Warnsdorff’s algorithm for Knight’s problem.**
 
+<br>
 
+<br>
 
 ## 3. N-Queen Problem***
 
@@ -354,7 +362,9 @@ n_queen()
 - **Time: O(N!)**
 - **Auxilliary Space: O(N<sup>2</sup>)**:- Need to create a board matrix of N*N. 
 
+<br>
 
+<br>
 
 ## 4. Rat in Maze***
 
@@ -439,7 +449,9 @@ rat_in_maze()
 - **Time:** Every block will have 2 directional choices (Forward & Backward). Hence 2*2*2*. . .(n times), so **2<sup>n</sup>**.
 - **Auxilliary Space: O(N<sup>2</sup>):-** Need to create a maze matrix of N*N. 
 
+<br>
 
+<br>
 
 ## 5. Subset Sum Problem
 
@@ -501,7 +513,9 @@ print(subset_sum(given_set, 53))
 - **Time:** Every number will be either picked or not picked (2choices). Hence 2*2*2*. . .(n times), so **2<sup>n</sup>**.
 - **Auxilliary Space: O(N)**
 
+<br>
 
+<br>
 
 ## 6. Sudoku***
 
@@ -632,7 +646,9 @@ else:
 - **Time:** 
 - **Auxilliary Space: O(N<sup>2</sup>)**
 
+<br>
 
+<br>
 
 ## 7. Tower of Hanoi
 
@@ -683,7 +699,9 @@ tower_of_hanoi(4, "A", "B", "C")
 
 
 
+<br>
 
+<br>
 
 ------
 

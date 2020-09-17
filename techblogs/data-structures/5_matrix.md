@@ -16,7 +16,7 @@ topic: matrix
 
 <img src="assets/matrix_example.png" width="35%">
 
-
+<br>
 
 #### Applications of Matrix
 
@@ -25,9 +25,11 @@ topic: matrix
 - Some localization algorithms also use matrix operations.
 - Matrices, and in general Linear Algebra, are the language and mathematical tools computer scientists constantly use.
 
-
+<br>
 
 ------
+
+<br>
 
 ### Standard Matrix Problems
 
@@ -106,7 +108,9 @@ search_row_column_wise_sorted_matrix(mat, 38)
 - **Time:** **O(N)** 
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 2. Print Matrix in spiral form***
 
@@ -192,6 +196,8 @@ matrix_spiral_print(mat)
 
 
 
+<br>
+
 ## 3. Print elements in sorted order in row and column wise sorted matrix
 
 ###### Problem:
@@ -227,6 +233,8 @@ Print all elements of matrix in sorted order.
 
 
 
+<br>
+
 
 
 ##### Problems To Do:
@@ -234,6 +242,8 @@ Print all elements of matrix in sorted order.
 - maximum size of square sub-matrix with sum <= K
 
 
+
+<br>
 
 ------
 

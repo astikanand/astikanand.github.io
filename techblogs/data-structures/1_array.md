@@ -26,11 +26,13 @@ topic: array
 - Many databases, small and large, consist of (or include) one-dimensional arrays whose elements are records.
 - Arrays are used to implement other data structures such as lists, heaps, hash tables, deques, queues, stacks, strings etc.
 
-
+<br>
 
 ---
 
 ------
+
+<br>
 
 ### Standard Array Problems
 
@@ -95,7 +97,9 @@ print_leaders([13, 15, 6, 7, 8, 3])
 - **Time:** **O(n)** 
 - **Auxilliary Space:** **O(1)** as leaders array can be ignored and directly printed.
 
+<br>
 
+<br>
 
 ## 2. Search in sorted and rotated array***
 
@@ -177,7 +181,9 @@ search([30, 40, 50, 10, 20], 0, 4, 10)
 - **Time:** **O(LogN)** 
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 3. Maximum sum with no two adjacent elements***
 
@@ -246,7 +252,9 @@ max_sum_with_no_adjacents([1, 20, 3])
 - **Time:** **O(n)** 
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 4. Smallest subarray with sum greater than a given value***
 
@@ -334,7 +342,9 @@ smallest_subarray_with_atleast_given_sum([1, 2, 4], 8)
 - **Time:** **O(n)** 
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 5. Longest increasing subarray
 
@@ -397,6 +407,8 @@ longest_increasing_subarray([12, 13, 1, 5, 4, 7, 8, 10, 10, 11])
 
 - **Time:** **O(n)** 
 - **Auxilliary Space:** **O(1)**
+
+<br><br>
 
 <br>
 
@@ -479,7 +491,9 @@ def trap2(height):
 - **Time: O(n)** 
 - **Auxilliary Space: O(1)** 
 
+<br>
 
+<br>
 
 
 
@@ -489,6 +503,8 @@ def trap2(height):
 - Trapping Rain Water Problem
 
 
+
+<br><br>
 
 <br>
 

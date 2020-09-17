@@ -14,7 +14,7 @@ An algorithm that uses random numbers to decide what to do next anywhere in its 
 - ***Randomized Quick Sort:*** Uses random number to pick the next pivot (or randomly shuffles the array).
 - ***Karger’s algorithm:*** Randomly picks an edge.
 
-
+<br><br>
 
 ### Concept of Expectation
 
@@ -57,13 +57,13 @@ Let R<sub>1</sub> and R<sub>2</sub> be two discrete random variables on some pro
 
 <img src="assets/probability_and_exception.png" width="70%">
 
-
+<br>
 
 ### Mathematical Background
 
 <img src="assets/conditional_probability_bayes_theorem.png" width="75%">
 
-
+<br>
 
 
 
@@ -81,7 +81,7 @@ Let R<sub>1</sub> and R<sub>2</sub> be two discrete random variables on some pro
         - Linearity of Expectation
         - Expected Number of Trials until Success.
 
-
+<br>
 
 ### Classification of Randomized Algorithms
 
@@ -106,7 +106,7 @@ Randomized algorithms are classified in two categories:
 > - The Las Vegas algorithm always finds an index of 1, but time complexity is determined as expect value. The expected number of trials before success is 2, therefore expected time complexity is O(1).
 > - The Monte Carlo Algorithm finds a 1 with probability [1 – (1/2)k]. Time complexity of Monte Carlo is O(k) which is deterministic
 
-
+<br>
 
 ### Applications of Randomized Algorithms
 
@@ -125,7 +125,9 @@ Randomized algorithms are classified in two categories:
 
 
 
+<br>
 
+<br>
 
 ------
 

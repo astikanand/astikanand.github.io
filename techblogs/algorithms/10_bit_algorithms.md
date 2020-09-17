@@ -111,11 +111,13 @@ Bitwise operators are good for saving space and sometimes to cleverly remove dep
 3. Data structure like n-bit map can be used to allocate n-size resource pool to represent the current status.
 4. Bits are used in networking, framing the packets of numerous bits which is sent to another system generally through any type of serial interface.
 
-
+<br>
 
 ---
 
 ------
+
+<br>
 
 ### Standard Bit Operations Problems
 
@@ -158,7 +160,9 @@ print(check_opposite_sign(-2, -7))
 - **Time: O(1)**
 - **Auxilliary Space: O(1)**
 
+<br>
 
+<br>
 
 ## 2. Divisible by 3
 
@@ -242,7 +246,9 @@ print(is_divisible_by_3(111))
 - **Time: O(logn)**
 - **Auxilliary Space: O(1)**
 
+<br>
 
+<br>
 
 ## 3. Multiply by 7
 
@@ -281,7 +287,9 @@ multiply_by_7(19)
 - **Time: O(1)**
 - **Space: O(1)**
 
+<br>
 
+<br>
 
 ## 4. Check power of 2***
 
@@ -322,7 +330,9 @@ check_power_of_2(x):
     return (x && !(x & (x - 1)))
 ```
 
+<br>
 
+<br>
 
 ## 5. Count  1's  in Binary Representation***
 
@@ -390,7 +400,9 @@ count_ones(n):
 
 - **Time: O(k)**
 
+<br>
 
+<br>
 
 ## 6. Check if i<sup>th</sup> bit is set***
 
@@ -430,7 +442,9 @@ check_ith_bit_set(N, i):
 >
 > Which means it’s 2nd bit is set.
 
+<br>
 
+<br>
 
 ## 7. Generate all Possible Subsets of a Set***
 
@@ -482,7 +496,9 @@ print_possible_subsets(A[]):
 
 
 
+<br>
 
+<br>
 
 ------
 

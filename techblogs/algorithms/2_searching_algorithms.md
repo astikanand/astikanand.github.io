@@ -23,6 +23,8 @@ topic: searching-algorithms
 
 <br>
 
+<br>
+
 > ### Algo-1: Binary Search***
 
 Given a sorted array arr[ ] of n elements, write a function to search a given element x in arr[ ].
@@ -78,11 +80,13 @@ print(binary_search(arr, 0, 0, 2))
 - **Time: O(logn)**
 - **Auxilliary Space: O(1)**
 
-
+<br>
 
 ---
 
 -----
+
+<br>
 
 ### Standard Searching Algorithms Problems
 
@@ -94,7 +98,9 @@ print(binary_search(arr, 0, 0, 2))
 
 
 
+<br>
 
+<br>
 
 ------
 

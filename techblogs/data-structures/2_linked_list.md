@@ -119,11 +119,13 @@ linked_list.print_list()
 - **Previous and next page in web browser –** We can access previous and next url searched in web browser by pressing back and next button since, they are linked as linked list.
 - **Music Player –** Songs in music player are linked to previous and next song. you can play songs either from starting or ending of the list.
 
-
+<br>
 
 ---
 
 ------
+
+<br>
 
 ### Standard Linked List Problems
 
@@ -258,7 +260,9 @@ linked_list.print_list()
 - **Time:** **O(1)**
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 2. Delete a node in linked list
 
@@ -370,7 +374,9 @@ linked_list.print_list()
 - **Time:** **O(n)**
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 3. Reverse a linked list
 
@@ -465,7 +471,9 @@ linked_list.print_list()
 - **Time:** **O(n)**
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 4. Merge 2 sorted linked list
 
@@ -582,7 +590,9 @@ linked_list_1.print_list()
 - **Time:** **O(n) :** Whosever size is larger 
 - **Auxilliary Space:** **O(n1+n2):** Can be very easily done in O(1) with prev_pointer for linked_list_1. 
 
+<br>
 
+<br>
 
 ## 5. Reverse linked list in a group of size***
 
@@ -701,7 +711,9 @@ linked_list.print_list()
 - **Time:** **O(n)**
 - **Auxilliary Space:** **O(K)**
 
+<br>
 
+<br>
 
 ## 6. Add 2 numbers represented by linked list
 
@@ -829,7 +841,9 @@ number_1.print_list()
 - **Time:** **O(n) :** Whosever size is larger 
 - **Auxilliary Space:** **O(n):** 
 
+<br>
 
+<br>
 
 ## 7. Detect and remove loop in linked list***
 
@@ -952,7 +966,9 @@ linked_list.detect_and_remove_loop()
 
 **Note:** The problem can also be solved in O(n) using hashing the visited node address but it will take O(N) space. 
 
+<br>
 
+<br>
 
 ## 8. Circular linked list insertion
 
@@ -1047,7 +1063,9 @@ cll.print_list()
 - **Time:** **O(1)**
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 9. Split a circular linked list in 2 halves***
 
@@ -1177,7 +1195,9 @@ second_cll.print_list()
 - **Time:** **O(n)** 
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 10. Sorted insert in circular linked list
 
@@ -1300,7 +1320,9 @@ cll.print_list()
 - **Time:** **O(n)** 
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ------
 

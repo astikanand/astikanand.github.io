@@ -98,7 +98,9 @@ print(bolts)
 - **Time:-** Average Case: **O(nlogn)** 
 - **Auxilliary Space: O(1)**
 
+<br>
 
+<br>
 
 ## 2. Flood Fill Algorithm - Implement fill() in paint***
 
@@ -185,7 +187,9 @@ for i in range(m):
 - **Time:** **O(n<sup>2</sup>)** 
 - **Auxilliary Space: O(1)**
 
+<br>
 
+<br>
 
 ## 3. Find  Conflicting  Appointments***
 
@@ -280,7 +284,9 @@ conflicting_appointments(None, appointments)
 - Time complexity of the above implementation may be more than O(nLogn) if skewed trees.
 - To avoid that we can use Red-Black Tree or AVL Tree balancing techniques.
 
+<br>
 
+<br>
 
 ## 4. Find if first string is a subsequence of second***
 
@@ -337,7 +343,9 @@ check_subsequence('mtsdet', 'meetsandmeets')
 - **Time:** **O(n)** 
 - **Auxilliary Space: O(1)**
 
+<br>
 
+<br>
 
 ## 5. Connect 'n' ropes with minimum cost***
 
@@ -408,7 +416,9 @@ connect_n_ropes_min_cost([4, 3, 2, 6])
 - **Time:** **O(nlogn)** : Extract min take O(logn) and need to do it for n times.
 - **Auxilliary Space: O(n)**
 
+<br>
 
+<br>
 
 ------
 

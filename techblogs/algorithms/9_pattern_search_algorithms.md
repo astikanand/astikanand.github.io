@@ -27,7 +27,9 @@ topic: pattern-search-alogrithms
 - Rabin-Karp Algorithm
 - KMP (Knuth-Morris-Pratt) Algorithm
 
+<br>
 
+<br>
 
 
 
@@ -83,7 +85,9 @@ naive_pattern_search(pat, txt)
     - ***Worst Case***: **O(n-m+1)(m)** - All characters of the text and pattern are same OR only the last character is different. 
 - **Auxilliary Space: O(1)**
 
+<br>
 
+<br>
 
 
 
@@ -183,7 +187,9 @@ rabin_karp_search(pat, txt)
     - ***Worst Case***: **O(n)(m)** - Failure of hash function that leads to all spurious hits 
 - **Auxilliary Space: O(1)**
 
+<br>
 
+<br>
 
 
 
@@ -340,11 +346,13 @@ KMP_search(pat, txt)
 - **Time: O(n+m)**
 - **Auxilliary Space: O(m)**
 
+<br>
 
+---
 
 ---
 
----
+<br>
 
 ### Standard Pattern Search Algorithms Problmes
 
@@ -412,7 +420,9 @@ anagram_search(pat, txt)
 - **Time: O(n)**
 - **Auxilliary Space: O(1) :** Only 256 spaces can be treated as constant. 
 
+<br>
 
+<br>
 
 ## 2. Manacher's  Algorithm - O(N) Time Longest Palindromic Substring***
 
@@ -536,7 +546,9 @@ manacher_longest_palindromic_substring(txt)
 - **Time: O(n) :** Traversing through loop only once. 
 - **Auxilliary Space: O(n) :** We are using (2n+1) spaces array 
 
+<br>
 
+<br>
 
 ## 3. All Possible Strings - Made by Placing Spaces***
 
@@ -622,7 +634,9 @@ print_pattern(string)
 - **Time:** **O(n\*(2<sup>n</sup>))** **:** Since number of Gaps are n-1, there are total 2<sup>n-1</sup> patterns each having length ranging from n to 2n-1, hence overall complexity would be O(n*(2<sup>n</sup>)) 
 - **Auxilliary Space: O(n) :** We are using (2n) spaces array 
 
+<br>
 
+<br>
 
 
 
@@ -633,7 +647,9 @@ print_pattern(string)
 
 
 
+<br>
 
+<br>
 
 ------
 

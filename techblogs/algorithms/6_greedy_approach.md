@@ -45,13 +45,9 @@ Greedy is an algorithmic paradigm that builds up a solution piece by piece, alwa
     - A Greedy choice for this problem is to pick the nearest unvisited city from the current city at every step.
     - This solutions don’t always produce the best optimal solution but can be used to get an approximately optimal solution.
 
-<br>
 
----
 
-------
-
-<br>
+----
 
 ### Standard Greedy Algorithm Problems
 

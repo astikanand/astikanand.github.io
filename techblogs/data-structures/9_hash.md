@@ -59,13 +59,9 @@ There are many other applications of hashing, including modern day cryptography 
 - Rabin-Karp Algortithm
 - Linking File name and path together
 
-<br>
+
 
 ---
-
-------
-
-<br>
 
 ### Some Standard Hashing Problems
 

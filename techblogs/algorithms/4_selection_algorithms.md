@@ -23,15 +23,11 @@ topic: selection-algorithms
 
 > ### Algo-1: QuickSelect Algorithm
 
+- Quick select is partition based selection and is similar to how Quick Sort works.
 
 
-<br>
-
----
 
 ----
-
-<br>
 
 ### Standard Selection Algorithms Problems
 

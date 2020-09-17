@@ -170,13 +170,9 @@ print("Is stack empty? {}".format(my_stack.is_empty()))
 - Backtracking
 - Recursive Function Calls
 
-<br>
 
----
 
-------
-
-<br>
+----
 
 ### Standard Stack Problems
 

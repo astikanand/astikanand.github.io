@@ -205,13 +205,9 @@ print("Is queue empty? {}".format(my_queue.is_empty()))
     2. When data is transferred asynchronously (data not necessarily received at same rate as sent) between two processes.
         - Examples include IO Buffers, pipes, file IO, etc.
 
-<br>
 
----
 
-------
-
-<br>
+----
 
 ### Standard Queue Problems
 

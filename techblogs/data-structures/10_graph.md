@@ -149,7 +149,7 @@ Graphs are used to represent many real-life applications:
 
 <br>
 
->  ### Algo-1: Breadth First Seach (BFS)
+> ### Algo-1: Breadth First Seach (BFS)
 
 ###### What is BFS ?
 
@@ -456,13 +456,9 @@ g.dfs_traversal_recursive("A")
 - **Solving puzzles with only one solution** such as mazes.
     - DFS can be adapted to find all solutions to a maze by only including nodes on the current path in the visited set.
 
-<br>
+
 
 ---
-
-------
-
-<br>
 
 ### Standard Graph Algorithms and Problems
 

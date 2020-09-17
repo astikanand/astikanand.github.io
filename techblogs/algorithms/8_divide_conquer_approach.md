@@ -53,13 +53,9 @@ A typical Divide and Conquer algorithm solves a problem using following three st
     - For example: Binary Search is a Divide and Conquer algorithm, we never evaluate the same subproblems again.
     - On the other hand, for calculating nth Fibonacci number, Dynamic Programming should be preferred.
 
-<br>
 
----
 
-------
-
-<br>
+----
 
 ### Standard Divide and Conquer Problems
 

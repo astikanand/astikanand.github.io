@@ -119,13 +119,9 @@ linked_list.print_list()
 - **Previous and next page in web browser –** We can access previous and next url searched in web browser by pressing back and next button since, they are linked as linked list.
 - **Music Player –** Songs in music player are linked to previous and next song. you can play songs either from starting or ending of the list.
 
-<br>
 
----
 
-------
-
-<br>
+----
 
 ### Standard Linked List Problems
 

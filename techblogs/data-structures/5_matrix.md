@@ -25,11 +25,9 @@ topic: matrix
 - Some localization algorithms also use matrix operations.
 - Matrices, and in general Linear Algebra, are the language and mathematical tools computer scientists constantly use.
 
-<br>
 
-------
 
-<br>
+----
 
 ### Standard Matrix Problems
 

@@ -80,13 +80,9 @@ print(binary_search(arr, 0, 0, 2))
 - **Time: O(logn)**
 - **Auxilliary Space: O(1)**
 
-<br>
 
----
 
------
-
-<br>
+----
 
 ### Standard Searching Algorithms Problems
 

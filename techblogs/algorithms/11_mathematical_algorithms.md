@@ -7,17 +7,11 @@ topic: mathematical-algorithms
 
 # Mathematical Algorithms
 
-Algorithms deals with Mathematical calculations and its aspects.
+- Algorithms deals with Mathematical calculations and its aspects.
 
 
 
-<br>
-
----
-
----
-
-<br>
+----
 
 ### Standard Mathematical Algorithm Problems
 

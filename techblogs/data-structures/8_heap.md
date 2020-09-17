@@ -180,13 +180,9 @@ print("After Decreasing Key of 2 to 1, Now Get Min = {}".format(my_heap.getMin()
     - ***Sort an almost Sorted Array.***
     - ***Merge K Sorted Arrays.***
 
-<br>
+
 
 ---
-
-------
-
-<br>
 
 ### Standard Heap Problems
 

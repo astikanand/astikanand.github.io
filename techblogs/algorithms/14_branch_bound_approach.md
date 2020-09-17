@@ -18,13 +18,9 @@ Branch and Bound solve these problems relatively quickly.
 - Branch and bound is very useful technique for searching a solution but in worst case, we need to fully calculate the entire tree.
 - At best, we only need to fully calculate one path through the tree and prune the rest of it.
 
-<br>
 
----
 
-------
-
-<br>
+----
 
 ### Standard  Branch and Bound Approach Problems
 

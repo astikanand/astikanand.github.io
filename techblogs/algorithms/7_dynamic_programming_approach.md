@@ -137,13 +137,9 @@ print(fib_tabulation_bottom_up(34))
 
     ![optimal_substructure](assets/optimal_substructure.gif)
 
-<br>
 
----
 
-------
-
-<br>
+----
 
 ### Standard Dynamic Programming Problems
 

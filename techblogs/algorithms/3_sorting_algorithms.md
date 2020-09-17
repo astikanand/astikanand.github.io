@@ -406,13 +406,9 @@ print(heap_sort(arr))
 - Sort a nearly sorted (or K sorted) array
 - k largest(or smallest) elements in an array
 
-<br>
 
----
 
 ----
-
-<br>
 
 ### Standard Sorting Algorithms Problems
 

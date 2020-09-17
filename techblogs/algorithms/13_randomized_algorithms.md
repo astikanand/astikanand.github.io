@@ -14,7 +14,7 @@ An algorithm that uses random numbers to decide what to do next anywhere in its 
 - ***Randomized Quick Sort:*** Uses random number to pick the next pivot (or randomly shuffles the array).
 - ***Karger’s algorithm:*** Randomly picks an edge.
 
-<br><br>
+<br>
 
 ### Concept of Expectation
 

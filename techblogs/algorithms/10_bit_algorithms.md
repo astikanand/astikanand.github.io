@@ -111,13 +111,9 @@ Bitwise operators are good for saving space and sometimes to cleverly remove dep
 3. Data structure like n-bit map can be used to allocate n-size resource pool to represent the current status.
 4. Bits are used in networking, framing the packets of numerous bits which is sent to another system generally through any type of serial interface.
 
-<br>
 
----
 
-------
-
-<br>
+----
 
 ### Standard Bit Operations Problems
 

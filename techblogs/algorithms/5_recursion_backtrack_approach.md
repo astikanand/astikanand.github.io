@@ -49,13 +49,9 @@ topic: recursion-backtrack-approach
 - Sudoku
 - Graph-Coloring
 
-<br>
 
----
 
-------
-
-<br>
+----
 
 ### Standard Backtracking Problems
 

@@ -26,13 +26,9 @@ topic: array
 - Many databases, small and large, consist of (or include) one-dimensional arrays whose elements are records.
 - Arrays are used to implement other data structures such as lists, heaps, hash tables, deques, queues, stacks, strings etc.
 
-<br>
 
----
 
-------
-
-<br>
+----
 
 ### Standard Array Problems
 

@@ -346,13 +346,9 @@ KMP_search(pat, txt)
 - **Time: O(n+m)**
 - **Auxilliary Space: O(m)**
 
-<br>
 
----
 
----
-
-<br>
+----
 
 ### Standard Pattern Search Algorithms Problmes
 

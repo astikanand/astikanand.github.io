@@ -1,5 +1,4 @@
 ---
-
 permalink: /techblogs/algorithms/miscellaneous
 topic: miscellaneous
 ---

@@ -25,13 +25,9 @@ Orientation of an ordered triplet of points in the plane can be:
 
 <img src="assets/orientation_formula.png" width="50%">
 
-<br>
 
----
 
-------
-
-<br>
+----
 
 ### Standard  Geometric Algorithm Problems
 

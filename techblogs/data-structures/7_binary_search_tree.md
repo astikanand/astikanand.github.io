@@ -124,13 +124,9 @@ print("Searching if 6 is present ? : {}".format(search(root, 6)))
 - Hashing would be faster, but want to avoid attacker sending IP packets with worst-case inputs.
 - For dynamic sorting.
 
-<br>
 
-----
 
-------
-
-<br>
+---
 
 ### Standard BST Problems
 

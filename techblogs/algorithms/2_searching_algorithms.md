@@ -21,7 +21,7 @@ topic: searching-algorithms
 
 
 
-
+<br>
 
 > ### Algo-1: Binary Search***
 

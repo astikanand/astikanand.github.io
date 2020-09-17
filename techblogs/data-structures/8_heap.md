@@ -19,7 +19,9 @@ topic: heap
 - **Binomial Heap**
 - **Fibonacci Heap**
 
-## Binary Heap
+<br>
+
+> ### Binary Heap
 
 - Introduced by **J. W. J. William**s in **1964**.
 - A common implementation of a heap is the binary heap, in which the tree is a binary tree
@@ -29,7 +31,7 @@ topic: heap
 
 <img src="assets/binary_heap.jpg" width="60%">
 
-#### Binary Heap Representation
+##### Binary Heap Representation
 
 A Binary Heap is a Complete Binary Tree. A binary heap is typically represented as an array.
 
@@ -40,7 +42,7 @@ A Binary Heap is a Complete Binary Tree. A binary heap is typically represented 
 
 <img src="assets/binary_heap_representation.jpg" width="70%">
 
-#### heapify(): 
+##### heapify(): 
 
 - **To maintain the heap property.**
 - Let’s assume that we have a heap having some elements which are stored in array .
@@ -66,7 +68,7 @@ def max_heapify(arr, i, N):
 
 <img src="assets/max_heapify.jpg" width="50%">
 
-#### build_heap():
+##### build_heap():
 
 - **Builds the heap from the given array.**
 - Now let’s say we have **N** elements stored in the array **Arr** indexed from **0** to **N-1** . 
@@ -86,7 +88,9 @@ def build_max_heap(arr):
     return arr
 ```
 
-### Operations on Heap
+<br>
+
+#### Operations on Heap
 
 1. **getMin():** It returns the root element of Min Heap. Time Complexity: **O(1)**.
 2. **extractMin():** Removes the minimum element from MinHeap. Time Complexity: **O(Logn)** as this operation needs to maintain the heap property (by calling heapify()) after removing root.
@@ -94,7 +98,7 @@ def build_max_heap(arr):
 4. **insert():** Inserting a new key takes **O(Logn)** time. We add a new key at the end of the tree. If new key is greater than its parent, then we don’t need to do anything. Otherwise, we need to traverse up to fix the violated heap property.
 5. **delete():** Deleting a key also takes **O(Logn)** time. We replace the key to be deleted with minum infinite by calling decreaseKey(). After decreaseKey(), the minus infinite value must reach root, so we call extractMin() to remove the key.
 
-#### Implementation
+###### Implementation
 
 ```python
 import sys
@@ -164,6 +168,8 @@ print("After Decreasing Key of 2 to 1, Now Get Min = {}".format(my_heap.getMin()
 
 ![heap_implementation_output](assets/heap_implementation_output.png)
 
+<br>
+
 #### Applications of Heap
 
 1. **Heap Sort:** It uses Binary Heap to sort an array in O(nLogn) time.
@@ -174,104 +180,17 @@ print("After Decreasing Key of 2 to 1, Now Get Min = {}".format(my_heap.getMin()
     - ***Sort an almost Sorted Array.***
     - ***Merge K Sorted Arrays.***
 
-
+<br>
 
 ---
 
 ------
 
+<br>
+
 ### Standard Heap Problems
 
-## 1. Heap Sort***
-
-Heap sort is a comparison based sorting technique based on **Binary Heap** data structure. 
-
-It is similar to selection sort where we first find the maximum element and place the maximum element at the end and repeat the same process for remaining element.
-
-###### **Algorithm:**
-
-1. Build a max heap from the input data.
-2. At this point, the largest item is stored at the root of the heap.
-3. Replace it with the last item of the heap followed by reducing the size of heap by 1.
-4. Finally, heapify the root of tree.
-5. Repeat above steps while size of heap is greater than 1.
-
-###### Implementation
-
-```python
-def heap_sort(arr): 
-    n = len(arr) 
-  
-    # Build a maxheap. 
-    for i in range(n//2, -1, -1): 
-        max_heapify(arr, i, n) 
-  
-    # One by one move larger elements to end and decrease the size
-    for i in range(n-1, 0, -1): 
-        arr[i], arr[0] = arr[0], arr[i] 
-        max_heapify(arr, 0, i)
-    
-    return arr
-
-
-def max_heapify(arr, i, N):
-    left_child = 2*i+1
-    right_child = 2*i+2
-
-    # Find the largest of left_child, right_child and parent which is i.
-    if (left_child < N and arr[left_child] > arr[i]):
-        largest = left_child
-    else:
-        largest = i
-
-    if (right_child < N and arr[right_child] > arr[largest]):
-         largest = right_child
-
-    # If Parent is not largest, swap and apply max_heapify on child to propagate it down
-    if largest != i:
-        arr[i], arr[largest] = arr[largest], arr[i]
-        max_heapify(arr, largest, N)
-  
-
-
-print("Example-1: heap_sort(arr)")
-arr = [10, 80, 30, 90, 70, 85, 75, 95, 40, 50, 70]
-print(heap_sort(arr))
-
-print("Example-2: heap_sort(arr)")
-arr = [4, 3, 2, 10, 12, 1, 5, 6]
-print(heap_sort(arr))
-
-print("Example-3: heap_sort(arr)")
-arr = [12, 11, 13, 5, 6]
-print(heap_sort(arr))
-```
-
-**Output:**
-
-![](assets/heap_sort_output.png)
-
-
-
-###### **Complexity:**
-
-- **Time:-** Worst Case:**O(nlogn)**  Average Case: **O(nlogn)** 
-- **Auxilliary Space: O(1)**
-
-##### Notes:
-
-- **Algorithmic Paradigm:** Choose Min or Max Approach
-- **Sorting In Place:** Yes
-- **Stable:** No
-
-##### **Uses:**
-
-- Sort a nearly sorted (or K sorted) array
-- k largest(or smallest) elements in an array
-
-
-
-## 2. Find k largest/smallest elements in an array***
+## 1. Find k largest/smallest elements in an array***
 
 ###### Problem:
 
@@ -323,7 +242,9 @@ find_k_smallest([1, 23, 12, 9, 30, 2, 50], 2)
 
 - **Time: O(n+klogn)**
 
+<br>
 
+<br>
 
 ------
 

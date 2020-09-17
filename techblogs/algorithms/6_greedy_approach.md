@@ -45,11 +45,13 @@ Greedy is an algorithmic paradigm that builds up a solution piece by piece, alwa
     - A Greedy choice for this problem is to pick the nearest unvisited city from the current city at every step.
     - This solutions don’t always produce the best optimal solution but can be used to get an approximately optimal solution.
 
-
+<br>
 
 ---
 
 ------
+
+<br>
 
 ### Standard Greedy Algorithm Problems
 
@@ -133,7 +135,9 @@ activity_selection(start, finish)
     - **O(n):** if input activities are sorted.
 - **Auxilliary Space:** **O(n)** :-> Creating a new array but can be done in O(1)
 
+<br>
 
+<br>
 
 ## 2. Minimum Number of Platforms Required***
 
@@ -202,7 +206,9 @@ min_number_of_platforms_required(arrivals, departures)
     - **O(n):** if input activities are sorted. 
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 3. Huffman Coding***
 

@@ -113,7 +113,7 @@ print("Searching if 6 is present ? : {}".format(search(root, 6)))
 - We can construct a BST with only Preorder or Postorder or Level Order traversal. Note that we can always get inorder traversal by sorting the only given traversal.
 - Number of unique BSTs with n distinct keys is Catalan Number
 
-
+<br>
 
 #### Applications of Binary Search Tree
 
@@ -124,11 +124,13 @@ print("Searching if 6 is present ? : {}".format(search(root, 6)))
 - Hashing would be faster, but want to avoid attacker sending IP packets with worst-case inputs.
 - For dynamic sorting.
 
-
+<br>
 
 ----
 
 ------
+
+<br>
 
 ### Standard BST Problems
 
@@ -278,6 +280,10 @@ print()
 - **Time: O(Logn**) for both insert and search. In skewed tree it maybe O(n)
 - **Auxilliary Space: O(1)** if recursive call stack is not considered. 
 
+<br>
+
+<br>
+
 ## 2. Check if Binary Tree is BST***
 
 ###### **Problem:**
@@ -379,7 +385,9 @@ print("Is this binary Tree a BST ? : {}".format(is_bst(root)))
 - **Time: O(n**) 
 - **Auxilliary Space: O(1)** if recursive call stack is not considered. 
 
+<br>
 
+<br>
 
 ## 3. Lowest Common Ancestor in BST (LCA)***
 
@@ -444,7 +452,9 @@ print("Lowest Common Ancestor of 10 and 22 is : {}".format(lowest_common_ancesto
 - **Time: O(n**) 
 - **Auxilliary Space: O(1)**
 
+<br>
 
+<br>
 
 ## 4. Inorder Successor in BST***
 
@@ -570,7 +580,9 @@ print("Inorder Successor of 14 is : {}".format(inorder_successor(root, 14).val))
 - **Time: O(Logn**) 
 - **Auxilliary Space: O(1)**
 
+<br>
 
+<br>
 
 ## 5. K<sup>th</sup> Smallest Element in BST
 
@@ -617,7 +629,9 @@ Given root of binary search tree and K as input, find K-th smallest element in B
 - **Time:** 
 - **Auxilliary Space:**
 
+<br>
 
+<br>
 
 ## 6. Merge 2 BSTs with Limited Extra Space
 
@@ -657,7 +671,9 @@ Maximum allowed auxiliary space is O(height of the first tree + height of the se
 - **Time: O(m+n**) 
 - **Auxilliary Space: O(h<sub>m</sub>+h<sub>n</sub>)**
 
+<br>
 
+<br>
 
 ## 7. Binary Tree to BST Conversion
 
@@ -694,7 +710,9 @@ The conversion must be done in such a way that keeps the original structure of B
 - **Time: O(nlogn**) 
 - **Auxilliary Space: O(n)**
 
+<br>
 
+<br>
 
 ## 8. Two Nodes are Swapped Correct the BST
 
@@ -763,7 +781,9 @@ Since inorder traversal of BST is always a sorted array, the problem can be redu
 - **Time:** 
 - **Auxilliary Space:**
 
+<br>
 
+<br>
 
 ------
 

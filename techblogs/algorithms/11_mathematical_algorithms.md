@@ -11,11 +11,13 @@ Algorithms deals with Mathematical calculations and its aspects.
 
 
 
+<br>
 
+---
 
 ---
 
----
+<br>
 
 ### Standard Mathematical Algorithm Problems
 
@@ -96,7 +98,9 @@ print(check_lucky(19, 2))
 
 - **Time: O(loglogn)**
 
+<br>
 
+<br>
 
 ## 2. Square Root - Babylonian Method***
 
@@ -146,7 +150,9 @@ print(round(square_root(50), 5))
 
 - **Time: **
 
+<br>
 
+<br>
 
 ## 3. Sieve of Eratosthenes
 
@@ -217,7 +223,9 @@ sieve_of_eratosthenes(101)
 
 - **Time: **
 
+<br>
 
+<br>
 
 ## 4. Next Smallest Palindrome***
 
@@ -311,7 +319,9 @@ print(next_smallest_palindrome(23941))
 
 - **Time: O(n) **
 
+<br>
 
+<br>
 
 ## 5. Prime Factors
 
@@ -371,7 +381,9 @@ prime_factors(315)
 
 - **Time: O(n) **
 
+<br>
 
+<br>
 
 ## 6. Trailing Zeroes in Factorial
 
@@ -424,7 +436,9 @@ factorial_trailing_zeroes(100)
 
 - **Time: O(loglogn) **
 
+<br>
 
+<br>
 
 ## 7. Next Greater with Same Digits***
 
@@ -511,7 +525,9 @@ print(next_greater_same_digits(534976))
 
 - **Time: O(size)**
 
+<br>
 
+<br>
 
 ## 8. Possible Decodings of Digit Sequence***
 
@@ -630,7 +646,9 @@ print(count_digits_sequence_decodings_DP('1234121'))
 
 - **Time: O(n)**
 
+<br>
 
+<br>
 
 ## 9. Clock Angle Problem***
 
@@ -698,7 +716,9 @@ print(clock_angle(3, 30))
 
 - **Time: O(1)**
 
+<br>
 
+<br>
 
 ## 10. Smallest number whose digit multiply to give number N
 
@@ -775,7 +795,9 @@ print(smallest_num_digit_multiply_to_n(13))
 
 - **Time: O(1)**
 
+<br>
 
+<br>
 
 ## 11. Birthday Paradox***
 
@@ -829,7 +851,9 @@ birthday_paradox_find_n(0.999)
 
 
 
+<br>
 
+<br>
 
 ------
 

@@ -30,7 +30,9 @@ topic: complexity-analysis
 
     - Discussed in detail below.
 
+<br>
 
+<br>
 
 ## 1. Asymptotic Analysis
 
@@ -221,6 +223,10 @@ Asymptotic notations are mathematical tools to represent time complexity of algo
         
         <img src="assets/master_theorem_shorted.png" width="35%">
 
+<br>
+
+<br>
+
 ## 2. Amortized Analysis
 
 ###### **What is this Amortized Analysis?**
@@ -252,7 +258,9 @@ Asymptotic notations are mathematical tools to represent time complexity of algo
     - One particular task may be expensive.
     - But it may leave data structure in a state that next few operations become easier.
 
+<br>
 
+<br>
 
 ## 3. Space Complexity
 
@@ -264,7 +272,9 @@ Asymptotic notations are mathematical tools to represent time complexity of algo
 - But if we want to compare algorithms on the basis of space, then Auxiliary Space would be a better criteria than Space Complexity.
     - **Example:** Merge Sort uses O(n) auxiliary space, Insertion sort and Heap Sort use O(1) auxiliary space. Space complexity of all these sorting algorithms is O(n) though.
 
+<br>
 
+<br>
 
 ## 4. Complexity Classes
 
@@ -435,6 +445,8 @@ Asymptotic notations are mathematical tools to represent time complexity of algo
 
 ---
 
+<br>
+
 ### Complexity Analysis Problems
 
 ##### Problem-1:
@@ -472,7 +484,9 @@ T(n) = Θ(√n) */
 
 
 
+<br>
 
+<br>
 
 ------
 

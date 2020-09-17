@@ -41,6 +41,8 @@ There are two ways to implement a stack:
 1. **Using array**
 2. **Using linked list**
 
+<br>
+
 #### Array implementation of Queue
 
 - To implement any data structure we need to define all its operations.
@@ -104,6 +106,8 @@ print("Is queue empty? {}".format(my_queue.is_empty()))
 **Output:**
 
 ![queue_array_impl_output](assets/queue_array_impl_output.png)
+
+<br>
 
 #### Linked List Implementation of Queue
 
@@ -190,7 +194,7 @@ print("Is queue empty? {}".format(my_queue.is_empty()))
 
 ![queue_linked_list_impl_output](assets/queue_linked_list_impl_output.png)
 
-
+<br>
 
 #### Applications of Queue
 
@@ -201,11 +205,13 @@ print("Is queue empty? {}".format(my_queue.is_empty()))
     2. When data is transferred asynchronously (data not necessarily received at same rate as sent) between two processes.
         - Examples include IO Buffers, pipes, file IO, etc.
 
-
+<br>
 
 ---
 
 ------
+
+<br>
 
 ### Standard Queue Problems
 
@@ -309,7 +315,9 @@ print("Is queue empty? {}".format(my_queue.is_empty()))
 
 ![queue_using_stacks_output](assets/queue_using_stacks_output.png)
 
+<br>
 
+<br>
 
 ## 2. Stack using Queues***
 
@@ -401,7 +409,9 @@ print("Is stack empty? {}".format(my_stack.is_empty()))
 
 ![stack_using_queus_output](assets/stack_using_queus_output.png)
 
+<br>
 
+<br>
 
 ## 3. Find first circular tour that visits all petrol pumps***
 
@@ -486,7 +496,9 @@ print(first_circular_tour_visiting_all_pumps(pumps))
 - **Time:** **O(n) :** Seems to be more than linear at first look. If we consider the items between start and end as part of a circular queue, we can observe that every item is enqueued at most two times to the queue. The total number of operations is proportional to total number of enqueue operations. Therefore the time complexity is O(n).
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 4. Maximum of all subarrays of size k (Sliding Window Maximum)
 
@@ -565,7 +577,9 @@ print(max_of_all_subarrays_of_k_size(arr, 4))
 - **Time:** **O(nlogk) :** Can do it in O(n) by avoiding finding max in current window by storing useful values in deque which stores max at top. 
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 5. Generate Binary Numbers from 1 to N (An Interesting Method)
 
@@ -636,7 +650,9 @@ print(generate_1_to_n_binary_using_queue(10))
 - **Time:** **O(n)**
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ------
 

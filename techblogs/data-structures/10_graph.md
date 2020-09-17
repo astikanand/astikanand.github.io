@@ -27,45 +27,40 @@ topic: graph
 
 <img src="assets/graph.jpg" width="80%">
 
-> 1. **Adjacency Matrix**
+##### 1. Adjacency Matrix
 
 - Adjacency Matrix is a 2D array of size V x V where V is the number of vertices in a graph.
 - Let the 2D array be adj[][], a slot `adj[i][j] = 1` indicates that there is an edge from vertex i to vertex j.
 - Adjacency matrix for undirected graph is **always symmetric**. 
 - Adjacency Matrix is also used to represent weighted graphs.
 - If adj[i][j] = w, then there is an edge from vertex i to vertex j with weight w.
+- **Pros:** 
+  - Representation is easier to implement and follow.
+  - Removing an edge takes O(1) time.
+  - Queries like whether there is an edge from vertex ‘u’ to vertex ‘v’ are efficient and can be done O(1).
+- **Cons:** 
 
-##### Pros: 
+  - Consumes more space O(V<sup>2</sup>).
+  - Even if the graph is sparse(contains less number of edges), it consumes the same space.
+  - Adding a vertex is O(V<sup>2</sup>) time.
 
-- Representation is easier to implement and follow.
-- Removing an edge takes O(1) time.
-- Queries like whether there is an edge from vertex ‘u’ to vertex ‘v’ are efficient and can be done O(1).
-
-##### Cons: 
-
-- Consumes more space O(V<sup>2</sup>).
-- Even if the graph is sparse(contains less number of edges), it consumes the same space.
-- Adding a vertex is O(V<sup>2</sup>) time.
-
-> 2. **Adjacency List**
+##### 2. Adjacency List
 
 - An array of linked lists is used.
 - Size of the array is equal to the number of vertices.
 - Let the array be array[]. An entry array[i] represents the linked list of vertices adjacent to the ith vertex.
 - This representation can also be used to represent a weighted graph.
 - The weights of edges can be stored in nodes of linked lists.
+- **Pros:**
 
-##### Pros:
+  - Saves space O(|V|+|E|) .
+  - In the worst case, there can be C(V, 2) number of edges in a graph thus consuming O(V<sup>2</sup>) space.
+  - Adding a vertex is easier.
+- **Cons:**
 
-- Saves space O(|V|+|E|) .
-- In the worst case, there can be C(V, 2) number of edges in a graph thus consuming O(V<sup>2</sup>) space.
-- Adding a vertex is easier.
+  - Queries like whether there is an edge from vertex u to vertex v are not efficient and can be done O(V).
 
-##### Cons:
-
-- Queries like whether there is an edge from vertex u to vertex v are not efficient and can be done O(V).
-
-#### Implementation
+###### Implementation
 
 ```python
 from collections import defaultdict
@@ -105,6 +100,8 @@ g.print_graph()
 **Output:**
 
 ![graph_representation_output](assets/graph_representation_output.png)
+
+<br>
 
 #### Applications of Graph
 
@@ -148,21 +145,16 @@ Graphs are used to represent many real-life applications:
         - There may be several weights associated with each edge, including distance, travel time, or monetary cost.
         - Such weighted graphs are commonly used to **program GPS's**, and **travel-planning search engines** that compare flight times and costs. 
 
+<br>
 
+<br>
 
----
+>  ### Algo-1: Breadth First Seach (BFS)
 
-------
+###### What is BFS ?
 
-### Standard Graph Algorithms and Problems
-
-## 1. Breadth First Seach (BFS)***
-
-###### **Problem:**
-
-BFS for a graph is similar to Breadth First Traversal of a tree. The only catch here is, unlike trees, graphs may contain cycles, so we may come to the same node again.
-
-To avoid processing a node more than once, we use a boolean visited array.
+- BFS for a graph is similar to Breadth First Traversal of a tree. The only catch here is, unlike trees, graphs may contain cycles, so we may come to the same node again.
+- To avoid processing a node more than once, we use a boolean visited array.
 
 <img src="assets/breadth_first_search.png" width="60%">
 
@@ -317,162 +309,20 @@ g.bfs_traversal("A")
 - **Finding all nodes within one connected component:** 
     - We can either use Breadth First or Depth First Traversal to find all nodes reachable from a given node.
 
+<br>
+
+<br>
 
 
-## 2. Depth First Search (DFS)***
 
-###### **Problem:**
+>  ### Algo-2: Depth First Search (DFS)
 
-DFS for a graph is similar to Depth First Traversal of tree. The only catch here is, unlike trees, graphs may contain cycles, so we may come to the same node again.
+###### What is DFS ?
 
-To avoid processing a node more than once, we use a boolean visited array.
+- DFS for a graph is similar to Depth First Traversal of tree. The only catch here is, unlike trees, graphs may contain cycles, so we may come to the same node again.
+- To avoid processing a node more than once, we use a boolean visited array.
 
 <img src="assets/depth_first_search.png" width="60%">
-
-#### Iterative Approach
-
-###### **Algorithm:**
-
-1. Start with the given start_vertex, take a stack and push the start_vertex to it.
-
-2. While stack is not empty take out the current_vertex from stack. 
-
-    - **If current_vertex is not already visited:** 
-
-        > coz stack may contain some vertex more than once, so we need to print the popped item only if it is not visited. This may happen if some vertex was discovered by some earlier vertex and at later point it is visited by some other vertex. # Example: In Graph-1: vertex-2 and vertex-6 was discovered by previous vertex and visited later by other. 
-
-        - Print it and mark it visited
-
-    - See all the connected vertices to current_vertex:
-
-        - If any connected_vertex is not visited push to the stack.
-
-3. Check if any unvisited vertex (case of UNREACHABLE or DISCONNECTED graphs): 
-
-    - Call the function again from unvisited vertex.
-
-###### **Iterative Implementation:**
-
-```python
-class Graph:
-    def __init__(self):
-        self.graph = {}
-    
-
-    def add_vertex(self, vertex):
-        if vertex not in self.graph:
-            self.graph[vertex] = []
-    
-
-    def add_edge(self, u, v):
-        self.add_vertex(u)
-        self.add_vertex(v)
-        self.graph[u].append(v)
-    
-
-    def unvisited(self, visited):
-        for vertex in visited:
-            if(visited[vertex] is False):
-                return vertex
-        return None
-    
-
-    def dfs_traversal_iterative_util(self, start_vertex, visited):
-        # Take a stack and push the start_vertex
-        stack = []
-        stack.append(start_vertex)
-
-        # Pop out the current_vertex from stack and print it
-        while(stack):
-            current_vertex= stack.pop()
-            # Stack may contain some vertex more than once, so we need to print the popped item 
-            # only if it is not visited.
-            # This may happen if some vertex was discovered by some earlier vertex and at 
-            # later point it is visited by some other vertex.
-            # Example: In Graph-1: vertex-2 and vertex-6 was discovered by previous 
-            # vertex and visited later by other.
-            if(visited[current_vertex] is False):
-                visited[current_vertex] = True
-                print("{}".format(current_vertex), end=" ")
-
-            # See all the connected vertices to current_vertex
-            for connected_vertex in self.graph[current_vertex]:
-                # If any connected_vertex is not visited push to the stack
-                if(visited[connected_vertex] is False):
-                    stack.append(connected_vertex)
-    
-
-    def dfs_traversal_iterative(self, start_vertex):
-        # Mark every every vertex as unvisited
-        visited = {}
-        for vertex in self.graph:
-            visited[vertex] = False
-        
-        # Call the dfs_traversal_iterative_util with start_vertex
-        self.dfs_traversal_iterative_util(start_vertex, visited)
-
-        # Check if there is still any unvisited vertex
-        # Only when graph is UNREACHABLE or DISCONNECTED below lines will be executed
-        while(self.unvisited(visited) is not None):
-            # Call the dfs_traversal_iterative_util from the unvisited vertex
-            self.dfs_traversal_iterative_util(self.unvisited(visited), visited)
-        print()
-
-
-
-print("Example-1: DFS Traversal of Graph (Iterative) from vertex-1:")
-g = Graph()
-g.add_edge(1, 2)
-g.add_edge(2, 3)
-g.add_edge(3, 4)
-g.add_edge(4, 2)
-g.add_edge(1, 5)
-g.add_edge(5, 6)
-g.add_edge(5, 8)
-g.add_edge(8, 3)
-g.add_edge(8, 6)
-g.add_edge(8, 7)
-g.dfs_traversal_iterative(1)
-
-print("Example-2: DFS Traversal of Graph (Iterative) from vertex-2:")
-g = Graph()
-g.add_edge(1, 2)
-g.add_edge(1, 5)
-g.add_edge(2, 3)
-g.add_edge(2, 5)
-g.add_edge(3, 4)
-g.add_edge(4, 5)
-g.dfs_traversal_iterative(2)
-
-print("Example-3: DFS Traversal of Graph (Iterative) from vertex-A:")
-g = Graph()
-g.add_edge("A", "B")
-g.add_edge("A", "C")
-g.add_edge("B", "C")
-g.add_edge("D", "E")
-g.add_edge("E", "G")
-g.add_edge("F", "D")
-g.add_edge("G", "H")
-g.add_edge("H", "E")
-g.dfs_traversal_iterative("A")
-```
-
-**Output:**
-
-![depth_first_search_iterative_output](assets/depth_first_search_iterative_output.png)
-
-##### Notes:
-
-- The non-recursive implementation is similar to breadth-first search but varies in 2 ways.
-    - It uses stack instead of queue.
-    - It delays to mark a node as visited at time of popping from stack rather than at time of discovering.
-
-###### **Complexity:**
-
-- **Time:** **O(V+E)** :- V is no. of vertices & E is no. of edges. 
-- **Auxilliary Space:** **O(V)**
-
-#### Recursive Approach
 
 ###### Algorithm
 
@@ -606,7 +456,17 @@ g.dfs_traversal_recursive("A")
 - **Solving puzzles with only one solution** such as mazes.
     - DFS can be adapted to find all solutions to a maze by only including nodes on the current path in the visited set.
 
-## 3. Detect Cycle in Undirected Graph***
+<br>
+
+---
+
+------
+
+<br>
+
+### Standard Graph Algorithms and Problems
+
+## 1. Detect Cycle in Undirected Graph***
 
 ###### **Problem:**
 
@@ -729,9 +589,11 @@ g.detect_cycle_undirected_graph("A")
 - **Time:** **O(V+E)** :- As Recursive DFS is used. 
 - **Auxilliary Space:** **O(h)**
 
+<br>
 
+<br>
 
-## 4. Detect Cycle in Directed Graph***
+## 2. Detect Cycle in Directed Graph***
 
 ###### **Problem:**
 
@@ -874,9 +736,11 @@ g.detect_cycle_directed_graph("A")
 - **Time:** **O(V+E)** :- As Recursive DFS is used. 
 - **Auxilliary Space:** **O(h)**
 
+<br>
 
+<br>
 
-## 5. Topological Sorting***
+## 3. Topological Sorting***
 
 **What is Topological Sorting:**
 
@@ -1022,9 +886,11 @@ g.topological_sort("A")
     - Data Serialization
     - Resolving symbol dependencies in linkers
 
+<br>
 
+<br>
 
-## 6. Prim's Minimum Spanning Tree (MST) - Greedy***
+## 4. Prim's Minimum Spanning Tree (MST) - Greedy***
 
 ###### **What is Minimum Spanning Tree?**
 
@@ -1174,9 +1040,11 @@ g.prims_mst("A")
 - **Cluster analysis**
     - K Clustering Problem can be viewed as finding an MST and deleting the k-1 most expensive edges.
 
+<br>
 
+<br>
 
-## 7. Dijkstra's Shortest Path Algorithm - Greedy***
+## 5. Dijkstra's Shortest Path Algorithm - Greedy***
 
 ###### **Problem:**
 
@@ -1312,9 +1180,11 @@ g.dijkstras_spt("A")
 - Dijkstra’s algorithm doesn’t work for graphs with negative weight edges.
 - For graphs with negative weight edges, Bellman–Ford algorithm can be used, we will soon be discussing it as a separate post.
 
+<br>
 
+<br>
 
-## 8. Snake and Ladder Problem***
+## 6. Snake and Ladder Problem***
 
 ###### **Problem:**
 
@@ -1403,9 +1273,11 @@ get_min_dice_throws_snake_ladder(N, moves)
 - **Time:** **O(N)**
 - **Auxilliary Space:** **O(N)**
 
+<br>
 
+<br>
 
-## 9. Finding number of Islands
+## 7. Finding number of Islands
 
 ###### **Problem:**
 
@@ -1521,9 +1393,11 @@ g.find_number_of_islands()
 - **Time:** **O(V<sup>2</sup>)**
 - **Auxilliary Space: O(V<sup>2</sup>)**
 
+<br>
 
+<br>
 
-## 10. Find Critical Connections in Network (Bridges in Graph)
+## 8. Find Critical Connections in Network (Bridges in Graph)
 
 ###### Problem:
 
@@ -1630,7 +1504,9 @@ print(Solution().criticalConnections(6, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,5],[5,
 - **Time: O(V+E)** Single DFS is needed.
 - **Auxilliary Space: O(V)** 
 
+<br>
 
+<br>
 
 ##### Problems To Do:
 
@@ -1638,7 +1514,9 @@ print(Solution().criticalConnections(6, [[0,1],[1,2],[2,0],[1,3],[3,4],[4,5],[5,
 - Hamiltonian Cycle
 - Travelling Salesman Problem (TSP)
 
+<br>
 
+<br>
 
 ------
 

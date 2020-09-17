@@ -33,6 +33,8 @@ Many a times a computer science problems need data to be present in certain sort
 
 <br>
 
+<br>
+
 > ### Algo-1: Insertion Sort
 
 ###### What is Insertion Sort ?
@@ -108,6 +110,8 @@ print(insertion_sort(arr))
 - Worst Case:**O(nlogn)**  Average Case: **O(n<sup>2</sup>)** 
 
 
+
+<br>
 
 <br>
 
@@ -212,6 +216,8 @@ print(merge_sort(arr))
 
 <br>
 
+<br>
+
 > ### Algo-3: Quick Sort***
 
 ###### What is Quick Sort ?
@@ -313,6 +319,8 @@ print(quick_sort(arr))
 
 <br>
 
+<br>
+
 > ### Algo-4: Heap Sort***
 
 Heap sort is a comparison based sorting technique based on **Binary Heap** data structure. 
@@ -398,11 +406,13 @@ print(heap_sort(arr))
 - Sort a nearly sorted (or K sorted) array
 - k largest(or smallest) elements in an array
 
-
+<br>
 
 ---
 
 ----
+
+<br>
 
 ### Standard Sorting Algorithms Problems
 
@@ -414,7 +424,9 @@ print(heap_sort(arr))
 
 
 
+<br>
 
+<br>
 
 ------
 

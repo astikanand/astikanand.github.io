@@ -36,12 +36,14 @@ A hash function is any function that can be used to map a data set of an arbitra
 2. **Uniform distribution:** It should provide a uniform distribution across the hash table and should not result in clustering.
 3. **Less collisions:** Collisions occur when pairs of elements are mapped to the same hash value. These should be avoided.
 
-###### Notes:
+
+
+[Notes:]()
 
 - Irrespective of how good a hash function is, collisions are bound to occur.
 - Therefore, to maintain the performance of a hash table, it is important to manage collisions through various collision resolution techniques.
 
-#### Hashing Operations
+##### Hashing Operations
 
 - Hashing provides constant time search, insert and delete operations on average.
 - This is why hashing is one of the most used data structure, example problems are, distinct elements, counting frequencies of items, finding duplicates, etc
@@ -57,11 +59,13 @@ There are many other applications of hashing, including modern day cryptography 
 - Rabin-Karp Algortithm
 - Linking File name and path together
 
-
+<br>
 
 ---
 
 ------
+
+<br>
 
 ### Some Standard Hashing Problems
 
@@ -121,7 +125,9 @@ find_pair_with_given_sum([1, 4, 45, 6, 10, -8], 13)
 
 
 
+<br>
 
+<br>
 
 ## 2. Find whether an array is subset of another array
 
@@ -201,7 +207,9 @@ check_if_arr_is_subset([10, 5, 2, 23, 19], [19, 5, 3])
 
 ![check_if_arr_is_subset_output](assets/check_if_arr_is_subset_output.png)
 
+<br>
 
+<br>
 
 ## 3. Vertical Order Traversal***
 
@@ -273,7 +281,9 @@ print_vertical_order(root)
 
 ![vertical_order_traversal_output](assets/vertical_order_traversal_output.png)
 
+<br>
 
+<br>
 
 ------
 

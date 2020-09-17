@@ -40,7 +40,7 @@ There are two ways to implement a stack:
 1. **Using array**
 2. **Using linked list**
 
-
+<br>
 
 #### Array Implementation of Stack
 
@@ -94,7 +94,7 @@ print("Is stack empty? {}".format(my_stack.is_empty()))
 
 ![stack_array_implementation_output](assets/stack_array_implementation_output.png)
 
-
+<br>
 
 #### Linked List Implementation of Stack
 
@@ -159,7 +159,7 @@ print("Is stack empty? {}".format(my_stack.is_empty()))
 
 ![stack_linked_list_implementation_output](assets/stack_linked_list_implementation_output.png)
 
-
+<br>
 
 #### Applications of Stack
 
@@ -170,11 +170,13 @@ print("Is stack empty? {}".format(my_stack.is_empty()))
 - Backtracking
 - Recursive Function Calls
 
-
+<br>
 
 ---
 
 ------
+
+<br>
 
 ### Standard Stack Problems
 
@@ -279,7 +281,9 @@ infix_to_postfix("a+b*(c^d-e)^(f+g*h)-i")
 - **Time:** **O(n)** : n is size of expression 
 - **Auxilliary Space:** **O(n)**
 
+<br>
 
+<br>
 
 ## 2. Postfix Evaluation
 
@@ -341,7 +345,9 @@ evaluate_postfix('2 3 10 * + 9 -')
 - **Time:** **O(n)** : n is size of expression 
 - **Auxilliary Space:** **O(n)**
 
+<br>
 
+<br>
 
 ## 3. Check for balanced parentheses in an expression
 
@@ -405,7 +411,9 @@ check_balanced_bracket('[(])')
 - **Time:** **O(n)** : n is parenthesis size 
 - **Auxilliary Space:** **O(n)**
 
+<br>
 
+<br>
 
 ## 4. Next greater for every element***
 
@@ -504,7 +512,9 @@ next_greater_for_every_element([11, 13, 21, 3])
 - **Time:** **O(n)** : n is array size 
 - **Auxilliary Space:** **O(n)**
 
+<br>
 
+<br>
 
 
 
@@ -578,7 +588,9 @@ Desgin a stack which supports push(), pop() and getmin in O(1) time.
 
 
 
+<br>
 
+<br>
 
 ------
 

@@ -33,12 +33,12 @@ topic: binary-tree
 - Self-balancing search trees like **AVL** and **Red-Black** trees guarantee an upper bound of **O(Logn)** for insertion/deletion. 
 - Like Linked Lists and unlike Arrays, Trees don’t have an upper limit on number of nodes as nodes are linked using pointers.
 
-#### Properties of Binary Tree
+###### Properties of Binary Tree
 
 - Max no. of nodes at level L: **2<sup>L-1</sup>**
 - Max no. of nodes in a binary tree of height "h":  **2<sup>h</sup> – 1**
 
-#### Types of Binary Trees
+###### Types of Binary Trees
 
 - **Full Binary Tree**:
     - Every node has 0 or 2 children
@@ -107,7 +107,7 @@ print()
 
 ![tree_representation_output](assets/tree_representation_output.png)
 
-
+<br>
 
 #### Applications of Binary Trees
 
@@ -118,19 +118,14 @@ print()
 - Router algorithms.
 - Form of a multi-stage decision-making (see business chess).
 
+<br>
 
+<br>
 
-----
+> ### Algo-1: Tree DFS Traversals - (Inorder, Preorder, Postorder)
 
-------
-
-
-
-### Standard Binary Trees Problems
-
-## 1. Tree Traversals
-
-Unlike linear data structures (Array, Linked List, Queues, Stacks, etc) which have only one logical way to traverse them, trees can be traversed in different ways.
+- Unlike linear data structures (Array, Linked List, Queues, Stacks, etc) which have only one logical way to traverse them, trees can be traversed in different ways.
+- We have 3 options to traverse tree in DFS manner (Inorder, Preorder, Postorder).
 
 <img src="assets/tree_traversals.png" width="95%">
 
@@ -204,9 +199,11 @@ print()
 - **Time: O(n)** :- worst for skewed tree 
 - **Auxilliary Space:** If we don’t consider size of stack for function calls then O(1) otherwise O(n)
 
+<br>
 
+<br>
 
-## 2. Level Order Traversal
+> ### Algo-2: Tree BFS Traversal - Level Order
 
 Level order traversal of a tree is breadth first traversal for the tree.
 
@@ -284,13 +281,15 @@ print()
 - **Time : O(n)** :- where n is number of nodes in the binary tree 
 - **Auxilliary Space:** **O(w)** where w is maximum width of Binary Tree
 
+<br>
 
+<br>
 
-## 3. BFS vs DFS in Binary Tree
+> ### BFS vs DFS in Binary Tree
 
 <img src="assets/bfs_dfs_binary_tree_uses.png" width="90%">
 
-#### Why do we care?
+##### Why do we care?
 
 There are many tree questions that can be solved using any of the above four traversals.
 
@@ -396,9 +395,19 @@ print("Max of Tree: {}".format(maximum(root)))
 - The most important points is, BFS starts visiting nodes from root while DFS starts visiting nodes from leaves.
 - So if our problem is to search something that is more likely to closer to root, we would prefer BFS and if the target node is close to a leaf, we would prefer DFS.
 
+<br>
 
+<br>
 
-## 4. Diameter of Binary Tree***
+----
+
+------
+
+<br>
+
+### Standard Binary Trees Problems
+
+## 1. Diameter of Binary Tree***
 
 - The diameter of a tree is the number of nodes on the longest path between two leaves in the tree. 
 - The diagram below shows two trees each with **diameter 9**.
@@ -490,9 +499,11 @@ print("Diameter of Tree: {}".format(diameter(root)))
 - **Time:**  **O(n)**  DFS traversal 
 - **Auxilliary Space: O(h)** where h is maximum height of Binary Tree.
 
+<br>
 
+<br>
 
-## 5. Maximum Width of Binary Tree***
+## 2. Maximum Width of Binary Tree***
 
 Width of a tree is maximum of widths of all levels.
 
@@ -593,9 +604,11 @@ print("Maximum Width = {}".format(max_width_binary_tree(root)))
 - **Time : O(n)** :- BFS: Same as Level order traversal 
 - **Auxilliary Space:** **O(w)** where w is maximum width of Binary Tree 
 
+<br>
 
+<br>
 
-## 6. Left View of Tree***
+## 3. Left View of Tree***
 
 Print all the tree elements when seen from left side.
 
@@ -687,9 +700,11 @@ print()
 - **Time : O(n)** :- Same as maximum width problem 
 - **Auxilliary Space:** **O(w)** where w is maximum width of Binary Tree 
 
+<br>
 
+<br>
 
-## 7. Print  Nodes at K distance from Root
+## 4. Print  Nodes at K distance from Root
 
 Given a root of a tree, and an integer k. Print all the nodes which are at k distance from root.
 
@@ -755,9 +770,11 @@ print()
 - **Time:**  **O(n)**  DFS traversal 
 - **Auxilliary Space: O(h)** where h is maximum height of Binary Tree.
 
+<br>
 
+<br>
 
-## 8. Check if Binary Tree is Sub-tree of another Binary Tree***
+## 5. Check if Binary Tree is Sub-tree of another Binary Tree***
 
 ###### **Problem:**
 
@@ -864,9 +881,11 @@ print("Example-3: Is Tree S subtree of Tree T ?: {}".format(is_subtree(S, T)))
 - **Time:**  **O(n)**  DFS traversal 
 - **Auxilliary Space: O(h)** where h is maximum height of Binary Tree.
 
+<br>
 
+<br>
 
-## 9. Connect Nodes at Same Level***
+## 6. Connect Nodes at Same Level***
 
 ###### **Problem:**
 
@@ -969,9 +988,11 @@ connect_nodes_at_same_level(root)
 - **Time : O(n)** :- Same as **maximum_****width** or **left_view** problem. 
 - **Auxilliary Space:** **O(w)** where w is maximum width of Binary Tree. 
 
+<br>
 
+<br>
 
-## 10. Ancestors of a Given Node in Binary Tree***
+## 7. Ancestors of a Given Node in Binary Tree***
 
 ###### **Problem:**
 
@@ -1040,9 +1061,11 @@ print()
 - **Time:**  **O(n)**  DFS traversal 
 - **Auxilliary Space: O(h)** where h is maximum height of Binary Tree.
 
+<br>
 
+<br>
 
-## 11. Inorder Tree Traversal without Recursion
+## 8. Inorder Tree Traversal without Recursion
 
 Need to do the inorder traversal without using recursion methodology.
 
@@ -1109,9 +1132,11 @@ inorder_without_recursion(root)
 - **Time:**  **O(n)**
 - **Auxilliary Space: O(h)**
 
+<br>
 
+<br>
 
-## 12. Inorder Traversal without Recursion and without Stack (Morris Traversal)
+## 9. Inorder Traversal without Recursion and without Stack (Morris Traversal)
 
 - Using Morris Traversal, we can traverse the tree without using stack and recursion.
 - The idea of Morris Traversal is based on Threaded Binary Tree.
@@ -1187,9 +1212,11 @@ morris_inorder_traversal(root)
 - **Time:**  **O(n)**
 - **Auxilliary Space: O(1)**
 
+<br>
 
+<br>
 
-## 13. Check if Binary Tree is Balanced***
+## 10. Check if Binary Tree is Balanced***
 
 ###### Problem:
 
@@ -1289,9 +1316,11 @@ else:
 
 ```
 
+<br>
 
+<br>
 
-## 14. Serialize and Deserialize Binary Tree
+## 11. Serialize and Deserialize Binary Tree
 
 > **Serialization & Deserialization**
 >
@@ -1427,11 +1456,11 @@ print()
 - **Time complexity: O(N)** In both serialization and deserialization functions, we visit each node exactly once, thus the time complexity is O(N), where N is the number of nodes, *i.e.* the size of tree.
 - **Space complexity: O(N)** In both serialization and deserialization functions, we keep the entire tree, either at the beginning or at the end, therefore, the space complexity is O(N).
 
+<br>
 
+<br>
 
-
-
-## 15. Threaded Binary Trees
+## 12. Threaded Binary Trees
 
 - Inorder traversal of Binary Tree can either be done using recursion or with the use of an auxiliary stack.
 - The idea of threaded binary trees is to make inorder traversal faster and do it without stack and without recursion.
@@ -1461,9 +1490,11 @@ class Node:
 
 <img src="assets/inorder_threaded_binary_tree.jpg" width="65%">
 
+<br>
 
+<br>
 
-## 16. Constructing Binary Tree from 2 given traversal sequences
+## 13. Constructing Binary Tree from 2 given traversal sequences
 
 ###### **Possible to create?**
 
@@ -1492,8 +1523,6 @@ If one of the traversal methods is Inorder then the tree can be constructed, oth
 - By searching ‘A’ in Inorder sequence, we can find out all elements on left side of ‘A’ are in left subtree and elements on right are in right subtree. 
 
     ![constructing_binary_tree](assets/constructing_binary_tree.png)
-
-
 
 ###### **Algorithm:**
 
@@ -1614,7 +1643,9 @@ Stack (to store the path visited while traversing Preorder array) and Set (to ma
 
     <img src="assets/tree_construtction_from_traversal_3.png" width="30%">
 
+<br>
 
+<br>
 
 ------
 

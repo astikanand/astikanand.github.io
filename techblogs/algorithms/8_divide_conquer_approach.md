@@ -53,11 +53,13 @@ A typical Divide and Conquer algorithm solves a problem using following three st
     - For example: Binary Search is a Divide and Conquer algorithm, we never evaluate the same subproblems again.
     - On the other hand, for calculating nth Fibonacci number, Dynamic Programming should be preferred.
 
-
+<br>
 
 ---
 
 ------
+
+<br>
 
 ### Standard Divide and Conquer Problems
 
@@ -110,7 +112,9 @@ print(power(7, 9))
 - **Time:** **O(logn)** 
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 2. Median of 2 Sorted Arrays of Same Size***
 
@@ -227,7 +231,9 @@ print(find_median(arr1, arr2))
 - **Time:** **O(logn)** 
 - **Auxilliary Space:** **O(1)**
 
+<br>
 
+<br>
 
 ## 3. Count Inversions in an Array***
 
@@ -320,7 +326,9 @@ print(count_inv(arr)[0])
 - **Time:** **O(nlogn)** 
 - **Auxilliary Space:** **O(n)**
 
+<br>
 
+<br>
 
 
 
@@ -332,7 +340,9 @@ print(count_inv(arr)[0])
 
 
 
+<br>
 
+<br>
 
 ------
 

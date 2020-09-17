@@ -17,15 +17,21 @@ topic: selection-algorithms
 - QuickSelect
 - PartialSelectionSort
 
+<br>
+
+<br>
+
+> ### Algo-1: QuickSelect Algorithm
 
 
 
-
-
+<br>
 
 ---
 
 ----
+
+<br>
 
 ### Standard Selection Algorithms Problems
 
@@ -35,7 +41,9 @@ topic: selection-algorithms
 
 
 
+<br>
 
+<br>
 
 ------
 

@@ -31,7 +31,7 @@ Many a times a computer science problems need data to be present in certain sort
 
 
 
-
+<br>
 
 > ### Algo-1: Insertion Sort
 
@@ -109,7 +109,7 @@ print(insertion_sort(arr))
 
 
 
-
+<br>
 
 > ### Algo-2: Merge Sort***
 
@@ -210,7 +210,7 @@ print(merge_sort(arr))
 
 
 
-
+<br>
 
 > ### Algo-3: Quick Sort***
 
@@ -311,7 +311,7 @@ print(quick_sort(arr))
 
 
 
-
+<br>
 
 > ### Algo-4: Heap Sort***
 

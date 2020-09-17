@@ -7,7 +7,7 @@ topic: recursion-backtrack-approach
 
 # Recursion and Backtrack Approach
 
-> **Backtracking**
+###### What is Backtracking Approach ?
 
 - It is one of problem solving strategy and it uses **Brute-Force Approach**. 
 
@@ -23,11 +23,13 @@ topic: recursion-backtrack-approach
 
 - **Backtracking is an algorithmic paradigm that tries different solutions until finds a solution that “works”.**
 
-- ###### Problems which are typically solved using backtracking technique have following property in common. 
 
-    - These problems can only be solved by trying every possible configuration and each configuration is tried only once.
-    - A Naive solution for these problems is to try all configurations and output a configuration that follows given problem constraints.
-    - Backtracking works in incremental way and is an optimization over the Naive solution where all possible configurations are generated and tried.
+
+[Problems which are typically solved using backtracking technique have following property in common:]() 
+
+- These problems can only be solved by trying every possible configuration and each configuration is tried only once.
+- A Naive solution for these problems is to try all configurations and output a configuration that follows given problem constraints.
+- Backtracking works in incremental way and is an optimization over the Naive solution where all possible configurations are generated and tried.
 
 ##### **Notes:-**
 
@@ -46,6 +48,10 @@ topic: recursion-backtrack-approach
 - Subset-Sum
 - Sudoku
 - Graph-Coloring
+
+
+
+---
 
 ------
 
@@ -681,7 +687,7 @@ tower_of_hanoi(4, "A", "B", "C")
 
 ------
 
-<a href="searching-sorting-algorithms" class="prev-button">&larr; Previous: Searching and Sorting Algorithms</a>    
+<a href="selection-algorithms" class="prev-button">&larr; Previous: Selection Algorithms</a>    
 
 <a href="greedy-approach" class="next-button">Next: Greedy Approach &rarr;</a>
 

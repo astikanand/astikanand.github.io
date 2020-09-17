@@ -111,6 +111,10 @@ Bitwise operators are good for saving space and sometimes to cleverly remove dep
 3. Data structure like n-bit map can be used to allocate n-size resource pool to represent the current status.
 4. Bits are used in networking, framing the packets of numerous bits which is sent to another system generally through any type of serial interface.
 
+
+
+---
+
 ------
 
 ### Standard Bit Operations Problems
@@ -482,7 +486,7 @@ print_possible_subsets(A[]):
 
 ------
 
-<a href="pattern-searching-string-alogrithms" class="prev-button">&larr; Previous: Pattern Searching - String Algorithms</a>       
+<a href="pattern-search-alogrithms" class="prev-button">&larr; Previous: Pattern Search Algorithms</a>       
 
 <a href="mathematical-algorithms" class="next-button">Next: Mathematical Algorithms &rarr;</a>
 

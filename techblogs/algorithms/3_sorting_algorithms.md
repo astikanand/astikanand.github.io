@@ -1,28 +1,17 @@
 ---
-permalink: /techblogs/algorithms/searching-sorting-algorithms
-topic: searching-sorting-algorithms
+permalink: /techblogs/algorithms/sorting-algorithms
+topic: sorting-algorithms
 ---
 
 
 
-# Searching and Sorting Algorithms
-
-###### Why Searching Algorithms ?
-
-Many of the computer science problems require us to search through the data to find certian things or pattern. These are the scenarios when we need the Searching Algorithms.
-
-> **Various Searching Algorithms:**
-
-- Linear Search
-- Binary Search
-- Ternary Search
-- Jump Search
+# Sorting Algorithms
 
 ###### Why Sorting Algorithms ?
 
 Many a times a computer science problems need data to be present in certain sorted order. These are the scenarios when we need the Sorting Algorithms.
 
-> **Various Sorting Algorithms:**
+> **Famous Sorting Algorithms:**
 
 - ##### Comparison Sorts:
 
@@ -40,81 +29,17 @@ Many a times a computer science problems need data to be present in certain sort
     - Radix Sort
     - Pigeonhole Sort
 
-------
-
-### Standard Searching & Sorting Algorithm Problems
-
-## 1. Binary Search***
-
-###### **Problem:**
-
-Given a sorted array arr[ ] of n elements, write a function to search a given element x in arr[ ].
-
-Return the index if it is found or else return -1.
-
-###### **Approach-1: Linear Search**
-
-- Search from left to right.
-- **Time Complexity: O(n)**
-
-###### **Approach-2: Divide and Conquer** **—** **Binary Search** 
-
-- Check the middle element of the array, if **middle element = num** return index. 
-- If the **middle element < num**, search the num in right half of the array. 
-- Else search in the num in left half of the array.
-- If num not found return -1.
-
-###### **Implementation:**
-
-```python
-def binary_search(arr, l, r, num):
-    if(r>=l):
-        mid = (l+r)//2
-        # If mid element is equal to num, return index
-        if(arr[mid]==num):
-            return mid
-        # If mid element is lesser than num, search in the right half of the array
-        elif(arr[mid] < num):
-            return binary_search(arr, mid+1, r, num)
-        # If mid element is grater searhc in left half of the array
-        else:
-            return binary_search(arr, l, mid-1, num)
-    
-    return -1
 
 
 
-print("Example-1: binary_search(arr, num)")
-arr = [2, 3, 4, 10, 40]
-print(binary_search(arr, 0, 4, 10))
 
-print("Example-2: binary_search(arr, num)")
-arr = [2, 3, 4, 10, 40]
-print(binary_search(arr, 0, 4, 15))
+> ### Algo-1: Insertion Sort
 
-print("Example-3: binary_search(arr, num)")
-arr = [2]
-print(binary_search(arr, 0, 0, 2))
-```
+###### What is Insertion Sort ?
 
-**Output:**
-
-![binary_search_output](assets/binary_search_output.png)
-
-###### **Complexity:**
-
-- **Time: O(logn)**
-- **Auxilliary Space: O(1)**
+- Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.
 
 
-
-## 2. Insertion Sort
-
-Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.
-
-###### **Problem:**
-
-Given an array of n numbers, sort the numbers in increasing order.
 
 <img src="assets/insertion_sort.png" width="30%">
 
@@ -184,19 +109,18 @@ print(insertion_sort(arr))
 
 
 
-## 3. Merge Sort***
 
-Merge Sort is a Divide and Conquer algorithm.
 
-It divides input array in two halves, calls itself for the two halves and then merges the two sorted halves.
+> ### Algo-2: Merge Sort***
 
-The **merge( )** function is used for merging two halves. 
+###### What is Merge Sort ?
 
-The merge( ) is key process that assumes that arr[…mid] and arr[mid+1….] are sorted and merges the two sorted sub-arrays into one.
+- Merge Sort is a Divide and Conquer algorithm.
+- It divides input array in two halves, calls itself for the two halves and then merges the two sorted halves.
+- The **merge( )** function is used for merging two halves. 
+- The merge( ) is key process that assumes that arr[…mid] and arr[mid+1….] are sorted and merges the two sorted sub-arrays into one.
 
-###### **Problem:**
 
-Given an array of n numbers, sort the numbers in increasing order in O(logn) time.
 
 <img src="assets/merge_sort.png" width="45%">
 
@@ -286,24 +210,22 @@ print(merge_sort(arr))
 
 
 
-## 4. Quick Sort***
 
-Like Merge Sort, QuickSort is a Divide and Conquer algorithm.
 
-It picks an element as pivot and partitions the given array around the picked pivot.
+> ### Algo-3: Quick Sort***
 
-**There are many different versions of quickSort that pick pivot in different ways.**
+###### What is Quick Sort ?
 
-- Always pick first element as pivot.
-- Always pick last element as pivot (implemented below)
-- Pick a random element as pivot.
-- Pick median as pivot.
+- Like Merge Sort, QuickSort is a Divide and Conquer algorithm.
+- It picks an element as pivot and partitions the given array around the picked pivot.
+- **There are many different versions of quickSort that pick pivot in different ways.**
+  - Always pick first element as pivot.
+  - Always pick last element as pivot (implemented below)
+  - Pick a random element as pivot.
+  - Pick median as pivot.
+- The key process in quickSort is `partition()`. Target of partitions is to put pivot x  of array at its correct position in sorted array and put all elements smaller than x before x, and all elements greater than x after x. All this should be done in linear time.
 
-The key process in quickSort is `partition()`. Target of partitions is to put pivot x  of array at its correct position in sorted array and put all elements smaller than x before x, and all elements greater than x after x. All this should be done in linear time.
 
-###### **Problem:**
-
-Given an array of n numbers, sort the numbers in increasing order.
 
 <img src="assets/quick_sort.png" width="50%">
 
@@ -389,7 +311,9 @@ print(quick_sort(arr))
 
 
 
-## 5. Heap Sort***
+
+
+> ### Algo-4: Heap Sort***
 
 Heap sort is a comparison based sorting technique based on **Binary Heap** data structure. 
 
@@ -476,9 +400,25 @@ print(heap_sort(arr))
 
 
 
+---
+
+----
+
+### Standard Sorting Algorithms Problems
+
+
+
+
+
+
+
+
+
+
+
 ------
 
-<a href="complexity-analysis" class="prev-button">&larr; Previous: Complexity Analysis</a>   
+<a href="searching-algorithms" class="prev-button">&larr; Previous: Searching Algorithms</a>   
 
-<a href="recursion-backtrack-approach" class="next-button">Next: Recursion and Backtrack Approach  &rarr;</a>
+<a href="selection-algorithms" class="next-button">Next: Selection Algorithms  &rarr;</a>
 

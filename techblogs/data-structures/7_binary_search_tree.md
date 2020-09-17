@@ -126,6 +126,8 @@ print("Searching if 6 is present ? : {}".format(search(root, 6)))
 
 
 
+----
+
 ------
 
 ### Standard BST Problems

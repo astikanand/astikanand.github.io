@@ -27,6 +27,8 @@ Orientation of an ordered triplet of points in the plane can be:
 
 
 
+---
+
 ------
 
 ### Standard  Geometric Algorithm Problems

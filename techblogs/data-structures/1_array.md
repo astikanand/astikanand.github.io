@@ -28,7 +28,7 @@ topic: array
 
 
 
-
+---
 
 ------
 
@@ -400,97 +400,9 @@ longest_increasing_subarray([12, 13, 1, 5, 4, 7, 8, 10, 10, 11])
 
 <br>
 
-## 6. Find Majority Element in Array 
-
-###### Problem:
-
-
-
-
-
-###### Approach:
-
-
-
-
-
-
-
-###### Implementation:
-
-```python
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-
-###### Complexity:
-
-- **Time: O(n)** 
-- **Auxilliary Space: O(1)** 
-
-
-
 <br>
 
-## 7. Sort an array of 0s, 1s and 2s 
-
-###### Problem:
-
-
-
-
-
-
-
-###### Approach:
-
-
-
-
-
-
-
-
-
-
-
-###### Implementation:
-
-```python
-
-
-
-
-
-
-
-
-
-
-
-
-```
-
-###### Complexity:
-
-- **Time: O(n)** 
-- **Auxilliary Space: O(1)** 
-
-<br>
-
-## 8. Trapping Rain Water Problem
+## 6. Trapping Rain Water Problem
 
 ###### Problem:
 
@@ -566,6 +478,17 @@ def trap2(height):
 
 - **Time: O(n)** 
 - **Auxilliary Space: O(1)** 
+
+
+
+
+
+##### Problems To Do:
+
+- Find Majority Element in Array 
+- Trapping Rain Water Problem
+
+
 
 <br>
 

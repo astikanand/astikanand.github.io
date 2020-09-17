@@ -7,12 +7,14 @@ topic: dynamic-programming-approach
 
 # Dynamic Programming Approach
 
-###### What is dynamic Programming
+###### What is dynamic Programming ?
 
 It is an algorithmic paradigm that solves a given complex problem by: 
 
 - breaking it into subproblems and
 - stores the results of subproblems to avoid computing the same results again. 
+
+
 
 **Following are the two main properties of a problem that suggests that the given problem can be solved using Dynamic programming.**
 
@@ -134,6 +136,10 @@ print(fib_tabulation_bottom_up(34))
         - Coz the longest path from q to r is q→s→t→r and the longest path from r to t is r→q→s→t.
 
     ![optimal_substructure](assets/optimal_substructure.gif)
+
+
+
+---
 
 ------
 
@@ -865,35 +871,15 @@ print(count_tiling_ways(4))
 
 
 
-## 8. Edit Distance***
 
 
 
 
 
 
+##### Problems To Do:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Edit Distance
 
 <br>
 

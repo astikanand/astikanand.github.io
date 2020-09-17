@@ -176,6 +176,8 @@ print("After Decreasing Key of 2 to 1, Now Get Min = {}".format(my_heap.getMin()
 
 
 
+---
+
 ------
 
 ### Standard Heap Problems

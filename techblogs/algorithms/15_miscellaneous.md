@@ -1,4 +1,5 @@
 ---
+
 permalink: /techblogs/algorithms/miscellaneous
 topic: miscellaneous
 ---
@@ -6,6 +7,8 @@ topic: miscellaneous
 
 
 # Miscellaneous Algorithmic Problems
+
+Here are some interesting list of miscellaneous problems.
 
 ## 1. Nuts & Bolts (Lock & Key) Problem***
 

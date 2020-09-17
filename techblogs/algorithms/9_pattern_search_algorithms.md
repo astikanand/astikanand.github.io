@@ -1,34 +1,37 @@
 ---
-permalink: /techblogs/algorithms/pattern-searching-string-alogrithms
-topic: pattern-searching-string-alogrithms
+permalink: /techblogs/algorithms/pattern-search-alogrithms
+topic: pattern-search-alogrithms
 ---
 
 
 
-# Pattern Searching - String Algorithms
+# Pattern Search Algorithms
 
-###### **Problem:**
+###### Why Pattern Search Algorithms ?
 
-Given a text **txt[0..n-1]** and a pattern **pat[0..m-1]**, write a function **search(pat, txt)** that prints all occurrences of pat[] in txt[].  
+- Many a times we need to find a pattern **pat[0..m-1]** in a given text **txt[0..n-1]** assuming n >= m.
+- In those situation we use pattern search algorithms.
 
-You may assume that n > m.
+- **Example:**
 
 ![pattern_search_introduction](assets/pattern_search_introduction.png)
 
 - Pattern searching is an important problem in computer science.
 - When we do search for a string in notepad/word file or browser or database, pattern searching algorithms are used to show the search results.
 
-------
 
-### Standard Pattern Search - String Algorithm Problems
 
-## 1. Naive Algorithm
+> **Famous Pattern Search Algorithms**
 
-###### **Problem:**
+- Naive Algorithm
+- Rabin-Karp Algorithm
+- KMP (Knuth-Morris-Pratt) Algorithm
 
-Find a pattern in the given text.
 
-###### **Approach:**
+
+
+
+> ### Algo-1: Naive Algorithm
 
 - Just need to use 2 loops to check every substring of same length as of given pattern and check if it matches it.
 
@@ -82,34 +85,31 @@ naive_pattern_search(pat, txt)
 
 
 
-## 2. Rabin-Karp Algorithm***
 
-###### **Approach:**
 
-Like the Naive Algorithm, Rabin-Karp algorithm also slides the pattern one by one.
+> ### Algo-2: Rabin-Karp Algorithm***
 
-But unlike the Naive algorithm, Rabin Karp algorithm matches the hash value of the pattern with the hash value of current substring of text,
+- Like the Naive Algorithm, Rabin-Karp algorithm also slides the pattern one by one.
+- But unlike the Naive algorithm, Rabin Karp algorithm matches the hash value of the pattern with the hash value of current substring of text,and if the hash values match then only it starts matching individual characters.
 
-and if the hash values match then only it starts matching individual characters.
+- **Rabin-Karp algorithm needs to calculate hash values for following strings:**
 
-##### Rabin-Karp algorithm needs to calculate hash values for following strings:
+  1. Pattern itself.
+  2. All the substrings of text of length m.
 
-1. Pattern itself.
-2. All the substrings of text of length m.
+- [Calculating hash function as suggested by Rabin-Karp:]()
 
-##### **Calculating hash function as suggested by Rabin-Karp:**
+  - We treat string character with its ASCII value and hence we take base as 256.
 
-- We treat string character with its ASCII value and hence we take base as 256.
+  - The numeric values cannot be practically stored as an integer.
 
-- The numeric values cannot be practically stored as an integer.
+  - Hence numeric value is calculated using modular arithmetic to make sure that the hash values can be stored in an integer variable.
 
-- Hence numeric value is calculated using modular arithmetic to make sure that the hash values can be stored in an integer variable.
+  - To do rehashing, we need to take off the most significant digit and add the new least significant digit for hash value.
 
-- To do rehashing, we need to take off the most significant digit and add the new least significant digit for hash value.
-
-    > **Rehashing Formula:**
-    >
-    > hash( txt[s+1 .. s+m] ) = ( d ( hash(txt[s .. s+m-1]) – txt[s]*h ) + txt[s + m] ) mod q 
+  > **Rehashing Formula:**
+  >
+  > hash( txt[s+1 .. s+m] ) = ( d ( hash(txt[s .. s+m-1]) – txt[s]*h ) + txt[s + m] ) mod q 
 
 ###### **Implementation:**
 
@@ -185,23 +185,17 @@ rabin_karp_search(pat, txt)
 
 
 
-## 3. KMP (Knuth Morris Pratt) Algorithm***
 
-###### **Approach:**
+
+> ### Algo-3: KMP (Knuth Morris Pratt) Algorithm***
 
 - Naive doesn't work well in cases where we see many matching characters followed by a mismatching character.
-
-    > **Example:**
-    >
-    > **txt** = "AAAAAAAAAAAAAAAAAB" and **pat** = "AAAAB"
-
+- ***Example:*** **txt** = "AAAAAAAAAAAAAAAAAB" and **pat** = "AAAAB"
 - KMP algorithm uses degenerating property (pattern having same sub-patterns appearing more than once in the pattern) of the pattern & improves the worst case complexity to O(n).
-
 - The basic idea behind KMP’s algorithm is: whenever we detect a mismatch (after some matches), we already know some of the characters in the text of the next window.
-
 - We take advantage of this information to avoid matching the characters that we know will anyway match.
 
-###### **Preprocessing:**
+##### Step-1: Preprocessing
 
 - KMP algorithm preprocesses **pat[]** and constructs an auxiliary **lps[]** of size m (same as size of pattern) which is used to skip characters while matching.
 
@@ -225,13 +219,17 @@ rabin_karp_search(pat, txt)
 
     > **lps[i]** = the longest proper prefix of pat[0..i] which is also a suffix of pat[0..i]
 
-#### Longest Proper Prefix also a Suffix: LPS[] 
 
-###### Calculating  LPS or  Pi (π) or False function
+
+[Longest Proper Prefix also a Suffix: LPS[]]()
+
+- Calculating  LPS or  Pi (π) or False function
 
 <img src="assets/KMP_calculate_pi.png" width="80%">
 
-###### **Algorithm** **to calculate π**
+
+
+[Algorithm to calculate π]()
 
 - Start from **j=0, i=1** and **π[0]=0** for pat. 
 - if **pat[i]==pat[j]** put **π[i]=j+1** and **increase** both **i** and **j**. 
@@ -282,9 +280,9 @@ print(str(calculate_lps(pat)))
 - **Time: O(m)**
 - **Auxilliary Space: O(m)**
 
-#### Matching Algorithm
 
-###### **Algorithm**
+
+##### Step-2: Matching Algorithm
 
 - Start from **i=0, j=0** we will use i to track text and j to track pat.  
 - if **text[i] == pat[j]** then **increase** both **i** and **j** and check 
@@ -344,7 +342,13 @@ KMP_search(pat, txt)
 
 
 
-## 4. Anagram Substring Search
+---
+
+---
+
+### Standard Pattern Search Algorithms Problmes
+
+## 1. Anagram Substring Search
 
 ###### **Problem:**
 
@@ -410,7 +414,7 @@ anagram_search(pat, txt)
 
 
 
-## 5. Manacher's  Algorithm - Linear time Longest Palindromic Substring***
+## 2. Manacher's  Algorithm - O(N) Time Longest Palindromic Substring***
 
 ###### **Problem:**
 
@@ -437,7 +441,7 @@ Given a string, find the longest substring which is palindrome.
 ###### **Manacher** **Algorithm:**
 
 - **Pre-Processing:**
-    - Push **“****#”** before and after every character and create a **new_text**. Example: text = “abc” then new_text= “#a#b#a#" 
+    - Push **'#'** before and after every character and create a **new_text**. Example: text = “abc” then new_text= “#a#b#a#" 
     - Create an array **P[]** of size(2n+1) to store palindromic values of the new_text. 
     - Initialize **Center(C) = 0** and **Right(R) = 0** 
 - **Processing:**
@@ -534,44 +538,7 @@ manacher_longest_palindromic_substring(txt)
 
 
 
-## 6. Longest Even Length Substring :- Sum of 1st & 2nd half is same***
-
-###### Problem:
-
-
-
-
-
-###### Approach:
-
-
-
-
-
-###### Implementation:
-
-```python
-
-
-
-
-
-
-
-```
-
-**Output:**
-
-
-
-###### **Complexity:**
-
-- **Time:**
-- **Auxilliary Space:**
-
-
-
-## 7. All Possible Strings - Made by Placing Spaces***
+## 3. All Possible Strings - Made by Placing Spaces***
 
 ###### **Problem:**
 
@@ -657,39 +624,12 @@ print_pattern(string)
 
 
 
-## 8. Print all Anagrams Together - Sequence of words are given***
-
-###### Problem:
 
 
+##### Problems To Do:
 
-
-
-###### Approach:
-
-
-
-
-
-###### Implementation:
-
-```python
-
-
-
-
-
-
-```
-
-**Output:**
-
-
-
-###### **Complexity:**
-
-- **Time:**
-- **Auxilliary Space:**
+- Longest Even Length Substring :- Sum of 1st & 2nd half is same
+- Print all Anagrams Together - Sequence of words are given
 
 
 

@@ -9,99 +9,7 @@ topic: miscellaneous
 
 Here are some interesting list of miscellaneous problems.
 
-## 1. Nuts & Bolts (Lock & Key) Problem***
-
-###### Problem:
-
-Given a set of n nuts of different sizes and n bolts of different sizes. There is a one-one mapping between nuts and bolts.
-
-Match nuts and bolts efficiently.
-
-**Constraints:**
-
-- Comparison of a nut to another nut or a bolt to another bolt is not allowed.
-- It means nut can only be compared with bolt and bolt can only be compared with nut to see which one is bigger/smaller.
-
-##### Other way of asking this problem:
-
-Given a box with locks and keys where one lock can be opened by one key in the box. We need to match the pair.
-
-> **Example Representation:**
->
-> Nuts represented as array of character: &nbsp; ***char nuts[]*** = {‘@’, ‘#’, ‘$’, ‘%’, ‘^’, ‘&’}
->
-> Bolts represented as array of character: &nbsp; ***char bolts[]*** = {‘$’, ‘%’, ‘&’, ‘^’, ‘@’, ‘#’}
-
-###### Approach-1: Brute Force
-
-- Start with the first bolt and compare it with each nut until we find a match.
-- **Time Complexity: O(n<sup>2</sup>)**
-
-###### Approach-2: Quick Sort
-
-- Perform a partition by picking last element of bolts array as pivot, rearrange the array of nuts and returns the partition index **'i'** such that all nuts smaller than **nuts[i]** are on the left side and all nuts greater than **nuts[i]** are on the right side.
-- Next using the nuts[i] we can partition the array of bolts, partitioning operations can easily be implemented in O(n) and this operation also makes nuts and bolts array nicely partitioned.
-- Now apply this partitioning recursively on the left and right sub-array of nuts and bolts.
-- As we apply partitioning on nuts and bolts both so the total time complexity will be Θ(2*nlogn) = **Θ(nlogn) on average**.
-- Here for the sake of simplicity we have chosen last element always as pivot. We can do randomized quick sort too.
-
-###### Implementation
-
-```python
-def nuts_bolts_match(nuts, bolts, low, high):
-    if low < high:
-        # Set last character of bolts for nuts partition. 
-        pivot = partition(nuts, low, high, bolts[high])
-
-        # Now using the partition index of nuts set pivot for bolts partition
-        partition(bolts, low, high, nuts[pivot])
-
-        # Recur for [low...pivot-1] & [pivot+1...high] for nuts and bolts array. 
-        nuts_bolts_match(nuts, bolts, low, pivot-1)
-        nuts_bolts_match(nuts, bolts, pivot+1, high)
-
-
-def partition(arr, low, high, pivot):
-    i = j = low
-
-    while(j < high):
-        if arr[j] < pivot:
-            arr[i], arr[j] = arr[j], arr[i]
-            i += 1
-        elif arr[j] == pivot:
-            arr[high], arr[j] = arr[j], arr[high]
-            j -= 1
-        
-        j += 1
-    
-    arr[i], arr[high] = arr[high], arr[i]
-
-    return i            
-
-
-  
-print("Example-1: Nuts and Bolts Problem")
-nuts = ['@', '#', '$', '%', '^', '&']
-bolts = ['$', '%', '&', '^', '@', '#']
-nuts_bolts_match(nuts, bolts, 0, 5)
-print(nuts)
-print(bolts)
-```
-
-**Output:**
-
-![](assets/nuts_bolts_output.png)
-
-###### **Complexity:**
-
-- **Time:-** Average Case: **O(nlogn)** 
-- **Auxilliary Space: O(1)**
-
-<br>
-
-<br>
-
-## 2. Flood Fill Algorithm - Implement fill() in paint***
+## 1. Flood Fill Algorithm - Implement fill() in paint***
 
 ###### Problem:
 
@@ -190,7 +98,7 @@ for i in range(m):
 
 <br>
 
-## 3. Find  Conflicting  Appointments***
+## 2. Find  Conflicting  Appointments***
 
 ###### Problem:
 
@@ -287,7 +195,7 @@ conflicting_appointments(None, appointments)
 
 <br>
 
-## 4. Find if first string is a subsequence of second***
+## 3. Find if first string is a subsequence of second***
 
 ###### Problem:
 
@@ -346,7 +254,7 @@ check_subsequence('mtsdet', 'meetsandmeets')
 
 <br>
 
-## 5. Connect 'n' ropes with minimum cost***
+## 4. Connect 'n' ropes with minimum cost***
 
 ###### Problem:
 

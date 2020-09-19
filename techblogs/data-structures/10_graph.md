@@ -173,24 +173,20 @@ class Graph:
     def __init__(self):
         self.graph = {}
     
-
     def add_vertex(self, vertex):
         if vertex not in self.graph:
             self.graph[vertex] = []
     
-
     def add_edge(self, u, v):
         self.add_vertex(u)
         self.add_vertex(v)
         self.graph[u].append(v)
-    
 
     def unvisited(self, visited):
         for vertex in visited:
             if(visited[vertex] is False):
                 return vertex
         return None
-    
 
     def bfs_traversal_util(self, start_vertex, visited):
         # Take a queue and enqueue the start_vertex and mark it as visited
@@ -208,8 +204,7 @@ class Graph:
                 if(visited[connected_vertex] is False):
                     queue.append(connected_vertex)
                     visited[connected_vertex] = True
-
-       
+ 
     def bfs_traversal(self, start_vertex):
         # Mark every every vertex as unvisited
         visited = {}

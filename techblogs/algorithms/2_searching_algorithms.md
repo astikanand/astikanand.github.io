@@ -86,11 +86,85 @@ print(binary_search(arr, 0, 0, 2))
 
 ### Standard Searching Algorithms Problems
 
+## 1. Search in sorted and rotated array***
+
+###### Problem:
+
+An element in a sorted array can be found in O(log n) time via binary search. But suppose we rotate an ascending order sorted array at some pivot unknown to you beforehand. So for instance, 1 2 3 4 5 might become 3 4 5 1 2. Devise a way to find an element in the rotated array in O(log n) time.
+
+> **Example:**
+>
+> ***Input:*** arr[] = {5, 6, 7, 8, 9, 10, 1, 2, 3} &nbsp; key = 3
+> ***Output:*** Found at index 8
+>
+> 
+>
+> ***Input:*** arr[] = {5, 6, 7, 8, 9, 10, 1, 2, 3} &nbsp; key = 4
+> ***Output:*** Not found
+>
+> 
+>
+> ***Input:*** arr[] = {30, 40, 50, 10, 20} &nbsp; key = 10
+> ***Output:*** Found at index 3
+
+###### Approach-Distorted Binary Search
+
+- Find middle point mid = (l + h)/2
+- If key is present at middle point, return mid.
+- Else If arr[l..mid] is sorted
+  - a) If key to be searched lies in range from arr[l] to arr[mid], recur for arr[l..mid].
+  - b) Else recur for arr[mid+1..h]
+- Else (arr[mid+1..h] must be sorted)
+  - a) If key to be searched lies in range from arr[mid+1] to arr[h], recur for arr[mid+1..h].
+  - b) Else recur for arr[l..mid] 
+
+###### Implementation
+
+```python
+def search(arr, start, end, key): 
+    if start > end:
+        print("Key {} : NOT Found".format(key))
+        return
+      
+    mid = (start + end) // 2
+    if arr[mid] == key:
+        print("Key {} : Found at index {}".format(key, mid))
+        return
+  
+    # If arr[start...mid] i.e 1st half is sorted  
+    if arr[start] <= arr[mid]: 
+        # As the 1st subarray is sorted, Quickly check if key lies in first half or 2nd half  
+        if key >= arr[start] and key <= arr[mid]: 
+            return search(arr, start, mid-1, key)
+        else:
+            return search(arr, mid+1, end, key) 
+    # Else arr[start..mid] is not sorted, then arr[mid... end] must be sorted
+    else:
+        # As the 2nd subarray is sorted, Quickly check if key lies in 2nd half or first half
+        if key >= arr[mid] and key <= arr[end]: 
+            return search(arr, mid+1, end, key)
+        else:
+            return search(arr, start, mid-1, key)
 
 
+print("Example-1: search([5, 6, 7, 8, 9, 10, 1, 2, 3], 0, 8, 3)")
+search([5, 6, 7, 8, 9, 10, 1, 2, 3], 0, 8, 3)
 
+print("\nExample-2: search([5, 6, 7, 8, 9, 10, 1, 2, 3], 0, 8, 4)")
+search([5, 6, 7, 8, 9, 10, 1, 2, 3], 0, 8, 4)
 
+print("\nExample-3: search([30, 40, 50, 10, 20], 0, 4, 10)")
+search([30, 40, 50, 10, 20], 0, 4, 10)
+```
 
+**Output:**
+
+![serach_sorted_rotated_array_output](assets/serach_sorted_rotated_array_output.png)
+
+###### Complexity:
+
+- **Time:** **O(LogN)** 
+- **Auxilliary Space:** **O(1)**
 
 
 

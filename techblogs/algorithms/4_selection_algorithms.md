@@ -289,7 +289,7 @@ Output: [[3,3],[-2,4]]
 
 ###### Implementation:
 
-```
+```python
 from typing import List
 import random
 

@@ -11,3 +11,13 @@ $(document).on('click', "a.tabclick", function() {
 });
 ```
 
+
+
+
+
+###### Chrome
+
+```
+Runner.prototype.gameOver = function (){}
+```
+

@@ -1342,7 +1342,6 @@ We can save space by storing Preorder traversal and a marker for NULL pointers.
 ###### Implementation:
 
 ```python
-# Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -1352,14 +1351,8 @@ class TreeNode(object):
 
 class Codec:
     def serialize(self, root):
-        """Encodes a tree to a single string.
-
-        :type root: TreeNode
-        :rtype: str
-        """
         serialized_btree = []
         self._modified_pre_order(root, serialized_btree)
-
         return ",".join(serialized_btree)
 
     def _modified_pre_order(self, root, serialized_btree):
@@ -1371,11 +1364,6 @@ class Codec:
             serialized_btree.append("#")
 
     def deserialize(self, data):
-        """Decodes your encoded data to tree.
-
-        :type data: str
-        :rtype: TreeNode
-        """
         nodes_list = data.split(",")
         nodes_list.reverse()
         return self._build_tree(nodes_list)
@@ -1449,193 +1437,6 @@ print()
 
 - **Time complexity: O(N)** In both serialization and deserialization functions, we visit each node exactly once, thus the time complexity is O(N), where N is the number of nodes, *i.e.* the size of tree.
 - **Space complexity: O(N)** In both serialization and deserialization functions, we keep the entire tree, either at the beginning or at the end, therefore, the space complexity is O(N).
-
-<br>
-
-<br>
-
-## 12. Threaded Binary Trees
-
-- Inorder traversal of Binary Tree can either be done using recursion or with the use of an auxiliary stack.
-- The idea of threaded binary trees is to make inorder traversal faster and do it without stack and without recursion.
-- A binary tree is made threaded by making all right child pointers that would normally be NULL point to the inorder successor of the node (if it exists).
-- There are two types of threaded binary trees.
-    - ***Single Threaded:*** Where a NULL right pointers is made to point to the inorder successor (if successor exists)
-    - ***Double Threaded:*** Where both left and right NULL pointers are made to point to inorder predecessor and inorder successor respectively. The predecessor threads are useful for reverse inorder traversal and postorder traversal.
-- The threads are also useful for fast accessing ancestors of a node.
-
-- Since right pointer is used for two purposes, the boolean variable **rightThread** is used to indicate whether right pointer points to right child or inorder successor.
-- Similarly, we can add **leftThread** for a double threaded binary tree.
-- Following diagram shows an example Single Threaded Binary Tree. The dotted lines represent threads.
-
-#### Representation of Threaded Binary Tree
-
-```python
-class Node:
-    def __init__(self, key):
-        self.val = key 
-        self.left = None
-        self.right = None
-        self.rightThread = False
-
-```
-
-#### Inorder Traversal in Threaded Binary Tree
-
-<img src="assets/inorder_threaded_binary_tree.jpg" width="65%">
-
-<br>
-
-<br>
-
-## 13. Constructing Binary Tree from 2 given traversal sequences
-
-###### **Possible to create?**
-
-Whether we will be able to construct a binary tree with given 2 traversals depends on what traversals are given.
-
-If one of the traversal methods is Inorder then the tree can be constructed, otherwise not.
-
-
-
-**Therefore, following combination can uniquely identify a tree.**
-
-- Inorder and Preorder.
-- Inorder and Postorder.
-- Inorder and Level-order.
-
-#### Constructing Binary Tree
-
-- Let us consider the below traversals:
-    - Inorder sequence: D B E A F C
-    - Preorder sequence: A B D E C F
-
-###### Steps to Create:
-
-- In a Preorder sequence, leftmost element is the root of the tree. So we know ‘A’ is root for given sequences. 
-
-- By searching ‘A’ in Inorder sequence, we can find out all elements on left side of ‘A’ are in left subtree and elements on right are in right subtree. 
-
-    ![constructing_binary_tree](assets/constructing_binary_tree.png)
-
-###### **Algorithm:**
-
-1. Pick an element from **preorder** and increment a preorder_index  to pick next element in next recursive call.
-2. Create a new **tree_node** with the picked element.
-3. Find the picked element’s index in Inorder. Let the index be inorder_index.
-4. Call build_tree for elements before inorder_index and make the built tree as left subtree of tree_node.
-5. Call build_tree for elements after inorder_index and make the built tree as right subtree of tree_node.
-6. return tree_node.
-
-###### Implementation
-
-```python
-class Node:
-    def __init__(self, key):
-        self.val = key
-        self.left = None
-        self.right = None
-
-        
-# Recursive function to construct binary of size len from 
-# Inorder traversal inorder[] and Preorder traversal preorder[].  
-# Initial values of inorder_start and inorder_end should be 0 and len -1.  
-# The function doesn't do any error checking for cases where inorder and preorder do not form a tree.
-def build_tree(inorder, preorder, inorder_start, inorder_end):
-    if (inorder_start > inorder_end):
-        return None
- 
-    # Pick current node from Preorder traversal using preorder_index and increment preorder_index
-    # Create a new tree node with this picked element
-    tree_node = Node(preorder[build_tree.preorder_index])
-    build_tree.preorder_index += 1
- 
-    # If this node has no children then return
-    if inorder_start == inorder_end :
-        return tree_node
- 
-    # Else find the index of this node in Inorder traversal
-    inorder_index = search(inorder, inorder_start, inorder_end, tree_node.val)
-     
-    # Using index in Inorder Traversal, construct left and right subtrees
-    tree_node.left = build_tree(inorder, preorder, inorder_start, inorder_index-1)
-    tree_node.right = build_tree(inorder, preorder, inorder_index+1, inorder_end)
- 
-    return tree_node
-
-
-# Function to find index of vaue in arr[start...end]
-# The function assumes that value is rpesent in inorder[]
-def search(arr, start, end, value):
-    for i in range(start, end+1):
-        if arr[i] == value:
-            return i
-
-        
-def inorder_traversal(node):
-    if node is None:
-        return
-     
-    inorder_traversal(node.left)
-    print (node.val, end=" ")
-    inorder_traversal(node.right)
-
-
-
-# Driver program to test above function
-inorder = ['D', 'B' ,'E', 'A', 'F', 'C']
-preorder = ['A', 'B', 'D', 'E', 'C', 'F']
-# Static variable preorder_index
-build_tree.preorder_index = 0
-root = build_tree(inorder, preorder, 0, len(inorder)-1)
- 
-# Let us test the build tree by priting Inorder traversal
-print ("Inorder traversal of the constructed tree is:")
-inorder_traversal(root)
-print()
-
-```
-
-**Output:**
-
-![construct_binary_tree_from_2_traversals_output](assets/construct_binary_tree_from_2_traversals_output.png)
-
-###### **Time Complexity:** O(n<sup>2</sup>)
-
-Worst case occurs when tree is left skewed. 
-
-Example Preorder and Inorder traversals for worst case are {A, B, C, D} and {D, C, B, A}.
-
-#### Another Approach of Binary Tree Construction
-
-- Use the fact that **Inorder traversal** is `Left-Root-Right` and **Preorder traversal** is `Root-Left-Right`. 
-- Also, **first node** in Preorder traversal is always the **root node** and first node in Inorder traversal is the **leftmost node** in the tree.
-
-##### Maintain two data-structures:
-
-Stack (to store the path visited while traversing Preorder array) and Set (to maintain the node in which the next right subtree is expected). 
-
-###### Steps to create:
-
-1. **Do below until reach the leftmost node.**
-
-    - Keep creating the nodes from Preorder traversal
-
-    - If the stack’s topmost element is not in the set, link the created node to the left child of stack’s topmost element (if any), without popping the element.
-
-    - Else link the created node to the right child of stack’s topmost element and then remove the stack’s topmost element from the set and the stack.
-
-    - Push the node to stack.
-
-        <img src="assets/tree_construtction_from_traversal_1.png" width="30%">
-
-2. **Keep popping the nodes from the stack until either the stack is empty, or the topmost element of stack compares to the current element of Inorder traversal.** Once the loop is over, push the last node back into the stack and into the set.
-
-    <img src="assets/tree_construtction_from_traversal_2.png" width="30%">
-
-3. **Go to Step 1.**
-
-    <img src="assets/tree_construtction_from_traversal_3.png" width="30%">
 
 <br>
 

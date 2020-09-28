@@ -19,18 +19,19 @@
             <br>
             <div class="ui huge relaxed list">
                 <div class="item">
-                    <i class="server orange icon"></i>
                     <div class="content">
-                        <a style="color: #F2711C;" href="/">astik.me</a>
-                        <div class="ui tiny relaxed list">
+                        <a href="/">
+                            <img style="width: 10%;"
+                                src="https://astikanand.github.io/assets/logos/reactangular_blue_logo.png">
+                        </a>
+                        <div class="ui tiny relaxed list" style="padding-left: 40px;">
                             {% for section in site.data.sections %}
                             <div class="item title">
                                 <i class="folder blue icon {% if section.slug == page.section%} open {% endif %}"></i>
                                 <div class="content">
                                     <a>{{section.title}}</a>
                                     <div
-                                        class="ui tiny relaxed list transition {% if section.slug == page.section%} visible {% else %} hidden {% endif %}">
-
+                                        class="ui tiny relaxed list transition {% if section.slug == page.section %} visible {% else %} hidden {% endif %}">
 
                                         {% for subsection in site.data[section.slug] %}
                                         <div class="item title">

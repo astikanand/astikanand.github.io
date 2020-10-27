@@ -140,11 +140,80 @@
 
 
 - 
+    title: Advanced Data Structures
+    slug: advanced-data-structures
+    description: This is about advanced data structures.
+    img: /path/to/advanced-data-structures/img
+    topics:
+        -
+            title: Skip List
+            slug: skip-list
+            description: This is about skip list.
+            img: /path/to/skip-list/img
+        -
+            title: Trie
+            slug: trie
+            description: This is about trie.
+            img: /path/to/trie/img
+        -
+            title: AVL Tree
+            slug: avl-tree
+            description: This is about avl tree.
+            img: /path/to/avl-tree/img
+        -
+            title: Suffix Array
+            slug: suffix-array
+            description: This is about suffix array.
+            img: /path/to/suffix-array/img
+        -
+            title: Suffix Tree
+            slug: suffix-tree
+            description: This is about suffix-tree.
+            img: /path/to/suffix-tree/img
+        -
+            title: Segment Tree
+            slug: segment-tree
+            description: This is about segment tree.
+            img: /path/to/segment-tree/img
+        -
+            title: Interval Tree
+            slug: interval-tree
+            description: This is about interval tree.
+            img: /path/to/interval-tree/img
+        -
+            title: Binary Indexed / Fenwick Tree
+            slug: binary-indexed-or-fenwick-tree
+            description: This is about binary-indexed-or-fenwick-tree.
+            img: /path/to/binary-indexed-or-fenwick-tree/img
+        -
+            title: Splay Tree
+            slug: splay-tree
+            description: This is about splay tree.
+            img: /path/to/splay-tree/img
+        -
+            title: B-Trees
+            slug: b-trees
+            description: This is about b-trees.
+            img: /path/to/b-trees/img
+        -
+            title: Red-Black Tree
+            slug: red-black-tree
+            description: This is about red-black-tree.
+            img: /path/to/red-black-tree/img
+        -
+            title: Ternary Search Tree
+            slug: ternary-search-tree
+            description: This is about ternary-search-tree.
+            img: /path/to/ternary-search-tree/img
+
+
+- 
     title: Coding Problem Patterns
     slug: coding-problem-patterns
     description: This is about coding-problem-patterns.
     img: /path/to/coding-problem-patterns/img
     topics: []
+
 
 - 
     title: Dynamic Programming Patterns

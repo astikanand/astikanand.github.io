@@ -143,7 +143,8 @@
     title: Coding Problem Patterns
     slug: coding-problem-patterns
     description: This is about coding-problem-patterns.
-    img: /path/to/coding-problem-patterns/img    
+    img: /path/to/coding-problem-patterns/img
+    topics: []
 
 - 
     title: Dynamic Programming Patterns

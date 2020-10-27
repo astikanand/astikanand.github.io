@@ -138,73 +138,49 @@
             description: This is about time miscellaneous.
             img: /path/to/miscellaneous/img
 
-        
+
 - 
-    title: Advanced Data Structures
-    slug: advanced-data-structures
-    description: This is about advanced data structures.
-    img: /path/to/advanced-data-structures/img
+    title: Coding Problem Patterns
+    slug: coding-problem-patterns
+    description: This is about coding-problem-patterns.
+    img: /path/to/coding-problem-patterns/img    
+
+- 
+    title: Dynamic Programming Patterns
+    slug: dynamic-programming-patterns
+    description: This is about Dynamic Programming Patterns.
+    img: /path/to/dynamic-programming-patterns/img
     topics:
         -
-            title: Skip List
-            slug: skip-list
-            description: This is about skip list.
-            img: /path/to/skip-list/img
+            title: Introduction
+            slug: introduction
+            description: This is about DP patterns introduction.
+            img: /path/to/introduction/img
         -
-            title: Trie
-            slug: trie
-            description: This is about trie.
-            img: /path/to/trie/img
+            title: 0/1 Knapsack Pattern
+            slug: 0-1-knapsack-pattern
+            description: This is about 0-1-knapsack-pattern.
+            img: /path/to/0-1-knapsack-pattern/img
         -
-            title: AVL Tree
-            slug: avl-tree
-            description: This is about avl tree.
-            img: /path/to/avl-tree/img
+            title: Unbounded Knapsack Pattern
+            slug: unbounded-knapsack-pattern
+            description: This is about unbounded-knapsack-pattern tree.
+            img: /path/to/unbounded-knapsack-pattern/img
         -
-            title: Suffix Array
-            slug: suffix-array
-            description: This is about suffix array.
-            img: /path/to/suffix-array/img
+            title: Fibonacci Numbers Pattern
+            slug: fibonacci-numbers-pattern
+            description: This is about fibonacci-numbers-pattern array.
+            img: /path/to/fibonacci-numbers-pattern/img
         -
-            title: Suffix Tree
-            slug: suffix-tree
-            description: This is about suffix-tree.
-            img: /path/to/suffix-tree/img
+            title: Palindromic Subsequence Pattern
+            slug: palindromic-subsequence-pattern
+            description: This is about palindromic-subsequence-pattern.
+            img: /path/to/palindromic-subsequence-pattern/img
         -
-            title: Segment Tree
-            slug: segment-tree
-            description: This is about segment tree.
-            img: /path/to/segment-tree/img
-        -
-            title: Interval Tree
-            slug: interval-tree
-            description: This is about interval tree.
-            img: /path/to/interval-tree/img
-        -
-            title: Binary Indexed / Fenwick Tree
-            slug: binary-indexed-or-fenwick-tree
-            description: This is about binary-indexed-or-fenwick-tree.
-            img: /path/to/binary-indexed-or-fenwick-tree/img
-        -
-            title: Splay Tree
-            slug: splay-tree
-            description: This is about splay tree.
-            img: /path/to/splay-tree/img
-        -
-            title: B-Trees
-            slug: b-trees
-            description: This is about b-trees.
-            img: /path/to/b-trees/img
-        -
-            title: Red-Black Tree
-            slug: red-black-tree
-            description: This is about red-black-tree.
-            img: /path/to/red-black-tree/img
-        -
-            title: Ternary Search Tree
-            slug: ternary-search-tree
-            description: This is about ternary-search-tree.
-            img: /path/to/ternary-search-tree/img
+            title: Longest Common Substring Pattern
+            slug: longest-common-substring-pattern
+            description: This is about longest-common-substring-pattern tree.
+            img: /path/to/longest-common-substring-pattern/img
 
 
 - 

@@ -20,6 +20,16 @@ defaults:
       path: techblogs/advanced-data-structures
     values:
       subsection: advanced-data-structures
+
+  - scope:
+      path: techblogs/coding-problem-patterns
+    values:
+      subsection: coding-problem-patterns
+
+  - scope:
+      path: techblogs/dynamic-programming-patterns
+    values:
+      subsection: dynamic-programming-patterns
   
   - scope:
       path: techblogs/system-design

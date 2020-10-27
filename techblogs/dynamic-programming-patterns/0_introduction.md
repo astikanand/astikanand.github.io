@@ -139,7 +139,7 @@ Fib of 7 : 13
 
 ### Patterns to be studied:
 
-1. **0/1 Knapsack Patter**
+1. **0/1 Knapsack Pattern**
 2. **Unbounded Knapsack Pattern**
 3. **Fibonacci Numbers Pattern**
 4. **Palindromic Subsequence Pattern**

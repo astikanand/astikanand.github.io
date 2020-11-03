@@ -5,14 +5,6 @@ topic: longest-common-substring-pattern
 
 # Longest Common Substring Pattern
 
-- Pattern
-
-<br>
-
-<br>
-
----
-
 ### Problems Following Longest Common Substring Pattern
 
 ## 1. Longest Common Substring
@@ -40,4 +32,22 @@ topic: longest-common-substring-pattern
 ## 12.Edit Distance
 
 ## 13. Strings Interleaving
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<br>
+
+------
+
+<a href="palindromic-subsequence-pattern" class="prev-button">&larr; Previous: Palindromic Subsequence Pattern</a>
 

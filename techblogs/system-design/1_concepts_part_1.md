@@ -370,7 +370,7 @@ Following are some of the most common cache eviction policies:
 
 ------
 
-<a href="basics" class="prev-button"><--- Previous: Basics</a> 
+<a href="basics" class="prev-button">&rarr; Previous: Basics</a> 
 
-<a href="concepts-part-2" class="next-button">Next: Concepts - Part-2 ---></a>
+<a href="concepts-part-2" class="next-button">Next: Concepts - Part-2 &rarr;</a>
 

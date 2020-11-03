@@ -257,9 +257,9 @@ deletePaste(api_dev_key, api_paste_key)
 
 ---
 
-<a href="design-tiny-url-service" class="prev-button"><--- Previous: Design Tiny Url Service</a> 
+<a href="design-tiny-url-service" class="prev-button">&larr; Previous: Design Tiny Url Service</a> 
 
-<a href="design-instagram" class="next-button">Next: Design Instagram ---></a>
+<a href="design-instagram" class="next-button">Next: Design Instagram &rarr;</a>
 
 
 

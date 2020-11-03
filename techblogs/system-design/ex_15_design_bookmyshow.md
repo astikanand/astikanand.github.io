@@ -304,5 +304,5 @@ Here are a few observations about the data we are going to store:
 
 ---
 
-<a href="design-uber" class="prev-button"><--- Previous: Design Uber</a> 
+<a href="design-uber" class="prev-button">&larr; Previous: Design Uber</a> 
 

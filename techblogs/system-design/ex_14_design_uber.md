@@ -195,7 +195,7 @@ topic: design-uber
 
 ---
 
-<a href="design-yelp-or-nearby" class="prev-button"><--- Previous: Design Yelp / Nearby</a>
+<a href="design-yelp-or-nearby" class="prev-button">&larr; Previous: Design Yelp / Nearby</a>
 
-<a href="design-bookmyshow" class="next-button">Next: Design BookMyShow ---></a>
+<a href="design-bookmyshow" class="next-button">Next: Design BookMyShow &rarr;</a>
 

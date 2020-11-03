@@ -30,6 +30,10 @@ Best Profit Combination : 2 Apples + 1 Melon with 80 profit.
 
 <br>
 
+### Problems following Unbounded Knapsack Pattern
+
+## 1. Unbounded Knapsack
+
 ###### Problem:
 
 Given the weights ***w*** and profits ***p*** of 'N' items, need to find a subset of these items which will give max profit with contstraint that their cumulative sum should not be greater than total knapsack capacity ***C***.
@@ -128,7 +132,7 @@ print(unbounded_knapsack_dp_memoization([1, 3, 4, 5], [15, 50, 60, 90], 6))
 **Complexity:**
 
 - ***Time: O(N\*C)*** - Our memory stores the results for all the possible subproblems, hence we can't have more than N*C subproblems.
-- **Space: O(N*C)** - N*C space is used to store results and N for the recursion call stack and hence asymptotically O(N\*C).
+- ***Space: O(N\*C)*** - N\*C space is used to store results and N for the recursion call stack and hence asymptotically O(N\*C).
 
 <br>
 
@@ -197,7 +201,7 @@ DP -> Iteration + Tabulation Method :
 **Complexity:**
 
 - ***Time: O(N\*C)*** 
-- **Space: O(N*C)** 
+- ***Space: O(N\*C)***
 
 <br>
 
@@ -284,19 +288,33 @@ item - 1 with weight : 1 and profit : 15
 
 <br>
 
----
+## 2. Rod Cutting
 
-### Problems following Unbounded Knapsack Patterns
+## 3. Coin Change
 
-## 1. Rod Cutting
+## 4. Minimum Coin Change
 
-## 2. Coin Change
-
-## 3. Minimum Coin Change
-
-## 4. Maximum Ribbon Cut
+## 5. Maximum Ribbon Cut
 
 
 
  
+
+
+
+
+
+
+
+<br>
+
+<br>
+
+----
+
+<a href="0-1-knapsack-pattern" class="prev-button">&larr; Previous: 0/1 Knapsack Pattern</a> 
+
+<a href="fibonacci-numbers-pattern" class="next-button">Next: Fibonacci Numbers Pattern &rarr;</a>
+
+
 

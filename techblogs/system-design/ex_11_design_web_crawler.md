@@ -324,7 +324,7 @@ There are two important characteristics of the Web that makes Web crawling a ver
 
 ---
 
-<a href="design-twitter-search" class="prev-button"><--- Previous: Design Twitter Search</a> 
+<a href="design-twitter-search" class="prev-button">&larr; Previous: Design Twitter Search</a> 
 
-<a href="design-facebook-newsfeed" class="next-button">Next: Design Facebook Newsfeed ---></a>
+<a href="design-facebook-newsfeed" class="next-button">Next: Design Facebook Newsfeed &rarr;</a>
 

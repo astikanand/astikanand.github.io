@@ -315,7 +315,7 @@ tweet(api_dev_key, tweet_data, tweet_location, user_location, media_ids, maximum
 
 ---
 
-<a href="design-facebook-messenger" class="prev-button"><--- Previous: Design Facebook Messenger</a> 
+<a href="design-facebook-messenger" class="prev-button">&larr; Previous: Design Facebook Messenger</a> 
 
-<a href="design-youtube-or-netflix" class="next-button">Next: Design Youtube / Netflix ---></a>
+<a href="design-youtube-or-netflix" class="next-button">Next: Design Youtube / Netflix &rarr;</a>
 

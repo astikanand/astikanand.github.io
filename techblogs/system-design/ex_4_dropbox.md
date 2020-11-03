@@ -304,7 +304,7 @@ topic: design-dropbox
 
 ---
 
-<a href="design-instagram" class="prev-button"><--- Previous: Design Instagram</a> 
+<a href="design-instagram" class="prev-button">&larr; Previous: Design Instagram</a> 
 
-<a href="design-facebook-messenger" class="next-button">Next: Design Facebook Messenger ---></a>
+<a href="design-facebook-messenger" class="next-button">Next: Design Facebook Messenger &rarr;</a>
 

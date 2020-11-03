@@ -305,7 +305,7 @@ topic: design-facebook-messenger
 
 ---
 
-<a href="design-dropbox" class="prev-button"><--- Previous: Design Dropbox</a> 
+<a href="design-dropbox" class="prev-button">&larr; Previous: Design Dropbox</a> 
 
-<a href="design-twitter" class="next-button">Next: Design Twitter ---></a>
+<a href="design-twitter" class="next-button">Next: Design Twitter &rarr;</a>
 

@@ -20,7 +20,7 @@ topic: design-api-rate-limiter
 
 ---
 
-<a href="design-typeahead-suggestion" class="prev-button"><--- Previous: Design Type Ahead Suggestion</a> 
+<a href="design-typeahead-suggestion" class="prev-button">&larr; Previous: Design Type Ahead Suggestion</a> 
 
-<a href="design-twitter-search" class="next-button">Next: Design Twitter Search ---></a>
+<a href="design-twitter-search" class="next-button">Next: Design Twitter Search &rarr;</a>
 

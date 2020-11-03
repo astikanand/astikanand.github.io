@@ -268,7 +268,7 @@ Let’s now discuss some solutions to our **"live updates"** problems in the fol
 
 ---
 
-<a href="design-web-crawler" class="prev-button"><--- Previous: Design Web Crawler</a>
+<a href="design-web-crawler" class="prev-button">&larr; Previous: Design Web Crawler</a>
 
-<a href="design-yelp-or-nearby" class="next-button">Next: Design Yelp / Nearby ---></a>
+<a href="design-yelp-or-nearby" class="next-button">Next: Design Yelp / Nearby &rarr;</a>
 

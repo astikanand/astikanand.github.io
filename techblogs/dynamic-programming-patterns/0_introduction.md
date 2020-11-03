@@ -39,8 +39,6 @@ fib(n) = fib(n-1) + fib(n-2) for n > 1
 
 <br>
 
-<br>
-
 ###### Brute-Force: Recursion Method:
 
 ```python
@@ -152,4 +150,6 @@ Fib of 7 : 13
 <br>
 
 ---
+
+<a href="0-1-knapsack-pattern" class="next-button">Next: 0/1 Knapsack Pattern &rarr;</a>
 

@@ -269,7 +269,7 @@ For simplicity and search use case let’s assume our data is case insensitive.
 
 ---
 
-<a href="design-youtube-or-netflix" class="prev-button"><--- Previous: Design Youtube / Netflix</a>
+<a href="design-youtube-or-netflix" class="prev-button">&larr; Previous: Design Youtube / Netflix</a>
 
-<a href="design-api-rate-limiter" class="next-button">Next: Design API Rate Limiter ---></a>
+<a href="design-api-rate-limiter" class="next-button">Next: Design API Rate Limiter &rarr;</a>
 

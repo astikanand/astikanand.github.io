@@ -290,7 +290,7 @@ At a high-level we would need following components:
 
 ---
 
-<a href="design-twitter" class="prev-button"><--- Previous: Design Twitter</a> 
+<a href="design-twitter" class="prev-button">&larr; Previous: Design Twitter</a> 
 
-<a href="design-typeahead-suggestion" class="next-button">Next: Design Type Ahead Suggestion ---></a>
+<a href="design-typeahead-suggestion" class="next-button">Next: Design Type Ahead Suggestion &rarr;</a>
 

@@ -356,7 +356,7 @@ Select * from Places where Latitude between X-D and X+D and
 
 ---
 
-<a href="design-facebook-newsfeed" class="prev-button"><--- Previous: Design Facebook Newsfeed</a> 
+<a href="design-facebook-newsfeed" class="prev-button">&larr; Previous: Design Facebook Newsfeed</a> 
 
-<a href="design-uber" class="next-button">Next: Design Uber ---></a>
+<a href="design-uber" class="next-button">Next: Design Uber &rarr;</a>
 

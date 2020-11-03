@@ -184,7 +184,7 @@ topic: design-twitter-search
 
 ---
 
-<a href="design-api-rate-limiter" class="prev-button"><--- Previous: Design API Rate Limiter</a>
+<a href="design-api-rate-limiter" class="prev-button">&larr; Previous: Design API Rate Limiter</a>
 
-<a href="design-web-crawler" class="next-button">Next: Design Web Crawler ---></a>
+<a href="design-web-crawler" class="next-button">Next: Design Web Crawler &rarr;</a>
 

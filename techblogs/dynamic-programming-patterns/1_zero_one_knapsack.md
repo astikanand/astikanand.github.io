@@ -3,7 +3,11 @@ permalink: /techblogs/dynamic-programming-patterns/0-1-knapsack-pattern
 topic: 0-1-knapsack-pattern
 ---
 
-# 0 / 1 Knapsack Pattern
+# 0/1 Knapsack Pattern
+
+### Problems following 0/1 Knapsack Pattern
+
+## 1. 0/1 Knapsack
 
 ###### Problem:
 
@@ -329,115 +333,121 @@ DP -> Iteration + Tabulation - Optimized Space Method :
 
 <br>
 
+## 2. Equal Subset Sum Partition
+
+###### Problem:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<br>
+
+## 3. Subset Sum
+
+###### Problem:
+
+
+
+
+
+
+
+
+
+<br>
+
+<br>
+
+## 4. Minimum Subset Sum Difference
+
+###### Problem:
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<br>
+
+## 5. Count of Subset Sum
+
+###### Problem:
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<br>
+
+## 6. Target Sum
+
+###### Problem:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<br>
+
 ---
 
-### Problems following 0/1 Knapsack Patterns
+<a href="introduction" class="prev-button">&larr; Previous: Introduction</a> 
 
-## 1. Equal Subset Sum Partition
-
-###### Problem:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-
-<br>
-
-## 2. Subset Sum
-
-###### Problem:
-
-
-
-
-
-
-
-
-
-<br>
-
-<br>
-
-## 3. Minimum Subset Sum Difference
-
-###### Problem:
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-
-<br>
-
-## 4. Count of Subset Sum
-
-###### Problem:
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-
-<br>
-
-## 5. Target Sum
-
-###### Problem:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<a href="unbounded-knapsack-pattern" class="next-button">Next: Unbounded Knapsack Pattern &rarr;</a>
 
 
 

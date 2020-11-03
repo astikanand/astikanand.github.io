@@ -363,7 +363,7 @@ deleteURL(api_dev_key, url_key)
 
 ---
 
-<a href="tools-techniques" class="prev-button"><--- Previous: Tools and Techniques</a> 
+<a href="tools-techniques" class="prev-button">&larr; Previous: Tools and Techniques</a> 
 
-<a href="design-pastebin" class="next-button">Next: Design Pastebin ---></a>
+<a href="design-pastebin" class="next-button">Next: Design Pastebin &rarr;</a>
 

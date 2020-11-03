@@ -276,7 +276,7 @@ auto-increment-offset = 2
 
 ---
 
-<a href="design-pastebin" class="prev-button"><--- Previous: Design Pastebin</a> 
+<a href="design-pastebin" class="prev-button">&larr; Previous: Design Pastebin</a> 
 
-<a href="design-dropbox" class="next-button">Next: Design Dropbox ---></a>
+<a href="design-dropbox" class="next-button">Next: Design Dropbox &rarr;</a>
 

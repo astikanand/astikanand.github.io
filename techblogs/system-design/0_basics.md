@@ -96,5 +96,5 @@ topic: basics
 
 ------
 
-<a href="concepts-part-1" class="next-button">Next: System Design Concepts -1 ---></a>
+<a href="concepts-part-1" class="next-button">Next: System Design Concepts -1 &rarr;</a>
 

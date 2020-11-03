@@ -397,7 +397,7 @@ All theese are **popular communication protocols** between a client like a web b
 
 ---
 
-<a href="concepts-part-1" class="prev-button"><--- Previous: Concepts - Part-1</a> 
+<a href="concepts-part-1" class="prev-button">&larr; Previous: System Design Concepts - 1</a> 
 
-<a href="step-by-step-guide" class="next-button">Next: Step by Step Guide ---></a>
+<a href="step-by-step-guide" class="next-button">Next: Step by Step Guide &rarr;</a>
 

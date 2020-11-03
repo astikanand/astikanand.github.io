@@ -85,7 +85,7 @@ topic: tools-techniques
 
 ------
 
-<a href="step-by-step-guide" class="prev-button"><--- Previous: Step By Step Guide</a> 
+<a href="step-by-step-guide" class="prev-button">&larr; Previous: Step By Step Guide</a> 
 
-<a href="design-tiny-url-service" class="next-button">Next: Design Tiny Url Service ---></a>
+<a href="design-tiny-url-service" class="next-button">Next: Design Tiny Url Service &rarr;</a>
 

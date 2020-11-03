@@ -130,7 +130,7 @@ All such questions will determine how our end design will look like.
 
 ---
 
-<a href="concepts-part-2" class="prev-button"><--- Previous: Concepts - Part-2</a> 
+<a href="concepts-part-2" class="prev-button">&larr; Previous: System Design Concepts - 2</a> 
 
-<a href="tools-techniques" class="next-button">Next: Tools and Techniques ---></a>
+<a href="tools-techniques" class="next-button">Next: Tools and Techniques &rarr;</a>
 

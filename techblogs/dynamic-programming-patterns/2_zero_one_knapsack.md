@@ -77,6 +77,8 @@ Recursive Method :
 
 <br>
 
+<br>
+
 > **Identifying the problem as DP:**
 
 - Need to draw the recursive calls to see if there are any overlapping subproblems.
@@ -151,11 +153,17 @@ DP -> Recursion + Memoization Method :
   2. ***Inlude the item at index i***, if its weight is not more than capacity, in this case we get profit that is **profits[i] + table\[i-1][c-weights[i]]**.
 - Finally just get the max value from both the possbilities.
 
-```python
-table[i][c] = max(table[i-1][c], profits[i] + table[i-1][c-weights[i])
-```
+> **Table Filling Formula:**
+>
+> table\[i][c] = max(table\[i-1][c], profits[i] + table\[i-1][c-weights[i])
+
+**Tabulation:**
 
 ![](assets/knapsack_tabulation.gif)
+
+**Final Table:**
+
+![](assets/knapsack_final_table.png)
 
 **Code:**
 
@@ -281,7 +289,7 @@ item - 1 with weight : 1 and total_profit : 1
 
 <br>
 
-###### Solving in O(C) space :
+###### Space Optimized Solution : Solving in O(C) space
 
 - If we see closely, we need two values from the previous iteration **table[c]** and **table[c-weights[i]]**.
 - Since our inner loop is iterating over **c: 0-->capacity** lets see how it will effect our required values.
@@ -445,7 +453,7 @@ DP -> Iteration + Tabulation - Optimized Space Method :
 
 ---
 
-<a href="introduction" class="prev-button">&larr; Previous: Introduction</a> 
+<a href="fibonacci-numbers-pattern" class="prev-button">&larr; Previous: Fibonacci Numbers Pattern</a> 
 
 <a href="unbounded-knapsack-pattern" class="next-button">Next: Unbounded Knapsack Pattern &rarr;</a>
 

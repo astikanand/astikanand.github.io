@@ -145,19 +145,17 @@ print(unbounded_knapsack_dp_memoization([1, 3, 4, 5], [15, 50, 60, 90], 6))
   2. **Include the item** if weight is lesser than capacity avaialble, in this we get profit by this item plus profit from remaining capacity **profits[item_index] + table\[index][c]**.
 - Finally take the maximum of both.
 
-> `table[index][c] = max(table[index-1][c], profits[item_index] + table[index][c-weights[item_index]])`
+> **Table Filling Formula:**
+>
+> table\[index][c] = max(table\[index-1][c], profits[item_index] + table\[index][c-weights[item_index]])
 
-**Filling the DP table in bottom up manner:**
+**Tabulation:**
 
 ![](assets/unbounded_knapsack_tabulation.gif)
 
-<br>
-
-**Finally the DP table:**
+**Final Table:**
 
 ![](assets/unbounded_knapsack_tabulation_final.png)
-
-<br>
 
 **Code:**
 
@@ -215,8 +213,6 @@ DP -> Iteration + Tabulation Method :
 - Now again this 50 comes from top, so we go to previous row and ignore (3rd item).
 - Now this 50 doesn't come from top which is 45, so we select this item (2nd item) and subtract its profit  to go to 0.
 - As we reach 0 now, so we are done picking the items.
-
-<br>
 
 **Code:**
 
@@ -282,9 +278,7 @@ item - 1 with weight : 1 and profit : 15
 105
 ```
 
-
-
-
+<br>
 
 <br>
 
@@ -314,7 +308,5 @@ item - 1 with weight : 1 and profit : 15
 
 <a href="0-1-knapsack-pattern" class="prev-button">&larr; Previous: 0/1 Knapsack Pattern</a> 
 
-<a href="fibonacci-numbers-pattern" class="next-button">Next: Fibonacci Numbers Pattern &rarr;</a>
-
-
+<a href="palindromic-subsequence-pattern" class="next-button">Next: Palindromic Subsequence Pattern &rarr;</a>
 

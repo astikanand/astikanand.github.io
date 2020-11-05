@@ -227,6 +227,11 @@
             description: This is about DP patterns introduction.
             img: /path/to/introduction/img
         -
+            title: Fibonacci Numbers Pattern
+            slug: fibonacci-numbers-pattern
+            description: This is about fibonacci-numbers-pattern array.
+            img: /path/to/fibonacci-numbers-pattern/img
+        -
             title: 0/1 Knapsack Pattern
             slug: 0-1-knapsack-pattern
             description: This is about 0-1-knapsack-pattern.
@@ -236,11 +241,6 @@
             slug: unbounded-knapsack-pattern
             description: This is about unbounded-knapsack-pattern tree.
             img: /path/to/unbounded-knapsack-pattern/img
-        -
-            title: Fibonacci Numbers Pattern
-            slug: fibonacci-numbers-pattern
-            description: This is about fibonacci-numbers-pattern array.
-            img: /path/to/fibonacci-numbers-pattern/img
         -
             title: Palindromic Subsequence Pattern
             slug: palindromic-subsequence-pattern

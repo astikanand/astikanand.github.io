@@ -39,24 +39,6 @@ fib(n) = fib(n-1) + fib(n-2) for n > 1
 
 <br>
 
-###### Brute-Force: Recursion Method:
-
-```python
-def calculate_fib_recursion(n):
-    if (n < 2):
-        return n
-
-    return calculate_fib_recursion(n - 1) + calculate_fib_recursion(n - 2)
-
-
-print("Recursion Method :")
-print(f"Fib of 5 : {calculate_fib_recursion(5)}")
-print(f"Fib of 6 : {calculate_fib_recursion(6)}")
-print(f"Fib of 7 : {calculate_fib_recursion(7)}")
-```
-
-
-
 ##### Methods to Solve Dynamic Programming Problem 
 
 ###### 1. Recursion + Memoization (Top-Down Approach)
@@ -65,67 +47,12 @@ print(f"Fib of 7 : {calculate_fib_recursion(7)}")
 - ***Whenever we solve a sub-problem we cache its result to avoid calling it multiple times.***
 - This technique of storing the results of already solved subproblems k/a [Memoization]().
 
-```python
-def calculate_fib_dp_memoization(n):
-    memory = [None]*(n+1)
-    return calculate_fib_dp_memoization_util(n, memory)
-
-def calculate_fib_dp_memoization_util(n, memory):
-    if (n < 2):
-        return n
-
-    if (memory[n]):
-        return memory[n]
-
-    memory[n] = calculate_fib_dp_memoization_util(n - 1, memory) +\
-        calculate_fib_dp_memoization_util(n - 2, memory)
-
-    return memory[n]
-
-
-print("\nDP -> Recursion + Memoization Method :")
-print(f"Fib of 5 : {calculate_fib_dp_memoization(5)}")
-print(f"Fib of 6 : {calculate_fib_dp_memoization(6)}")
-print(f"Fib of 7 : {calculate_fib_dp_memoization(7)}")
-```
-
-**Output:**
-
-```
-DP -> Recursion + Memoization Method :
-Fib of 5 : 5
-Fib of 6 : 8
-Fib of 7 : 13
-```
-
-
-
 ###### 2. Iteration + Tabulation (Bottom-Up Approach)
 
 - Tabulation is opposite of Top-Down Approach and avoids recursion.
 - In this we solve the problem bottom up (i.e by solving all the related subproblems first).
 - ***This is typically done by filling an n-dimensional table.***
 - Based on the results in the table, the solution to the top/orignal problem is computed.
-
-```python
-def calculate_fib_dp_tabulation(n):
-    table = [None] * (n + 1)
-    table[0], table[1] = 0, 1
-
-    for i in range(2, n + 1):
-        table[i] = table[i - 1] + table[i - 2]
-
-    return table[n]
-```
-
-**Output:**
-
-```
-DP -> Iteration + Tabulation Method :
-Fib of 5 : 5
-Fib of 6 : 8
-Fib of 7 : 13
-```
 
 
 
@@ -137,9 +64,9 @@ Fib of 7 : 13
 
 ### Patterns to be studied:
 
-1. **0/1 Knapsack Pattern**
-2. **Unbounded Knapsack Pattern**
-3. **Fibonacci Numbers Pattern**
+1. **Fibonacci Numbers Pattern**
+2. **0/1 Knapsack Pattern**
+3. **Unbounded Knapsack Pattern**
 4. **Palindromic Subsequence Pattern**
 5. **Longest Common Substring Pattern**
 
@@ -151,5 +78,5 @@ Fib of 7 : 13
 
 ---
 
-<a href="0-1-knapsack-pattern" class="next-button">Next: 0/1 Knapsack Pattern &rarr;</a>
+<a href="fibonacci-numbers-pattern" class="next-button">Next: Fibonacci Numbers Pattern &rarr;</a>
 

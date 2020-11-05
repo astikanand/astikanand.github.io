@@ -21,7 +21,7 @@ First Few Fibonacci are : 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, .........
 >
 > Fib(n) = Fib(n-1) + Fib(n-2)   where Fib(0) = 1 and Fib(1) = 1
 
-
+<br>
 
 ###### Brute-Force : Recursive Solution
 
@@ -208,7 +208,6 @@ Fib of 7 : 13
 
 -----
 
-<a href="unbounded-knapsack-pattern" class="prev-button">&larr; Previous: Unbounded Knapsack Pattern</a> 
+<a href="introduction" class="prev-button">&larr; Previous: Introduction</a> 
 
-<a href="palindromic-subsequence-pattern" class="next-button">Next: Palindromic Subsequence Pattern &rarr;</a>
-
+<a href="0-1-knapsack-pattern" class="next-button">Next: 0/1 Knapsack Pattern &rarr;</a>

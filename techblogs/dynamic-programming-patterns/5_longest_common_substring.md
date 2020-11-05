@@ -81,7 +81,7 @@ Recursive Method :
 - We can use memoizaton to solve the recurring problem.
 - The ***three changing values*** in our recursive function is two start indexes ***i***, ***j*** and ***lcs_length***.
 - We can use 3-D array to store solution to our repeated subproblems.
-- We can also use **i + "|" + j + "|" + lcs_length** as key to store in a hashmap.
+- We can also use **i + "\|" + j + "\|" + lcs_length** as key to store in a hashmap.
 
 **Code:**
 

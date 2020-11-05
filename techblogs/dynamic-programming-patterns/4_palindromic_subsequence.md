@@ -89,7 +89,7 @@ Recursive Method :
 - We can use memoizaton to solve the recurring problem.
 - The two changing values in our recursive function is start and end indexes.
 - We can use 2-D array to store solution to our repeated subproblems.
-- We can also use start + "|" + end as key to store in a hashmap.
+- We can also use start + "\|" + end as key to store in a hashmap.
 
 **Code:**
 
@@ -300,7 +300,7 @@ Recursive Method :
 - Similar to the Palindromic Subsequence Problem, we can use memoizaton to solve the recurring problem.
 - The two changing values in our recursive function is start and end indexes.
 - We can use 2-D array to store solution to our repeated subproblems.
-- We can also use start + "|" + end as key to store in a hashmap.
+- We can also use start + "\|" + end as key to store in a hashmap.
 
 **Code:**
 

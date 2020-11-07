@@ -229,7 +229,7 @@
         -
             title: Fibonacci Numbers Pattern
             slug: fibonacci-numbers-pattern
-            description: This is about fibonacci-numbers-pattern array.
+            description: This is about fibonacci-numbers-pattern.
             img: /path/to/fibonacci-numbers-pattern/img
         -
             title: 0/1 Knapsack Pattern
@@ -239,17 +239,22 @@
         -
             title: Unbounded Knapsack Pattern
             slug: unbounded-knapsack-pattern
-            description: This is about unbounded-knapsack-pattern tree.
+            description: This is about unbounded-knapsack-pattern.
             img: /path/to/unbounded-knapsack-pattern/img
         -
-            title: Palindromic Subsequence Pattern
-            slug: palindromic-subsequence-pattern
-            description: This is about palindromic-subsequence-pattern.
-            img: /path/to/palindromic-subsequence-pattern/img
+            title: Longest Palindromic Subsequence Pattern
+            slug: longest-palindromic-subsequence-pattern
+            description: This is about longest-palindromic-subsequence-pattern.
+            img: /path/to/longest-palindromic-subsequence-pattern/img
         -
-            title: Longest Common Substring Pattern
-            slug: longest-common-substring-pattern
-            description: This is about longest-common-substring-pattern tree.
+            title: Longest Common Subsequence Pattern
+            slug: longest-common-subsequence-pattern
+            description: This is about longest-common-subsequence-pattern.
+            img: /path/to/longest-common-subsequence-pattern/img
+        -
+            title: Longest Increasing Subsequence Pattern
+            slug: longest-increasing-subsequence-pattern
+            description: This is about longest-increasing-subsequence-pattern.
             img: /path/to/longest-common-substring-pattern/img
 
 

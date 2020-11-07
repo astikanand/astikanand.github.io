@@ -1,9 +1,9 @@
 ---
-permalink: /techblogs/dynamic-programming-patterns/palindromic-subsequence-pattern
-topic: palindromic-subsequence-pattern
+permalink: /techblogs/dynamic-programming-patterns/longest-palindromic-subsequence-pattern
+topic: longest-palindromic-subsequence-pattern
 ---
 
-# Palindromic Subsequence Pattern
+# Longest Palindromic Subsequence Pattern
 
 ### Problems Following Palindromic Subsequence Pattern
 

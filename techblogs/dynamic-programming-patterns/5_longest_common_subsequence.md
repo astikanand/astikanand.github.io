@@ -72,7 +72,7 @@ Recursive Method :
 
 **Complexity:**
 
-- ***Time: O(2<sup>m+n</sup>)*** - Here ***m*** and ***n*** are lengths of two substrings and we have 2 recursive calls in wors cases when character not matches.
+- ***Time: O(2<sup>m+n</sup>)*** - Here ***m*** and ***n*** are lengths of two substrings and we have 2 recursive calls in worse cases when character not matches.
 - ***Space: O(m+n)*** - Used to store the recursion stack.
 
 <br>
@@ -480,6 +480,89 @@ DP -> Iteration + Tabulation Space Optimized Method :
 <br>
 
 ## 3. Minimum Deletions & Insertions to Transform a String into another
+
+###### Problem Statement:
+
+Given string ***str1*** and ***str2***, we need to transform ***str1*** into ***str2*** by deleting and inserting characters.
+
+Calculate the count of the minimum number of deletion and insertion operations.
+
+```
+====== Examples ======
+Input: str1 = "abc", str2 = "fbc"
+Output: 1 deletion and 1 insertion
+Explanation: We need to delete {'a'} from str1 and insert {'f'} into it to transform to str2
+
+Input: str1 = "abdca", str2 = "cbda"
+Output: 2 deletions and 1 insertion
+Explanation: We need to delete {'a', 'c'} from str1 and insert {'c'} into it to transform to str2
+
+Input: str1 = "passport", str2 = "ppsspt"
+Output: 3 deletions and 1 insertion
+Explanation: We need to delete {'a', 'o', 'r'} from str1 and insert {'p'} into it to transform to str2
+```
+
+<br>
+
+###### Solution Approach:
+
+- The problem is very similar to finding [Longest Common Subsequence]().
+- First find the longest common subsequence **lcs_count**.
+  - Delete other characters from ***str1*** to get the **number of deletions** *i.e.* **len(str1) - lcs_count**.
+  - Insert remaining characters from ***str2*** to get **number of insertions** i.e, **len(str2) - lcs_count**.
+- We will directly solve this problem using bottom-up tabulation approach.
+
+<br>
+
+###### DP : Iteration + Tabulation (Bottom-Up) Solution
+
+- We will follow the process similar to of calculationg longest subsequence.
+
+```python
+def min_delete_insert_to_transform(str1, str2):
+    n1, n2 = len(str1), len(str2)
+    table = [[0] * (n2 + 1) for _ in range(2)]
+
+    for i in range(1, n1 + 1):
+        for j in range(1, n2 + 1):
+            if (str1[i - 1] == str2[j - 1]):
+                table[i % 2][j] = 1 + table[(i - 1) % 2][j - 1]
+            else:
+                table[i % 2][j] = max(table[(i - 1) % 2][j], table[i % 2][j - 1])
+
+    lcs_count = table[i % 2][j]
+    print(f"Minimum Deletions Needed : {len(str1)-lcs_count}")
+    print(f"Minimum Insertions Needed : {len(str2)-lcs_count}\n")
+
+
+print("DP -> Iteration + Tabulation Space Optimized Method :")
+min_delete_insert_to_transform("abc", "fbc")
+min_delete_insert_to_transform("abdca", "cbda")
+min_delete_insert_to_transform("passport", "ppsspt")
+```
+
+**Output:**
+
+```
+DP -> Iteration + Tabulation Space Optimized Method :
+Minimum Deletions Needed : 1
+Minimum Insertions Needed : 1
+
+Minimum Deletions Needed : 2
+Minimum Insertions Needed : 1
+
+Minimum Deletions Needed : 3
+Minimum Insertions Needed : 1
+```
+
+**Complexity:**
+
+- ***Time: O(mn)*** - Here ***m*** and ***n*** are lengths of two substrings and at max we can have **m\*n** subproblems.
+- ***Space: O(n)*** - Need to store total of of 2 rows data only so it is 2n ≈ O(n).
+
+<br>
+
+<br>
 
 ## 4. Shortest Common Super-sequence
 

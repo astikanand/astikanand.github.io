@@ -192,52 +192,103 @@ matrix_spiral_print(mat)
 - **Time:** **O(MN)** 
 - **Auxilliary Space:** **O(1)**
 
-
+<br>
 
 <br>
 
-## 3. Print elements in sorted order in row and column wise sorted matrix
+## 3. Flood Fill Algorithm - Implement fill() in paint***
 
 ###### Problem:
 
-Given an n x n matrix, where every row and column is sorted in non-decreasing order.
+In MS-Paint, when we take the brush to a pixel and click, the color of the region of that pixel is replaced with a new selected color. Following is the problem statement to do this task. 
+Given a 2D screen, location of a pixel in the screen and a color, replace color of the given pixel and all adjacent same colored pixels with the given color.
 
-Print all elements of matrix in sorted order.
+> **Example:**
 
-<img src="assets/print_sorted_from_row_column_wise_sorted_matrix.png" width="35%">
+<img src="../algorithms/assets/flood_fill_algorithm_example.png" width="80%">
 
-###### Approach
+###### Approach - Simple:
+
+- The idea is simple, we first replace the color of current pixel, then recur for 4 surrounding points.
+
+###### Algorithm:
+
+**`flood_fill(screen[M][N], x, y, prev_color, new_color)`**
+
+1. If x or y is outside the screen, then return.
+2. If color of `screen[x][y]` is not same as prev_color, then return
+3. Replace the color at (x, y)
+4. Recur for north, south, east and west
+   - flood_fill(screen,  x+1,  y,  prev_color,  new_color)
+   - flood_fill(screen,  x-1,   y,  prev_color,  new_color) 
+   - flood_fill(screen,  x,  y+1,  prev_color,  new_color)
+   - flood_fill(screen,  x,   y-1,  prev_color,  new_color)
+
+###### Implementation:
+
+```python
+def flood_fill(screen, x, y, prev_color, new_color):
+    m = len(screen)
+    n = len(screen[0])
+
+    # If x or y is outside the screen, then return.
+    if(x < 0 or x >= m or y < 0 or y >= n):
+        return
+    
+    # If color of screen[x][y] is not same as prev_color, then return
+    if(screen[x][y] != prev_color):
+        return
+    
+    # Replace the color at (x, y)
+    screen[x][y] = new_color
+
+    # Recur for north, south, east and west
+    flood_fill(screen, x, y+1, prev_color, new_color)
+    flood_fill(screen, x, y-1, prev_color, new_color)
+    flood_fill(screen, x+1, y, prev_color, new_color)
+    flood_fill(screen, x-1, y, prev_color, new_color)
 
 
 
+print("Example-1: Flood Fill Algorithm")
+screen = [ [1, 1, 1, 1, 1, 1, 1, 1], 
+           [1, 1, 1, 1, 1, 1, 0, 0], 
+           [1, 0, 0, 1, 1, 0, 1, 1], 
+           [1, 2, 2, 2, 2, 0, 1, 0], 
+           [1, 1, 1, 2, 2, 0, 1, 0], 
+           [1, 1, 1, 2, 2, 2, 2, 0], 
+           [1, 1, 1, 1, 1, 2, 1, 1], 
+           [1, 1, 1, 1, 1, 2, 2, 1] ]
 
 
 
+flood_fill(screen, 4, 4, 2, 3); 
+m = len(screen)
+n = len(screen[0])
 
-###### Implementation
-
-
-
-
+for i in range(m):
+    for j in range(n):
+        print(screen[i][j], end=" ")
+    print()
+```
 
 **Output:**
 
+![flood_fill_algorithm_output](assets/flood_fill_algorithm_output.png)
 
+###### **Complexity:**
 
-###### Complexity:
-
-- **Time:** 
-- **Auxilliary Space:**
-
-
+- **Time:** **O(n<sup>2</sup>)** 
+- **Auxilliary Space: O(1)**
 
 <br>
 
-
+<br>
 
 ##### Problems To Do:
 
-- maximum size of square sub-matrix with sum <= K
+- Print elements in sorted order in row and column wise sorted matrix
+- Maximum size of square sub-matrix with sum <= K
 
 
 

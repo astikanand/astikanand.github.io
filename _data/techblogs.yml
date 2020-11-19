@@ -10,6 +10,11 @@
             description: This is about array.
             img: /path/to/array/img
         -
+            title: String
+            slug: string
+            description: This is about string.
+            img: /path/to/string/img
+        -
             title: Linked List
             slug: linked-list
             description: This is about Linked List.

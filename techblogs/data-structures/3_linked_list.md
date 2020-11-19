@@ -1322,5 +1322,7 @@ cll.print_list()
 
 ------
 
-<a href="array" class="prev-button">&larr; Previous: Array</a>          <a href="stack" class="next-button">Next: Stack &rarr;</a>
+<a href="string" class="prev-button">&larr; Previous: String</a>          
+
+<a href="stack" class="next-button">Next: Stack &rarr;</a>
 

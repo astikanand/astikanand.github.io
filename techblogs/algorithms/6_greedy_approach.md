@@ -129,7 +129,7 @@ activity_selection(start, finish)
 - **Time:** 
     - **O(n log n):** if input activities not sorted. 
     - **O(n):** if input activities are sorted.
-- **Auxilliary Space:** **O(n)** :-> Creating a new array but can be done in O(1)
+- **Auxilliary Space:** **O(n)** : Creating a new array but can be done in O(1)
 
 <br>
 
@@ -421,6 +421,79 @@ generate_huffman_code(chars, frequencies)
     ​                             : To extract Min using heappop() takes O(logn) and as there are n nodes, it is called 2*(n–1) times. 
 
 - **Auxilliary Space : O(n)** : Storing n nodes in heap 
+
+<br>
+
+<br>
+
+## 4. Connect 'n' ropes with minimum cost***
+
+###### Problem:
+
+There are given n ropes of different lengths, we need to connect these ropes into one rope.
+
+The cost to connect two ropes is equal to sum of their lengths, calculate the minimum cost.
+
+> **Example:**
+>
+> ***Input:*** 4 ropes of lengths 4, 3, 2 and 6. &nbsp; ***Output:*** 29
+>
+> 
+>
+> ***Explanation:***
+>
+> 1) First connect ropes of lengths 2 and 3. Now we have three ropes of lengths 4, 6 and 5.
+> 2) Now connect ropes of lengths 4 and 5. Now we have two ropes of lengths 6 and 9.
+> 3) Finally connect the two ropes and all ropes have connected.
+>
+> **Total cost** = 5 + 9 + 15 = 29
+
+###### Approach: Huffman Coding
+
+- Observing closely, we can notice that the lengths of the ropes which are picked first are included more than once in total cost.
+- Therefore, the idea is to connect smallest two ropes first and recur for remaining ropes.
+- This approach is similar to **Huffman Coding**.
+- Put smallest ropes down the tree so that they can be repeated multiple times rather than the longer ropes.
+- **Time Complexity: O(nlogn)**
+
+###### Algorithm:
+
+1. Create a min heap and insert all lengths into the min heap.
+2. Do following while number of elements in min heap is not one.
+   - a) Extract the minimum and second minimum from min heap
+   - b) Add the above two extracted values and insert the added value to the min-heap.
+   - c) Maintain a variable for total cost and keep incrementing it by the sum of extracted values.
+3. Return the value of this total cost.
+
+###### Implementation:
+
+```python
+import heapq
+
+def connect_n_ropes_min_cost(ropes):
+    total_cost = 0
+    heapq.heapify(ropes)
+
+    while(len(ropes) >= 2):
+        new_connected_rope = heapq.heappop(ropes) + heapq.heappop(ropes)
+        total_cost += new_connected_rope
+        heapq.heappush(ropes, new_connected_rope)
+    
+    print(total_cost)
+
+
+print("Example-1: connect_n_ropes_min_cost([4, 3, 2, 6])")
+connect_n_ropes_min_cost([4, 3, 2, 6])
+```
+
+**Output:**
+
+![connect_n_ropes_min_cost_output](assets/connect_n_ropes_min_cost_output.png)
+
+###### **Complexity:**
+
+- **Time:** **O(nlogn)** : Extract min take O(logn) and need to do it for n times.
+- **Auxilliary Space: O(n)**
 
 <br>
 

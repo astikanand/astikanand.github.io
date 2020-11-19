@@ -7,137 +7,91 @@ topic: dynamic-programming-approach
 
 # Dynamic Programming Approach
 
-###### What is dynamic Programming ?
+###### What is Dynamic Programming Approach ?
 
-It is an algorithmic paradigm that solves a given complex problem by: 
+- It is an algorithmic paradigm that solves a given complex problem by breaking it into subproblems and storing the results of subproblems to avoid computing the same results again. 
 
-- breaking it into subproblems and
-- stores the results of subproblems to avoid computing the same results again. 
+- Utilizes the fact that the optimal solution to the overall problem depends on the optimal solutions to its subproblems.
+- ***Example:*** Fibonacci numbers - We can calculate nth Fibonacci by below eqution
 
+```
+fib(n) = fib(n-1) + fib(n-2) for n > 1
+```
 
+- Here to solve the overall problem we broke it down to smaller subproblems.
 
-**Following are the two main properties of a problem that suggests that the given problem can be solved using Dynamic programming.**
+<br>
 
-1. Overlapping Subproblems
-2. Optimal Substructure
+##### Characteristics of Dynamic Programming
 
-#### 1. Overlapping Subproblems
+[1. Overlapping Subproblems]()
 
+- Subproblems are smaller version of the original problem.
+- Any problem has overlappping subproblems if finding its solution involves solving the same subproblem multiple times.
 - Like Divide and Conquer, Dynamic Programming combines solutions to sub-problems.
-
 - Dynamic Programming is mainly used when solutions of same subproblems are needed again and again.
-
 - In dynamic programming, computed solutions to subproblems are stored in a table so that these don’t have to be recomputed.
-
 - Dynamic Programming is not useful when there are no common (overlapping) subproblems because there is no point storing the solutions if they are not needed again.
-
 - **Binary Search** is broken down into subproblems but it doesn’t have common subproblems, so no sense to store the solutions.
 
-    ![dynamic_programming_example](assets/dynamic_programming_example.png)
+<img src="../dynamic-programming-patterns/assets/fibonacci_subproblems.png" width="40%">
 
-    > There are following two different ways to store the values so that these values can be reused:
+- Here we can see overlapping subproblems as **fib(2)** is evaluated twice and **fib(1)** evaluated thrice.
 
-    - a) Memoization (Top Down)
-    - b) Tabulation (Bottom Up)
+<br>
 
-##### a) Memoization (Top Down Approach)
+[2. Optimal Substructure Property]()
 
-- The memoized program for a problem is **similar to the recursive version** with a small modification that it looks into a lookup table before computing solutions. 
-- We initialize a lookup array with all initial values as NIL.
-- Whenever we need the solution to a subproblem, we first look into the lookup table.
-- If the precomputed value is there then we return that value, otherwise, we calculate the value and put the result in the lookup table so that it can be reused later.
+- Any problem has optimal substructure property if its overall optimal solution can be constructed from optimal solution of subproblems.
 
-###### Implementation
-
-```python
-def fib_memoization_top_down(n, lookup):
-    if(n == 0 or n == 1):
-        lookup[n] = n
-
-    if(lookup[n] is None):
-        lookup[n] = fib_memoization_top_down(n-1, lookup) + fib_memoization_top_down(n-2, lookup)
-    
-    return lookup[n]
-
-
-print("Fibonacci: DP(Top_Down/Memoization) Approach Example-1:")
-print(fib_memoization_top_down(5, [None]*(6)))
-
-print("Fibonacci: DP(Top_Down/Memoization) Approach Example-2:")
-print(fib_memoization_top_down(34, [None]*(35)))
-```
-
-**Output:**
-
-![dp_top_down_approach](assets/dp_top_down_approach.png)
-
-###### **Complexity:**
-
-- **Time:** **O(n)** :- Each problem exactly once hence O(n) 
-- **Auxilliary Space:** **O(n)** :- Lookup array of size n.  
-
-##### b) Bottom Up Approach - Tabulation
-
-- The tabulated program for a given problem **builds a table in bottom up fashion** and returns the last entry from table. 
-- For example, for the same Fibonacci number, we first calculate fib(0) then fib(1) then fib(2) then fib(3) and so on.
-- So literally, we are building the solutions of subproblems bottom-up.
-
-###### Implementation
-
-```python
-def fib_tabulation_bottom_up(n):
-    table = [0]*(n+1)
-    table[1] = 1
-
-    for i in range(2, n+1):
-        table[i] = table[i-1] + table[i-2]
-    
-    return table[n]
-
-
-print("Fibonacci: DP(Bottom_Up/Tabulation) Approach Example-1:")
-print(fib_tabulation_bottom_up(5))
-
-print("Fibonacci: DP(Bottom_Up/Tabulation) Approach Example-2:")
-print(fib_tabulation_bottom_up(34))
-```
-
-**Output:**
-
-![dp_bottom_up_approach](assets/dp_bottom_up_approach.png)
-
-###### **Complexity:**
-
-- **Time:** **O(n)** :- Loop runs till n 
-- **Auxilliary Space:** **O(n)** :- Values table of size n 
-
-###### **Notes:**
-
-- Both Tabulated and Memoized store the solutions of subproblems.
-- In Memoized version, table is filled on demand while in Tabulated version, starting from the first entry, all entries are filled one by one.
-- Unlike the Tabulated version, all entries of the lookup table are not necessarily filled in Memoized version.
-- ***Example:-*** Memoized solutionof the LCS problem doesn’t necessarily fill all entries. 
-
-#### 2. Optimal Substructures
-
-- A given problems has Optimal Substructure Property if optimal solution of the given problem can be obtained by using optimal solutions of its subproblems.
+- **`fib(n)= fib(n-1)+fib(n-2)`** - shows that overall problem of size ***n*** is reduced to subproblems of size ***n-1*** and ***n-2***.
 
 - ***E******xample:-*** The Shortest Path problem has following optimal substructure property:
 
-    - If a node x lies in the shortest path from a source node u to destination node v.
-    - Then the shortest path from u to v is combination of shortest path from u to x and shortest path from x to v.
-    - The standard All Pair Shortest Path algorithms like **Floyd–Warshall** and **Bellman–Ford** are typical examples of Dynamic Programming. 
+  - If a node x lies in the shortest path from a source node u to destination node v.
+  - Then the shortest path from u to v is combination of shortest path from u to x and shortest path from x to v.
+  - The standard All Pair Shortest Path algorithms like **Floyd–Warshall** and **Bellman–Ford** are typical examples of Dynamic Programming. 
 
 - But the Longest Path problem i.e. longest simple path (path without cycle) between two nodes doesn’t have the Optimal Substructure property. 
 
-    - There are two longest paths from q to t: q→r→t and q→s→t.
-    - Unlike shortest paths, these longest paths do not have the optimal substructure property.
-    - *Example:-* The longest path q→r→t is not a combination of longest path from q to r and longest path from r to t.
-        - Coz the longest path from q to r is q→s→t→r and the longest path from r to t is r→q→s→t.
+  - There are two longest paths from q to t: q→r→t and q→s→t.
+  - Unlike shortest paths, these longest paths do not have the optimal substructure property.
+  - *Example:-* The longest path q→r→t is not a combination of longest path from q to r and longest path from r to t.
+    - Coz the longest path from q to r is q→s→t→r and the longest path from r to t is r→q→s→t.
 
-    ![optimal_substructure](assets/optimal_substructure.gif)
+  ![optimal_substructure](assets/optimal_substructure.gif)
 
 
+
+<br>
+
+##### Methods to Solve Dynamic Programming Problem 
+
+###### 1. Recursion + Memoization (Top-Down Approach)
+
+- Solve bigger problem by recursiverly finding the solution to smaller sub-problems.
+- ***Whenever we solve a sub-problem we cache its result to avoid calling it multiple times.***
+- This technique of storing the results of already solved subproblems k/a [Memoization]().
+
+###### 2. Iteration + Tabulation (Bottom-Up Approach)
+
+- Tabulation is opposite of Top-Down Approach and avoids recursion.
+- In this we solve the problem bottom up (i.e by solving all the related subproblems first).
+- ***This is typically done by filling an n-dimensional table.***
+- Based on the results in the table, the solution to the top/orignal problem is computed.
+
+
+
+> [Notes :-]() 
+>
+> - Both Tabulated and Memoized store the solutions of subproblems.
+> - In Memoized version, table is filled on demand but in Tabulated version, starting from the first entry, all entries are filled one by one.
+> - Unlike the Tabulated version, all entries of the lookup table are not necessarily filled in Memoized version.
+> - ***Example:-*** Memoized solutionof the LCS problem doesn’t necessarily fill all entries. 
+
+<br>
+
+<br>
 
 ----
 

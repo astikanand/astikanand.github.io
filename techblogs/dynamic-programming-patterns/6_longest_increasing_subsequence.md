@@ -158,8 +158,8 @@ def find_longest_incresing_subsequence_dp_tabulation(nums):
 
     for i in range(1, n):
         for j in range(i):
-            if (nums[i] > nums[j] and table[i] < table[j] + 1):
-                table[i] = table[j] + 1
+            if (nums[i] > nums[j]):
+                table[i] = max(table[i], table[j] + 1)
 
     return table[i]
 
@@ -240,8 +240,8 @@ def find_max_sum_incresing_subsequence_dp_tabulation(nums):
 
     for i in range(1, n):
         for j in range(i):
-            if (nums[i] > nums[j] and table[i] < table[j] + nums[i]):
-                table[i] = table[j] + nums[i]
+            if (nums[i] > nums[j]):
+                table[i] = max(table[i], table[j] + nums[i])
 
     return table[i]
 
@@ -312,8 +312,8 @@ def min_deletions_required_to_sort_sequence_dp_tabulation(nums):
 
     for i in range(1, n):
         for j in range(i):
-            if (nums[i] > nums[j] and table[i] < table[j] + 1):
-                table[i] = table[j] + nums[i]
+            if (nums[i] > nums[j]):
+                table[i] = max(table[i], table[j] + 1)
 
     print(f"Min deletions rquired to sort sequence : {n-table[i]}")
 
@@ -328,8 +328,8 @@ min_deletions_required_to_sort_sequence_dp_tabulation([3, 2, 1, 0])
 
 ```
 DP -> Iteration + Tabulation Method :
-Min deletions rquired to sort sequence : -6
-Min deletions rquired to sort sequence : -11
+Min deletions rquired to sort sequence : 2
+Min deletions rquired to sort sequence : 1
 Min deletions rquired to sort sequence : 3
 ```
 
@@ -371,15 +371,65 @@ Explanation: The LBS is {4, 5, 9, 7, 6, 3, 1}
   2. Find LDS starting from 'i' to the beginning of the array.
 - Finally LBS would be maximum sum of above two subsequences.
 
+<br>
+
+###### DP : Iteration + Tabulation (Bottom-Up) Solution
+
+- This can be clearly solved by the bottom-up approach.
+- We know from LIS calculation that at any index 'i' it gives longest increasing sequence till 'i'.
+- We can separately calculate LDS for every index *i.e.* from the beginning to the end of the array and vice-versa.
+- So, we will have **lds_table_forward** and **lds_table_backward** now.
+- The required LBS length will be max sum considering every index in both these tables i.e lds_table_forward and lds_table_backward.
+
 **Code:**
 
 ```python
+def find_longest_bitonic_subsequence_dp_tabulation(nums):
+    n = len(nums)
+    table_lds_forward = [1] * n
+    table_lds_backward = [1] * n
 
+    # From beginning to end of sequence, calculate backward LDS
+    for i in range(1, n):
+        for j in range(i - 1, -1, -1):
+            if (nums[j] < nums[i]):
+                table_lds_backward[i] = max(table_lds_backward[i], table_lds_backward[j] + 1)
+
+    # From end to beginning of sequence, calculate forward LDS
+    for i in range(n - 2, -1, -1):
+        for j in range(i + 1, n):
+            if (nums[j] < nums[i]):
+                table_lds_forward[i] = max(table_lds_forward[i], table_lds_forward[j] + 1)
+
+    # Calculate max lbs length
+    max_lbs_length = 0
+    for i in range(n):
+        max_lbs_length = max(max_lbs_length, table_lds_backward[i] + table_lds_forward[i] - 1)
+
+    return max_lbs_length
+
+
+print("DP -> Iteration + Tabulation Method :")
+print(find_longest_bitonic_subsequence_dp_tabulation([4, 2, 3, 6, 10, 1, 12]))
+print(find_longest_bitonic_subsequence_dp_tabulation([4, 2, 5, 9, 7, 6, 10, 3, 1]))
 ```
 
+**Output:**
 
+```
+DP -> Iteration + Tabulation Method :
+5
+7
+```
 
+**Complexity:**
 
+- ***Time: O(N<sup>2</sup>)*** 
+- ***Space: O(N)*** 
+
+<br>
+
+<br>
 
 ## 5. Longest Alternating Subsequence
 

@@ -39,7 +39,12 @@ defaults:
   - scope:
       path: techblogs/software-engineering
     values:
-      subsection: software-engineering 
+      subsection: software-engineering
+
+  - scope:
+      path: techblogs/software-design-patterns
+    values:
+      subsection: software-design-patterns
   
   - scope:
       path: techblogs/java

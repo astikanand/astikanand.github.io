@@ -1,11 +1,11 @@
 ---
-permalink: /techblogs/software-engineering/solid-principles
-topic: solid-principles
+permalink: /techblogs/software-design-patterns/design-principles-solid
+topic: design-principles-solid
 ---
 
 
 
-# S.O.L.I.D Principles
+# Design Principles (S.O.L.I.D)
 
 ###### What are SOLID Principles ?
 

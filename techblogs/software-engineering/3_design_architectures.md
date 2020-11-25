@@ -9,7 +9,7 @@ topic: mvc-mvp-mvvm-architectures
 
 ###### Why Design Architecture Patterns ?
 
-- It is not like you can't develop web applications without the use of either of MVC or MVP**. 
+- It is not like you can't develop web applications without the use of either of MVC or MVP. 
 - But they both are designing patterns and helps greatly in development an maintenance of your project and code.
 - At the heart of MVC is Separated Presentation. 
 - The idea behind Separated Presentation is to make a clear division between domain objects that model our perception of the real world, and presentation objects that are the GUI elements we see on the screen. 

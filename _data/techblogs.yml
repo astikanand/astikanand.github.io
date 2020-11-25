@@ -410,6 +410,44 @@
 
 
 - 
+    title: Software Design Patterns
+    slug: software-design-patterns
+    description: This is about software-design-patterns.
+    img: /path/to/software-design-patterns/img
+    topics:
+        -
+            title: Design Principles (S.O.L.I.D)
+            slug: design-principles-solid
+            description: This is about design-principles-solid.
+            img: /path/to/design-principles-solid/img
+        -
+            title: Design Patterns Introduction
+            slug: design-pattterns-introduction
+            description: This is about design-pattterns-introduction.
+            img: /path/to/design-pattterns-introduction/img
+        -
+            title: Creational Design Pattterns
+            slug: creational-design-pattterns
+            description: This is about creational-design-pattterns.
+            img: /path/to/creational-design-pattterns/img
+        -
+            title: Structural Design Pattterns
+            slug: structural-design-pattterns
+            description: This is about structural-design-pattterns.
+            img: /path/to/structural-design-pattterns/img
+        -
+            title: Behavioral Design Pattterns
+            slug: behavioral-design-pattterns
+            description: This is about behavioral-design-pattterns.
+            img: /path/to/behavioral-design-pattterns/img
+        -
+            title: J2EE Design Patterns
+            slug: j2ee-design-pattterns
+            description: This is about j2ee-design-pattterns.
+            img: /path/to/j2ee-design-pattterns/img
+
+
+- 
     title: Java
     slug: java
     description: This is about Java.

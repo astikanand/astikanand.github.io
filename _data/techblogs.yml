@@ -393,16 +393,6 @@
             description: This is about mvc-mvp-mvvm-architectures.
             img: /path/to/mvc-mvp-mvvm-architectures/img
         -
-            title: Design Patterns
-            slug: design-pattterns
-            description: This is about design-pattterns.
-            img: /path/to/design-pattterns/img
-        -
-            title: S.O.L.I.D Principles
-            slug: solid-principles
-            description: This is about solid-principles.
-            img: /path/to/solid-principles/img
-        -
             title: Dependency Injection
             slug: dependency-injection
             description: This is about dependency-injection.

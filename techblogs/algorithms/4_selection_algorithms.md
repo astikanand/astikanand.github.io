@@ -77,8 +77,8 @@ def find_kth_smallest(arr, low, high, k):
 
 ###### Complexity:
 
-- **Time complexity: O(N)** in the average case, **O(N<sup>2</sup>)** in the worst case.
-- **Space complexity: O(1)**
+- **Time: O(N)** in the average case, **O(N<sup>2</sup>)** in the worst case.
+- **Space: O(1)**
 
 
 
@@ -129,46 +129,61 @@ Output: 6
 
 ###### Implementation
 
+**Code:**
+
 ```python
+
 import random
 
 
 def find_kth_smallest(arr, low, high, k):
     if (low <= high):
-        pat_index = partition(arr, low, high)
-        if (pat_index == k - 1):
-            return arr[k - 1]
-        elif (pat_index > k - 1):
-            return find_kth_smallest(arr, low, pat_index - 1, k)
+        p_index = partition(arr, low, high)
+        if (p_index == k - 1):
+            return arr[p_index]
+        elif (p_index > k - 1):
+            return find_kth_smallest(arr, low, p_index-1, k)
         else:
-            return find_kth_smallest(arr, pat_index + 1, high, k)
+            return find_kth_smallest(arr, p_index + 1, high, k)
+
+    return - 1
 
 
 def partition(arr, low, high):
-    # Below 2 lines of code just to make it Randomized QuickSelect
     rand_index = random.randint(low, high)
-    arr[high], arr[rand_index] = arr[rand_index], arr[high]
+    arr[rand_index], arr[high] = arr[high], arr[rand_index]
 
     pivot = arr[high]
 
     for i in range(low, high):
-        if arr[i] < pivot:
-            arr[i], arr[low] = arr[low], arr[i]
+        if (arr[i] < pivot):
+            arr[low], arr[i] = arr[i], arr[low]
             low += 1
 
     arr[low], arr[high] = arr[high], arr[low]
+
     return low
 
 
-# Run Program
-assert find_kth_smallest([7, 10, 4, 3, 20, 15], 0, 5, 3) == 7
-assert find_kth_smallest([10, 4, 5, 8, 6, 11, 26], 0, 6, 3) == 6
+print(find_kth_smallest([7, 10, 4, 3, 20, 15], 0, 5, 3))
+print(find_kth_smallest([10, 4, 5, 8, 6, 11, 26], 0, 6, 3))
+print(find_kth_smallest([10, 4, 5, 8, 6, 11, 26], 0, 6, 9))
+print(find_kth_smallest([5], 0, 0, 1))
 ```
 
-###### Complexity:
+**Output:**
 
-- **Time complexity: O(N)** in the average case, **O(N<sup>2</sup>)** in the worst case.
-- **Space complexity: O(1)**
+```
+7
+6
+-1
+5
+```
+
+**Complexity:**
+
+- **Time: O(N)** in the average case, **O(N<sup>2</sup>)** in the worst case.
+- **Space: O(1)**
 
 <br>
 
@@ -196,6 +211,8 @@ Output: 4
 - **Time complexity: O(N)** in the average case
 
 ###### Implementation:
+
+**Code:**
 
 ```python
 from typing import List
@@ -240,10 +257,10 @@ assert s.findKthLargest([3, 2, 1, 5, 6, 4], 2) == 5
 assert s.findKthLargest([3, 2, 3, 1, 2, 4, 5, 5, 6], 4) == 4
 ```
 
-###### Complexity:
+**Complexity:**
 
-- **Time complexity: O(N)** in the average case, **O(N<sup>2</sup>)** in the worst case.
-- **Space complexity: O(1)**
+- ***Time: O(N)*** in the average case, **O(N<sup>2</sup>)** in the worst case.
+- ***Space: O(1)***
 
 <br>
 
@@ -288,6 +305,8 @@ Output: [[3,3],[-2,4]]
 - **Time complexity: O(N)** in the average case
 
 ###### Implementation:
+
+**Code:**
 
 ```python
 from typing import List
@@ -340,10 +359,10 @@ print(s.kClosest([[3, 3], [5, -1], [-2, 4]], 3))
 [[3, 3], [-2, 4], [5, -1]]
 ```
 
-###### Complexity:
+**Complexity:**
 
-- **Time complexity: O(N)** in the average case, **O(N<sup>2</sup>)** in the worst case.
-- **Space complexity: O(1)**
+- ***Time: O(N)*** in the average case, **O(N<sup>2</sup>)** in the worst case.
+- ***Space: O(1)***
 
 
 

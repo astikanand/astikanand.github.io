@@ -412,7 +412,75 @@ print(heap_sort(arr))
 
 ### Standard Sorting Algorithms Problems
 
-## 1. Nuts & Bolts (Lock & Key) Problem***
+## 1. Sorting Log Files
+
+###### Problem:
+
+You have an array of logs.  Each log is a space delimited string of words.
+
+For each log, the first word in each log is an alphanumeric identifier.  Then, either:
+
+- Each word after the identifier will consist only of lowercase letters, or;
+- Each word after the identifier will consist only of digits.
+
+We will call these two varieties of logs letter-logs and digit-logs. It is guaranteed that each log has at least one word after its identifier.
+
+Reorder the logs so that all of the letter-logs come before any digit-log.  The letter-logs are ordered lexicographically ignoring identifier, with the identifier used in case of ties.  The digit-logs should be put in their original order.
+
+Return the final order of the logs.
+
+<br>
+
+###### Approach:
+
+- We can split each log by first space to get identifier and log_data.
+- We just need to sort the letter logs by log_data and if log_data matches then on the basis of identifier using custom comparator.
+- We also need to ignore the digit logs.
+- So we need to write out custom comparator in such a way that it ignores digit logs and sort letter logs by log_data and identifier for ties.
+
+<br>
+
+###### Implementation:
+
+**Code:**
+
+```python
+class Solution:
+    def reorderLogFiles(self, logs):
+        logs.sort(key=self._get_key)
+        return logs
+
+    def _get_key(self, log):
+        identifier, log_data = log.split(" ", 1)
+        if (log_data[0].isalpha()):
+            return (0, log_data, identifier)
+        else:
+            return (1, )
+
+
+logs = ["dig1 8 1 5 1", "let1 art can", "dig2 3 6", "let2 own kit dig", "let3 art zero"]
+print(Solution().reorderLogFiles(logs))
+```
+
+**Output:**
+
+```
+['let1 art can', 'let3 art zero', 'let2 own kit dig', 'dig1 8 1 5 1', 'dig2 3 6']
+```
+
+**Complexity:**
+
+- ***Time: O(M\*N\*LogN)*** 
+  - Here, N is total number of logs and M is the max length of single.
+  - N\*LogN to sort n items and then each log item is of length M hence, M\*N\*LognN.
+- ***Space: O(M\*N)***
+  - Sorting of n items take N space and each item is of length M, hence M\*N.
+
+<br>
+
+<br>
+
+## 2. Nuts & Bolts (Lock & Key) Problem***
 
 ###### Problem:
 
@@ -453,36 +521,34 @@ Given a box with locks and keys where one lock can be opened by one key in the b
 ```python
 def nuts_bolts_match(nuts, bolts, low, high):
     if low < high:
-        # Set last character of bolts for nuts partition. 
+        # Set last character of bolts for nuts partition.
         pivot = partition(nuts, low, high, bolts[high])
 
         # Now using the partition index of nuts set pivot for bolts partition
         partition(bolts, low, high, nuts[pivot])
 
-        # Recur for [low...pivot-1] & [pivot+1...high] for nuts and bolts array. 
+        # Recur for [low...pivot-1] & [pivot+1...high] for nuts and bolts array.
         nuts_bolts_match(nuts, bolts, low, pivot-1)
         nuts_bolts_match(nuts, bolts, pivot+1, high)
 
 
 def partition(arr, low, high, pivot):
-    i = j = low
+    i = low
+    while(i < high):
+        if arr[i] < pivot:
+            arr[low], arr[i] = arr[i], arr[low]
+            low += 1
+        elif arr[i] == pivot:
+            arr[high], arr[i] = arr[i], arr[high]
+            i -= 1
 
-    while(j < high):
-        if arr[j] < pivot:
-            arr[i], arr[j] = arr[j], arr[i]
-            i += 1
-        elif arr[j] == pivot:
-            arr[high], arr[j] = arr[j], arr[high]
-            j -= 1
-        
-        j += 1
-    
-    arr[i], arr[high] = arr[high], arr[i]
+        i += 1
 
-    return i            
+    arr[low], arr[high] = arr[high], arr[low]
+
+    return low
 
 
-  
 print("Example-1: Nuts and Bolts Problem")
 nuts = ['@', '#', '$', '%', '^', '&']
 bolts = ['$', '%', '&', '^', '@', '#']

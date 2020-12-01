@@ -523,128 +523,7 @@ print(next_greater_same_digits(534976))
 
 <br>
 
-## 8. Possible Decodings of Digit Sequence***
-
-###### Problem:
-
-Let 1 represent ‘A’, 2 represents ‘B’, . . . 26 represents ‘Z' etc. 
-
-Given a digit sequence, count the number of possible decodings of the given digit sequence.
-
-> **Examples:**
->
-> Input: 121  &nbsp;  Output: 3     &nbsp; coz Possible Decodings are: "ABA", "AU", “LA" 
->
-> Input: 1234  &nbsp; Output: 3     &nbsp; coz Possible Decodings are: "ABCD", "LCD", "AWD" 
-
-#### Recursive Approach
-
-- This problem is recursive and can be broken in sub-problems.
-- Start from end of the given digit sequence.
-- Initialize the total count of decodings as 0.
-- Recur for two subproblems.
-    1. If the last digit is non-zero, recur for remaining (n-1) digits and add the result to total count.
-    2. If the last two digits form a valid character (or smaller than 27), recur for remaining (n-2) digits and add the result to total count.
-
-###### **Implementation:**
-
-```python
-def count_digits_sequence_decodings(digits):
-    n = len(digits)
-
-    # base cases 
-    if(n==0 or n==1):
-        return 1
-    
-    count = 0
-
-    # If the last digit is not 0, then last digit must add to the number of words.
-    if(digits[-1]>'0'):
-        count = count_digits_sequence_decodings(digits[:-1])
-    
-    # If the last two digits form a number smaller than or equal to 26, then consider last two digits and recur
-    if(digits[-2]=='1' or (digits[-2]=='2' and digits[-1]<='6')):
-        count += count_digits_sequence_decodings(digits[:-2])
-    
-    return count
-
-
-print("Recursive Approach")
-print("Example-1: count_digits_sequence_decodings('12')")
-print(count_digits_sequence_decodings('12'))
-
-print("Example-1: count_digits_sequence_decodings('121')")
-print(count_digits_sequence_decodings('121'))
-
-print("Example-3: count_digits_sequence_decodings('1234')")
-print(count_digits_sequence_decodings('1234'))
-```
-
-**Output:**
-
-![possible_decodings_output](assets/possible_decodings_output.png)
-
-###### Complexity:
-
-- **Time: Exponential**
-
-#### Dynamic Programming Approach
-
-- If we take a closer look at the above program, we can observe that the recursive solution is similar to Fibonacci Numbers.
-- Therefore, we can optimize the above solution to work in **O(n)** time using Dynamic Programming. 
-
-###### **DP Implementation**
-
-```python
-def count_digits_sequence_decodings_DP(digits):
-    n = len(digits)
-    count = [0]*(n+1) # A table to store results of subproblems 
-
-    # Base cases 
-    count[0] = 1;  count[1] = 1  
-  
-    for i in range(2, n+1):  
-        count[i] = 0
-  
-        # If the last digit is not 0, then last digit must add to the number of words  
-        if (digits[i-1] > '0'):  
-            count[i] = count[i-1] 
-
-        # If the last two digits form a number smaller than or equal to 26, 
-        # then last two digits form a valid character  
-        if (digits[i-2]=='1' or (digits[i-2]=='2' and digits[i-1]<='6') ):  
-            count[i] += count[i-2] 
-  
-    return count[n]
-
-
-print("\nDP Approach")
-print("Example-1: count_digits_sequence_decodings_DP('12')")
-print(count_digits_sequence_decodings_DP('12'))
-
-print("Example-1: count_digits_sequence_decodings_DP('121')")
-print(count_digits_sequence_decodings_DP('121'))
-
-print("Example-3: count_digits_sequence_decodings_DP('1234')")
-print(count_digits_sequence_decodings_DP('1234'))
-
-print("Example-3: count_digits_sequence_decodings_DP('1234121')")
-print(count_digits_sequence_decodings_DP('1234121'))
-```
-
-**Output:**
-
-![possible_decodings_dp_output](assets/possible_decodings_dp_output.png)
-
-###### Complexity:
-
-- **Time: O(n)**
-
-<br>
-
-<br>
-
-## 9. Clock Angle Problem***
+## 8. Clock Angle Problem***
 
 ###### **Problem:**
 
@@ -714,7 +593,7 @@ print(clock_angle(3, 30))
 
 <br>
 
-## 10. Smallest number whose digit multiply to give number N
+## 9. Smallest number whose digit multiply to give number N
 
 ###### **Problem:**
 
@@ -793,7 +672,7 @@ print(smallest_num_digit_multiply_to_n(13))
 
 <br>
 
-## 11. Birthday Paradox***
+## 10. Birthday Paradox***
 
 ###### Q1. How many people must be there in a room to make the probability 100% that at-least two people in the room have same birthday?
 

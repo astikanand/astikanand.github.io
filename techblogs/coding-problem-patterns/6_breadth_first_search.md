@@ -1,3 +1,10 @@
+---
+permalink: /techblogs/coding-problem-patterns/breadth-first-search-pattern
+topic: breadth-first-search-pattern
+---
+
+
+
 # Breadth First Search Pattern
 
 ###### Intorduction
@@ -101,7 +108,6 @@ grid = [
     ["0", "0", "0", "1", "1"]
 ]
 print(Solution().numIslands(grid))
-
 ```
 
 **Output:**
@@ -262,4 +268,156 @@ print(s.distanceK(root, root.right.right, 4))
 <br>
 
 <br>
+
+## 3. Word Ladder
+
+###### Problem Statement:
+
+Given two words (beginWord and endWord), and a dictionary's word list, find the length of shortest transformation sequence from beginWord to endWord, such that:
+
+- Only one letter can be changed at a time.
+- Each transformed word must exist in the word list.
+
+```
+====== Examples ======
+Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]
+Output: 5
+Explanation: As one shortest transformation is "hit" -> "hot" -> "dot" -> "dog" -> "cog" so, length = 5.
+
+Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"]
+Output: 0
+Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.
+
+Input: beginWord = "a", endWord = "c", wordList = ["a", "b", "c"]
+Output: 2
+Explanation: Shortest transformation is : "a" -> "c" so, length = 2
+```
+
+
+
+**Notes:**
+
+1. Return 0 if there is no such transformation sequence.
+2. All words have the same length.
+3. All words contain only lowercase alphabetic characters.
+4. You may assume no duplicates in the word list.
+5. You may assume beginWord and endWord are non-empty and are not the same.
+
+<br>
+
+###### Approach: Using BFS
+
+- We are given a `beginWord` and an `endWord`. Let these two represent `start node` and `end node` of a graph. 
+- We have to reach from the start node to the end node using  some intermediate nodes/words. 
+- The intermediate nodes are determined by  the `wordList` given to us. 
+- The only condition for every step we take on this ladder of words is the current word should change by just `one letter`.
+
+<img src="assets/word_ladder_example.png" width="35%">
+
+<br>
+
+###### Pre-processing:
+
+- To efficiently find the neighboring nodes for any given word we do some pre-processing on the words of the given `wordList`. 
+- The pre-processing involves replacing the letter of a word by a non-alphabet say, `*`.
+
+<img src='assets/word_ladder_preprocessing.png' width="35%">
+
+- This pre-processing helps to form generic states to represent a single letter change.
+- Both `Dog` and `Dig` map to the same intermediate or generic state `D*g`.
+
+<br>
+
+###### Implementation:
+
+**Code:**
+
+```python
+from typing import List
+from collections import defaultdict
+from collections import deque
+
+
+class Solution:
+    def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
+        if(not beginWord or not endWord or not wordList or endWord not in wordList):
+            return 0
+
+        # All words are of same length
+        n = len(beginWord)
+
+        graph = defaultdict(list)
+
+        # Create Graph
+        for word in wordList:
+            for i in range(n):
+                u = word[0:i] + "*" + word[i+1:]
+                v = word
+                graph[u].append(v)
+                graph[v].append(u)
+
+        visited = set()
+        queue = deque()
+        level = 1
+
+        # Start the BFS from the given beginWord
+        queue.append((beginWord, 1))
+        visited.add(beginWord)
+
+        while(queue):
+            current, level = queue.popleft()
+
+            # Preprocess to create all the intermediate words possible from current word
+            # to be ready to explore all the word which is at one change
+            intermediate_words = [current[0:i] + "*" + current[i + 1:] for i in range(n)]
+
+            # Now check for all the words that are possible with single change and visit them
+            for intermediate_word in intermediate_words:
+                for connected_word in graph[intermediate_word]:
+                    # If we find the target word simply return the level
+                    if(connected_word == endWord):
+                        return level + 1
+
+                    # If connected word is one change different from the current word and is not visited
+                    # Visit them and add it to queue
+                    if(connected_word not in visited):
+                        queue.append((connected_word, level+1))
+                        visited.add(connected_word)
+
+                # Once an intermediate_word is processed remove from graph to avoid processing again
+                del graph[intermediate_word]
+
+        # If not possible to find transformations with given words return 0
+        return 0
+
+
+words = ["hot", "dot", "dog", "lot", "log", "cog"]
+print(Solution().ladderLength("hit", "cog", words))
+
+words = ["hot", "dog"]
+print(Solution().ladderLength("hot", "dog", words))
+
+words = ["a", "b", "c"]
+print(Solution().ladderLength("a", "c", words))
+```
+
+**Output:**
+
+```
+5
+0
+2
+```
+
+**Complexity:**
+
+- ***Time: O(M<sup>2</sup>N)*** - where M is the length of each word and N is the total number of words in the input word list.
+  - For each word in the word list, we iterate over its length to find all the intermediate words corresponding to it. Since the length of each word is M and we have N words, the total number of iterations the algorithm takes to create graph is M×N. Additionally, forming each of the intermediate word takes O(M) time because of the substring operation used to create the new string. This adds up to a complexity of O(M<sup>2</sup>N).
+  - Breadth first search in the worst case might go to each of the N words. For each word, we need to examine M possible intermediate words/combinations. Notice, we have used the substring operation to find each of the combination. Thus,  M combinations take O(M<sup>2</sup>) time. As a result, the time complexity of BFS traversal would also be O(M<sup>2</sup>N).
+  - Combining the above steps, the overall time complexity of this approach is O(M<sup>2</sup>N).
+- ***Space: O(M<sup>2</sup>N)***
+  - Each word in the word list would have M intermediate combinations. To create the graph dictionary we save an intermediate word as the key and its corresponding original words as the value. Note, for each of M intermediate words we save the original word of length M. This simply means, for every word we would need a space of M<sup>2</sup> to save all the transformations corresponding to it. Thus, graph would need a total space of O(M<sup>2</sup>N).
+  - Visited dictionary would need a space of O(MN) as each word is of length MMM.
+  - Queue for BFS in worst case would need a space for all O(N) words and this would also result in a space complexity of O(MN).
+  - Combining the above steps, the overall space complexity is O(M<sup>2</sup>N) space.
 

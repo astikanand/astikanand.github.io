@@ -833,146 +833,130 @@ print(count_tiling_ways(4))
 
 ![tiling_problem_recursive_output](assets/tiling_problem_recursive_output.png)
 
-
-
 <br>
 
 <br>
 
-## 8. Word Break Problem
+## 8. Possible Decodings of Digit Sequence***
 
-###### Problem Statement:
+###### Problem:
 
-Given a **non-empty** string *s* and a dictionary *wordDict* containing a list of **non-empty** words, determine if *s* can be segmented into a space-separated sequence of one or more dictionary words.
+Let 1 represent ‘A’, 2 represents ‘B’, . . . 26 represents ‘Z' etc. 
 
-**Note:**
+Given a digit sequence, count the number of possible decodings of the given digit sequence.
 
-- The same word in the dictionary may be reused multiple times in the segmentation.
-- You may assume the dictionary does not contain duplicate words.
-
-**Examples:**
-
-```
-Example-1:
-Input: s = "leetcode", wordDict = ["leet", "code"]
-Output: true
-Explanation: Return true because "leetcode" can be segmented as "leet code".
-
-Example-2:
-Input: s = "applepenapple", wordDict = ["apple", "pen"]
-Output: true
-Explanation: Return true because "applepenapple" can be segmented as "apple pen apple". Note that you are allowed to reuse a dictionary word.
-
-Example-3:
-Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
-Output: false
-```
+> **Examples:**
+>
+> Input: 121  &nbsp;  Output: 3     &nbsp; coz Possible Decodings are: "ABA", "AU", “LA" 
+>
+> Input: 1234  &nbsp; Output: 3     &nbsp; coz Possible Decodings are: "ABCD", "LCD", "AWD" 
 
 <br>
 
-###### Brute-Force : Recursive Solution
+###### Recursive Approach
 
-- Check every possible prefix of that string in the dictionary of words, if it is found in the dictionary, then the recursive function is called for the remaining portion of that string.
-- If in some function call it is found that the complete string is in dictionary, then it will return true.
+- This problem is recursive and can be broken in sub-problems.
+- Start from end of the given digit sequence.
+- Initialize the total count of decodings as 0.
+- Recur for two subproblems.
+  1. If the last digit is non-zero, recur for remaining (n-1) digits and add the result to total count.
+  2. If the last two digits form a valid character (or smaller than 27), recur for remaining (n-2) digits and add the result to total count.
 
-**Code:**
+###### **Implementation:**
 
 ```python
-class Solution:
-    def wordBreak(self, s, wordDict):
-        return self.word_break_recursive(s, 0, set(wordDict))
+def count_digits_sequence_decodings(digits):
+    n = len(digits)
 
-    def word_break_recursive(self, s, start, word_dict):
-        if(start == len(s)):
-            return True
+    # base cases 
+    if(n==0 or n==1):
+        return 1
+    
+    count = 0
 
-        for end in range(start+1, len(s)+1):
-            if(s[start:end] in word_dict and self.word_break_recursive(s, end, word_dict)):
-                return True
+    # If the last digit is not 0, then last digit must add to the number of words.
+    if(digits[-1]>'0'):
+        count = count_digits_sequence_decodings(digits[:-1])
+    
+    # If the last two digits form a number smaller than or equal to 26, then consider last two digits and recur
+    if(digits[-2]=='1' or (digits[-2]=='2' and digits[-1]<='6')):
+        count += count_digits_sequence_decodings(digits[:-2])
+    
+    return count
 
-        return False
+
+print("Recursive Approach")
+print("Example-1: count_digits_sequence_decodings('12')")
+print(count_digits_sequence_decodings('12'))
+
+print("Example-1: count_digits_sequence_decodings('121')")
+print(count_digits_sequence_decodings('121'))
+
+print("Example-3: count_digits_sequence_decodings('1234')")
+print(count_digits_sequence_decodings('1234'))
 ```
 
 **Output:**
 
-```
-True
-True
-False
-```
+![possible_decodings_output](assets/possible_decodings_output.png)
 
-**Complexity:**
+###### Complexity:
 
-- ***Time: O(n<sup>n</sup>)*** - Consider the worst case where *s = "aaaaaaa"* and every prefix of *s* is present in the dictionary of words, then the recursion tree can grow upto n<sup>n</sup>.
-- ***Space: O(n)*** - Used to store the recursion stack.
+- **Time: Exponential**
 
 <br>
 
-###### DP : Recursion + Memoization (Top-Down) Solution
+##### Dynamic Programming Approach
 
-- We can use memoizaton to solve the recurring problem.
-- Only thing changing here is the start point of the word.
-- So, we will make use of a 2-D memory to store the results of the subproblems.
-- Now many redundant subproblems are avoided and recursion tree is pruned and reduces the time complexity by a large factor.
+- If we take a closer look at the above program, we can observe that the recursive solution is similar to Fibonacci Numbers.
+- Therefore, we can optimize the above solution to work in **O(n)** time using Dynamic Programming. 
 
-**Code:**
+###### **DP Implementation**
 
 ```python
-class Solution:
-    def wordBreak(self, s, wordDict):
-        memory = [None]*(len(s))
-        return self.word_break_dp_memoization(s, 0, set(wordDict), memory)
+def count_digits_sequence_decodings_DP(digits):
+    n = len(digits)
+    count = [0]*(n+1) # A table to store results of subproblems 
 
-    def word_break_dp_memoization(self, s, start, word_dict, memory):
-        if(start == len(s)):
-            return True
+    # Base cases 
+    count[0] = 1;  count[1] = 1  
+  
+    for i in range(2, n+1):  
+        count[i] = 0
+  
+        # If the last digit is not 0, then last digit must add to the number of words  
+        if (digits[i-1] > '0'):  
+            count[i] = count[i-1] 
 
-        if(memory[start] is not None):
-            return memory[start]
-
-        for end in range(start+1, len(s)+1):
-            if(s[start:end] in word_dict and self.word_break_dp_memoization(s, end, word_dict, memory)):
-                memory[start] = True
-                return True
-
-        memory[start] = False
-        return False
+        # If the last two digits form a number smaller than or equal to 26, 
+        # then last two digits form a valid character  
+        if (digits[i-2]=='1' or (digits[i-2]=='2' and digits[i-1]<='6') ):  
+            count[i] += count[i-2] 
+  
+    return count[n]
 
 
-s = Solution()
-print(s.wordBreak("leetcode", ["leet", "code"]))
-print(s.wordBreak("applepenapple", ["apple", "pen"]))
-print(s.wordBreak("catsandog", ["cats", "dog", "sand", "and", "cat"]))
+print("\nDP Approach")
+print("Example-1: count_digits_sequence_decodings_DP('12')")
+print(count_digits_sequence_decodings_DP('12'))
+
+print("Example-1: count_digits_sequence_decodings_DP('121')")
+print(count_digits_sequence_decodings_DP('121'))
+
+print("Example-3: count_digits_sequence_decodings_DP('1234')")
+print(count_digits_sequence_decodings_DP('1234'))
+
+print("Example-3: count_digits_sequence_decodings_DP('1234121')")
+print(count_digits_sequence_decodings_DP('1234121'))
 ```
 
 **Output:**
 
-```
-True
-True
-False
-```
+![possible_decodings_dp_output](assets/possible_decodings_dp_output.png)
 
-**Complexity:**
+###### Complexity:
 
-- ***Time: O(n<sup>2</sup>)*** - At max there can be n<sup>2</sup> subproblems.
-- ***Space: O(n)*** - Used to store the recursion stack.
-
-<br>
-
-
-
-
-
-<br>
-
-<br>
-
-##### Problems To Do:
-
-- Edit Distance
-
-<br>
+- **Time: O(n)**
 
 <br>
 

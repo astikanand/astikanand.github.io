@@ -447,10 +447,6 @@ check_point_inside_polygon(polygon2, (8, 1))
 - **Time: O(n)** : Size of polygon is n.
 - **Auxilliary Space: O(1)**
 
-
-
-
-
 <br>
 
 <br>

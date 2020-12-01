@@ -447,3 +447,5 @@ DP -> Iteration + Tabulation Method :
 
 <a href="longest-common-substring-pattern" class="prev-button">&larr; Previous: Longest Common Substring Pattern</a>
 
+<a href="miscellaneous-dp-problems" class="next-button">Next: Miscellaneous DP Problems &rarr;</a>
+

@@ -421,3 +421,127 @@ print(Solution().ladderLength("a", "c", words))
   - Queue for BFS in worst case would need a space for all O(N) words and this would also result in a space complexity of O(MN).
   - Combining the above steps, the overall space complexity is O(M<sup>2</sup>N) space.
 
+<br>
+
+<br>
+
+## 4. Friend Circles
+
+###### Problem Statement
+
+There are **N**  students in a class. Some of them are friends, while some are not. Their friendship is transitive in nature. For example, if A is a **direct** friend of B, and B is a **direct** friend of C, then A is an **indirect** friend of C. A friend circle is a group of students who are direct or indirect friends.
+
+<br>
+
+Given a **N\*N** matrix **M** representing the friend relationship between students in the class.If M\[i][j] = 1, then the ith and jth students are **direct** friends with each other, otherwise not. We have to output the total number of friend circles among all the students.
+
+```
+====== Examples ======
+Input: 
+[[1,1,0],
+ [1,1,0],
+ [0,0,1]]
+Output: 2
+Explanation:The 0th and 1st students are direct friends, so they are in a friend circle. 
+The 2nd student himself is in a friend circle. So return 2.
+
+[[1,1,0],
+ [1,1,1],
+ [0,1,1]]
+Output: 1
+Explanation:The 0th and 1st students are direct friends, the 1st and 2nd students are direct friends, 
+so the 0th and 2nd students are indirect friends. All of them are in the same friend circle, so return 1.
+```
+
+<br>
+
+###### Approach:
+
+- We know there are **N** student and their friendship relationship is represent by N\*N matrix.
+- Need to remember 2 things:
+  1. Diagonal with same i, j will always be 1 coz person will always be friend with himself, so M\[i][j] = 1
+  2. And if i, j are friends, then j and i are also friends, so M\[i][j] = M\[j][i]
+- Considering above 2 points we can get all the friendship relations by considering the only half part of matrix above diagonal.
+- Find all the relations using above concept and can make a undirected  graph with that.
+- Now simply count no. of times needed to completely visit the graph (count no. of connected components.)
+
+<br>
+
+###### Implementation:
+
+**Code:**
+
+```python
+from typing import List
+from collections import deque
+
+
+class Solution:
+    def findCircleNum(self, M: List[List[int]]) -> int:
+        n = len(M)
+        graph = {i: [] for i in range(n)}
+
+        # Get all the friendship relationship by considering matrix only above the diagonal
+        # and make directed graph
+        for i in range(n):
+            for j in range(i + 1, n):
+                if(M[i][j] == 1):
+                    graph[i].append(j)
+                    graph[j].append(i)
+
+        # Now simply count the no. of connected components
+        friend_circles = 0
+        visited = set()
+        for vertex in graph:
+            if vertex not in visited:
+                friend_circles += 1
+                self.bfs(graph, visited, vertex)
+
+        return friend_circles
+
+    def bfs(self, graph, visited, current):
+        queue = deque()
+        visited.add(current)
+        queue.append(current)
+
+        while(queue):
+            current = queue.popleft()
+
+            for connected_vertex in graph[current]:
+                if(connected_vertex not in visited):
+                    visited.add(connected_vertex)
+                    queue.append(connected_vertex)
+
+
+M = [[1, 1, 0],
+     [1, 1, 0],
+     [0, 0, 1]]
+print(Solution().findCircleNum(M))
+
+M = [[1, 1, 0],
+     [1, 1, 1],
+     [0, 1, 1]]
+print(Solution().findCircleNum(M))
+
+M = [[1, 0, 0, 1],
+     [0, 1, 1, 0],
+     [0, 1, 1, 1],
+     [1, 0, 1, 1]]
+print(Solution().findCircleNum(M))
+```
+
+**Output:**
+
+```
+2
+1
+1
+```
+
+**Complexity:**
+
+- ***Time: O(N<sup>2</sup>)*** - We will have N nodes and at the worst we will have everyone friends with all other and hence N<sup>2</sup> edges and also time taken to build graph by processing N<sup>2</sup>/2 elements. 
+- ***Space: O(N<sup>2</sup>)*** - To store the students and realtionships in graph which can at worst by O(N<sup>2</sup>).
+
+
+

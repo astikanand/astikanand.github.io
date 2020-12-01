@@ -7,7 +7,98 @@ topic: miscellaneous-dp-problems
 
 # Miscellaneous DP Problems
 
-## 1. Word Break Problem
+## 1. Maximal Square
+
+###### Problem Statement:
+
+Given an `m x n` binary `matrix` filled with `0`'s and `1`'s, *find the largest square containing only* `1`'s *and return its area*.
+
+```
+====== Examples =====
+Input: matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
+Output: 4
+
+Input: matrix = [["0","1"],["1","0"]]
+Output: 1
+
+Input: matrix = [["0"]]
+Output: 0
+```
+
+<img src="assets/maximal_square_example.png" width="50%">
+
+<br>
+
+###### Approach:
+
+- Starting from index (0,0), for every 1 found in the original matrix, we update the value of the current element as dp(i,j)=min⁡(dp(i−1,j),dp(i−1,j−1),dp(i,j−1))+1.
+- We also remember the size of the largest square found so far.
+- In this way, we traverse the original matrix once and find out the required maximum size. 
+
+![](assets/maximal_square_approach.png)
+
+<br>
+
+###### Implementation:
+
+**Code:**
+
+```python
+from typing import List
+
+
+class Solution:
+    def maximalSquare(self, matrix: List[List[str]]) -> int:
+        m, n = len(matrix), len(matrix[0])
+
+        side_len = 0
+        for i in range(m):
+            side_len = max(side_len, int(matrix[i][0]))
+
+        for j in range(n):
+            side_len = max(side_len, int(matrix[0][j]))
+
+        for i in range(1, m):
+            for j in range(1, n):
+                if (matrix[i][j] == "1"):
+                    matrix[i][j] = min(int(matrix[i][j - 1]), int(matrix[i - 1][j - 1]), int(matrix[i - 1][j])) + 1
+                    side_len = max(side_len, int(matrix[i][j]))
+
+        return side_len * side_len
+
+
+matrix = [["1", "0", "1", "0", "0"],
+          ["1", "0", "1", "1", "1"],
+          ["1", "1", "1", "1", "1"],
+          ["1", "0", "0", "1", "0"]]
+print(Solution().maximalSquare(matrix))
+
+matrix = [["0", "1"],
+          ["1", "0"]]
+print(Solution().maximalSquare(matrix))
+
+matrix = [["0"]]
+print(Solution().maximalSquare(matrix))
+```
+
+**Output:**
+
+```
+4
+1
+0
+```
+
+**Complexity:**
+
+- ***Time: O(m\*n)*** - Traversing the complete matrix once
+- ***Space: O(1)***
+
+<br>
+
+<br>
+
+## 2. Word Break
 
 ###### Problem Statement:
 

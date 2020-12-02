@@ -9,7 +9,7 @@ topic: intelligent-hashing-pattern
 
 ###### Introduction:
 
-- This pattern is based on the intelligent using of hashing to solve the problems.
+- This pattern is based on the intelligent use of hashing to solve the problems.
 
 <br>
 
@@ -31,6 +31,14 @@ The Linked List is represented in the input/output as a list of `n` nodes. Each 
 **Example:**
 
 ![](assets/copy_list_random_pointer_example.png)
+
+<br>
+
+###### Problem Stats:
+
+- **Difficulty: Medium**
+- **Category:** Leetcode - 138
+- **Companies:** Amazon
 
 <br>
 
@@ -119,4 +127,139 @@ print_list(Solution().copyRandomList(rl))
 <br>
 
 <br>
+
+## 2. Anlyze User Website Visit Pattern
+
+###### Problem Statement:
+
+We are given some website visits: the user with name `username[i]` visited the website `website[i]` at time `timestamp[i]`.
+
+A *3-sequence* is a list  of websites of length 3 sorted in ascending order by the time of their  visits. (Websites in a 3-sequence may not distinct.)
+
+Find the 3-sequence visited by the largest number of users. If more than one solution, return the lexicographically smallest such  3-sequence.
+
+```
+====== Example ======
+Input:
+username = ["joe","joe","joe","james","james","james","james","mary","mary","mary"]
+timestamp = [1,2,3,4,5,6,7,8,9,10]
+website = ["home","about","career","home","cart","maps","home","home","about","career"]
+
+Output: ["home","about","career"]
+
+Explanation: The wesite visited tuples in this example are:
+["joe", 1, "home"]
+["joe", 2, "about"]
+["joe", 3, "career"]
+["james", 4, "home"]
+["james", 5, "cart"]
+["james", 6, "maps"]
+["james", 7, "home"]
+["mary", 8, "home"]
+["mary", 9, "about"]
+["mary", 10, "career"]
+The 3-sequence ("home", "about", "career") was visited at least once by 2 users.
+The 3-sequence ("home", "cart", "maps") was visited at least once by 1 user.
+The 3-sequence ("home", "cart", "home") was visited at least once by 1 user.
+The 3-sequence ("home", "maps", "home") was visited at least once by 1 user.
+The 3-sequence ("cart", "maps", "home") was visited at least once by 1 user.
+```
+
+**Notes:**
+
+1. `3 <= N = username.length = timestamp.length = website.length <= 50`
+2. `1 <= username[i].length <= 10`
+3. `0 <= timestamp[i] <= 10^9`
+4. `1 <= website[i].length <= 10`
+5. Both `username[i]` and `website[i]` contain only lowercase characters.
+6. It is guaranteed that there is at least one user who visited at least 3 websites.
+7. No user visits two websites at the same time
+
+<br>
+
+###### Problem Stats:
+
+- **Difficulty: Medium**
+- **Category:** Leetcode Premium - 1152
+- **Companies:** Amazon
+
+<br>
+
+###### Approach:
+
+- We can first store the websites visited by every user in a map where key is username and value is list of sites visited a/c to timestamp.
+- Now go to list of websites visited by every user and make a 3_seq_web_visit_tuple and store it in a yet another map three_seq_visit_map.
+- Store key as 3_seq_web_visit_tuple and value as the times they are visited by every user in that 3-sequence.
+- Now finally return the max from the three_seq_visit_map and  lexicographically smaller if more candidates.
+
+<br>
+
+###### Implementation:
+
+**Code:**
+
+```python
+from typing import List
+from collections import defaultdict
+
+
+class Solution:
+    def mostVisitedPattern(self, usernames: List[str], timestamps: List[int], websites: List[str]) -> List[str]:
+        # First create the map to store the sites visited by every user
+        user_web_visit_history = defaultdict(list)
+        for username, website in zip(usernames, websites):
+            user_web_visit_history[username].append(website)
+
+        # Now go to list of websites visited by that particular user and make a 3_seq_web_visit_tuple and
+        # store it in a yet another map three_seq_visit_map with key as 3_seq_web_visit_tuple and value
+        # as the times they are visited by every user in that sequence.
+        three_seq_visit_map = defaultdict(int)
+        for web_visit_history in user_web_visit_history.values():
+            n = len(web_visit_history)
+            if (n >= 3):
+                self.update_3_seq_web_visit_map(three_seq_visit_map, web_visit_history)
+
+        # Now from three_seq_visit_map get the max visited key
+        return self.get_max_freq_3_seq_visit(three_seq_visit_map)
+
+    def update_3_seq_web_visit_map(self, three_seq_visit_map, web_visit_history):
+        n = len(web_visit_history)
+        for i in range(n - 2):
+            for j in range(i + 1, n - 1):
+                for k in range(j + 1, n):
+                    three_seq_visit_map[(web_visit_history[i], web_visit_history[j], web_visit_history[k])] += 1
+
+    def get_max_freq_3_seq_visit(self, three_seq_visit_map):
+        max_candidate = ("~", )
+        max_val = -1
+        for key, val in three_seq_visit_map.items():
+            if val > max_val and key < max_candidate:
+                max_candidate = key
+                max_val = val
+
+        return list(max_candidate)
+
+
+username = ["joe", "joe", "joe", "james", "james", "james", "james", "mary", "mary", "mary"]
+timestamp = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+website = ["home", "about", "career", "home", "cart", "maps", "home", "home", "about", "career"]
+print(Solution().mostVisitedPattern(username, timestamp, website))
+
+username = ["u1", "u1", "u1", "u2", "u2", "u2"]
+timestamp = [1, 2, 3, 4, 5, 6]
+website = ["a", "b", "a", "a", "b", "c"]
+print(Solution().mostVisitedPattern(username, timestamp, website))
+```
+
+**Output:**
+
+```
+['home', 'about', 'career']
+['a', 'b', 'a']
+```
+
+**Complexity:**
+
+- ***Time: O(N<sup>3</sup>)*** - In worst case if only 1 user, then will have to create tuple of every triplet making it O(N<sup>3</sup>) where N is websites length.
+- ***Space: O(N<sup>3</sup>)*** - In worst case if all sites are distinct then will have to store every triplet and hence we need O(N<sup>3</sup>).
 

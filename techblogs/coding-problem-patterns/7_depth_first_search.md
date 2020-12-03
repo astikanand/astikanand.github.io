@@ -133,6 +133,13 @@ Given the `root` of a binary search tree, rearrange the tree in **in-order** so 
 
 ![](assets/increasing_order_search_tree_example.png)
 
+**Constraints:**
+
+- The number of nodes in the given tree will be in the range `[1, 100]`.
+- `0 <= Node.val <= 1000`
+
+<br>
+
 ###### Problem Stats:
 
 - **Difficulty: Easy**
@@ -206,6 +213,24 @@ result_root = Solution().increasingBST(root)
 print("Verifying if returned result tree is correct : ")
 print_result(result_root)
 ```
+
+**Output:**
+
+```
+Verifying if returned result tree is correct : 
+1 2 3 4 5 6 7 8 9 
+Verifying if returned result tree is correct : 
+1 5 7 
+```
+
+**Complexity:**
+
+- ***Time: O(N)*** -  Need to process every element of the node.
+- ***Auxilliary Space: O(H)*** - Total space needed for recursion stack is height of BST.
+
+<br>
+
+<br>
 
 
 

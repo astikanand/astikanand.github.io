@@ -220,7 +220,8 @@ class Solution:
                 self.update_3_seq_web_visit_map(three_seq_visit_map, web_visit_history)
 
         # Now from three_seq_visit_map get the max visited key
-        return self.get_max_freq_3_seq_visit(three_seq_visit_map)
+        max_key = max(three_seq_visit_map.items(), key=lambda k: (k[1], k[0]))
+        return list(max_key[0])
 
     def update_3_seq_web_visit_map(self, three_seq_visit_map, web_visit_history):
         n = len(web_visit_history)
@@ -228,16 +229,6 @@ class Solution:
             for j in range(i + 1, n - 1):
                 for k in range(j + 1, n):
                     three_seq_visit_map[(web_visit_history[i], web_visit_history[j], web_visit_history[k])] += 1
-
-    def get_max_freq_3_seq_visit(self, three_seq_visit_map):
-        max_candidate = ("~", )
-        max_val = -1
-        for key, val in three_seq_visit_map.items():
-            if val > max_val and key < max_candidate:
-                max_candidate = key
-                max_val = val
-
-        return list(max_candidate)
 
 
 username = ["joe", "joe", "joe", "james", "james", "james", "james", "mary", "mary", "mary"]

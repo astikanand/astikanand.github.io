@@ -190,22 +190,42 @@ print(matrix)
 >
 > ##### Algorithm R - By Alan Waterman
 >
-> - It is a simplest algorithm for Reservoir Sampling albeit slow one
+> - It is a simplest algorithm for Reservoir Sampling albeit slow one.
+> - If you see the below algorithm, we have not stored the entire elements in memory.
+> - And neither we have tried to know what is its total size in advance.
+> - The memory used to store reservoir is a constant space.
 >
 > ```python
-> # S has items to sample, R will contain the result
-> def ReservoirSample(S[1..n], R[1..k])
->   # fill the reservoir array
->   for i := 1 to k
->       R[i] := S[i]
+> import random
 > 
->   # replace elements with gradually decreasing probability
->   for i := k+1 to n
->     # randomInteger(a, b) generates a uniform integer
->     #   from the inclusive range {a, ..., b} *)
->     j := randomInteger(1, i)
->     if j <= k
->         R[j] := S[i]
+> def ReservoirSample(space, k):
+>     # Create and fill the Reservoir of size k
+>     reservoir = []
+>     for i in range(k):
+>         reservoir[i].append(space[i])
+> 
+>     # Now process all the elements one by one after the kth element
+>     # And replace the elements in Reservoir with gradually decreasing probability of being replaced
+>     i = k
+>     while True:
+>         try:
+>             current = space[i]  # To check if we still have elements left
+>             rand_index = random.randint(0, i)  # generates random number b/w 0 to i both inclusive
+>             # As we go further and further rand_index will have lesser and leserr probability of beign < k
+>             # Hence probability of being replaced decreases gradually
+>             if (rand_index < k):
+>                 reservoir[rand_index] = current
+>         except Exception:
+>             # We have finished with all the elements of the given space
+>             break
+> 
+>         i += 1
+> 
+>     return reservoir
+> 
+> 
+> print(ReservoirSample([1, 2, 3], 1)) # Returns 1 random element from the space
+> print(ReservoirSample([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 3)) # Returns 3 random elements
 > ```
 >
 > <br>

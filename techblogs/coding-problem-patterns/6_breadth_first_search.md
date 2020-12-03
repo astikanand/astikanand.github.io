@@ -543,5 +543,132 @@ print(Solution().findCircleNum(M))
 - ***Time: O(N<sup>2</sup>)*** - We will have N nodes and at the worst we will have everyone friends with all other and hence N<sup>2</sup> edges and also time taken to build graph by processing N<sup>2</sup>/2 elements. 
 - ***Space: O(N<sup>2</sup>)*** - To store the students and realtionships in graph which can at worst by O(N<sup>2</sup>).
 
+<br>
 
+<br>
+
+## 5. Rotting Oranges
+
+###### Problem Statement:
+
+In a given grid, each cell can have one of three values:
+
+- the value `0` representing an empty cell;
+- the value `1` representing a fresh orange;
+- the value `2` representing a rotten orange.
+
+Every minute, any fresh orange that is adjacent (4-directionally) to a rotten orange becomes rotten.
+
+Return the minimum number of minutes that must elapse until no cell has a fresh orange. If this is impossible, return `-1` instead.
+
+**Example:**
+
+![](assets/rotting_oranges_example.png)
+
+```
+======= Examples ======
+Input: [[2,1,1],[1,1,0],[0,1,1]]
+Output: 4
+
+Input: [[2,1,1],[0,1,1],[1,0,1]]
+Output: -1
+Explanation:  The orange in the bottom left corner (row 2, column 0) is never rotten, because rotting only happens 4-directionally.
+
+Input: [[0,2]]
+Output: 0
+Explanation:  Since there are already no fresh oranges at minute 0, the answer is just 0.
+```
+
+**Note:**
+
+1. `1 <= grid.length <= 10`
+2. `1 <= grid[0].length <= 10`
+3. `grid[i][j]` is only `0`, `1`, or `2`.
+
+<br>
+
+###### Problem Stats:
+
+- **Difficulty: Medium**
+- **Category:** Leetcode - 994
+- **Companies:** Amazon
+
+<br>
+
+###### Approach:
+
+- We can solve this problem using BFS, just take all the rotten oranges as start vertices.
+- Try to do the BFS processing parallely from all the starting vertices.
+- Check if the neighbour is still not rotten update its time to be current vertex time + 1.
+- We can simply mark the visited as rotten oranges, so we don't need to maintain visited matrix.
+
+<br>
+
+###### Implementation:
+
+**Code:**
+
+```python
+from typing import List
+from collections import deque
+
+
+class Solution:
+    DIRECTIONS = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+
+    IS_SAFE = lambda self, grid, i, j, m, n: i >= 0 and i < m and j >= 0 and j < n and grid[i][j] == 1
+
+    def orangesRotting(self, grid: List[List[int]]) -> int:
+        m, n = len(grid), len(grid[0])
+        initial_rotten_oranges = []
+        total_fresh = 0
+
+        for i in range(m):
+            for j in range(n):
+                if(grid[i][j] == 2):
+                    initial_rotten_oranges.append((i, j, 0))
+                elif (grid[i][j] == 1):
+                    total_fresh += 1
+
+        return self.parallel_bfs(grid, initial_rotten_oranges, total_fresh)
+
+    def parallel_bfs(self, grid, start_vertices, total_fresh):
+        m, n = len(grid), len(grid[0])
+        max_time = 0
+        queue = deque()
+        for start_vertex in start_vertices:
+            queue.append(start_vertex)
+
+        while (queue):
+            x, y, time = queue.popleft()
+
+            for dx, dy in self.DIRECTIONS:
+                if (self.IS_SAFE(grid, x + dx, y + dy, m, n)):
+                    grid[x + dx][y + dy] = 2
+                    queue.append((x + dx, y + dy, time + 1))
+                    max_time = max(max_time, time + 1)
+                    total_fresh -= 1
+
+        return max_time if total_fresh == 0 else -1
+
+
+print(Solution().orangesRotting([[2, 1, 1], [1, 1, 0], [0, 1, 1]]))
+print(Solution().orangesRotting([[2, 1, 1], [0, 1, 1], [1, 0, 1]]))
+print(Solution().orangesRotting([[0, 2]]))
+```
+
+**Output:**
+
+```
+4
+-1
+0
+```
+
+**Complexity:**
+
+- ***Time: O(N<sup>2</sup>)*** - Need to process all N<sup>2</sup> elements in matrix.
+- ***Space: O(N)*** - At worst need to store the complete row in deque.
+
+<br>
 

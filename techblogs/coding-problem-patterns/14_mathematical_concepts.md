@@ -180,5 +180,146 @@ print(matrix)
 
 
 
+> ### Reservoir Sampling
+>
+> - In order to do random sampling over a population of ***unknown size*** with ***constant space***, the answer is [reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling).
+> - The reservoir sampling is a ***family*** of algorithms which includes several variants over the time.
+>   - Algorithm R
+>   - Algorithm L
+>   - Algorithm with Random Sort
+>
+> ##### Algorithm R - By Alan Waterman
+>
+> - It is a simplest algorithm for Reservoir Sampling albeit slow one
+>
+> ```python
+> # S has items to sample, R will contain the result
+> def ReservoirSample(S[1..n], R[1..k])
+>   # fill the reservoir array
+>   for i := 1 to k
+>       R[i] := S[i]
+> 
+>   # replace elements with gradually decreasing probability
+>   for i := k+1 to n
+>     # randomInteger(a, b) generates a uniform integer
+>     #   from the inclusive range {a, ..., b} *)
+>     j := randomInteger(1, i)
+>     if j <= k
+>         R[j] := S[i]
+> ```
+>
+> <br>
+> [`Main Idea of the Algorithm:`]()
+>
+> - Initially, we fill up an array of reservoir `R[]` with the heading elements from the pool of samples `S[]`. 
+> - We then iterate through the rest of elements in the pool. For each element, we need to *decide* if we want to include it in the reservoir or not. If so, we will replace an existing element in reservoir with the current element.
+> - At the end of the algorithm, the reservoir will contain the final elements we sample from the pool.
+>
+> <br>
+>
+> [`Ensuring equal probability of being chosen for every element:`]()
+>
+> - Algorithm guarantees that at any moment, for each element scanned so far, it has an equal chance to be selected into the  reservoir.
+> - Here is the prroof:
+>   - Suppose that we have an element at the index of `i` (and `i > k`), when we reach the element, the chance that it will be selected into the reservoir would be `k/i`, as we can see from the algorithm.
+>   - Later on, there is a chance that any chosen element in the reservoir might be **replaced** with the subsequent element. More specifically, when we reach the element `j` (`j > i`), there would be a chance of `1/j` for any specific element in the reservoir to be replaced. Because for any specific position in the reservoir, there is `1/j` chance that it might be chosen by the random number generator. On the other hand, there would be `(j-1)/j` probability for any specific element in the reservoir to stay in the reservoir at that particular moment of sampling.
+>   - Finally, in order for any element in the pool to be chosen in the final reservoir, a series of **independent events** need to happen: 
+>     - Firstly, the element needs to be chosen in the reservoir when we reach the element.
+>     - Secondly, in the following sampling, the element should remain in the reservoir, *i.e.* not to be replaced.
+>   - Therefore, for a sequence of length `n`, the chance that any element ends up in the final reservoir could be represented in the following formula: `k/i * i/(i+1) * (i+1)/(i+2).....(n-1)/n = k/n`
 
+<br>
+
+<br>
+
+## 2. Linked List Random Node
+
+###### Problem Statement:
+
+Given a singly linked list, return a random node's value from the linked list. Each node must have the **same probability** of being chosen.
+
+**Follow up:**
+What if the linked list is extremely large and its length is unknown to  you? Could you solve this efficiently without using extra space?
+
+```
+======= Examples ======
+// Init a singly linked list [1,2,3].
+ListNode head = new ListNode(1);
+head.next = new ListNode(2);
+head.next.next = new ListNode(3);
+Solution solution = new Solution(head);
+
+// getRandom() should return either 1, 2, or 3 randomly. Each element should have equal probability
+solution.getRandom();
+```
+
+<br>
+
+###### Problem Stats:
+
+- **Difficulty: Medium**
+- **Category:** Leetcode - 382
+- **Companies:** Facebook
+
+<br>
+
+###### Approach:
+
+- In the `getRandom()` function, we can do a reservoir  sampling starting from the head of the linked list.
+- More specifically, we scan the element one by one and decide whether we  should put it into the reservoir (here size k = 1).
+
+<br>
+
+###### Implementation:
+
+**Code:**
+
+```python
+import random
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+class Solution:
+    def __init__(self, head: ListNode):
+        self.head = head
+
+    def getRandom(self) -> int:
+        temp = self.head
+        # Reservoir Sample Size k = 1, fill the reservoir first
+        reservoir = temp.val
+        temp = temp.next
+
+        i = 1  # Start from next element after reservoir
+        while (temp):
+            rand_index = random.randint(0, i)
+            if (rand_index < 1):
+                reservoir = temp.val
+            i += 1
+            temp = temp.next
+
+        return reservoir
+
+
+head = ListNode(1)
+head.next = ListNode(2)
+head.next.next = ListNode(3)
+solution = Solution(head)
+print(solution.getRandom())
+```
+
+**Output:**
+
+```
+2  # Prints Randomly everytime
+```
+
+**Complexity:**
+
+- ***Time: O(N<sup>2</sup>)*** - Get random takes O(N) time to process the linked list.
+- ***Space: O(1)***
 

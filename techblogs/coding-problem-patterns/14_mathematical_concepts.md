@@ -180,7 +180,7 @@ print(matrix)
 
 
 
-> ### Reservoir Sampling
+> ### Concept: Reservoir Sampling
 >
 > - In order to do random sampling over a population of ***unknown size*** with ***constant space***, the answer is [reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling).
 > - The reservoir sampling is a ***family*** of algorithms which includes several variants over the time.
@@ -202,7 +202,7 @@ print(matrix)
 >     # Create and fill the Reservoir of size k
 >     reservoir = []
 >     for i in range(k):
->         reservoir[i].append(space[i])
+>         reservoir.append(space[i])
 > 
 >     # Now process all the elements one by one after the kth element
 >     # And replace the elements in Reservoir with gradually decreasing probability of being replaced
@@ -310,17 +310,18 @@ class Solution:
 
     def getRandom(self) -> int:
         temp = self.head
-        # Reservoir Sample Size k = 1, fill the reservoir first
+        # # Create and fill the Reservoir of size k, here k = 1
+        k = 1
         reservoir = temp.val
         temp = temp.next
 
-        i = 1  # Start from next element after reservoir
+        i = k  # Now process all the elements one by one after the kth element
         while (temp):
             rand_index = random.randint(0, i)
-            if (rand_index < 1):
+            if (rand_index < k):
                 reservoir = temp.val
-            i += 1
             temp = temp.next
+            i += 1
 
         return reservoir
 

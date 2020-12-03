@@ -341,6 +341,6 @@ print(solution.getRandom())
 
 **Complexity:**
 
-- ***Time: O(N<sup>2</sup>)*** - Get random takes O(N) time to process the linked list.
+- ***Time: O(N)*** - Get random takes O(N) time to process the linked list.
 - ***Space: O(1)***
 

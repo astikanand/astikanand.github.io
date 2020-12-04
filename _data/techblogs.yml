@@ -302,6 +302,54 @@
         -
             title: Unified Modeling Language (UML)
             slug: unified-modeling-language-uml
+        -
+            title: Design Library Managment System
+            slug: design-library-managment-system
+        -
+            title: Design Parking Lot
+            slug: design-parking-lot
+        -
+            title: Design Online Shopping System - Amazon
+            slug: design-online-shopping-system-amazon
+        -
+            title: Design StackOverflow
+            slug: design-stackoverflow
+        -
+            title: Design Movie Ticket Booking System
+            slug: design-movie-ticket-booking-system
+        -
+            title: Design ATM
+            slug: design-atm
+        -
+            title: Design Airline Management System
+            slug: design-airline-management-system
+        -
+            title: Design BlackJack and Deck of Cards
+            slug: design-blackjack-and-deck-of-cards
+        -
+            title: Design Hotel Management System
+            slug: design-hotel-management-system
+        -
+            title: Design Restaurant Design System
+            slug: design-restaurant-design-system
+        -
+            title: Design Chess
+            slug: design-chess
+        -
+            title: Design Online Brokerage System
+            slug: design-online-brokerage-system
+        -
+            title: Design Car Rental System
+            slug: design-car-rental-system
+        -
+            title: Design Linkedin
+            slug: design-linkedin
+        -
+            title: Design Cricinfo
+            slug: design-cricinfo
+        -
+            title: Design Social Network - Facebook
+            slug: design-docial-network-facebook
 
 
 - 

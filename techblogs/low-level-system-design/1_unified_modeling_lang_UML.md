@@ -190,17 +190,70 @@ topic: unified-modeling-language-uml
 - An abstract class is identified by specifying its name in *italics*.
   - *Example:* Person and Account classes are abstract.
 
+![](assets/UML_conventions.png)
 
+<br>
 
+## Sequence Diagram
 
+###### Sequence Diagram Definition
 
+- Describe interactions among classes in terms of an exchange of messges over time.
+- It is used to explore the logic of complex operations, functions or procedures.
+- The sequence of interactions b/w the objects is represented in a step-by-step manner.
+- Sequence diagram shows a detailed flow for a specific use case or even just part of a particular use case.
+- They are almost self explanatory and show the calls b/w the different objects in their sequence.
+- They can also explain at a detailed level different calls to various objects.
 
+###### Depiction of Sequence Diagram
 
+- A sequence diagram has 2 dimensions vertical and horizontal.
+- **Vertical dimension** shows the sequence of messages in the chronological order thay they occur.
+- **Horizontal dimension** shows the object instances to which the messages are sent.
 
+![](assets/sequence_diagram_example.png)
 
+###### Drawing Sequence Diagram
 
+- At the top of the diagram - identify the class instances (objects) by putting each class instance inside a box (see above).
+- If a class instance sends a message to another class instance, draw a line with an open arrowhead pointing to the receiveing class instance and place the name of the message above the line.
+- Optionally for important messages, we can draw a dotted line with an arrowhead pointing back to the originating class instance and label the returned value above the dotted line.
 
+<br>
 
+## Activity Diagrams
+
+###### Activity Diagram Definition
+
+- Activity diagrams are used to illustrate the flow of control in system.
+- An activity diagram shows the flow of control for a system functionality.
+- It emphasizes the condition of flow and the sequence in which it happens.
+- We can also use an activity diagram to refer to the steps involved in the execution of a use case.
+
+###### Purose of Activity Diagrams
+
+- It illustrate the dynamic nature of a system by modeling the flow of control from activity to activity.
+- An activity represents an operation on some class in the system that results in a change in the state of the system.
+- Typically activity diagrams are used to model workflow or business processes and internal operations.
+
+![](assets/activity_diagram_example.png)
+
+<br>
+
+<br>
+
+###### Difference b/w Activity Diagram and Sequence Diagram
+
+- **Activity Diagram:** 
+  - Captures the process workflow and is used for [funtional modeling]().
+  - [Functional model]() represents the flow of values from external inputs through operations & internal data stores to external outputs.
+- **Sequence Diagram:**
+  - Tracks the interaction b/w the objects and is used for [dynamic modeling]().
+  - Dynamic Modeling is represented by tracking states, transition b/w states and the events that trigger these transitions.
+
+<br>
+
+<br>
 
 ----
 

@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/design-instagram
+permalink: /techblogs/high-level-system-design/design-instagram
 topic: design-instagram
 ---
 

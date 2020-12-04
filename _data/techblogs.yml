@@ -228,8 +228,8 @@
 
 
 - 
-    title: System Design
-    slug: system-design
+    title: High Level System Design
+    slug: high-level-system-design
     topics:
         -
             title: Basics
@@ -291,6 +291,17 @@
         -
             title: Design BookMyShow
             slug: design-bookmyshow
+
+- 
+    title: Low Level System Design
+    slug: low-level-system-design
+    topics:
+        -
+            title: Low Level Design Basics
+            slug: low-level-design-basics
+        -
+            title: Unified Modeling Language (UML)
+            slug: unified-modeling-language-uml
 
 
 - 

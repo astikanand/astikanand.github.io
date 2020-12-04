@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/design-youtube-or-netflix
+permalink: /techblogs/high-level-system-design/design-youtube-or-netflix
 topic: design-youtube-or-netflix
 ---
 

@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/design-twitter
+permalink: /techblogs/high-level-system-design/design-twitter
 topic: design-twitter
 ---
 

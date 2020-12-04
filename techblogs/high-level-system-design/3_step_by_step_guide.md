@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/step-by-step-guide
+permalink: /techblogs/high-level-system-design/step-by-step-guide
 topic: step-by-step-guide
 ---
 

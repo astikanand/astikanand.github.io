@@ -32,9 +32,14 @@ defaults:
       subsection: dynamic-programming-patterns
   
   - scope:
-      path: techblogs/system-design
+      path: techblogs/high-level-system-design
     values:
-      subsection: system-design
+      subsection: high-level-system-design
+
+  - scope:
+      path: techblogs/low-level-system-design
+    values:
+      subsection: low-level-system-design
   
   - scope:
       path: techblogs/software-engineering

@@ -1,11 +1,11 @@
 ---
-permalink: /techblogs/object-oriented-design/ooo-design-basics
-topic: ooo-design-basics
+permalink: /techblogs/low-level-system-design/low-level-design-basics
+topic: low-level-design-basics
 ---
 
 
 
-# OO Design Basics
+# Low Level Design Basics
 
 ###### Object-Oriented Programming
 

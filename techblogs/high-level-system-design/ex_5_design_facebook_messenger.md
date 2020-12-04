@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/design-facebook-messenger
+permalink: /techblogs/high-level-system-design/design-facebook-messenger
 topic: design-facebook-messenger
 ---
 

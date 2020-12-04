@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/design-typeahead-suggestion
+permalink: /techblogs/high-level-system-design/design-typeahead-suggestion
 topic: design-typeahead-suggestion
 ---
 

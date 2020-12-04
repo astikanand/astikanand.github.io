@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/design-web-crawler
+permalink: /techblogs/high-level-system-design/design-web-crawler
 topic: design-web-crawler
 ---
 

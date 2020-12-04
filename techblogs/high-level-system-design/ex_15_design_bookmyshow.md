@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/design-bookmyshow
+permalink: /techblogs/high-level-system-design/design-bookmyshow
 topic: design-bookmyshow
 ---
 

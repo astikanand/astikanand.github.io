@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/design-dropbox
+permalink: /techblogs/high-level-system-design/design-dropbox
 topic: design-dropbox
 ---
 

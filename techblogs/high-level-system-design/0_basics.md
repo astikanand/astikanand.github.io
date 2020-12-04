@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/basics
+permalink: /techblogs/high-level-system-design/basics
 topic: basics
 ---
 

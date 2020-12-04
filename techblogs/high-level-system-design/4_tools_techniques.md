@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/tools-techniques
+permalink: /techblogs/high-level-system-design/tools-techniques
 topic: tools-techniques
 ---
 

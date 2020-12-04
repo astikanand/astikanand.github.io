@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/design-uber
+permalink: /techblogs/high-level-system-design/design-uber
 topic: design-uber
 ---
 

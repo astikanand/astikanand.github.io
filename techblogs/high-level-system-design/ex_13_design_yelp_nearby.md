@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/design-yelp-or-nearby
+permalink: /techblogs/high-level-system-design/design-yelp-or-nearby
 topic: design-yelp-or-nearby
 ---
 

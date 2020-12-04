@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/design-pastebin
+permalink: /techblogs/high-level-system-design/design-pastebin
 topic: design-pastebin
 ---
 

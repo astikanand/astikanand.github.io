@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/design-tiny-url-service
+permalink: /techblogs/high-level-system-design/design-tiny-url-service
 topic: design-tiny-url-service
 ---
 

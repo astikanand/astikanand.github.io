@@ -1,5 +1,5 @@
 ---
-permalink: /techblogs/system-design/concepts-part-1
+permalink: /techblogs/high-level-system-design/concepts-part-1
 topic: concepts-part-1
 ---
 

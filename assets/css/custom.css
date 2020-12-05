@@ -173,7 +173,7 @@ body{
     margin-bottom: 10px;
     padding: 5px 10px;
     background-color: lavender; /*#FFF8DC*/
-    border-left: 4px solid #ffeb8e;
+    border-left: 4px solid lightgray /*#ffeb8e*/;
 }
 
 h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6,

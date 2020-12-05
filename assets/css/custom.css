@@ -172,7 +172,7 @@ body{
 .markdown-body blockquote {
     margin-bottom: 10px;
     padding: 5px 10px;
-    background-color: #FFF8DC;
+    background-color: lavender; /*#FFF8DC*/
     border-left: 4px solid #ffeb8e;
 }
 

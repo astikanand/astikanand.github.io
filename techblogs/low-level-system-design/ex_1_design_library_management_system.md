@@ -122,7 +122,7 @@ Here are the steps for returning a book.
 
 #### Step-6: Code
 
-Here is the code for the use cases mentioned above: 1) Check-out a book  2) Return a book  3)Renew a book .
+Here is the code for the use cases mentioned above: 1) Check-out a book  2) Return a book  3) Renew a book.
 
 > **Note:** *This code only focuses on the design part of the use cases. Since it is not required to write a fully executable code in interview. We can assume parts of the code to interact with the database, payment system.*
 

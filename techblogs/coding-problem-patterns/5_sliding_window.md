@@ -65,7 +65,7 @@ Output: [4]
 
 ###### Implementation:
 
-**Code:**
+**Python Code:**
 
 ```python
 from typing import List
@@ -111,6 +111,54 @@ print(Solution().maxSlidingWindow([1], 1))
 print(Solution().maxSlidingWindow([1, -1], 1))
 print(Solution().maxSlidingWindow([9, 11], 2))
 print(Solution().maxSlidingWindow([4, -2], 2))
+```
+
+**Java Code:**
+
+```java
+import java.util.*;
+
+public class Q1SlidingWindowMaximum {
+    public int[] maxSlidingWindow(int[] nums, int k){
+        int n = nums.length;
+        int[] slidingWindowResult = new int[n-k+1];
+        Deque<Integer> deque = new ArrayDeque<>();
+
+        for(int i = 0; i < k; ++i){
+            while(!deque.isEmpty() && nums[i] >= nums[deque.getLast()]){
+                deque.removeLast();
+            }
+            deque.addLast(i);
+        }
+
+        slidingWindowResult[0] = nums[deque.getFirst()];
+
+        for (int i = k; i < n; ++i){
+            if(deque.getFirst() < i-k+1){
+                deque.removeFirst();
+            }
+
+            while(!deque.isEmpty() && nums[i] >= nums[deque.getLast()]){
+                deque.removeLast();
+            }
+            deque.addLast(i);
+
+            slidingWindowResult[i-k+1] = nums[deque.getFirst()];
+        }
+
+        return slidingWindowResult;
+
+    }
+
+    public static void main(String[] args){
+        Q1SlidingWindowMaximum obj = new Q1SlidingWindowMaximum();
+        System.out.println(Arrays.toString(obj.maxSlidingWindow(new int[] {1, 3, -1, -3, 5, 3, 6, 7}, 3)));
+        System.out.println(Arrays.toString(obj.maxSlidingWindow(new int[] {1}, 1)));
+        System.out.println(Arrays.toString(obj.maxSlidingWindow(new int[] {1, -1}, 1)));
+        System.out.println(Arrays.toString(obj.maxSlidingWindow(new int[] {9, 11}, 2)));
+        System.out.println(Arrays.toString(obj.maxSlidingWindow(new int[] {4, -2}, 2)));
+    }
+}
 ```
 
 **Output:**

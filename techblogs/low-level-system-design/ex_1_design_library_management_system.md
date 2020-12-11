@@ -126,3 +126,7 @@ Here is the code for the use cases mentioned above: 1) Check-out a book  2) Retu
 
 > **Note:** *This code only focuses on the design part of the use cases. Since it is not required to write a fully executable code in interview. We can assume parts of the code to interact with the database, payment system.*
 
+<br>
+
+[Enums and Constants:]() Required enums, data types and constants
+

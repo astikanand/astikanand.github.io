@@ -51,7 +51,7 @@ The Linked List is represented in the input/output as a list of `n` nodes. Each 
 
 ###### Implementation:
 
-**Code:**
+**Python Code:**
 
 ```python
 class Node:
@@ -107,6 +107,79 @@ rl.next.next.next.random = rl.next.next
 rl.next.next.random.random = rl
 
 print_list(Solution().copyRandomList(rl))
+```
+
+**Java Code:**
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+
+class Node {
+    int val;
+    Node next;
+    Node random;
+
+    public Node(int val) {
+        this.val = val;
+        this.next = null;
+        this.random = null;
+    }
+}
+
+
+public class Q1CopyListWithRandomPointer {
+    public Node copyRandomList(Node head) {
+        Map<Node, Node> nodesMap = new HashMap<Node, Node>();
+        Node originalNode = head;
+        Node copiedNode = null;
+
+        // Copying all the nodes
+        while (originalNode != null){
+            copiedNode = new Node(originalNode.val);
+            nodesMap.put(originalNode, copiedNode);
+            originalNode = originalNode.next;
+        }
+
+        // Setting all the new nodes its next and random pointers
+        originalNode = head;
+        while (originalNode != null){
+            copiedNode = nodesMap.get(originalNode);
+            copiedNode.next = nodesMap.get(originalNode.next);
+            copiedNode.random = nodesMap.get(originalNode.random);
+            nodesMap.put(originalNode, copiedNode);
+            originalNode = originalNode.next;
+        }
+
+        return nodesMap.get(head);
+    }
+
+    public void printRandomList(Node head){
+        while(head != null){
+            System.out.print("[" + head.val + "] -----> ");
+            System.out.print(head.next != null ? head.next.val : "None");
+            System.out.print(" ~~~~~~~~~> ");
+            System.out.println(head.random != null ? head.random.val : "None");
+            head = head.next;
+        }
+    }
+
+    public static void main(String[] args){
+        Node rl = new Node(7);
+        rl.next = new Node(13);
+        rl.next.next = new Node(11);
+        rl.next.random = rl;
+        rl.next.next.next = new Node(10);
+        rl.next.next.random = new Node(1);
+        rl.next.next.next.next = rl.next.next.random;
+        rl.next.next.next.random = rl.next.next;
+        rl.next.next.random.random = rl;
+
+        Q1CopyListWithRandomPointer obj = new Q1CopyListWithRandomPointer();
+        Node result = obj.copyRandomList(rl);
+        obj.printRandomList(result);
+    }
+}
 ```
 
 **Output:**
@@ -249,6 +322,75 @@ username = ["u1", "u1", "u1", "u2", "u2", "u2"]
 timestamp = [1, 2, 3, 4, 5, 6]
 website = ["a", "b", "c", "a", "b", "a"]
 print(Solution().mostVisitedPattern(username, timestamp, website))
+```
+
+**Java Code:**
+
+```java
+import java.util.*;
+
+public class Q2AnalyzeUserWebsiteVisitPattern {
+    public List<String> mostVisitedPattern(String[] users, int[] timestamps, String[] websites){
+        Map<String, List<String>> userWebHistoryMap = new HashMap<String, List<String>>();
+        int n = users.length;
+
+        for (int i = 0; i < n; ++i){
+            String user = users[i];
+            if(!userWebHistoryMap.containsKey(user)){
+                userWebHistoryMap.put(user, new ArrayList<String>());
+            }
+
+            List<String> userWebsites = userWebHistoryMap.get(user);
+            userWebsites.add(websites[i]);
+            userWebHistoryMap.put(user, userWebsites);
+        }
+
+        return getMaxVisited3SeqList(userWebHistoryMap.values());
+    }
+
+    public List<String> getMaxVisited3SeqList(Collection<List<String>> userWebHistoryValuesList){
+        Map<String, Integer> threeSeqWebsiteVisitsCount = new HashMap<String, Integer>();
+        for(List<String> userWebHistoryValues : userWebHistoryValuesList){
+            int n = userWebHistoryValues.size();
+
+            for(int i = 0; i < n-2; ++i){
+                for (int j = i+1; j < n-1; ++j){
+                    for (int k = j+1; k < n; ++k){
+                        String key = userWebHistoryValues.get(i) + "|" + userWebHistoryValues.get(j)
+                                + "|" + userWebHistoryValues.get(k);
+                        if(!threeSeqWebsiteVisitsCount.containsKey(key)){
+                            threeSeqWebsiteVisitsCount.put(key, 0);
+                        }
+
+                        threeSeqWebsiteVisitsCount.put(key, threeSeqWebsiteVisitsCount.get(key)+1);
+                    }
+                }
+            }
+        }
+
+        String maxCandidateKey =  threeSeqWebsiteVisitsCount.entrySet().stream().max((e1, e2) ->
+            (e1.getValue() > e2.getValue() || (e1.getValue() == e2.getValue() && e1.getKey().compareTo(e2.getKey()) == -1)) ? 1 : -1
+        ).get().getKey();
+
+        List<String> max3SeqCandidate = Arrays.asList(maxCandidateKey.split("\\|"));
+        return max3SeqCandidate;
+    }
+
+    public static void main(String[] args){
+        String[] username, website;
+        int[] timestamp;
+        Q2AnalyzeUserWebsiteVisitPattern obj  = new Q2AnalyzeUserWebsiteVisitPattern();
+        username = new String[] {"joe", "joe", "joe", "james", "james", "james", "james", "mary", "mary", "mary"};
+        timestamp = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        website = new String[] {"home", "about", "career", "home", "cart", "maps", "home", "home", "about", "career"};
+        System.out.println(obj.mostVisitedPattern(username, timestamp, website));
+
+        username = new String[] {"u1", "u1", "u1", "u2", "u2", "u2"};
+        timestamp = new int[] {1, 2, 3, 4, 5, 6};
+        website = new String[]{"a", "b", "c", "a", "b", "a"};
+        System.out.println(obj.mostVisitedPattern(username, timestamp, website));
+    }
+}
 ```
 
 **Output:**

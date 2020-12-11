@@ -110,6 +110,89 @@ grid = [
 print(Solution().numIslands(grid))
 ```
 
+**Java Code:**
+
+```java
+class Pair{
+    int x;
+    int y;
+    Pair(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+}
+
+public class Q1NumberOfIslands {
+    static final int[][] DIRECTIONS = {
+        {0, 1}, {1, 0}, {0, -1}, {-1, 0}
+    };
+
+    public static boolean checkSafe(int x, int y, int m, int n, char[][]grid){
+        return x >= 0 && x < m && y >= 0 && y <n && grid[x][y] == '1';
+    }
+
+    public int numIslands(char[][] grid) {
+        int m = grid.length;
+        int n = grid[0].length;
+        int islandsCount = 0;
+
+        for (int i = 0; i < m ; ++i){
+            for (int j = 0; j < n; ++j){
+                if(grid[i][j] == '1'){
+                    islandsCount += 1;
+                    bfs(grid, i, j);
+                }
+            }
+        }
+
+        return islandsCount;
+    }
+
+    public void bfs(char[][]grid, int i, int j){
+        int m = grid.length;
+        int n = grid[0].length;
+        Deque<Pair> queue = new ArrayDeque<>();
+        queue.addLast(new Pair(i, j));
+        grid[i][j] = '#';
+
+        while(!queue.isEmpty()){
+            Pair current = queue.removeFirst();
+            int x = current.x;
+            int y = current.y;
+            for(int[] direction : DIRECTIONS){
+                int dx = direction[0];
+                int dy = direction[1];
+                if(checkSafe(x+dx, y+dy, m, n, grid)){
+                    grid[x+dx][y+dy] = '#';
+                    queue.addLast(new Pair(x+dx, y+dy));
+                }
+            }
+        }
+    }
+
+
+    public static void main(String[] args){
+        Q1NumberOfIslands obj = new Q1NumberOfIslands();
+        char[][] grid;
+        grid = new char[][] {
+                {'1', '1', '1', '1', '0'},
+                {'1', '1', '0', '1', '0'},
+                {'1', '1', '0', '0', '0'},
+                {'0', '0', '0', '0', '0'}
+        };
+        System.out.println(obj.numIslands(grid));
+
+        grid = new char[][] {
+                {'1', '1', '0', '0', '0'},
+                {'1', '1', '0', '0', '0'},
+                {'0', '0', '1', '0', '0'},
+                {'0', '0', '0', '1', '1'}};
+        System.out.println(obj.numIslands(grid));
+
+    }
+}
+```
+
 **Output:**
 
 ```
@@ -218,6 +301,7 @@ class Solution:
         return []
 
 
+s = Solution()
 root = TreeNode(3)
 root.left = TreeNode(5)
 root.right = TreeNode(1)
@@ -227,28 +311,133 @@ root.right.left = TreeNode(0)
 root.right.right = TreeNode(8)
 root.left.right.left = TreeNode(7)
 root.left.right.right = TreeNode(4)
-
-s = Solution()
 print(s.distanceK(root, root.left, 2))
-
 
 root = TreeNode(0)
 root.left = TreeNode(1)
 root.left.left = TreeNode(3)
 root.left.right = TreeNode(2)
-
-s = Solution()
 print(s.distanceK(root, root.left.right, 1))
-
 
 root = TreeNode(0)
 root.left = TreeNode(2)
 root.right = TreeNode(1)
 root.right.right = TreeNode(3)
-
-s = Solution()
 print(s.distanceK(root, root.right.right, 3))
 print(s.distanceK(root, root.right.right, 4))
+```
+
+**Java Code:**
+
+```java
+import java.util.*;
+
+class TreeNode{
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    public TreeNode(int val){
+        this.val = val;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+public class Q2AllNodesAtKDistance {
+    public List<Integer> distanceK(TreeNode root, TreeNode target, int K) {
+        Map<TreeNode, TreeNode> parent = new HashMap<>();
+        dfs(root, parent);
+        return bfs(target, parent, K);
+    }
+
+    private List<Integer> bfs(TreeNode start, Map<TreeNode, TreeNode> parent, int K){
+        Set<TreeNode> visited = new HashSet<>();
+        List<Integer> result = new ArrayList<>();
+        Deque<TreeNode> queue = new ArrayDeque<>();
+
+        visited.add(start);
+        queue.add(start);
+
+        while(!queue.isEmpty() && K >= 0){
+            int n = queue.size();
+            for(int i = 0; i < n; ++i){
+                // return the elements of the queue
+                if(K == 0){
+                    Iterator<TreeNode> itr = queue.iterator();
+                    while(itr.hasNext()){
+                        result.add(itr.next().val);
+                    }
+                    return result;
+                }
+
+                TreeNode current = queue.removeFirst();
+                // Visit 3 neighbours of current
+                if(current.left != null && !visited.contains(current.left)){
+                    visited.add(current.left);
+                    queue.add(current.left);
+                }
+
+                if(current.right != null && !visited.contains(current.right)){
+                    visited.add(current.right);
+                    queue.add(current.right);
+                }
+                TreeNode currentParent = parent.get(current);
+                if(currentParent != null && !visited.contains(currentParent)){
+                    visited.add(currentParent);
+                    queue.add(currentParent);
+                }
+            }
+
+            K -= 1;
+
+        }
+
+        return result;
+    }
+
+    private void dfs(TreeNode node, Map<TreeNode, TreeNode> parent){
+        if(node != null){
+            if(node.left != null){
+                parent.put(node.left, node);
+                dfs(node.left, parent);
+            }
+
+            if(node.right != null){
+                parent.put(node.right, node);
+                dfs(node.right, parent);
+            }
+        }
+    }
+
+    public static void main(String[] args){
+        Q2AllNodesAtKDistance obj = new Q2AllNodesAtKDistance();
+        TreeNode root;
+        root = new TreeNode(3);
+        root.left = new TreeNode(5);
+        root.right = new TreeNode(1);
+        root.left.left = new TreeNode(6);
+        root.left.right = new TreeNode(2);
+        root.right.left = new TreeNode(0);
+        root.right.right = new TreeNode(8);
+        root.left.right.left = new TreeNode(7);
+        root.left.right.right = new TreeNode(4);
+        System.out.println(obj.distanceK(root, root.left, 2));
+
+        root = new TreeNode(0);
+        root.left = new TreeNode(1);
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(2);
+        System.out.println(obj.distanceK(root, root.left.right, 1));
+
+        root = new TreeNode(0);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(1);
+        root.right.right = new TreeNode(3);
+        System.out.println(obj.distanceK(root, root.right.right, 3));
+        System.out.println(obj.distanceK(root, root.right.right, 4));
+    }
+}
 ```
 
 **Output:**

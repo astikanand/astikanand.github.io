@@ -70,7 +70,7 @@ topic: basics
 
 ###### Designing a Restaurant
 
-1. Once restaurant starts working fine, pay more to chef to increase throughput using samer resource --- **Vertical Scaling**
+1. Once restaurant starts working fine, pay more to chef to increase throughput using same resource --- **Vertical Scaling**
 2. Preparing beforehand during non-peak hours ---- **Preprocessing and Cron jobs.**
 3. Keeps backup and avoid single point of failure. **--- Backups (Master - Slave Architecture)**
 4. Hire more resources. **--- Horizontal Scaling**

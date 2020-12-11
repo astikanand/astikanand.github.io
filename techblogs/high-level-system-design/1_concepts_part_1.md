@@ -74,6 +74,9 @@ topic: concepts-part-1
      - Move clockwise on the ring until finding the first cache it encounters.
      - That cache is the one that contains the key.
 
+
+<img src="assets/consistent_hashing.gif" width="70%">
+
 - To [add a new server](), say D, keys that were originally residing at C will be split. Some of them will be shifted to D, while other keys will not be touched.
 - To [remove a cache or if a cache failed, say A](), all keys that were originally mapping to A will fall into B, and only those keys need to be moved to B, other keys will not be affected.
 - For [load balancing](), as we discussed in the beginning, the real data is essentially randomly distributed and thus may not be uniform. It **may make the keys on caches unbalanced**.

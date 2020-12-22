@@ -226,7 +226,7 @@ auto-increment-offset = 2
 
 4. [Tedious Hybrid Approach:]()
 
-   - Server pushes updates to all the users not more than a certain frequency, letting users with a lot of follows to regularly pull data.<br
+   - Server pushes updates to all the users not more than a certain frequency, letting users with a lot of follows to regularly pull data.
 
 <br>
 

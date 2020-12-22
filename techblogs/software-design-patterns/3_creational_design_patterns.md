@@ -298,3 +298,56 @@ public final class Singleton {
 
 
 
+<br>
+
+## Singleton Design Pattern
+
+```java
+public class LazyInitializedSingleton {
+    private static LazyInitializedSingleton instance;
+    private LazyInitializedSingleton(){}
+    
+    public static LazyInitializedSingleton getInstance(){
+        if(instance == null){
+            instance = new LazyInitializedSingleton();
+        }
+        return instance;
+    }
+}
+
+```
+
+
+
+
+
+## Factory Design Pattern
+
+##### OS.java
+
+![Screenshot 2020-12-12 at 10.14.39 AM](assets/Screenshot%202020-12-12%20at%2010.14.39%20AM.png)
+
+##### Android.java
+
+![Screenshot 2020-12-12 at 10.14.10 AM](assets/Screenshot%202020-12-12%20at%2010.14.10%20AM.png)
+
+##### IOS.java
+
+![Screenshot 2020-12-12 at 10.13.36 AM](assets/Screenshot%202020-12-12%20at%2010.13.36%20AM.png)
+
+##### Android.java
+
+![Screenshot 2020-12-12 at 10.12.20 AM](assets/Screenshot%202020-12-12%20at%2010.12.20%20AM.png)
+
+##### Windows.java
+
+![Screenshot 2020-12-12 at 10.11.27 AM](assets/Screenshot%202020-12-12%20at%2010.11.27%20AM.png)
+
+##### OperatingSystemFactory.java
+
+![Screenshot 2020-12-12 at 10.09.26 AM](assets/Screenshot%202020-12-12%20at%2010.09.26%20AM.png)
+
+##### FactoryMain.java
+
+![Screenshot 2020-12-12 at 10.10.25 AM](assets/Screenshot%202020-12-12%20at%2010.10.25%20AM.png)
+

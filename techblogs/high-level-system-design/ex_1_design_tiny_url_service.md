@@ -338,11 +338,12 @@ deleteURL(api_dev_key, url_key)
 - Should we remove links that haven’t been visited in some length of time, say six months ?
 - This could be tricky. Since **storage is getting cheap**, we can decide to **keep links forever**.
 
-<img src="assets/url_shortening_detailed_design.png" style="width:55%;" />
+<img src="assets/url_shortening_detailed_design.png" width="60%">
 
 <br>
 
 #### Step-11: Telemetry
+
 - How many times a short URL has been used, what were user locations, etc. ? How would we store these statistics ?
 - If it is part of a DB row that gets updated on each view, what will happen when a popular URL is slammed with a large number of concurrent requests ?
 - We can have statistics about the country of the visitor, date and time of access, web page that refers the click, browser or platform from where the page was accessed and more.

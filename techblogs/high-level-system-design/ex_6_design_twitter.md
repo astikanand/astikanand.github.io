@@ -230,7 +230,7 @@ tweet(api_dev_key, tweet_data, tweet_location, user_location, media_ids, maximum
 - Since we want to retrieve most recent data first, we can always insert new tweets at the head of the linked list, which means all the older tweets will be near the tail of the linked list.
 - Therefore, we can remove tweets from the tail to make space for newer tweets.
 
-<br>
+<img src="assets/detailed_twitter_design.png" width="70%">
 
 #### Step-9: Timeline Generation
 

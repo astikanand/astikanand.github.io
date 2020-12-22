@@ -21,7 +21,7 @@ A typical Divide and Conquer algorithm solves a problem using following three st
     - A searching algorithm.
     - In each step, the algorithm compares the input element x with the value of the middle element in array.
     - If the values match, return the index of middle.
-    - Otherwise, if x is less than the middle element, then the algorithm recurs for left side of middle element, else recurs for right side of middle element.
+    - Otherwise, if x is less than the middle element, then the algorithm recurs for left side of middle element, else recurse for right side of middle element.
 - **Quicksort:**
     - A sorting algorithm.
     - The algorithm picks a pivot element, rearranges the array elements in such a way that all elements smaller than the picked pivot element move to left side of pivot, and all greater elements move to right side.
@@ -31,8 +31,8 @@ A typical Divide and Conquer algorithm solves a problem using following three st
     - The algorithm divides the array in two halves, recursively sorts them and finally merges the two sorted halves.
 - **Closest Pair of Points:** 
     - The problem is to find the closest pair of points in a set of points in x-y plane.
-    - The problem can be solved in O(n<sup>2</sup>) time by calculating distances of every pair of points and comparing the distances to find the minimum.
-    - The Divide and Conquer algorithm solves the problem in O(nLogn) time.
+    - Problem can be solved in O(n<sup>2</sup>) time by calculating distances of every pair of points & comparing the distances to find the minimum.
+    - Divide and Conquer algorithm solves the problem in O(nLogn) time.
 - **Strassen’s Algorithm:**
     - An efficient algorithm to multiply two matrices.
     - A simple method to multiply two matrices need 3 nested loops and is O(n<sup>3</sup>).

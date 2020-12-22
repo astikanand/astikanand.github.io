@@ -80,7 +80,7 @@ naive_pattern_search(pat, txt)
 
 ###### **Complexity:**
 
-- **Time**
+- **Time:**
     - ***Best Case:*** **O(n)** - First character of pattern is not present in text 
     - ***Worst Case***: **O(n-m+1)(m)** - All characters of the text and pattern are same OR only the last character is different. 
 - **Auxilliary Space: O(1)**

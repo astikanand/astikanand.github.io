@@ -183,7 +183,7 @@ topic: design-dropbox
 
 > ##### d) Message Queuing Service (MQS)
 
-- It is an important part of our architecture is a messaging middleware that should be able to handle a substantial number of requests.
+- An important part of our architecture is a messaging middleware that should be able to handle a substantial number of requests.
 - A scalable MQS that supports asynchronous message-based communication between clients and the Synchronization Service instances best fits the requirements of our application.
 - It supports asynchronous and loosely coupled message- based communication between distributed components of the system. 
 - It should be able to efficiently store any number of messages in a highly available, reliable and scalable queue.

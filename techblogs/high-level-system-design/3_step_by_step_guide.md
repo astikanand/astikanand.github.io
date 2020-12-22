@@ -72,7 +72,7 @@ All such questions will determine how our end design will look like.
 
 - **User:** UserID, Name, Email, DoB, CreationData, LastLogin, etc.
 - **Tweet:** TweetID, Content, TweetLocation, NumberOfLikes, TimeStamp, etc.
-- **UserFollowos:** UserdID1, UserID2
+- **UserFollows:** UserdID1, UserID2
 - **FavoriteTweets:** UserID, TweetID, TimeStamp
 
 ###### Considerations

@@ -219,7 +219,7 @@ deletePaste(api_dev_key, api_paste_key)
   1. **Metadata database:** We can use a relational database like MySQL or a Distributed Key-Value store like Dynamo or Cassandra.
   2. **Block storage:** We can store our contents in a block storage that could be a distributed file storage or an SQL-like database. Whenever we feel like hitting our full capacity on content storage, we can easily increase it by adding more servers.
 
-<img src="assets/datastore_layer.png" style="width:60%;" />
+<img src="assets/pastebin_detailed_design.png" width="55%">
 
 <br>
 

@@ -93,6 +93,9 @@
     slug: advanced-data-structures
     topics:
         -
+            title: N-ary Tree
+            slug: n-ary-tree
+        -
             title: Skip List
             slug: skip-list
         -

@@ -14,7 +14,7 @@ topic: tools-techniques
 - Can provide both eventual and strong consistency.
 - Under the hood Cassandra uses consistent hashing to shard the data and also uses gossiping to keep all the nodes informed about the cluster.
 
-###### MongoDB / Couchbase:
+###### MongoDB / Hbase:
 
 - If we have JSON like structure and we want to persist that then MongoDB works perfectly fine.
 - They provide ACID properties at the document level and they scale pretty well.

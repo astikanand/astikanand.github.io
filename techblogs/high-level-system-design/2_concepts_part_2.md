@@ -272,6 +272,8 @@ All theese are **popular communication protocols** between a client like a web b
 
 - There are 4 layers in this model and we need to know about what are they and how they work.
 
+<img src="assets/osi_tcp_ip.jpeg" width="40%">
+
 ##### IPv4  vs.  IPv6
 
 - IPv4 has 32 bit-addresses and IPv6 has 128-bit addresses.

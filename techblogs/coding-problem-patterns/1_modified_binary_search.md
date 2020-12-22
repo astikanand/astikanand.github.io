@@ -53,7 +53,7 @@ Output: 2.0
 
 ###### Implementation:
 
-**Python Code:**
+**Code:**
 
 ```python
 from typing import List
@@ -134,99 +134,6 @@ arr1 = [0, 0]
 arr2 = [0, 0]
 print(Solution().findMedianSortedArrays(arr1, arr2))
 ```
-
-**Java Code:**
-
-```java
-public class Q1MedianTwoSortedArrays {
-    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        int m = nums1.length;
-        int n = nums2.length;
-        int[] A = nums1;
-        int[] B = nums2;
-
-        if (m > n) {
-            int[] temp = A; A = B; B = temp;
-            int tmp = m; m = n; n = tmp;
-        }
-
-        int halfTotalLength = (m + n + 1) /2;
-        int low = 0;
-        int high = m;
-        double result = 0;
-
-        while(low <= high){
-            int partitionIndexA = low + (high-low)/2;
-            int partitionIndexB = halfTotalLength - partitionIndexA;
-
-            // Calculate all 4 elements at boundary
-            int aLeft = partitionIndexA == 0 ? Integer.MIN_VALUE : A[partitionIndexA-1];
-            int aRight = partitionIndexA == m ? Integer.MAX_VALUE : A[partitionIndexA];
-            int bLeft = partitionIndexB == 0 ? Integer.MIN_VALUE : B[partitionIndexB-1];
-            int bRight = partitionIndexB == n ? Integer.MAX_VALUE : B[partitionIndexB];
-
-
-            // Now check if this is the partition index required
-            if(aLeft <= bRight && bLeft <= aRight){
-                // calculate min
-                int leftMax = Math.max(aLeft, bLeft);
-                if((m + n ) % 2 == 1){
-                    result = (double)leftMax;
-                } else {
-                    int rightMin = Math.min(aRight, bRight);
-                    result = (double)(leftMax + rightMin)/2;
-                }
-                break;
-            } else if (aLeft > bRight) {
-                low --;
-            } else {
-                high ++;
-            }
-        }
-
-        return result;
-    }
-
-    public static void main(String[] args){
-        int[] arr1, arr2;
-        Q1MedianTwoSortedArrays obj = new Q1MedianTwoSortedArrays();
-
-        arr1 = new int[]{1, 3, 8, 9, 15};
-        arr2 = new int[]{7, 11, 18, 19, 21, 25};
-        System.out.println(obj.findMedianSortedArrays(arr1, arr2));
-
-        arr1 = new int[] {1, 3, 8, 9, 15, 16};
-        arr2 = new int[] {7, 11, 18, 19, 21, 25};
-        System.out.println(obj.findMedianSortedArrays(arr1, arr2));
-
-        arr1 = new int[] {2, 3, 5, 8};
-        arr2 = new int[] {10, 12, 14, 16, 18, 20, 21};
-        System.out.println(obj.findMedianSortedArrays(arr1, arr2));
-
-        arr1 = new int[] {22, 23, 25, 28};
-        arr2 = new int[] {10, 12, 14, 16, 18, 20, 21};
-        System.out.println(obj.findMedianSortedArrays(arr1, arr2));
-
-        arr1 = new int[] {1, 3};
-        arr2 = new int[] {2};
-        System.out.println(obj.findMedianSortedArrays(arr1, arr2));
-
-        arr1 = new int[] {1, 3};
-        arr2 = new int[] {2, 5};
-        System.out.println(obj.findMedianSortedArrays(arr1, arr2));
-
-        arr1 = new int[] {2};
-        arr2 = new int[] {};
-        System.out.println(obj.findMedianSortedArrays(arr1, arr2));
-
-        arr1 = new int[] {0, 0};
-        arr2 = new int[] {0, 0};
-        System.out.println(obj.findMedianSortedArrays(arr1, arr2));
-    }
-}
-```
-
-
 
 **Output:**
 

@@ -193,6 +193,8 @@ lst.display_list()
 
 ------
 
+<a href="n-ary-tree" class="prev-button">&larr; Previous: N-ary Tree</a>            
+
 <a href="trie" class="next-button">Next: Trie &rarr;</a>
 
 

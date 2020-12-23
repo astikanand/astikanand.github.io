@@ -15,7 +15,101 @@ topic: intelligent-hashing-pattern
 
 ### Problems Following Intelligent Hashing Pattern
 
-## 1. Copy List with Random Pointer
+## 1. Subarray Sum Equals K
+
+###### Problem Statement:
+
+Given an array of integers `nums` and an integer `k`, return *the total number of continuous subarrays whose sum equals to `k`*.
+
+```
+====== Examples ======
+Input: nums = [1,1,1], k = 2
+Output: 2
+
+Input: nums = [1,2,3], k = 3
+Output: 2
+```
+
+**Constraints:**
+
+- `1 <= nums.length <= 2 * 104`
+- `-1000 <= nums[i] <= 1000`
+- `-107 <= k <= 107`
+
+<br>
+
+###### Problem Stats:
+
+- **Difficulty: Medium**
+- **Category:** Leetcode - 560
+- **Companies:** Amazon, Google
+
+<br>
+
+###### Approach
+
+- **Main Idea for this Approach:** If the cumulative sum (represented by sum[i] for sum upto i<sup>th</sup> index) upto two indices is the same, then the sum of the elements lying in between those indices is zero.
+- **Extension of the Idea:** If the cumulative sum upto two indices, say i and j is at a difference of k i.e. if sum[i] − sum[j] = k, then sum of elements lying between indices i and j is k.
+- Based on these thoughts, we make use of a hashmap to store the cumulative sum upto all the indices possible along with the number of times the same sum occurs.
+- We store the data in the form: (sum<sub>i</sub>, no. of occurences of sum<sub>i</sub>).
+- We traverse over the array and keep on finding the cumulative sum.Every time we encounter a new sum, we make a new entry in the hashmap corresponding to that sum. If the same sum occurs again, we increment the count corresponding to that sum in the hashmap. 
+- Further, for every sum encountered, we also determine the number of times the sum−k has occured already, since it will determine the number of times a subarray with sum k has occured upto the current index. We increment the count by the same amount.
+- After the complete array has been traversed, the count gives the required result.
+
+<br>
+
+###### Implementation:
+
+**Code:**
+
+```python
+from typing import List
+from collections import defaultdict
+
+
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        cumulative_sums_dict = defaultdict(int)
+        cumulative_sums_dict[0] = 1
+
+        curr_sum = 0
+        count = 0
+        for num in nums:
+            curr_sum += num
+            if((curr_sum - k) in cumulative_sums_dict):
+                count += cumulative_sums_dict[curr_sum - k]
+
+            cumulative_sums_dict[curr_sum] += 1
+
+        return count
+
+
+s = Solution()
+print(s.subarraySum([6, 4, 8, 4, 15, 10, 2, 17], 27))
+print(s.subarraySum([1, 1, 1], 2))
+print(s.subarraySum([1, -1, 0], 0))
+print(s.subarraySum([1, 2, 1, 2, 1], 3))
+```
+
+**Output:**
+
+```
+2
+2
+3
+4
+```
+
+**Complexity:**
+
+- ***Time: O(N)*** - Array is traversed only once.
+- ***Space: O(N)*** - Hashmap can contain upto n distinct entries in the worst case.
+
+<br>
+
+<br>
+
+## 2. Copy List with Random Pointer
 
 ###### Problem Statement
 
@@ -51,7 +145,7 @@ The Linked List is represented in the input/output as a list of `n` nodes. Each 
 
 ###### Implementation:
 
-**Python Code:**
+**Code:**
 
 ```python
 class Node:
@@ -109,79 +203,6 @@ rl.next.next.random.random = rl
 print_list(Solution().copyRandomList(rl))
 ```
 
-**Java Code:**
-
-```java
-import java.util.HashMap;
-import java.util.Map;
-
-class Node {
-    int val;
-    Node next;
-    Node random;
-
-    public Node(int val) {
-        this.val = val;
-        this.next = null;
-        this.random = null;
-    }
-}
-
-
-public class Q1CopyListWithRandomPointer {
-    public Node copyRandomList(Node head) {
-        Map<Node, Node> nodesMap = new HashMap<Node, Node>();
-        Node originalNode = head;
-        Node copiedNode = null;
-
-        // Copying all the nodes
-        while (originalNode != null){
-            copiedNode = new Node(originalNode.val);
-            nodesMap.put(originalNode, copiedNode);
-            originalNode = originalNode.next;
-        }
-
-        // Setting all the new nodes its next and random pointers
-        originalNode = head;
-        while (originalNode != null){
-            copiedNode = nodesMap.get(originalNode);
-            copiedNode.next = nodesMap.get(originalNode.next);
-            copiedNode.random = nodesMap.get(originalNode.random);
-            nodesMap.put(originalNode, copiedNode);
-            originalNode = originalNode.next;
-        }
-
-        return nodesMap.get(head);
-    }
-
-    public void printRandomList(Node head){
-        while(head != null){
-            System.out.print("[" + head.val + "] -----> ");
-            System.out.print(head.next != null ? head.next.val : "None");
-            System.out.print(" ~~~~~~~~~> ");
-            System.out.println(head.random != null ? head.random.val : "None");
-            head = head.next;
-        }
-    }
-
-    public static void main(String[] args){
-        Node rl = new Node(7);
-        rl.next = new Node(13);
-        rl.next.next = new Node(11);
-        rl.next.random = rl;
-        rl.next.next.next = new Node(10);
-        rl.next.next.random = new Node(1);
-        rl.next.next.next.next = rl.next.next.random;
-        rl.next.next.next.random = rl.next.next;
-        rl.next.next.random.random = rl;
-
-        Q1CopyListWithRandomPointer obj = new Q1CopyListWithRandomPointer();
-        Node result = obj.copyRandomList(rl);
-        obj.printRandomList(result);
-    }
-}
-```
-
 **Output:**
 
 ```
@@ -201,7 +222,7 @@ public class Q1CopyListWithRandomPointer {
 
 <br>
 
-## 2. Anlyze User Website Visit Pattern
+## 3. Anlyze User Website Visit Pattern
 
 ###### Problem Statement:
 
@@ -322,75 +343,6 @@ username = ["u1", "u1", "u1", "u2", "u2", "u2"]
 timestamp = [1, 2, 3, 4, 5, 6]
 website = ["a", "b", "c", "a", "b", "a"]
 print(Solution().mostVisitedPattern(username, timestamp, website))
-```
-
-**Java Code:**
-
-```java
-import java.util.*;
-
-public class Q2AnalyzeUserWebsiteVisitPattern {
-    public List<String> mostVisitedPattern(String[] users, int[] timestamps, String[] websites){
-        Map<String, List<String>> userWebHistoryMap = new HashMap<String, List<String>>();
-        int n = users.length;
-
-        for (int i = 0; i < n; ++i){
-            String user = users[i];
-            if(!userWebHistoryMap.containsKey(user)){
-                userWebHistoryMap.put(user, new ArrayList<String>());
-            }
-
-            List<String> userWebsites = userWebHistoryMap.get(user);
-            userWebsites.add(websites[i]);
-            userWebHistoryMap.put(user, userWebsites);
-        }
-
-        return getMaxVisited3SeqList(userWebHistoryMap.values());
-    }
-
-    public List<String> getMaxVisited3SeqList(Collection<List<String>> userWebHistoryValuesList){
-        Map<String, Integer> threeSeqWebsiteVisitsCount = new HashMap<String, Integer>();
-        for(List<String> userWebHistoryValues : userWebHistoryValuesList){
-            int n = userWebHistoryValues.size();
-
-            for(int i = 0; i < n-2; ++i){
-                for (int j = i+1; j < n-1; ++j){
-                    for (int k = j+1; k < n; ++k){
-                        String key = userWebHistoryValues.get(i) + "|" + userWebHistoryValues.get(j)
-                                + "|" + userWebHistoryValues.get(k);
-                        if(!threeSeqWebsiteVisitsCount.containsKey(key)){
-                            threeSeqWebsiteVisitsCount.put(key, 0);
-                        }
-
-                        threeSeqWebsiteVisitsCount.put(key, threeSeqWebsiteVisitsCount.get(key)+1);
-                    }
-                }
-            }
-        }
-
-        String maxCandidateKey =  threeSeqWebsiteVisitsCount.entrySet().stream().max((e1, e2) ->
-            (e1.getValue() > e2.getValue() || (e1.getValue() == e2.getValue() && e1.getKey().compareTo(e2.getKey()) == -1)) ? 1 : -1
-        ).get().getKey();
-
-        List<String> max3SeqCandidate = Arrays.asList(maxCandidateKey.split("\\|"));
-        return max3SeqCandidate;
-    }
-
-    public static void main(String[] args){
-        String[] username, website;
-        int[] timestamp;
-        Q2AnalyzeUserWebsiteVisitPattern obj  = new Q2AnalyzeUserWebsiteVisitPattern();
-        username = new String[] {"joe", "joe", "joe", "james", "james", "james", "james", "mary", "mary", "mary"};
-        timestamp = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        website = new String[] {"home", "about", "career", "home", "cart", "maps", "home", "home", "about", "career"};
-        System.out.println(obj.mostVisitedPattern(username, timestamp, website));
-
-        username = new String[] {"u1", "u1", "u1", "u2", "u2", "u2"};
-        timestamp = new int[] {1, 2, 3, 4, 5, 6};
-        website = new String[]{"a", "b", "c", "a", "b", "a"};
-        System.out.println(obj.mostVisitedPattern(username, timestamp, website));
-    }
-}
 ```
 
 **Output:**

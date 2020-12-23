@@ -107,55 +107,48 @@ Find the sum of contiguous subarray within a one-dimensional array of numbers wh
 
 ###### **Kadane’s Algorithm:**
 
-- **Initialize:** max_so_far = 0, max_ending_here = 0 
-- **Loop** for each element of the array 
-    - max_ending_here = max_ending_here + a[i]
-    - **if** (max_so_far < max_ending_here) 
-        - max_so_far = max_ending_here
-    - **if** (max_ending_here < 0) 
-        - max_ending_here = 0
-- **return** max_so_far 
+- Use Kadane's DP approach.
 
 ###### Implementation
 
 ```python
-def maximum_sum_subarray_kadane(arr):
-    n = len(arr)
-    max_so_far = arr[0]
-    max_ending_here = arr[0]
-    start = 0; end = 0; s = 0;
+def maxSubArray(nums):
+    current_sum = max_sum = float("-inf")
+    start = end = s = 0
 
-    for i in range(1, n):
-        max_ending_here += arr[i]
-        
-        if(max_so_far < max_ending_here):
-            max_so_far = max_ending_here
-            start = s
+    for i, num in enumerate(nums):
+        if (current_sum < 0):
+            current_sum = num
+            s = i
+        else:
+            current_sum += num
+
+        if(current_sum >= max_sum):
+            max_sum = current_sum
             end = i
-        
-        if(max_ending_here < 0):
-            max_ending_here = 0
-            s = i+1
-        
-    
-    return (max_so_far, arr[start:end+1])
+            start = s
+
+    print(f"Max : {max_sum} and Subarray : {nums[start:end + 1]}")
 
 
-
-print("Example-1: maximum_sum_subarray_kadane(arr)")
-arr = [-2, -3, 4, -1, -2, 1, 5, -3]
-max_sum, subarray = maximum_sum_subarray_kadane(arr)
-print("Max: {} and Subarray: {}".format(max_sum, subarray))
-
-print("\nExample-2: maximum_sum_subarray_kadane(arr)")
-arr = [-13, -3, -25, -20, -3, -16, -23, -12, -5, -22, -15, -4, -7]
-ax_sum, subarray = maximum_sum_subarray_kadane(arr)
-print("Max: {} and Subarray: {}".format(max_sum, subarray))
+maxSubArray([-2, -3, 4, -1, -2, 1, 5, -3])
+maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+maxSubArray([1])
+maxSubArray([0])
+maxSubArray([-1])
+maxSubArray([-5, -3, -2, -4])
 ```
 
 **Output:**
 
-![maximum_sum_subarray_output](assets/maximum_sum_subarray_output.png)
+```
+Max : 7 and Subarray : [4, -1, -2, 1, 5]
+Max : 6 and Subarray : [4, -1, 2, 1]
+Max : 1 and Subarray : [1]
+Max : 0 and Subarray : [0]
+Max : -1 and Subarray : [-1]
+Max : -2 and Subarray : [-2]
+```
 
 ###### **Complexity:**
 

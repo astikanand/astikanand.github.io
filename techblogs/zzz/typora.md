@@ -15,25 +15,22 @@ To customize styles in typora notes
 ```css
 h1 {
     padding-bottom: .3em;
-    font-size: 2.3em;
+    font-size: 2.2em;
     line-height: 1.2;
-    border-bottom: 5px solid #eee;
-    font-weight: bold;
-    margin-top: 0;
+    border-bottom: 1px solid #eee;
     font-weight: bold;
 }
 h2 {
     padding-bottom: .3em;
-    font-size: 1.85em;
+    font-size: 1.75em;
     line-height: 1.225;
-    border-bottom: 3px solid #eee;
+    border-bottom: 1px solid #eee;
     color: rgb(255, 47, 146);
     margin-top: 1.8em;
     margin-bottom: 0.1em;
-    font-weight: bold;
 }
 h3 {
-    font-size: 1.55em;
+    font-size: 1.5em;
     line-height: 1.43;
     color: rgb(148, 55, 255);
     margin-top: 1.8em;
@@ -41,18 +38,16 @@ h3 {
     font-weight: bold;
 }
 h4 {
-    font-size: 1.35em;
+    font-size: 1.25em;
     color: #ffa500;
     margin-top: 1.8em;
     margin-bottom: 0.1em;
-    font-weight: bold;
 }
 h5 {
-    font-size: 1.15em;
+    font-size: 1em;
     color: #86c232;
     margin-top: 1.8em;
     margin-bottom: 0.1em;
-    font-weight: bold;
 }
 
 h6 {
@@ -60,14 +55,13 @@ h6 {
     color: #3399ff !important;
     margin-top: 1.8em;
     margin-bottom: 0.1em;
-    font-weight: bold;
 }
 
 blockquote {
-    margin-bottom: 10px !important ;
-    padding: 5px 10px !important;
-    background-color: #FFF8DC !important;
-    border-left: 4px solid #ffeb8e !important;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: lavender; /*#FFF8DC*/
+    border-left: 4px solid lightgray /*#ffeb8e*/;
 }
 
 h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6,

@@ -4,7 +4,7 @@
 echo -e "#################### Starting the deployment ###########################\n"
 
 ## Set the error logging from here
-set -e
+# set -e
 
 # Change to project repo directory
 cd /Users/astikanand/MyCloud/Notes/astikanand.github.io/

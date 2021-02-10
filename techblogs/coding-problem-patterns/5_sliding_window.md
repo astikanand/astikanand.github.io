@@ -65,7 +65,7 @@ Output: [4]
 
 ###### Implementation:
 
-**Python Code:**
+**Code:**
 
 ```python
 from typing import List
@@ -113,54 +113,6 @@ print(Solution().maxSlidingWindow([9, 11], 2))
 print(Solution().maxSlidingWindow([4, -2], 2))
 ```
 
-**Java Code:**
-
-```java
-import java.util.*;
-
-public class Q1SlidingWindowMaximum {
-    public int[] maxSlidingWindow(int[] nums, int k){
-        int n = nums.length;
-        int[] slidingWindowResult = new int[n-k+1];
-        Deque<Integer> deque = new ArrayDeque<>();
-
-        for(int i = 0; i < k; ++i){
-            while(!deque.isEmpty() && nums[i] >= nums[deque.getLast()]){
-                deque.removeLast();
-            }
-            deque.addLast(i);
-        }
-
-        slidingWindowResult[0] = nums[deque.getFirst()];
-
-        for (int i = k; i < n; ++i){
-            if(deque.getFirst() < i-k+1){
-                deque.removeFirst();
-            }
-
-            while(!deque.isEmpty() && nums[i] >= nums[deque.getLast()]){
-                deque.removeLast();
-            }
-            deque.addLast(i);
-
-            slidingWindowResult[i-k+1] = nums[deque.getFirst()];
-        }
-
-        return slidingWindowResult;
-
-    }
-
-    public static void main(String[] args){
-        Q1SlidingWindowMaximum obj = new Q1SlidingWindowMaximum();
-        System.out.println(Arrays.toString(obj.maxSlidingWindow(new int[] {1, 3, -1, -3, 5, 3, 6, 7}, 3)));
-        System.out.println(Arrays.toString(obj.maxSlidingWindow(new int[] {1}, 1)));
-        System.out.println(Arrays.toString(obj.maxSlidingWindow(new int[] {1, -1}, 1)));
-        System.out.println(Arrays.toString(obj.maxSlidingWindow(new int[] {9, 11}, 2)));
-        System.out.println(Arrays.toString(obj.maxSlidingWindow(new int[] {4, -2}, 2)));
-    }
-}
-```
-
 **Output:**
 
 ```
@@ -175,6 +127,130 @@ public class Q1SlidingWindowMaximum {
 
 - ***Time: O(n)*** - We iterate over our elements and for each element it can be put inside and outside of our deque only once.
 - ***Space: O(k)*** - Maximum size of the deque.
+
+<br>
+
+<br>
+
+## 2. Fruits into Baskets
+
+###### Problem Statement:
+
+In a row of trees, the `i`-th tree produces fruit with type `tree[i]`.
+
+You **start at any tree of your choice**, then repeatedly perform the following steps:
+
+1. Add one piece of fruit from this tree to your baskets. If you cannot, stop.
+2. Move to the next tree to the right of the current tree. If there is no tree to the right, stop.
+
+Note that you do not have any choice after the initial choice of starting tree: you must perform step 1, then step 2, then back to step 1, then step 2, and so on until you stop.
+
+You have two baskets, and each basket can carry any quantity of fruit, but you want each basket to only carry one type of fruit each.
+
+What is the total amount of fruit you can collect with this procedure?
+
+```
+====== Examples ======
+Input: [1,2,1]
+Output: 3
+Explanation: We can collect [1,2,1].
+
+Input: [0,1,2,2]
+Output: 3
+Explanation: We can collect [1,2,2].
+If we started at the first tree, we would only collect [0, 1].
+
+Input: [1,2,3,2,2]
+Output: 4
+Explanation: We can collect [2,3,2,2].
+If we started at the first tree, we would only collect [1, 2].
+
+Input: [3,3,3,1,2,1,1,2,3,3,4]
+Output: 5
+Explanation: We can collect [1,2,1,1,2].
+If we started at the first tree or the eighth tree, we would only collect 4 fruits.
+```
+
+**Constraints:**
+
+1. `1 <= tree.length <= 40000`
+2. `0 <= tree[i] < tree.length`
+
+
+
+###### Problem Stats:
+
+- **Difficulty: Medium**
+- **Category:** Leetcode - 904
+- **Companies:** Google
+
+<br>
+
+###### Approach:
+
+- Need to make a sliding window with atmost 2 different elements into it.
+- We will keep count of elements in the window to know about if there are more than 2 elements.
+- Once there are more than 2 elements shrink the window to have atmost 2 different elements.
+
+<br>
+
+###### Implementation:
+
+**Code:**
+
+```python
+from typing import List
+from collections import defaultdict
+
+
+class Solution:
+    def totalFruit(self, tree: List[int]) -> int:
+        max_count = curr_count = 0
+
+        fruits_count = defaultdict(int)
+        i, n = 0, len(tree)
+
+        while i < n:
+            if (len(fruits_count) < 2) or (len(fruits_count) == 2 and tree[i] in fruits_count):
+                fruits_count[tree[i]] += 1
+                curr_count += 1
+                i += 1
+            else:
+                max_count = max(max_count, curr_count)
+                j = i - curr_count
+                while len(fruits_count) > 1:
+                    fruits_count[tree[j]] -= 1
+                    curr_count -= 1
+                    if fruits_count[tree[j]] == 0:
+                        del fruits_count[tree[j]]
+                    j += 1
+
+        max_count = max(max_count, curr_count)
+
+        return max_count 
+
+
+print(Solution().totalFruit([1,2,1]))
+print(Solution().totalFruit([0,1,2,2]))
+print(Solution().totalFruit([1,2,3,2,2]))
+print(Solution().totalFruit([3,3,3,1,2,1,1,2,3,3,4]))
+```
+
+**Output:**
+
+```
+3
+3
+4
+5
+```
+
+**Complexity:**
+
+- ***Time: O(N)*** - Array is traversed only once.
+- ***Space: O(1)*** - Hashmap contains atmost 2 keys.
+
+<br>
 
 <br>
 

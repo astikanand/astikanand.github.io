@@ -48,7 +48,7 @@ Output: 6
 
 ###### Implementation
 
-**Python Code:**
+**Code:**
 
 ```python
 import random
@@ -87,53 +87,6 @@ print(find_kth_smallest([7, 10, 4, 3, 20, 15], 0, 5, 3))
 print(find_kth_smallest([10, 4, 5, 8, 6, 11, 26], 0, 6, 3))
 print(find_kth_smallest([10, 4, 5, 8, 6, 11, 26], 0, 6, 9))
 print(find_kth_smallest([5], 0, 0, 1))
-```
-
-**Java Code:**
-
-```java
-import java.util.Random;
-
-public class Q1KthSmallestInUnsortedArr {
-    public int findKthSmallest(int[] arr, int low, int high, int K){
-        if(low <= high){
-            int partitionIndex = getPartitionIndex(arr, low, high);
-            if(partitionIndex == K - 1){
-                return arr[partitionIndex];
-            } else if (partitionIndex < K-1){
-                return findKthSmallest(arr, partitionIndex+1, high, K);
-            } else {
-                return findKthSmallest(arr, low, partitionIndex-1, K);
-            }
-        }
-        return -1;
-    }
-
-    public int getPartitionIndex(int[] arr, int low, int high){
-        int randomIndex = low + new Random().nextInt(high-low+1);
-        int temp = arr[high]; arr[high] = arr[randomIndex]; arr[randomIndex] = temp;
-
-        int pivot = arr[high];
-        int i = low;
-        for(; i < high; ++i){
-            if(arr[i] < pivot){
-                temp = arr[low]; arr[low] = arr[i]; arr[i] = temp;
-                low += 1;
-            }
-        }
-        temp = arr[low]; arr[low] = arr[high]; arr[high] = temp;
-
-        return low;
-    }
-
-    public static void main(String[] args){
-        Q1KthSmallestInUnsortedArr obj = new Q1KthSmallestInUnsortedArr();
-        System.out.println(obj.findKthSmallest(new int[]{7, 10, 4, 3, 20, 15}, 0, 5, 3));
-        System.out.println(obj.findKthSmallest(new int[]{10, 4, 5, 8, 6, 11, 26}, 0, 6, 3));
-        System.out.println(obj.findKthSmallest(new int[]{10, 4, 5, 8, 6, 11, 26}, 0, 6, 9));
-        System.out.println(obj.findKthSmallest(new int[]{5}, 0, 0, 1));
-    }
-}
 ```
 
 

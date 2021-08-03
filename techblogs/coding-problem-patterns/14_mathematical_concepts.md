@@ -211,7 +211,7 @@ print(matrix)
 >         try:
 >             current = space[i]  # To check if we still have elements left
 >             rand_index = random.randint(0, i)  # generates random number b/w 0 to i both inclusive
->             # As we go further and further rand_index will have lesser and leserr probability of beign < k
+>             # As we go further and further rand_index will have lesser and lesser probability of being < k
 >             # Hence probability of being replaced decreases gradually
 >             if (rand_index < k):
 >                 reservoir[rand_index] = current

@@ -5,6 +5,8 @@ topic: getting-started-with-mysql
 
 # Getting Started with MySQL
 
+<img src="assets/relational_dbms.png" alt="relational dbms" width="50%">
+
 ## Basics
 
 ###### MySQL Locations
@@ -114,6 +116,12 @@ USE test_db;
 
 ## Tables
 
+###### Show all Tables in Current Database
+
+```sql
+SHOW TABLES;
+```
+
 ###### Create Table
 
 ```sql
@@ -137,10 +145,42 @@ id INT AUTO_INCREMENT,
 DROP TABLE tablename;
 ```
 
-###### Show Tables
+###### Show Columns of a Table
+
+```mysql
+DESCRIBE table_name;
+```
+
+###### Show the information of a column in a table
+
+```mysql
+DESCRIBE table_name column_name;
+```
+
+###### Add New Column
 
 ```sql
-SHOW TABLES;
+ALTER TABLE users ADD age VARCHAR(3);
+```
+
+###### Modify Column
+
+```sql
+ALTER TABLE users MODIFY COLUMN age INT(3);
+```
+
+###### Add Primary Key into Table
+
+```mysql
+ALTER TABLE table_name 
+ADD PRIMARY KEY (column_name,...);
+```
+
+###### Remove the primary key of a table
+
+```mysql
+ALTER TABLE table_name
+DROP PRIMARY KEY;
 ```
 
 
@@ -185,18 +225,6 @@ DELETE FROM users WHERE id = 6;
 
 ```sql
 UPDATE users SET email = 'freddy@gmail.com' WHERE id = 2;
-```
-
-###### Add New Column
-
-```sql
-ALTER TABLE users ADD age VARCHAR(3);
-```
-
-###### Modify Column
-
-```sql
-ALTER TABLE users MODIFY COLUMN age INT(3);
 ```
 
 

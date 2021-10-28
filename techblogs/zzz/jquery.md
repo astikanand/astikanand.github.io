@@ -21,3 +21,20 @@ $(document).on('click', "a.tabclick", function() {
 Runner.prototype.gameOver = function (){}
 ```
 
+
+
+
+
+###### Insta
+
+```
+var myvar = $x('//li[@class="wo9IH"]//div//div//div//div//a/@title')
+org = []
+myvar.forEach(item => org.push(item.value));
+org.sort()
+copy(org)
+
+Find the 2 sets and then:
+print(set(followings)-set(followers))
+```
+

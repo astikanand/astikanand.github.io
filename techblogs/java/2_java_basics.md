@@ -193,7 +193,7 @@ String s1 = new String("GeeksforGeeks");
 #### Array:
 
 - ***[Array](https://www.geeksforgeeks.org/arrays-in-java/)*** is a ***group of like-typed variables*** that are referred to by a common name.
-- Arrays in Java work differently than they do in C/C++. 
+- ***[Arrays in Java](https://www.scaler.com/topics/java/array-in-java/)*** work differently than they do in C/C++. 
 - Following are some important point about Java arrays.
     - In Java all arrays are dynamically allocated. (discussed below).
     - Since arrays are objects in Java, we can find their length using member length. 

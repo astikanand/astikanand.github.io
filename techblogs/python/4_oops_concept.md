@@ -5,7 +5,7 @@ topic: object-oriented-programming
 
 
 
-# Object Oriennted Programming
+# Object Oriented Programming
 
 ###### What is Object Oriented Programming?
 

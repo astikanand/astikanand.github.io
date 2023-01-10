@@ -3,10 +3,10 @@
   img: /path/to/techblogs/img
   slug: techblogs
 
-- title: Non-TechBlogs
-  description: Blogs on various different subjects like Geography, History, Economy, Polity, Science and Tech, Art & Culture, Environment, Sociology, Current Affairs and Various Others.
-  img: /path/to/nontechblogs/img
-  slug: nontechblogs
+# - title: Non-TechBlogs
+#   description: Blogs on various different subjects like Geography, History, Economy, Polity, Science and Tech, Art & Culture, Environment, Sociology, Current Affairs and Various Others.
+#   img: /path/to/nontechblogs/img
+#   slug: nontechblogs
 
 - title: Articles
   description: Browse all the technical articles on recent and trending technologies.
